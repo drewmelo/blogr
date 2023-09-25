@@ -2,7 +2,7 @@ toggleMenu:
     other: Alternar Menu
 
 darkMode:
-    other: Modo Escuro
+    other: Modo Dark
 
 list:
     page:
@@ -62,6 +62,6 @@ search:
 
 footer:
     builtWith:
-        other: Criado com {{ .Generator }}
+        other: Criado com {{ .Generator }}.
     designedBy:
-        other: Tema {{ .Theme }} desenvolvido por {{ .DesignedBy }}
+        other: Todos os direitos reservados.

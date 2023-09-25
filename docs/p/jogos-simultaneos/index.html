@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://drewmelo.github.io/blogr/p/jogos-simultaneos/'>
 
-<link rel="stylesheet" href="/blogr/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='Teoria dos Jogos no R: Jogos Simultâneos'>
+<link rel="stylesheet" href="/blogr/scss/style.min.921a43cf133f9cb2c02a4a99b1a45bdb3912bfd1096d4106b0db35f3fb296188.css"><meta property='og:title' content='Teoria dos Jogos no R: Jogos Simultâneos'>
 <meta property='og:description' content='Este tutorial tem como objetivo ensinar como aplicar a teoria dos jogos no ambiente R, utilizando o pacote Rgamer.'>
 <meta property='og:url' content='https://drewmelo.github.io/blogr/p/jogos-simultaneos/'>
 <meta property='og:site_name' content='André Melo'>
@@ -217,7 +217,7 @@
 
 
 
-                    <span>Modo Escuro</span>
+                    <span>Modo Dark</span>
                 </li>
             
         </div>
@@ -275,10 +275,10 @@
     <header class="article-header">
         <div class="article-image">
             <a href="/blogr/p/jogos-simultaneos/">
-                <img src="/blogr/p/jogos-simultaneos/jogos-simultaneos_hufdae702a5eaf0df2879f2773c2d55e9e_162865_800x0_resize_q75_box.jpg"
-                        srcset="/blogr/p/jogos-simultaneos/jogos-simultaneos_hufdae702a5eaf0df2879f2773c2d55e9e_162865_800x0_resize_q75_box.jpg 800w, /blogr/p/jogos-simultaneos/jogos-simultaneos_hufdae702a5eaf0df2879f2773c2d55e9e_162865_1600x0_resize_q75_box.jpg 1600w"
-                        width="800" 
-                        height="339" 
+                <img src="/blogr/p/jogos-simultaneos/jogos-simultaneos.jpg"
+                        
+                        width="1366" 
+                        height="578" 
                         loading="lazy"
                         alt="Featured image of post Teoria dos Jogos no R: Jogos Simultâneos" />
                 
@@ -305,7 +305,7 @@
         <h2 class="article-title">
             <a href="/blogr/p/jogos-simultaneos/">Teoria dos Jogos no R: Jogos Simultâneos</a>
         </h2>
-    
+
         
         <h3 class="article-subtitle">
             Este tutorial tem como objetivo ensinar como aplicar a teoria dos jogos no ambiente R, utilizando o pacote Rgamer.
@@ -493,6 +493,25 @@ function showConteudo(conteudoId) {
     opacity: 0;
     transition: opacity 0.5s;
   }
+  
+/* Estilos para o layout responsivo dos botões */
+@media screen and (max-width: 768px) {
+  #botoesExemplo {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
+    grid-template-rows: auto auto; /* Duas linhas para os dois primeiros botões */
+    gap: 10px; /* Espaço entre os botões */
+  }
+
+  .botao-interativo-exemplo {
+    width: 100%; /* Largura total para preencher a coluna */
+  }
+
+  /* O terceiro botão vai para a segunda linha */
+  .botao-interativo-exemplo:nth-child(3) {
+    grid-row: 2; /* Coloca-o na segunda linha */
+  }
+}
 
 /* JOGOS SIMULTÂNEOS-MISTAS -- FIM */
 </style>
@@ -1252,6 +1271,7 @@ function showConteudoExemplo(conteudoId) {
 
     
 
+
      
     
         
@@ -1301,16 +1321,14 @@ function showConteudoExemplo(conteudoId) {
 
     <footer class="site-footer">
     <section class="copyright">
-        &copy; 
-        
-            2020 - 
+        &copy;
         
         2023 André Melo
     </section>
-    
+
     <section class="powerby">
-        Criado com <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Tema <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.20.0">Stack</a></b> desenvolvido por <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        Criado com <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>. <br />
+        Todos os direitos reservados.
     </section>
 </footer>
 

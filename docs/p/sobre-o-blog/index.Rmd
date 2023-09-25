@@ -6,7 +6,7 @@ slug: sobre-o-blog
 categories: []
 tags: []
 description: Esse artigo mostra as novidades que o blog oferece e a contribuição para a comunidade programadora, especialmente para a linguagem R e afins voltados para o universo econômico.
-image: sobre-o-blog.jpg
+image: sobre-o-blog2.jpg
 math: ~
 license: ~
 hidden: no

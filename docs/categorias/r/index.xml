@@ -146,6 +146,25 @@ function showConteudo(conteudoId) {
     opacity: 0;
     transition: opacity 0.5s;
   }
+  
+/* Estilos para o layout responsivo dos botões */
+@media screen and (max-width: 768px) {
+  #botoesExemplo {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
+    grid-template-rows: auto auto; /* Duas linhas para os dois primeiros botões */
+    gap: 10px; /* Espaço entre os botões */
+  }
+
+  .botao-interativo-exemplo {
+    width: 100%; /* Largura total para preencher a coluna */
+  }
+
+  /* O terceiro botão vai para a segunda linha */
+  .botao-interativo-exemplo:nth-child(3) {
+    grid-row: 2; /* Coloca-o na segunda linha */
+  }
+}
 
 /* JOGOS SIMULTÂNEOS-MISTAS -- FIM */
 &lt;/style&gt;

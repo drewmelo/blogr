@@ -5,7 +5,7 @@ rssFullContent = true
 favicon = "/favicon.png"
 
 [footer]
-since = 2020
+since = 2023
 customText = ""
 
 [dateFormat]
@@ -22,12 +22,12 @@ local = true
 src = "img/avatar.png"
 
 [article]
-math = false
+math = true
 readingTime = true
 
 [article.license]
 enabled = true
-default = "Licensed under CC BY-NC-SA 4.0"
+default = "Sob licença CC BY-NC-SA 4.0"
 
 ## Widgets
 [[widgets.homepage]]
@@ -68,10 +68,10 @@ toggle = true
 default = "auto"
 
 [imageProcessing.cover]
-enabled = true
+enabled = false
 
 [imageProcessing.content]
-enabled = true
+enabled = false
 
 ## Comments
 [comments]

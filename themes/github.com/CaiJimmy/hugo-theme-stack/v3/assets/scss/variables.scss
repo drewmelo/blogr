@@ -26,7 +26,7 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
     --scrollbar-track: var(--body-background);
 
     &[data-scheme="dark"] {
-        --body-background: #303030;
+        --body-background: #192124;
         --accent-color: #ecf0f1;
         --accent-color-darker: #bdc3c7;
         --accent-color-text: #000;
@@ -78,12 +78,19 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
     }
 
     &[data-scheme="dark"] {
-        --card-background: #424242;
+        --card-background: #22333b;
         --card-background-selected: rgba(255, 255, 255, 0.16);
         --card-text-color-main: rgba(255, 255, 255, 0.9);
         --card-text-color-secondary: rgba(255, 255, 255, 0.7);
         --card-text-color-tertiary: rgba(255, 255, 255, 0.5);
         --card-separator-color: rgba(255, 255, 255, 0.12);
+        table.lightable-classic thead tr:first-child {
+    background-color: #cecccc;/* Cor de fundo desejada para a primeira linha do cabeçalho */;
+}
+
+table.lightable-classic tbody tr:nth-child(odd) {
+    background-color: #cecccc; /* Cor de fundo desejada para as linhas ímpares */;
+}
     }
 }
 
@@ -129,8 +136,8 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
         --code-background-color: #272822;
         --code-text-color: rgba(255, 255, 255, 0.9);
 
-        --table-border-color: #717171;
-        --tr-even-background-color: #545454;
+        --table-border-color: #f2e9e4;
+        --tr-even-background-color: #f2e9e4;
 
         --blockquote-background-color: rgb(75 75 75);
     }
@@ -156,7 +163,7 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
 
 [data-scheme="dark"] {
     --pre-text-color: #f8f8f2;
-    --pre-background-color: #272822;
+    --pre-background-color: #212529;
     @import "partials/highlight/dark.scss";
 }
 

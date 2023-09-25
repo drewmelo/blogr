@@ -48,8 +48,8 @@ let Stack = {
                         const colors = await getColor(key, hash, imageURL);
 
                         articleDetails.style.background = `
-                        linear-gradient(0deg, 
-                            rgba(${colors.DarkMuted.rgb[0]}, ${colors.DarkMuted.rgb[1]}, ${colors.DarkMuted.rgb[2]}, 0.5) 0%, 
+                        linear-gradient(0deg,
+                            rgba(${colors.DarkMuted.rgb[0]}, ${colors.DarkMuted.rgb[1]}, ${colors.DarkMuted.rgb[2]}, 0.5) 0%,
                             rgba(${colors.Vibrant.rgb[0]}, ${colors.Vibrant.rgb[1]}, ${colors.Vibrant.rgb[2]}, 0.75) 100%)`;
                     })
                 })
@@ -63,8 +63,8 @@ let Stack = {
          * Add copy button to code block
         */
         const highlights = document.querySelectorAll('.article-content div.highlight');
-        const copyText = `Copy`,
-            copiedText = `Copied!`;
+        const copyText = `Copiar`,
+            copiedText = `Copiado!`;
 
         highlights.forEach(highlight => {
             const copyButton = document.createElement('button');
