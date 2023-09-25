@@ -6,115 +6,356 @@
         <description>Recent content in Posts on André Melo</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 07 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://drewmelo.github.io/blogr/post/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Hello World</title>
-        <link>https://drewmelo.github.io/blogr/p/hello-world/</link>
-        <pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate>
+        <lastBuildDate>Fri, 22 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://drewmelo.github.io/blogr/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Análise do SINASC - Granja - CE</title>
+        <link>https://drewmelo.github.io/blogr/p/analise-do-sinasc-granja-ce/</link>
+        <pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://drewmelo.github.io/blogr/p/hello-world/</guid>
-        <description>&lt;img src="https://drewmelo.github.io/blogr/p/hello-world/cover.jpg" alt="Featured image of post Hello World" /&gt;&lt;p&gt;Welcome to Hugo theme Stack. This is your first post. Edit or delete it, then start writing!&lt;/p&gt;
-&lt;p&gt;For more information about this theme, check the documentation: &lt;a class=&#34;link&#34; href=&#34;https://stack.jimmycai.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://stack.jimmycai.com/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Want a site like this? Check out &lt;a class=&#34;link&#34; href=&#34;https://github.com/CaiJimmy/hugo-theme-stack-starter&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;hugo-theme-stack-stater&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Photo by &lt;a class=&#34;link&#34; href=&#34;https://unsplash.com/@pawel_czerwinski&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Pawel Czerwinski&lt;/a&gt; on &lt;a class=&#34;link&#34; href=&#34;https://unsplash.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Unsplash&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+        <guid>https://drewmelo.github.io/blogr/p/analise-do-sinasc-granja-ce/</guid>
+        <description>&lt;img src="https://drewmelo.github.io/blogr/p/analise-do-sinasc-granja-ce/analise-sinasc-ce.jpg" alt="Featured image of post Análise do SINASC - Granja - CE" /&gt;&lt;h2 id=&#34;as-complicações-em-gestações-prematuras-para-mulheres-acima-de-30-anos&#34;&gt;As complicações em gestações prematuras para mulheres acima de 30 anos&lt;/h2&gt;
+&lt;p&gt;A gestação é um processo complexo que envolve diversos aspectos da saúde física e emocional tanto da mãe quanto do feto. As gestações prematuras representam um problema de saúde pública que afeta milhares de mulheres em todo o mundo. Esse problema se torna ainda mais significativo quando consideramos as complicações na gravidez em mulheres com mais de 30 anos.&lt;/p&gt;
+&lt;p&gt;Portanto, é de suma importância compreender a análise estatística por trás desses fatores que podem contribuir para a ocorrência do parto prematuro em mulheres mais velhas. Abaixo, apresentamos um gráfico que ilustra a incidência de gestações prematuras em mulheres acima de 30 anos.&lt;/p&gt;
+&lt;div style=&#34;text-align:center;&#34;&gt;
+  &lt;img src=&#34;figure1.jpg&#34; alt=&#34;Landscape&#34; width=&#34;550&#34; style=&#34;box-shadow: 0 5px 15px rgba(0,0,0,.25);&#34;&gt;
+&lt;/div&gt;
+&lt;p&gt;No que diz respeito às variáveis Semana de Gestação, Idade da Mãe e Consultas mencionadas no gráfico anterior, podemos observar vários fatores que estão relacionados ao nascimento prematuro de bebês. O estudo revela uma maior taxa de natalidade de crianças prematuras em mães mais velhas, baseado em uma amostra de 36 pessoas. Dessas, 20 estão situadas na faixa etária de 30 a 38 anos, com gestações entre 32 e 36 semanas e 7 ou mais consultas médicas. Essa taxa se agrava quando comparada com mães na mesma faixa etária que tiveram gestações entre menos de 22 e 28 a 31 semanas, com apenas 1 a 3 consultas ou nenhuma.&lt;/p&gt;
+&lt;p&gt;Conforme destacado por Souza (2015), as causas para esse fenômeno podem ser variadas, incluindo a saúde materna, presença de comorbidades médicas, qualidade de vida e outros fatores. Nesse sentido, o nascimento prematuro em mulheres mais velhas pode estar relacionado a complicações na implantação do embrião e no desenvolvimento placentário. Além disso, outros fatores devem ser considerados, como a exposição a fatores de risco, sejam eles ambientais ou relacionados ao estresse, que podem contribuir para o parto prematuro.&lt;/p&gt;
+&lt;p&gt;Entretanto, é fundamental ressaltar que as análises realizadas aqui não estabelecem uma relação direta entre uma variável e outra. Cada caso é único, e nem todas as mulheres mais velhas terão um parto prematuro, assim como nem todas as gestações com outras características resultarão em nascimentos prematuros.&lt;/p&gt;
+&lt;h3 id=&#34;relação-entre-semana-de-gestação-e-peso-em-kg&#34;&gt;Relação entre semana de gestação e peso em kg&lt;/h3&gt;
+&lt;div style=&#34;text-align:center;&#34;&gt;
+  &lt;img src=&#34;figure2.jpg&#34; alt=&#34;Landscape&#34; width=&#34;550&#34; style=&#34;box-shadow: 0 5px 15px rgba(0,0,0,.25);&#34;&gt;
+&lt;/div&gt;
+&lt;p&gt;No gráfico acima, apresenta-se o diagrama de dispersão que relaciona o peso com a semana de gestação em mulheres com idades entre 12 e 45 anos. No subconjunto das mulheres acima de 30 anos, observamos uma amostra composta por 19 mulheres, divididas entre os intervalos de gestação de menos de 22 a 36 semanas e pesos de 1 a 3 quilogramas.&lt;/p&gt;
+&lt;p&gt;Notou-se que a maioria dos casos se concentra nos intervalos de 2 a 3 quilogramas, com 32 a 36 semanas de gestação, abrangendo sete pessoas, e de 1 a 2 quilogramas, também com 32 a 36 semanas de gestação, com seis casos. Esta análise está relacionada novamente à variável da gestação, mas agora considerando a relação com o peso dos bebês prematuros. Este cenário é comum, pois é amplamente conhecido que quanto menor a semana de gestação, menor a quantidade de nutrientes que o bebê recebe durante o desenvolvimento no útero. Isso, por sua vez, está diretamente ligado ao menor peso e à estrutura orgânica reduzida do recém-nascido.&lt;/p&gt;
+&lt;p&gt;A grande maioria dos bebês prematuros, como indicado neste estudo e como pode ser observado no gráfico anterior, nasce com peso abaixo da média esperada para bebês nascidos a termo.&lt;/p&gt;
+&lt;h3 id=&#34;relação-entre-escolaridade-e-idade-da-mãe&#34;&gt;Relação entre escolaridade e idade da mãe&lt;/h3&gt;
+&lt;div style=&#34;text-align:center;&#34;&gt;
+  &lt;img src=&#34;figure3.jpg&#34; alt=&#34;Landscape&#34; width=&#34;550&#34; style=&#34;box-shadow: 0 5px 15px rgba(0,0,0,.25);&#34;&gt;
+&lt;/div&gt;
+&lt;p&gt;Já neste gráfico, podemos observar condições que, à primeira vista, podem parecer difíceis de relacionar, mas o estudo realizado revelou o contrário. Um exemplo notável é a relação entre o nível de instrução e a taxa de nascimentos prematuros. Na amostra de 36 mães com mais de 30 anos que tiveram gestações com menos de 37 semanas, notou-se que nenhuma delas possuía ensino superior. Uma análise mais detalhada desses 36 indivíduos revela que 6 estavam distribuídos em gestações com menos de 22 a 31 semanas, com apenas uma mulher tendo completado o ensino médio.&lt;/p&gt;
+&lt;p&gt;De acordo com Kramer et al. (2000), a falta de educação pode afetar a capacidade das mulheres de acessar informações cruciais sobre saúde e cuidados pré-natais adequados. Mulheres com menor nível de escolaridade podem ter menos acesso a informações precisas e atualizadas sobre saúde reprodutiva, incluindo a prevenção de complicações durante a gravidez e o parto.&lt;/p&gt;
+&lt;p&gt;Nessas três análises que abrangem as variáveis Idade da Mãe, Escolaridade, Gestação e Peso, percebe-se que essas quatro variáveis estão de alguma forma correlacionadas, embora não diretamente. O nascimento prematuro, como evidenciado no gráfico da relação entre semana de gestação e peso, frequentemente ocorre em bebês com peso entre 1 kg e 3 kg, principalmente quando as mães são mais velhas, o que aumenta ainda mais o risco. Ao comparar Idade da Mãe e Escolaridade, observa-se que à medida que a idade das mães aumenta além dos 30 anos, o número de mulheres com ensino superior diminui, o que, por sua vez, reduz o acesso à informação e diminui a frequência das consultas pré-natais, aumentando os riscos de nascimento prematuro.&lt;/p&gt;
+&lt;p&gt;Além disso, a falta de recursos financeiros, frequentemente causada pela ausência de ensino superior em mulheres mais velhas, pode limitar o acesso a serviços públicos de qualidade, como exames pré-natais regulares e assistência ao parto por profissionais qualificados.&lt;/p&gt;
+&lt;h2 id=&#34;referências&#34;&gt;Referências&lt;/h2&gt;
+&lt;p&gt;KRAMER, M. S. et al. Socio-economic disparities in pregnancy outcome: why do the poor fare so poorly? Paediatric and perinatal epidemiology, v. 14, n. 3, p. 194-210, 2000. Disponível em: &lt;a href=&#34;https://doi.org/10.1007/s11042-022-12153-2&#34; target=&#34;_blank&#34; style=&#34;color:#016dea; text-decoration: none;&#34; onmouseover=&#34;this.style.color=&#39;#014ba0&#39;;&#34; onmouseout=&#34;this.style.color=&#39;#016dea&#39;;&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://onlinelibrary.wiley.com/doi/abs/10.1046/j.1365-3016.2000.00265.x&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://onlinelibrary.wiley.com/doi/abs/10.1046/j.1365-3016.2000.00265.x&lt;/a&gt;&lt;/a&gt;. Acesso em: 19 mar. 2021.&lt;/p&gt;
+&lt;p&gt;MENEZES, A. L. Como assim, cultura da pedofilia? Politize. 2022. Disponível em: &lt;a href=&#34;https://doi.org/10.1007/s11042-022-12153-2&#34; target=&#34;_blank&#34; style=&#34;color:#016dea; text-decoration: none;&#34; onmouseover=&#34;this.style.color=&#39;#014ba0&#39;;&#34; onmouseout=&#34;this.style.color=&#39;#016dea&#39;;&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.politize.com.br/cultura-do-estupro-como-assim/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.politize.com.br/cultura-do-estupro-como-assim/&lt;/a&gt;&lt;/a&gt;. Acesso em: 19 mar. 2021.&lt;/p&gt;
+&lt;p&gt;SOUZA, R. T. Uma análise do parto prematuro terapêutico no contexto da prematuridade no Brasil. Dissertação. Campinas (SP): Universidade Estadual de Campinas, 2015.&lt;/p&gt;
 </description>
         </item>
         <item>
-        <title>Markdown Syntax Guide</title>
-        <link>https://drewmelo.github.io/blogr/p/markdown-syntax-guide/</link>
-        <pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate>
+        <title>Ciência de Dados na Economia</title>
+        <link>https://drewmelo.github.io/blogr/p/ciencia-de-dados-na-economia/</link>
+        <pubDate>Thu, 21 Sep 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://drewmelo.github.io/blogr/p/markdown-syntax-guide/</guid>
-        <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;
-&lt;h2 id=&#34;headings&#34;&gt;Headings&lt;/h2&gt;
-&lt;p&gt;The following HTML &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt;—&lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt; elements represent six levels of section headings. &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; is the highest section level while &lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt; is the lowest.&lt;/p&gt;
-&lt;h1 id=&#34;h1&#34;&gt;H1&lt;/h1&gt;
-&lt;h2 id=&#34;h2&#34;&gt;H2&lt;/h2&gt;
-&lt;h3 id=&#34;h3&#34;&gt;H3&lt;/h3&gt;
-&lt;h4 id=&#34;h4&#34;&gt;H4&lt;/h4&gt;
-&lt;h5 id=&#34;h5&#34;&gt;H5&lt;/h5&gt;
-&lt;h6 id=&#34;h6&#34;&gt;H6&lt;/h6&gt;
-&lt;h2 id=&#34;paragraph&#34;&gt;Paragraph&lt;/h2&gt;
-&lt;p&gt;Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata tiustia prat.&lt;/p&gt;
-&lt;p&gt;Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sapicia is sinveli squiatum, core et que aut hariosam ex eat.&lt;/p&gt;
-&lt;h2 id=&#34;blockquotes&#34;&gt;Blockquotes&lt;/h2&gt;
-&lt;p&gt;The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a &lt;code&gt;footer&lt;/code&gt; or &lt;code&gt;cite&lt;/code&gt; element, and optionally with in-line changes such as annotations and abbreviations.&lt;/p&gt;
-&lt;h3 id=&#34;blockquote-without-attribution&#34;&gt;Blockquote without attribution&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Tiam, ad mint andaepu dandae nostion secatur sequo quae.
-&lt;strong&gt;Note&lt;/strong&gt; that you can use &lt;em&gt;Markdown syntax&lt;/em&gt; within a blockquote.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;blockquote-with-attribution&#34;&gt;Blockquote with attribution&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Don&amp;rsquo;t communicate by sharing memory, share memory by communicating.&lt;br&gt;
-— &lt;cite&gt;Rob Pike&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/cite&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;tables&#34;&gt;Tables&lt;/h2&gt;
-&lt;p&gt;Tables aren&amp;rsquo;t part of the core Markdown spec, but Hugo supports supports them out-of-the-box.&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
+        <guid>https://drewmelo.github.io/blogr/p/ciencia-de-dados-na-economia/</guid>
+        <description>&lt;img src="https://drewmelo.github.io/blogr/p/ciencia-de-dados-na-economia/ciencia-de-dados-economia.jpg" alt="Featured image of post Ciência de Dados na Economia" /&gt;&lt;p&gt;Ao longo das últimas décadas, testemunhamos avanços tecnológicos que alteraram a forma como vivemos, seja no trabalho ou no modo como nos comunicamos. No cerne dessa revolução está a internet, um sistema global de informações que conecta pessoas, empresas e instituições em diferentes partes do mundo. Seu surgimento, juntamente com o crescimento exponencial da quantidade de dados gerados e armazenados em servidores levaram a uma necessidade sem precedentes para aplicar esses conhecimentos em uma escala maior. Dessa forma, com o avanço dessa tecnologia ascendeu o desenvolvimento e popularização da &lt;em&gt;Data Science&lt;/em&gt;, ou simplesmente Ciência de Dados.&lt;/p&gt;
+&lt;p&gt;A Ciência de Dados é um campo multidisciplinar que abrange a análise de dados estruturados, que são fixos e organizados, bem como de dados não estruturados, que são flexíveis e dinâmicos, com técnicas e algoritmos para extração e exploração de informações a partir de conjuntos de bases complexas. Nesse quesito, um especialista buscará
+envolver a coleta, processamento, análise e interpretação desses dados com o objetivo de obter &lt;em&gt;insights&lt;/em&gt; e conhecimentos relevantes para a área econômica.&lt;/p&gt;
+&lt;p&gt;Algumas técnicas são essenciais para análise ou extração de dados, como &lt;em&gt;Web Scraping&lt;/em&gt;, que consiste na utilização da automatização para obter pontos imensuráveis de dados estruturados da internet, em contraposição ao processo do Text Mining ou &lt;em&gt;Text Analytics&lt;/em&gt;, na extração de dados não estruturados de fontes online. Essas duas técnicas combinadas com &lt;em&gt;Machine Learning&lt;/em&gt; ou Aprendizado de Máquina, podem fazer o diferencial na carreira de um economista no que diz respeito à análise de mercado e previsões econômicas.&lt;/p&gt;
+&lt;p&gt;É durante a fase de análise exploratória de dados que o modelo de previsão de preços de ativos e avaliação de risco financeiro é construído. Além disso, técnicas como &lt;em&gt;Text Analytics&lt;/em&gt; e &lt;em&gt;Machine Learning&lt;/em&gt;, têm uma aplicação valiosa na análise de sentimentos, principalmente quando estamos lidando com dados não estruturados. Dessa forma, é possível detectar as opiniões positivas, negativas ou neutras dos consumidores em relação a um produto ou serviço. Essa capacidade de compreensão do feedback dos clientes em relação aos produtos é de extrema utilidade para identificar tendências e problemas relacionados aos produtos das empresas.&lt;/p&gt;
+&lt;p&gt;a era do &lt;em&gt;“Big Data”&lt;/em&gt;, estamos lidando com um volume excessivo de dados econômicos, como indicadores macroeconômicos, séries temporais e informações de mercado. Esse cenário apresenta desafios significativos em relação ao armazenamento, processamento e privacidade dos dados. No entanto, também oferece aos profissionais a oportunidade de observar padrões complexos no comportamento econômico, o que permite análises abrangentes, previsões mais precisas e o desenvolvimento de estratégias eficientes.&lt;/p&gt;
+&lt;p&gt;Os avanços tecnológicos proporcionaram aos cientistas de dados ferramentas inteligentes e poderosas para explorar e compreender as bases de dados. Entretanto, é fundamental destacar o papel crucial do conhecimento e da experiência do economista nesse processo. Ao combinar o conhecimento teórico com as técnicas de Ciência de Dados, o profissional em questão é capaz de interpretar as relações de causa e efeito, aplicando seu conhecimento econômico para extrair &lt;em&gt;insights&lt;/em&gt; importantes. Com isso, adquirindo uma posição estratégica em um mundo cada vez mais orientado por dados, impulsionando o progresso econômico e embasando a tomada de decisões fundamentadas.&lt;/p&gt;</description>
+        </item>
+        <item>
+        <title>Teoria dos Jogos no R: Jogos Simultâneos</title>
+        <link>https://drewmelo.github.io/blogr/p/jogos-simultaneos/</link>
+        <pubDate>Sat, 16 Sep 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://drewmelo.github.io/blogr/p/jogos-simultaneos/</guid>
+        <description>&lt;img src="https://drewmelo.github.io/blogr/p/jogos-simultaneos/jogos-simultaneos.jpg" alt="Featured image of post Teoria dos Jogos no R: Jogos Simultâneos" /&gt;&lt;script src=&#34;https://drewmelo.github.io/blogr/p/jogos-simultaneos/index_files/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://drewmelo.github.io/blogr/p/jogos-simultaneos/index_files/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;div style=&#34;text-align:center;&#34;&gt;
+  &lt;img src=&#34;https://raw.githubusercontent.com/yukiyanai/rgamer/master/logo.png&#34; alt=&#34;Rgamer&#34; width=&#34;200&#34;&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
+&lt;p&gt;A teoria dos jogos é um ramo da matemática que explora as interações estratégicas em que as decisões de um indivíduo são influenciadas pelo conflito e cooperação de outros participantes. Em relação ao campo das ciências econômicas, essa teoria desempenha um papel fundamental ao analisar como as pessoas realizam escolhas estratégicas diante de objetivos concorrentes em um contexto de escassez.&lt;/p&gt;
+&lt;p&gt;Uma aplicação interessante da teoria dos jogos na área da economia é a sua combinação com simulações de aprendizado. Por exemplo, em um cenário em que diferentes empresas competem para estabelecer preços em um mercado, é possível utilizar a teoria dos jogos em conjunto com modelos de aprendizado. Nesses modelos, as empresas podem aprender ao longo do tempo a tomar decisões estratégicas mais eficientes e adaptar suas estratégias com base nas escolhas e resultados passados. Dessa forma, as empresas podem ajustar gradualmente suas ações para obter melhores resultados e alcançar equilíbrios de longo prazo em um ambiente competitivo.&lt;/p&gt;
+&lt;p&gt;Este tutorial tem como objetivo ensinar como aplicar a teoria dos jogos no ambiente R, utilizando o pacote &lt;a href=&#34;https://github.com/yukiyanai/rgamer&#34; target=&#34;_blank&#34; style=&#34;color:#016dea; text-decoration: none;&#34; onmouseover=&#34;this.style.color=&#39;#014ba0&#39;;&#34; onmouseout=&#34;this.style.color=&#39;#016dea&#39;;&#34;&gt;Rgamer&lt;/a&gt;, desenvolvido por Yusei Yanai, Ph.D. em Ciência Política, e Yoshio Kamijo, Especialista em Economia Experimental, Teoria dos Jogos, Teoria Comportamental dos Jogos e Design do Futuro. Desse modo, através da integração de funções de modelos de aprendizado, exploraremos a teoria dos jogos e sua aplicação prática. O pacote oferece representações visuais de jogos para dois ou mais jogadores e possibilita encontrar equilíbrios de Nash, proporcionando uma compreensão mais profunda dos conceitos fundamentais no contexto das Ciências Econômicas. Com o &lt;a href=&#34;https://github.com/yukiyanai/rgamer&#34; target=&#34;_blank&#34; style=&#34;color:#016dea; text-decoration: none;&#34; onmouseover=&#34;this.style.color=&#39;#014ba0&#39;;&#34; onmouseout=&#34;this.style.color=&#39;#016dea&#39;;&#34;&gt;Rgamer&lt;/a&gt;, tem-se disponível uma ferramenta poderosa para a análise e simulação de interações estratégicas, tornando o estudo do assunto ainda mais acessível e abrangente.&lt;/p&gt;
+&lt;h3 id=&#34;pacotes&#34;&gt;Pacotes&lt;/h3&gt;
+&lt;p&gt;Para realização dos passos seguintes, será necessário a instalação e ativação do pacote:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# install.packages(&amp;#34;devtools&amp;#34;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# devtools::install_github(&amp;#34;yukiyanai/rgamer&amp;#34;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;library&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rgamer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;library&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;utf8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;jogos-simultâneos&#34;&gt;Jogos Simultâneos&lt;/h2&gt;
+&lt;p&gt;Os jogos simultâneos representam uma categoria fundamental na teoria dos jogos, na qual todos os jogadores tomam suas decisões ao mesmo tempo, sem qualquer conhecimento prévio das escolhas dos outros jogadores. No ambiente de programação R, o pacote Rgamer oferece uma ampla gama de recursos que facilitam a modelagem de jogos simultâneos, o cálculo de equilíbrios de Nash, a representação gráfica e a análise de estratégias dominantes.&lt;/p&gt;
+&lt;h3 id=&#34;estratégias-puras&#34;&gt;Estratégias Puras&lt;/h3&gt;
+&lt;p&gt;O dilema dos prisioneiros é um clássico exemplo de jogo de estratégia pura em teoria dos jogos que envolve dois jogadores que enfrentam uma escolha difícil entre cooperar ou trair o outro jogador.  Através da função &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;normal_form()&lt;/code&gt;&lt;/span&gt; teremos dois exemplos desse tipo forma normal de jogo em dois métodos.&lt;/p&gt;
+&lt;div id=&#34;botoes&#34;&gt;
+  &lt;button id=&#34;botao-metodo1&#34; class=&#34;botao-interativo&#34; onclick=&#34;showConteudo(&#39;metodo1&#39;)&#34;&gt;Método 1&lt;/button&gt;
+  &lt;button id=&#34;botao-metodo2&#34; class=&#34;botao-interativo&#34; onclick=&#34;showConteudo(&#39;metodo2&#39;)&#34;&gt;Método 2&lt;/button&gt;
+&lt;/div&gt;
+&lt;script&gt;
+window.onload = function() {
+    showConteudoExemplo(&#39;exemplo1&#39;); // Exibir conteúdo do exemplo1 por padrão
+    showConteudo(&#39;metodo1&#39;); // Exibir conteúdo do método1 por padrão
+  };
+&lt;/script&gt;
+&lt;script&gt;
+function showConteudo(conteudoId) {
+  var conteudos = document.getElementsByClassName(&#39;conteudo&#39;);
+  for (var i = 0; i &lt; conteudos.length; i++) {
+    conteudos[i].style.opacity = 0; // Definir a opacidade do conteúdo como 0 (invisível)
+    conteudos[i].style.display = &#39;none&#39;; // Esconder o conteúdo (display: none)
+  }
+  
+  // Exibir o conteúdo desejado com animação suave
+  var conteudoDesejado = document.getElementById(conteudoId);
+  conteudoDesejado.style.display = &#39;block&#39;; // Exibir o conteúdo (display: block)
+  setTimeout(function() {
+    conteudoDesejado.style.opacity = 1; // Definir a opacidade do conteúdo como 1 (visível)
+  }, 50); // Aguardar 50 milissegundos para aplicar a opacidade (ajuste conforme desejado)
+
+  // Remover a classe &#39;selecionado&#39; de todos os botões
+  var botoes = document.getElementsByClassName(&#39;botao-interativo&#39;);
+  for (var i = 0; i &lt; botoes.length; i++) {
+    botoes[i].classList.remove(&#39;selecionado&#39;);
+  }
+
+  // Adicionar a classe &#39;selecionado&#39; apenas ao botão clicado
+  var botaoSelecionado = document.getElementById(&#39;botao-&#39; + conteudoId);
+  botaoSelecionado.classList.add(&#39;selecionado&#39;);
+}
+&lt;/script&gt;
+&lt;style type=&#34;text/css&#34;&gt;
+/* JOGOS SIMULTÂNEOS-ESTRATÉGIAS PURAS -- COMEÇO */
+   #botoes {
+    display: flex;
+    justify-content: center;
+  }
+  .botao-interativo {
+    background-color: transparent; /* Fundo transparente para todos os botões */
+    border-color: transparent; /* Borda transparente para todos os botões */
+    margin-left: 10px;
+    color: #016dea; /* Cor do texto para todos os botões */
+    border-radius: 0.5rem;
+    width: 120px; /* Largura do botão */
+    height: 40px; /* Altura do botão */
+    font-size: 15px; /* Tamanho da fonte do texto do botão */
+    transition: background-color 0.3s; /* Adicionando uma transição suave de 0.3 segundos */
+  width: auto; /* Largura automática para ajustar ao tamanho do texto */
+    white-space: nowrap; /* Evita que o texto quebre em várias linhas */
+  }
+
+  .botao-interativo:hover {
+    background-color: #E5E5E5; /* Cor cinza claro quando o mouse passar por cima */
+    color: #002e63;
+  }
+  
+  .botao-interativo.selecionado {
+    background-color: #0766a6;
+    color: white; /* Cor do texto do botão selecionado */
+  }
+  
+  .conteudo {
+    opacity: 0; /* Começa com opacidade 0 (invisível) */
+    transition: opacity 0.5s;
+  }
+  
+/* JOGOS SIMULTÂNEOS-ESTRATÉGIAS PURAS -- FIM */
+
+/* JOGOS SIMULTÂNEOS-MISTAS -- COMEÇO */
+  #botoesExemplo {
+    display: flex;
+    justify-content: center;
+  }
+  .botao-interativo-exemplo {
+    background-color: transparent;
+    border-color: transparent;
+    margin-left: 10px; /* Adicionando margem para separar os botões */
+    padding: 5px 10px; /* Adicionando espaçamento interno para melhor aparência */
+    color: #016dea;
+    border-radius: 0.5rem;
+    font-size: 15px;
+    transition: background-color 0.3s;
+    width: auto; /* Largura automática para ajustar ao tamanho do texto */
+    white-space: nowrap; /* Evita que o texto quebre em várias linhas */
+  }
+
+  .botao-interativo-exemplo:hover {
+    background-color: #E5E5E5;
+    color: #002e63;
+  }
+
+  .botao-interativo-exemplo.selecionadoExemplo {
+    background-color: #0766a6;
+    color: white;
+  }
+
+  .conteudoExemplo {
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+/* JOGOS SIMULTÂNEOS-MISTAS -- FIM */
+&lt;/style&gt;
+&lt;div id=&#34;metodo1&#34; class=&#34;conteudo&#34;&gt;
+&lt;p&gt;Neste primeiro método, é necessário definir os pagamentos para cada célula da matriz do jogo utilizando o argumento &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;cells&lt;/code&gt;&lt;/span&gt;, que é configurado como uma lista, no caso &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;list()&lt;/code&gt;&lt;/span&gt;. Também é necessário especificar os jogadores, que, neste exemplo, são &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;&amp;quot;Bonnie&amp;quot;&lt;/code&gt;&lt;/span&gt; e &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;&amp;quot;Clyde&amp;quot;&lt;/code&gt;&lt;/span&gt;, utilizando o argumento &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;players&lt;/code&gt;&lt;/span&gt;, em que as estratégias, &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;&amp;quot;Confessar&amp;quot;&lt;/code&gt;&lt;/span&gt; e &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;&amp;quot;Não Confessar&amp;quot;&lt;/code&gt;&lt;/span&gt;, respectivamente, são definidas nos argumentos &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;s1&lt;/code&gt;&lt;/span&gt; e &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;s2&lt;/code&gt;&lt;/span&gt; para eles.&lt;/p&gt;
+&lt;p&gt;O argumento lógico &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;byrow&lt;/code&gt;&lt;/span&gt; pode ser configurado como &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;TRUE&lt;/code&gt;&lt;/span&gt; ou &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;FALSE&lt;/code&gt;&lt;/span&gt;. Quando definido como &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;TRUE&lt;/code&gt;&lt;/span&gt;, os valores na lista dentro das células são especificados por linha, seguindo a ordem das estratégias &amp;ldquo;Confessar&amp;rdquo; e &amp;ldquo;Não Confessar&amp;rdquo;, respectivamente, para cada jogador. Se configurado como &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;FALSE&lt;/code&gt;&lt;/span&gt;, os valores serão organizados por coluna.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;jogo1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;normal_form&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;n&#34;&gt;players&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Bonnie&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Clyde&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;n&#34;&gt;s1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Confessar&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Não Confessar&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;n&#34;&gt;s2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Confessar&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Não Confessar&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;n&#34;&gt;cells&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;-8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;-8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                       &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;-15&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                       &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;-15&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                       &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;-1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;-1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;n&#34;&gt;byrow&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;TRUE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Para encontrar a solução do primeiro método é necessário a função &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;solve_nfg()&lt;/code&gt;&lt;/span&gt; e o argumento &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;show_table = TRUE&lt;/code&gt;&lt;/span&gt; para obter a tabela e o equilíbrio de Nash.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;s_jogo1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;solve_nfg&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;jogo1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;show_table&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;TRUE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Pure-strategy NE: [Confessar, Confessar]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;table class=&#34;lightable-classic table&#34; style=&#34;font-family: Arial; margin-left: auto; margin-right: auto; width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&#34;empty-cells: hide;&#34; colspan=&#34;2&#34;&gt;&lt;/th&gt;
+      &lt;th style=&#34;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; font-weight: bold;&#34; colspan=&#34;2&#34;&gt;
+        &lt;div style=&#34;border-bottom: 1px solid #111111; margin-bottom: -1px;&#34;&gt;Clyde&lt;/div&gt;
+      &lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th style=&#34;text-align:left;&#34;&gt;&lt;/th&gt;
+      &lt;th style=&#34;text-align:center;&#34;&gt;strategy&lt;/th&gt;
+      &lt;th style=&#34;text-align:center;&#34;&gt;Confessar&lt;/th&gt;
+      &lt;th style=&#34;text-align:center;&#34;&gt;Não Confessar&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&#34;text-align:left;font-weight: bold;&#34;&gt;Bonnie&lt;/td&gt;
+      &lt;td style=&#34;text-align:center;&#34;&gt;Confessar&lt;/td&gt;
+      &lt;td style=&#34;text-align:center;&#34;&gt;-8^, -8^&lt;/td&gt;
+      &lt;td style=&#34;text-align:center;&#34;&gt;0^, -15&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&#34;text-align:left;font-weight: bold;&#34;&gt;&lt;/td&gt;
+      &lt;td style=&#34;text-align:center;&#34;&gt;Não Confessar&lt;/td&gt;
+      &lt;td style=&#34;text-align:center;&#34;&gt;-15, 0^&lt;/td&gt;
+      &lt;td style=&#34;text-align:center;&#34;&gt;-1, -1&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Considerando o fator &amp;ldquo;traição&amp;rdquo;, escolher confessar é sempre a melhor opção para Bonnie, independentemente da escolha de Clyde. A estratégia de não confessar pode levar a resultados piores se o outro jogador escolher confessar. Portanto, confessar é a estratégia dominante para ambos, incentivando a cooperação mútua.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;metodo2&#34; class=&#34;conteudo&#34; style=&#34;display: none;&#34;&gt;
+&lt;p&gt;No segundo método, por padrão, temos os &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;payoffs1&lt;/code&gt;&lt;/span&gt; e &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;payoffs2&lt;/code&gt;&lt;/span&gt;, onde especificamos os ganhos de cada jogador. Neste outro exemplo dois postos de gasolina, &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;&amp;quot;OilFlex&amp;quot;&lt;/code&gt;&lt;/span&gt; e &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;&amp;quot;EconoGas&amp;quot;&lt;/code&gt;&lt;/span&gt;, competem para ver quem obtém o maior lucro e conquista a maior fatia de mercado na venda de combustíveis. Nesse cenário, as estratégias definidas para cada posto serão &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;&amp;quot;Manter Preço&amp;quot;&lt;/code&gt;&lt;/span&gt; e &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;&amp;quot;Reduzir Preço&amp;quot;&lt;/code&gt;&lt;/span&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;jogo2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;normal_form&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;n&#34;&gt;players&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;OilFlex&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;EconoGas&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;n&#34;&gt;s1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Manter Preço&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Reduzir Preço&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;n&#34;&gt;s2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Manter Preço&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Reduzir Preço&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;n&#34;&gt;payoffs1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;50&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;60&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;40&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;n&#34;&gt;payoffs2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;50&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;60&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;40&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Para obter a solução utilizando o segundo método, assim como no primeiro, também é possível definir o argumento &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;show_table&lt;/code&gt;&lt;/span&gt; como &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;FALSE&lt;/code&gt;&lt;/span&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;s_jogo2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;solve_nfg&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;jogo2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;show_table&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;FALSE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Pure-strategy NE: [Reduzir Preço, Reduzir Preço]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Sendo necessário o comando &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;$table&lt;/code&gt;&lt;/span&gt; para mostrar a tabela, juntamente com o equilíbrio de Nash.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;s_jogo2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;table&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;table class=&#34; lightable-classic table&#34; style=&#34;font-family: Arial; margin-left: auto; margin-right: auto; width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+ &lt;thead&gt;
 &lt;tr&gt;
-&lt;th&gt;Name&lt;/th&gt;
-&lt;th&gt;Age&lt;/th&gt;
+&lt;th style=&#34;empty-cells: hide;&#34; colspan=&#34;2&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; font-weight: bold; &#34; colspan=&#34;2&#34;&gt;&lt;div style=&#34;border-bottom: 1px solid #111111; margin-bottom: -1px; &#34;&gt;EconoGas&lt;/div&gt;&lt;/th&gt;
 &lt;/tr&gt;
-&lt;/thead&gt;
+  &lt;tr&gt;
+   &lt;th style=&#34;text-align:left;&#34;&gt;   &lt;/th&gt;
+   &lt;th style=&#34;text-align:center;&#34;&gt; strategy &lt;/th&gt;
+   &lt;th style=&#34;text-align:center;&#34;&gt; Manter Preço &lt;/th&gt;
+   &lt;th style=&#34;text-align:center;&#34;&gt; Reduzir Preço &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
 &lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Bob&lt;/td&gt;
-&lt;td&gt;27&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Alice&lt;/td&gt;
-&lt;td&gt;23&lt;/td&gt;
-&lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&#34;text-align:left;font-weight: bold;&#34;&gt; OilFlex &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; Manter Preço &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 50, 50 &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 30, 60^ &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&#34;text-align:left;font-weight: bold;&#34;&gt;  &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; Reduzir Preço &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 60^, 30 &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 40^, 40^ &lt;/td&gt;
+  &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h3 id=&#34;inline-markdown-within-tables&#34;&gt;Inline Markdown within tables&lt;/h3&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Italics&lt;/th&gt;
-&lt;th&gt;Bold&lt;/th&gt;
-&lt;th&gt;Code&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;italics&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;bold&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;code&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;A&lt;/th&gt;
-&lt;th&gt;B&lt;/th&gt;
-&lt;th&gt;C&lt;/th&gt;
-&lt;th&gt;D&lt;/th&gt;
-&lt;th&gt;E&lt;/th&gt;
-&lt;th&gt;F&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/td&gt;
-&lt;td&gt;Phasellus ultricies, sapien non euismod aliquam, dui ligula tincidunt odio, at accumsan nulla sapien eget ex.&lt;/td&gt;
-&lt;td&gt;Proin eleifend dictum ipsum, non euismod ipsum pulvinar et. Vivamus sollicitudin, quam in pulvinar aliquam, metus elit pretium purus&lt;/td&gt;
-&lt;td&gt;Proin sit amet velit nec enim imperdiet vehicula.&lt;/td&gt;
-&lt;td&gt;Ut bibendum vestibulum quam, eu egestas turpis gravida nec&lt;/td&gt;
-&lt;td&gt;Sed scelerisque nec turpis vel viverra. Vivamus vitae pretium sapien&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;code-blocks&#34;&gt;Code Blocks&lt;/h2&gt;
-&lt;h3 id=&#34;code-block-with-backticks&#34;&gt;Code block with backticks&lt;/h3&gt;
+&lt;p&gt;Se os dois concordarem em manter o preço original, cada um ganha 50 mil por mês. Se um deles reduzir o preço, ele recebe 60 mil, enquanto o outro ganha apenas 30 mil. Caso ambos decidam reduzir o preço, cada um ganha 40 mil. O ponto de equilíbrio é quando ambos reduzem o preço, pois essa é a estratégia dominante e resulta em um equilíbrio de Nash sem cooperação.&lt;/p&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;estratégias-dominantes&#34;&gt;Estratégias Dominantes&lt;/h3&gt;
+&lt;p&gt;As estratégias estritamente dominantes referem-se a uma situação em que um jogador tem uma estratégia que é sempre melhor do que qualquer outra estratégia que ele possa escolher, independentemente das escolhas dos outros jogadores.&lt;/p&gt;
+&lt;p&gt;No exemplo a seguir, os jogadores &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;&amp;quot;Pedro&amp;quot;&lt;/code&gt;&lt;/span&gt; e &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;&amp;quot;Ana&amp;quot;&lt;/code&gt;&lt;/span&gt; são especificados no argumento &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;players&lt;/code&gt;&lt;/span&gt;. Neste jogo, ao contrário dos dois exemplos anteriores, cada jogador possui 3 estratégias disponíveis: &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;&amp;quot;Bar&amp;quot;&lt;/code&gt;&lt;/span&gt;, &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;&amp;quot;Museu&amp;quot;&lt;/code&gt;&lt;/span&gt; e &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;&amp;quot;Café&amp;quot;&lt;/code&gt;&lt;/span&gt;. Dessa forma, será necessário aumentar o número de elementos nas matrizes &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;payoffs1&lt;/code&gt;&lt;/span&gt; e &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;payoffs2&lt;/code&gt;&lt;/span&gt;, agora contendo um total de 9 elementos.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -129,31 +370,258 @@
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;!doctype html&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;html&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;lang&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;en&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;head&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;meta&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;charset&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;utf-8&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;Example HTML5 Document&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;head&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;body&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;Test&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;body&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;html&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;jogo3&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;normal_form&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;n&#34;&gt;players&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Pedro&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Ana&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;n&#34;&gt;s1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Bar&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Museu&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Café&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;n&#34;&gt;s2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Bar&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Museu&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Café&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;n&#34;&gt;payoffs1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                       &lt;span class=&#34;m&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                       &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;n&#34;&gt;payoffs2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                       &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                       &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;code-block-indented-with-four-spaces&#34;&gt;Code block indented with four spaces&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;!doctype html&amp;gt;
-&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;
-&amp;lt;head&amp;gt;
-  &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
-  &amp;lt;title&amp;gt;Example HTML5 Document&amp;lt;/title&amp;gt;
-&amp;lt;/head&amp;gt;
-&amp;lt;body&amp;gt;
-  &amp;lt;p&amp;gt;Test&amp;lt;/p&amp;gt;
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;diff-code-block&#34;&gt;Diff code block&lt;/h3&gt;
+&lt;/div&gt;&lt;p&gt;O argumento lógico &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;mark_br&lt;/code&gt;&lt;/span&gt; desempenha a função de destacar as melhores respostas (&lt;em&gt;best responses&lt;/em&gt;) na tabela de solução. Quando é definido como &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;FALSE&lt;/code&gt;&lt;/span&gt;, as melhores respostas não são destacadas na tabela. O valor padrão para &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;mark_br&lt;/code&gt;&lt;/span&gt; é &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;TRUE&lt;/code&gt;&lt;/span&gt;, o que significa que, caso esse argumento na função não seja incluído na função, a tabela exibirá automaticamente o equilíbrio de Nash.&lt;/p&gt;
+&lt;p&gt;Nesse caso, o equilíbrio de Nash em conjunto com a mensagem não serão exibidas, já que ao configurar &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;quietly&lt;/code&gt;&lt;/span&gt; como &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;TRUE&lt;/code&gt;&lt;/span&gt;, está sendo implicitamente ocultado a mensagem de melhores respostas. Essa configuração flexível permite controlar tanto a exibição da mensagem quanto o destaque do Equilíbrio de Nash, de acordo com as preferências.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;s_jogo3&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;solve_nfg&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;jogo3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                     &lt;span class=&#34;n&#34;&gt;show_table&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;TRUE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                     &lt;span class=&#34;n&#34;&gt;mark_br&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;FALSE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                     &lt;span class=&#34;n&#34;&gt;quietly&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;TRUE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;table class=&#34; lightable-classic table&#34; style=&#34;font-family: Arial; margin-left: auto; margin-right: auto; width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+ &lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;empty-cells: hide;&#34; colspan=&#34;2&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; font-weight: bold; &#34; colspan=&#34;3&#34;&gt;&lt;div style=&#34;border-bottom: 1px solid #111111; margin-bottom: -1px; &#34;&gt;Ana&lt;/div&gt;&lt;/th&gt;
+&lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;th style=&#34;text-align:left;&#34;&gt;   &lt;/th&gt;
+   &lt;th style=&#34;text-align:center;&#34;&gt; strategy &lt;/th&gt;
+   &lt;th style=&#34;text-align:center;&#34;&gt; Bar &lt;/th&gt;
+   &lt;th style=&#34;text-align:center;&#34;&gt; Museu &lt;/th&gt;
+   &lt;th style=&#34;text-align:center;&#34;&gt; Café &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style=&#34;text-align:left;font-weight: bold;&#34;&gt; Pedro &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; Bar &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 6, 4 &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 6, 3 &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 4, 2 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&#34;text-align:left;font-weight: bold;&#34;&gt;  &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; Museu &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 2, 1 &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 5, 5 &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 2, 2 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&#34;text-align:left;font-weight: bold;&#34;&gt;  &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; Café &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 1, 1 &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 1, 3 &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 3, 6 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Na função &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;dom()&lt;/code&gt;&lt;/span&gt; com &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;type = &amp;quot;dominant&amp;quot;&lt;/code&gt;&lt;/span&gt;, são identificadas as estratégias estritamente dominantes para cada jogador no jogo. Por meio dessa configuração é possível identificar as estratégias que são sempre a melhor escolha, independentemente das ações tomadas pelos outros jogadores.&lt;/p&gt;
+&lt;p&gt;Diferentemente do parâmetro &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;quietly&lt;/code&gt;&lt;/span&gt;  encontrado em funções como &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;solve_nfg()&lt;/code&gt;&lt;/span&gt; e outras do pacote Rgamer, é essencial demonstrar que ao configurar esse parâmetro como &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;FALSE&lt;/code&gt;&lt;/span&gt; na função &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;dom()&lt;/code&gt;&lt;/span&gt;, ela passa a exibir uma mensagem que identifica quais estratégias são estritamente dominantes.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;dominant_j3&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dom&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;jogo3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                   &lt;span class=&#34;n&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;dominant&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                   &lt;span class=&#34;n&#34;&gt;quietly&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;FALSE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Pedro&amp;#39;s dominant strategy: Bar
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Pedro&amp;#39;s weakly dominant strategy: Bar
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Ana&amp;#39;s dominant strategy: NA
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Ana&amp;#39;s weakly dominant strategy: NA
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;No primeiro conjunto de resultados, ao analisar as estratégias estritamente dominantes, identificamos que a estratégia &amp;ldquo;Bar&amp;rdquo; é a melhor resposta para Pedro. Nesse contexto, essa estratégia é a escolha que Pedro deve realizar independentemente das escolhas de Ana.&lt;/p&gt;
+&lt;p&gt;Contudo, é importante ressaltar que a existência de estratégias estritamente dominantes em jogos não é uma característica universal, variando conforme as regras e as interações específicas dentro de cada jogo. Desse modo, quando tais estratégias estão presentes, elas desempenham um papel crucial na análise e na formulação de decisões estratégicas.&lt;/p&gt;
+&lt;h3 id=&#34;estratégias-dominadas&#34;&gt;Estratégias Dominadas&lt;/h3&gt;
+&lt;p&gt;A dominância fraca é um dos critérios usados para identificar estratégias não razoáveis ou não ótimas em um jogo. Ela indica a existência de outra estratégia que é, no mínimo, tão boa quanto a estratégia dominada fracamente, mas que pode oferecer um melhor resultado em algumas situações específicas.&lt;/p&gt;
+&lt;p&gt;No mesmo exemplo, faremos uma alteração no parâmetro &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;type&lt;/code&gt;&lt;/span&gt;, em que anteriormente estava definido como &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;&amp;quot;dominant&amp;quot;&lt;/code&gt;&lt;/span&gt;, mas agora será configurado como &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;&amp;quot;dominated&amp;quot;&lt;/code&gt;&lt;/span&gt;. O objetivo dessa modificação é identificar estratégias que são dominadas e fracamente dominadas tanto para Pedro quanto para Ana.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;dominated_j3&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dom&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;jogo3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    &lt;span class=&#34;n&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;dominated&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    &lt;span class=&#34;n&#34;&gt;quietly&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;FALSE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Pedro&amp;#39;s dominated strategy: Museu, Café
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Pedro&amp;#39;s weakly dominated strategy: Museu, Café
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Ana&amp;#39;s dominated strategy: NA
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Ana&amp;#39;s weakly dominated strategy: NA
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Através da análise do segundo conjunto, podemos evidenciar que para o jogador Pedro, as estratégias &amp;ldquo;Museu&amp;rdquo; e &amp;ldquo;Café&amp;rdquo; são dominadas por outra estratégia, pois sempre há uma escolha alternativa, no caso &amp;ldquo;Bar&amp;rdquo;, que leva a um resultado melhor, independentemente da escolha do outro jogador.&lt;/p&gt;
+&lt;p&gt;Na perspectiva de Ana, em ambos os conjuntos de resultados, não foram encontradas estratégias dominadas nem dominantes, o que indica que suas escolhas são consideradas melhores respostas dadas as escolhas de Pedro.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;br_j3&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;solve_nfg&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;jogo3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Pure-strategy NE: [Bar, Bar]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;table class=&#34; lightable-classic table&#34; style=&#34;font-family: Arial; margin-left: auto; margin-right: auto; width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+ &lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;empty-cells: hide;&#34; colspan=&#34;2&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; font-weight: bold; &#34; colspan=&#34;3&#34;&gt;&lt;div style=&#34;border-bottom: 1px solid #111111; margin-bottom: -1px; &#34;&gt;Ana&lt;/div&gt;&lt;/th&gt;
+&lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;th style=&#34;text-align:left;&#34;&gt;   &lt;/th&gt;
+   &lt;th style=&#34;text-align:center;&#34;&gt; strategy &lt;/th&gt;
+   &lt;th style=&#34;text-align:center;&#34;&gt; Bar &lt;/th&gt;
+   &lt;th style=&#34;text-align:center;&#34;&gt; Museu &lt;/th&gt;
+   &lt;th style=&#34;text-align:center;&#34;&gt; Café &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style=&#34;text-align:left;font-weight: bold;&#34;&gt; Pedro &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; Bar &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 6^, 4^ &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 6^, 3 &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 4^, 2 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&#34;text-align:left;font-weight: bold;&#34;&gt;  &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; Museu &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 2, 1 &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 5, 5^ &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 2, 2 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&#34;text-align:left;font-weight: bold;&#34;&gt;  &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; Café &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 1, 1 &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 1, 3 &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 3, 6^ &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Agora, ao verificar as melhores estratégias para o jogador 1 e 2, a mensagem e o destaque do Equilíbrio de Nash podem ser exibidos. Dentro da estrutura da função &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;solve_nfg()&lt;/code&gt;&lt;/span&gt;, ao remover o parâmetro &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;show_table&lt;/code&gt;&lt;/span&gt;, a tabela será exibida por padrão, assim como ocorre com outros parâmetros como &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;quietly&lt;/code&gt;&lt;/span&gt; e &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;mark_br&lt;/code&gt;&lt;/span&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;estratégias-mistas&#34;&gt;Estratégias Mistas&lt;/h3&gt;
+&lt;div id=&#34;botoesExemplo&#34;&gt;
+  &lt;button id=&#34;botao-exemplo1&#34; class=&#34;botao-interativo-exemplo&#34; onclick=&#34;showConteudoExemplo(&#39;exemplo1&#39;)&#34;&gt;Solução por br_plot&lt;/button&gt;
+  &lt;button id=&#34;botao-exemplo2&#34; class=&#34;botao-interativo-exemplo&#34; onclick=&#34;showConteudoExemplo(&#39;exemplo2&#39;)&#34;&gt;Payoff por função&lt;/button&gt;
+  &lt;button id=&#34;botao-exemplo3&#34; class=&#34;botao-interativo-exemplo&#34; onclick=&#34;showConteudoExemplo(&#39;exemplo3&#39;)&#34;&gt;Precisão do br_plot&lt;/button&gt;
+&lt;/div&gt;
+&lt;script&gt;
+function showConteudoExemplo(conteudoId) {
+  var conteudos = document.getElementsByClassName(&#39;conteudoExemplo&#39;);
+  for (var i = 0; i &lt; conteudos.length; i++) {
+    conteudos[i].style.opacity = 0; // Definir a opacidade do conteúdo como 0 (invisível)
+    conteudos[i].style.display = &#39;none&#39;; // Esconder o conteúdo (display: none)
+  }
+  
+  // Exibir o conteúdo desejado com animação suave
+  var conteudoDesejado = document.getElementById(conteudoId);
+  conteudoDesejado.style.display = &#39;block&#39;; // Exibir o conteúdo (display: block)
+  setTimeout(function() {
+    conteudoDesejado.style.opacity = 1; // Definir a opacidade do conteúdo como 1 (visível)
+  }, 50); // Aguardar 50 milissegundos para aplicar a opacidade (ajuste conforme desejado)
+
+  // Remover a classe &#39;selecionadoExemplo&#39; de todos os botões
+  var botoes = document.getElementsByClassName(&#39;botao-interativo-exemplo&#39;);
+  for (var i = 0; i &lt; botoes.length; i++) {
+    botoes[i].classList.remove(&#39;selecionadoExemplo&#39;);
+  }
+
+  // Adicionar a classe &#39;selecionadoExemplo&#39; apenas ao botão clicado
+  var botaoSelecionado = document.getElementById(&#39;botao-&#39; + conteudoId);
+  botaoSelecionado.classList.add(&#39;selecionadoExemplo&#39;);
+}
+&lt;/script&gt;
+&lt;div id=&#34;exemplo1&#34; class=&#34;conteudoExemplo&#34;&gt;
+&lt;p&gt;Imagine um cenário onde o Governo e uma pessoa pobre estão interagindo. O Governo tem duas estratégias possíveis: &amp;ldquo;Ajuda&amp;rdquo; e &amp;ldquo;Não Ajuda&amp;rdquo;, enquanto a pessoa pobre tem duas estratégias: &amp;ldquo;Trabalha&amp;rdquo; e &amp;ldquo;Vadia&amp;rdquo;.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -161,230 +629,18 @@
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-diff&#34; data-lang=&#34;diff&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[dependencies.bevy]
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git = &amp;#34;https://github.com/bevyengine/bevy&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rev = &amp;#34;11f52b8c72fc3a568e8bb4a4cd1f3eb025ac2e13&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gd&#34;&gt;- features = [&amp;#34;dynamic&amp;#34;]
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gd&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gi&#34;&gt;+ features = [&amp;#34;jpeg&amp;#34;, &amp;#34;dynamic&amp;#34;]
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;one-line-code-block&#34;&gt;One line code block&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;A paragraph&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;jogo4&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;normal_form&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;n&#34;&gt;players&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Governo&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Pobre&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;n&#34;&gt;s1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Ajuda&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Não Ajuda&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;n&#34;&gt;s2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Trabalha&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Vadia&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;n&#34;&gt;payoffs1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;-1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;-1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;n&#34;&gt;payoffs2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;list-types&#34;&gt;List Types&lt;/h2&gt;
-&lt;h3 id=&#34;ordered-list&#34;&gt;Ordered List&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;First item&lt;/li&gt;
-&lt;li&gt;Second item&lt;/li&gt;
-&lt;li&gt;Third item&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;unordered-list&#34;&gt;Unordered List&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;List item&lt;/li&gt;
-&lt;li&gt;Another item&lt;/li&gt;
-&lt;li&gt;And another item&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;nested-list&#34;&gt;Nested list&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Fruit
-&lt;ul&gt;
-&lt;li&gt;Apple&lt;/li&gt;
-&lt;li&gt;Orange&lt;/li&gt;
-&lt;li&gt;Banana&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Dairy
-&lt;ul&gt;
-&lt;li&gt;Milk&lt;/li&gt;
-&lt;li&gt;Cheese&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;other-elements--abbr-sub-sup-kbd-mark&#34;&gt;Other Elements — abbr, sub, sup, kbd, mark&lt;/h2&gt;
-&lt;p&gt;&lt;abbr title=&#34;Graphics Interchange Format&#34;&gt;GIF&lt;/abbr&gt; is a bitmap image format.&lt;/p&gt;
-&lt;p&gt;H&lt;sub&gt;2&lt;/sub&gt;O&lt;/p&gt;
-&lt;p&gt;X&lt;sup&gt;n&lt;/sup&gt; + Y&lt;sup&gt;n&lt;/sup&gt; = Z&lt;sup&gt;n&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;Press &lt;kbd&gt;CTRL&lt;/kbd&gt; + &lt;kbd&gt;ALT&lt;/kbd&gt; + &lt;kbd&gt;Delete&lt;/kbd&gt; to end the session.&lt;/p&gt;
-&lt;p&gt;Most &lt;mark&gt;salamanders&lt;/mark&gt; are nocturnal, and hunt for insects, worms, and other small creatures.&lt;/p&gt;
-&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
-&lt;hr&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn:1&#34;&gt;
-&lt;p&gt;The above quote is excerpted from Rob Pike&amp;rsquo;s &lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=PAAkCSZUG1c&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;talk&lt;/a&gt; during Gopherfest, November 18, 2015.&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;</description>
-        </item>
-        <item>
-        <title>Image gallery</title>
-        <link>https://drewmelo.github.io/blogr/p/image-gallery/</link>
-        <pubDate>Sat, 26 Aug 2023 00:00:00 +0000</pubDate>
-        
-        <guid>https://drewmelo.github.io/blogr/p/image-gallery/</guid>
-        <description>&lt;img src="https://drewmelo.github.io/blogr/p/image-gallery/2.jpg" alt="Featured image of post Image gallery" /&gt;&lt;p&gt;Hugo theme Stack supports the creation of interactive image galleries using Markdown. It&amp;rsquo;s powered by &lt;a class=&#34;link&#34; href=&#34;https://photoswipe.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;PhotoSwipe&lt;/a&gt; and its syntax was inspired by &lt;a class=&#34;link&#34; href=&#34;https://typlog.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Typlog&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;To use this feature, the image must be in the same directory as the Markdown file, as it uses Hugo&amp;rsquo;s page bundle feature to read the dimensions of the image. &lt;strong&gt;External images are not supported.&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&#34;syntax&#34;&gt;Syntax&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;![&lt;span class=&#34;nt&#34;&gt;Image 1&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;1.jpg&lt;/span&gt;) ![&lt;span class=&#34;nt&#34;&gt;Image 2&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;2.jpg&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;result&#34;&gt;Result&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://drewmelo.github.io/blogr/blogr/p/image-gallery/1.jpg&#34;
-	width=&#34;2000&#34;
-	height=&#34;1400&#34;
-	srcset=&#34;https://drewmelo.github.io/blogr/blogr/p/image-gallery/1_hudd2e8259c20ed0dcaa856c253552e90f_14625_480x0_resize_q75_box.jpg 480w, https://drewmelo.github.io/blogr/blogr/p/image-gallery/1_hudd2e8259c20ed0dcaa856c253552e90f_14625_1024x0_resize_q75_box.jpg 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;Image 1&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;142&#34;
-		data-flex-basis=&#34;342px&#34;
-	
-&gt; &lt;img src=&#34;https://drewmelo.github.io/blogr/blogr/p/image-gallery/2.jpg&#34;
-	width=&#34;1500&#34;
-	height=&#34;2250&#34;
-	srcset=&#34;https://drewmelo.github.io/blogr/blogr/p/image-gallery/2_hubce42636ecacc1a380b462f3110efcec_37455_480x0_resize_q75_box.jpg 480w, https://drewmelo.github.io/blogr/blogr/p/image-gallery/2_hubce42636ecacc1a380b462f3110efcec_37455_1024x0_resize_q75_box.jpg 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;Image 2&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;66&#34;
-		data-flex-basis=&#34;160px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Photo by &lt;a class=&#34;link&#34; href=&#34;https://unsplash.com/@mymind&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;mymind&lt;/a&gt; and &lt;a class=&#34;link&#34; href=&#34;https://unsplash.com/@lukechesser&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Luke Chesser&lt;/a&gt; on &lt;a class=&#34;link&#34; href=&#34;https://unsplash.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Unsplash&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
-        </item>
-        <item>
-        <title>Shortcodes</title>
-        <link>https://drewmelo.github.io/blogr/p/shortcodes/</link>
-        <pubDate>Fri, 25 Aug 2023 00:00:00 +0000</pubDate>
-        
-        <guid>https://drewmelo.github.io/blogr/p/shortcodes/</guid>
-        <description>&lt;img src="https://drewmelo.github.io/blogr/p/shortcodes/cover.jpg" alt="Featured image of post Shortcodes" /&gt;&lt;p&gt;For more details, check out the &lt;a class=&#34;link&#34; href=&#34;https://stack.jimmycai.com/writing/shortcodes&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;documentation&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;bilibili-video&#34;&gt;Bilibili video&lt;/h2&gt;
-
-
-
-
-
-
-    
-
-
-&lt;div class=&#34;video-wrapper&#34;&gt;
-    &lt;iframe src=&#34;https://player.bilibili.com/player.html?as_wide=1&amp;amp;high_quality=1&amp;amp;page=1&amp;bvid=BV1d4411N7zD&#34;
-            scrolling=&#34;no&#34;
-            frameborder=&#34;no&#34;
-            framespacing=&#34;0&#34;
-            allowfullscreen=&#34;true&#34;
-    &gt;
-    &lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&#34;tencent-video&#34;&gt;Tencent video&lt;/h2&gt;
-
-&lt;div class=&#34;video-wrapper&#34;&gt;
-    &lt;iframe src=&#34;https://v.qq.com/txp/iframe/player.html?vid=g0014r3khdw&amp;auto=0&#34; 
-            scrolling=&#34;no&#34; 
-            frameborder=&#34;no&#34;
-            framespacing=&#34;0&#34; 
-            allowfullscreen=&#34;true&#34;
-    &gt;
-    &lt;/iframe&gt;
-&lt;/div&gt;
-&lt;h2 id=&#34;youtube-video&#34;&gt;YouTube video&lt;/h2&gt;
-&lt;div class=&#34;video-wrapper&#34;&gt;
-    &lt;iframe loading=&#34;lazy&#34; 
-            src=&#34;https://www.youtube.com/embed/0qwALOOvUik&#34; 
-            allowfullscreen 
-            title=&#34;YouTube Video&#34;
-    &gt;
-    &lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&#34;generic-video-file&#34;&gt;Generic video file&lt;/h2&gt;
-&lt;div class=&#34;video-wrapper&#34;&gt;
-    &lt;video
-    controls
-    src=&#34;https://www.w3schools.com/tags/movie.mp4&#34;
-    
-    
-    &gt;
-        &lt;p&gt;
-            Your browser doesn&#39;t support HTML5 video. Here is a
-            &lt;a href=&#34;https://www.w3schools.com/tags/movie.mp4&#34;&gt;link to the video&lt;/a&gt; instead.
-        &lt;/p&gt;
-    &lt;/video&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&#34;gist&#34;&gt;Gist&lt;/h2&gt;
-&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/CaiJimmy/e2751a943de10b2a5b3a8a6c2120cb86.js&#34;&gt;&lt;/script&gt;
-
-&lt;h2 id=&#34;gitlab&#34;&gt;GitLab&lt;/h2&gt;
-&lt;script
-    type=&#34;application/javascript&#34;
-    src=&#34;https://gitlab.com/-/snippets/2589724.js&#34;
-&gt;&lt;/script&gt;
-&lt;h2 id=&#34;quote&#34;&gt;Quote&lt;/h2&gt;
-&lt;blockquote&gt;
-    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;&lt;span class=&#34;cite&#34;&gt;&lt;span&gt;― &lt;/span&gt;&lt;span&gt;A famous person, &lt;/span&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Book&#34;&gt;&lt;cite&gt;The book they wrote&lt;/cite&gt;&lt;/a&gt;&lt;/span&gt;&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Photo by &lt;a class=&#34;link&#34; href=&#34;https://unsplash.com/@codioful&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Codioful&lt;/a&gt; on &lt;a class=&#34;link&#34; href=&#34;https://unsplash.com/photos/WDSN62Qdxuk&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Unsplash&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
-        </item>
-        <item>
-        <title>Math Typesetting</title>
-        <link>https://drewmelo.github.io/blogr/p/math-typesetting/</link>
-        <pubDate>Thu, 24 Aug 2023 00:00:00 +0000</pubDate>
-        
-        <guid>https://drewmelo.github.io/blogr/p/math-typesetting/</guid>
-        <description>&lt;p&gt;Stack has built-in support for math typesetting using &lt;a class=&#34;link&#34; href=&#34;https://katex.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;KaTeX&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;It&amp;rsquo;s not enabled by default side-wide,&lt;/strong&gt; but you can enable it for individual posts by adding &lt;code&gt;math: true&lt;/code&gt; to the front matter. Or you can enable it side-wide by adding &lt;code&gt;math = true&lt;/code&gt; to the &lt;code&gt;params.article&lt;/code&gt; section in &lt;code&gt;config.toml&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;inline-math&#34;&gt;Inline math&lt;/h2&gt;
-&lt;p&gt;This is an inline mathematical expression: $\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…$&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…$
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;block-math&#34;&gt;Block math&lt;/h2&gt;
-&lt;p&gt;$$
-\varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
-$$&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;Nesse jogo, o Governo e o pobre podem optar por estratégias puras, ou seja, escolher uma ação específica com certeza, ou podem utilizar estratégias mistas, ou seja, fazer escolhas ponderadas com base em probabilidades. Através do parâmetro &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;mixed = TRUE&lt;/code&gt;&lt;/span&gt;, podemos encontrar a solução para esse tipo de jogo para as estratégias mistas.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -392,77 +648,275 @@ $$&lt;/p&gt;
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$$
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } 
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$$
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;s_jogo4&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;solve_nfg&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;jogo4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                     &lt;span class=&#34;n&#34;&gt;mixed&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;TRUE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                     &lt;span class=&#34;n&#34;&gt;show_table&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;FALSE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;$$
-f(x) = \int_{-\infty}^\infty\hat f(\xi),e^{2 \pi i \xi x},d\xi
-$$&lt;/p&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Pure strategy NE does not exist.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Mixed-strategy NE: [(1/2, 1/2), (1/5, 4/5)]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;The obtained mixed-strategy NE might be only a part of the solutions.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Please examine br_plot (best response plot) carefully.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Com a função &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;br_plot&lt;/code&gt;&lt;/span&gt; (&lt;em&gt;best response plot&lt;/em&gt;) ou gráfico de melhores respostas é possível se chegar a maximização do payoff esperado.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;s_jogo4&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;br_plot&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;img src=&#34;https://drewmelo.github.io/blogr/p/jogos-simultaneos/index_files/figure-html/mixedgraphgame-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exemplo2&#34; class=&#34;conteudoExemplo&#34;&gt;
+&lt;p&gt;A função de payoff em estratégias mistas é usada para representar o resultado esperado que um jogador obtém ao escolher uma determinada ação com probabilidade ou com incerteza. No exemplo a seguir estão as funções de payoff para as estratégias dos jogadores A e B.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Jogador: &lt;span style=&#34;font-size: 80%;&#34;&gt;$\{A, B\}$&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Estratégia: &lt;span style=&#34;font-size: 80%;&#34;&gt;$\{x \in [0, 1], y \in [0, 1] \}$&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Payoff: &lt;span style=&#34;font-size: 80%;&#34;&gt;$\{f_x(x, y) = -3x^2 + (1 - y) \times 2x, f_y(x, y) = -2y^2 + (1 - x) \times 3y\}$&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Desse modo, é possível definir um jogo fornecendo as funções de payoff como vetores de caracteres usando a função &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;normal_form()&lt;/code&gt;&lt;/span&gt;. Nos parâmetros &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;par1_lim&lt;/code&gt;&lt;/span&gt; e &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;par2_lim&lt;/code&gt;&lt;/span&gt; estão configurados os valores entre 0 e 1, o que significa que as estratégias ou escolhas dos jogadores &amp;ldquo;A&amp;rdquo; e &amp;ldquo;B&amp;rdquo; estão limitadas a esse intervalo. Esses argumentos definem os limites para os eixos, no caso, &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;&amp;quot;x&amp;quot;&lt;/code&gt;&lt;/span&gt; e &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;&amp;quot;y&amp;quot;&lt;/code&gt;&lt;/span&gt; contidas em &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;pars&lt;/code&gt;&lt;/span&gt;.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$$
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$$
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;jogo5&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;normal_form&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;n&#34;&gt;players&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;A&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;B&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;n&#34;&gt;payoffs1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;-4*x^2 + (1-y) * 2*x&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;n&#34;&gt;payoffs2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;-2*y^2 + (1-x) * 3*y&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;n&#34;&gt;par1_lim&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;n&#34;&gt;par2_lim&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;n&#34;&gt;pars&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;x&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;y&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description>
+&lt;/div&gt;&lt;p&gt;Com a construção da estrutura do jogo na forma normal, temos a solução dele a apartir da função &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;solve_nfg()&lt;/code&gt;&lt;/span&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;s_jogo5&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;solve_nfg&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;jogo5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;approximated NE: (0.1, 0.7)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;The obtained NE might be only a part of the solutions.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Please examine br_plot (best response plot) carefully.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;img src=&#34;https://drewmelo.github.io/blogr/p/jogos-simultaneos/index_files/figure-html/game4b-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exemplo3&#34; class=&#34;conteudoExemplo&#34;&gt;
+&lt;p&gt;Nesse método alternativo, é possível definir os resultados de um jogo na forma normal, utilizando &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;function&lt;/code&gt;&lt;/span&gt; da linguagem R&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Jogador: &lt;span style=&#34;font-size: 80%;&#34;&gt;$\{A, B\}$&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Estratégia: &lt;span style=&#34;font-size: 80%;&#34;&gt;$\{x \in [0, 1], y \in [0, 1] \}$&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Payoff: &lt;span style=&#34;font-size: 80%;&#34;&gt;$\{f_x(x, y) = -nx^a + (b - y) \times px, f_y(x, y) = -my^s + (t - x) \times qy\}$&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style=&#34;margin-top: 0.5cm;&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Função do jogador 1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;f_x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x^a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Função do jogador 2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;f_y&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;q&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y^s&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;t&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;q&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Após a definição das funções para os jogadores 1 e 2, podemos incorporá-las dentro da &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;normal_form()&lt;/code&gt;&lt;/span&gt; nos parâmetros &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;payoffs1&lt;/code&gt;&lt;/span&gt; e &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;payoffs2&lt;/code&gt;&lt;/span&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;jogo6&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;normal_form&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;n&#34;&gt;players&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;A&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;B&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;n&#34;&gt;payoffs1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f_x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;n&#34;&gt;payoffs2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f_y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;n&#34;&gt;par1_lim&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;n&#34;&gt;par2_lim&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;n&#34;&gt;pars&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;x&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;y&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Para obter uma solução aproximada numericamente usando o &lt;code&gt;solve_nfg()&lt;/code&gt;, é necessário definir os valores dos parâmetros da função que devem ser tratados como constantes, utilizando os argumentos &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;cons1&lt;/code&gt;&lt;/span&gt; e &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;cons2&lt;/code&gt;&lt;/span&gt;, ambos aceitando uma lista de nomes. Além disso, é possível evitar que o gráfico das melhores respostas seja exibido, definindo &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;plot = FALSE&lt;/code&gt;&lt;/span&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;spf_jogo6&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;solve_nfg&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;              &lt;span class=&#34;n&#34;&gt;game&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;jogo6&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;              &lt;span class=&#34;n&#34;&gt;cons1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;              &lt;span class=&#34;n&#34;&gt;cons2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;t&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;q&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;              &lt;span class=&#34;n&#34;&gt;plot&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;FALSE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## approximated NE: (0.1, 0.7)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## The obtained NE might be only a part of the solutions.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Please examine br_plot (best response plot) carefully.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;É possível ajustar a precisão da aproximação através do parâmetro &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;precision&lt;/code&gt;&lt;/span&gt; (por padrão, &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;precision = 1&lt;/code&gt;&lt;/span&gt;). Ao aumentar o valor, o cálculo das soluções será feito com maior detalhamento, resultando em uma aproximação mais precisa dos resultados. No entanto, é importante notar que quanto maior o valor desse parâmetro, mais tempo o processo de cálculo pode levar, especialmente para jogos mais complexos com muitas estratégias e jogadores. Portanto, é recomendado ajustar o valor da precisão de acordo com a complexidade do jogo e a necessidade de precisão dos resultados.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;s_jogo6&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;solve_nfg&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;game&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;jogo6&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;cons1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;              &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;              &lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;cons2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;              &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;t&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;q&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;              &lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;precision&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;approximated NE: (0.077, 0.692)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;The obtained NE might be only a part of the solutions.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Please examine br_plot (best response plot) carefully.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Para extrair o gráfico das melhores respostas com o ponto de Equilíbrio de Nash (&lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;NE&lt;/code&gt;&lt;/span&gt;) marcado, é possível utilizar a função &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;br_plot_NE&lt;/code&gt;&lt;/span&gt;. Esse gráfico mostra como as estratégias dos jogadores podem mudar e se adaptar para alcançar o &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;NE&lt;/code&gt;&lt;/span&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;s_jogo6&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;br_plot_NE&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;img src=&#34;https://drewmelo.github.io/blogr/p/jogos-simultaneos/index_files/figure-html/game6d-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;
+&lt;/div&gt;
+&lt;p&gt;Com estratégias mistas, os jogadores podem tomar decisões aleatórias com diferentes probabilidades para cada ação. Isso torna o resultado do jogo mais incerto, pois o desfecho dependerá das escolhas aleatórias feitas por cada jogador.&lt;/p&gt;
+&lt;h2 id=&#34;referências&#34;&gt;Referências&lt;/h2&gt;
+&lt;p&gt;HAZRA, Tanmoy; ANJARIA, Kushal. Applications of game theory in deep learning: a survey. &lt;strong&gt;Multimedia Tools and Applications&lt;/strong&gt;, v. 81, n. 6, p. 8963-8994, 2022. DOI: &lt;a href=&#34;https://doi.org/10.1007/s11042-022-12153-2&#34; target=&#34;_blank&#34; style=&#34;color:#016dea; text-decoration: none;&#34; onmouseover=&#34;this.style.color=&#39;#014ba0&#39;;&#34; onmouseout=&#34;this.style.color=&#39;#016dea&#39;;&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://doi.org/10.1007/s11042-022-12153-2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://doi.org/10.1007/s11042-022-12153-2&lt;/a&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;MANKIW, N. Gregory et al. &lt;strong&gt;Introdução à economia&lt;/strong&gt;. 2005.&lt;/p&gt;
+&lt;p&gt;YANAI, Yusei; KAMIJO, Yoshio. &lt;strong&gt;Game Theory With R&lt;/strong&gt;. Shin-Ogawacho, Shinjuku-ku, Tóquio, JP: Asakura Publishing Co,. Ltd., 2023. 244 p. ISBN 978-4-254-27024-2 C3050.&lt;/p&gt;</description>
         </item>
         <item>
-        <title>Hello R Markdown</title>
-        <link>https://drewmelo.github.io/blogr/p/hello-r-markdown/</link>
-        <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
+        <title>Sobre o blog</title>
+        <link>https://drewmelo.github.io/blogr/p/sobre-o-blog/</link>
+        <pubDate>Fri, 15 Sep 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://drewmelo.github.io/blogr/p/hello-r-markdown/</guid>
-        <description>
-
-
-&lt;div id=&#34;r-markdown&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;R Markdown&lt;/h1&gt;
-&lt;p&gt;This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;a href=&#34;http://rmarkdown.rstudio.com&#34; class=&#34;uri&#34;&gt;http://rmarkdown.rstudio.com&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;You can embed an R code chunk like this:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary(cars)
-##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00
-fit &amp;lt;- lm(dist ~ speed, data = cars)
-fit
-## 
-## Call:
-## lm(formula = dist ~ speed, data = cars)
-## 
-## Coefficients:
-## (Intercept)        speed  
-##     -17.579        3.932&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;including-plots&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Including Plots&lt;/h1&gt;
-&lt;p&gt;You can also embed plots. See Figure &lt;a href=&#34;#fig:pie&#34;&gt;1&lt;/a&gt; for example:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mar = c(0, 1, 0, 1))
-pie(
-  c(280, 60, 20),
-  c(&amp;#39;Sky&amp;#39;, &amp;#39;Sunny side of pyramid&amp;#39;, &amp;#39;Shady side of pyramid&amp;#39;),
-  col = c(&amp;#39;#0292D8&amp;#39;, &amp;#39;#F7EA39&amp;#39;, &amp;#39;#C4B632&amp;#39;),
-  init.angle = -50, border = NA
-)&lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:pie&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;https://drewmelo.github.io/blogr/p/hello-r-markdown/index.en_files/figure-html/pie-1.png&#34; alt=&#34;A fancy pie chart.&#34; width=&#34;672&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;
-Figure 1: A fancy pie chart.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
+        <guid>https://drewmelo.github.io/blogr/p/sobre-o-blog/</guid>
+        <description>&lt;img src="https://drewmelo.github.io/blogr/p/sobre-o-blog/sobre-o-blog.jpg" alt="Featured image of post Sobre o blog" /&gt;&lt;p&gt;Esse artigo mostra as novidades que o blog oferece e a contribuição para a comunidade programadora, especialmente para a linguagem R e afins voltados para o universo econômico.&lt;/p&gt;</description>
         </item>
         
     </channel>

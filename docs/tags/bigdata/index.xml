@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>bigdata on André Melo</title>
+        <link>https://drewmelo.github.io/blogr/tags/bigdata/</link>
+        <description>Recent content in bigdata on André Melo</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Thu, 21 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://drewmelo.github.io/blogr/tags/bigdata/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Ciência de Dados na Economia</title>
+        <link>https://drewmelo.github.io/blogr/p/ciencia-de-dados-na-economia/</link>
+        <pubDate>Thu, 21 Sep 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://drewmelo.github.io/blogr/p/ciencia-de-dados-na-economia/</guid>
+        <description>&lt;img src="https://drewmelo.github.io/blogr/p/ciencia-de-dados-na-economia/ciencia-de-dados-economia.jpg" alt="Featured image of post Ciência de Dados na Economia" /&gt;&lt;p&gt;Ao longo das últimas décadas, testemunhamos avanços tecnológicos que alteraram a forma como vivemos, seja no trabalho ou no modo como nos comunicamos. No cerne dessa revolução está a internet, um sistema global de informações que conecta pessoas, empresas e instituições em diferentes partes do mundo. Seu surgimento, juntamente com o crescimento exponencial da quantidade de dados gerados e armazenados em servidores levaram a uma necessidade sem precedentes para aplicar esses conhecimentos em uma escala maior. Dessa forma, com o avanço dessa tecnologia ascendeu o desenvolvimento e popularização da &lt;em&gt;Data Science&lt;/em&gt;, ou simplesmente Ciência de Dados.&lt;/p&gt;
+&lt;p&gt;A Ciência de Dados é um campo multidisciplinar que abrange a análise de dados estruturados, que são fixos e organizados, bem como de dados não estruturados, que são flexíveis e dinâmicos, com técnicas e algoritmos para extração e exploração de informações a partir de conjuntos de bases complexas. Nesse quesito, um especialista buscará
+envolver a coleta, processamento, análise e interpretação desses dados com o objetivo de obter &lt;em&gt;insights&lt;/em&gt; e conhecimentos relevantes para a área econômica.&lt;/p&gt;
+&lt;p&gt;Algumas técnicas são essenciais para análise ou extração de dados, como &lt;em&gt;Web Scraping&lt;/em&gt;, que consiste na utilização da automatização para obter pontos imensuráveis de dados estruturados da internet, em contraposição ao processo do Text Mining ou &lt;em&gt;Text Analytics&lt;/em&gt;, na extração de dados não estruturados de fontes online. Essas duas técnicas combinadas com &lt;em&gt;Machine Learning&lt;/em&gt; ou Aprendizado de Máquina, podem fazer o diferencial na carreira de um economista no que diz respeito à análise de mercado e previsões econômicas.&lt;/p&gt;
+&lt;p&gt;É durante a fase de análise exploratória de dados que o modelo de previsão de preços de ativos e avaliação de risco financeiro é construído. Além disso, técnicas como &lt;em&gt;Text Analytics&lt;/em&gt; e &lt;em&gt;Machine Learning&lt;/em&gt;, têm uma aplicação valiosa na análise de sentimentos, principalmente quando estamos lidando com dados não estruturados. Dessa forma, é possível detectar as opiniões positivas, negativas ou neutras dos consumidores em relação a um produto ou serviço. Essa capacidade de compreensão do feedback dos clientes em relação aos produtos é de extrema utilidade para identificar tendências e problemas relacionados aos produtos das empresas.&lt;/p&gt;
+&lt;p&gt;a era do &lt;em&gt;“Big Data”&lt;/em&gt;, estamos lidando com um volume excessivo de dados econômicos, como indicadores macroeconômicos, séries temporais e informações de mercado. Esse cenário apresenta desafios significativos em relação ao armazenamento, processamento e privacidade dos dados. No entanto, também oferece aos profissionais a oportunidade de observar padrões complexos no comportamento econômico, o que permite análises abrangentes, previsões mais precisas e o desenvolvimento de estratégias eficientes.&lt;/p&gt;
+&lt;p&gt;Os avanços tecnológicos proporcionaram aos cientistas de dados ferramentas inteligentes e poderosas para explorar e compreender as bases de dados. Entretanto, é fundamental destacar o papel crucial do conhecimento e da experiência do economista nesse processo. Ao combinar o conhecimento teórico com as técnicas de Ciência de Dados, o profissional em questão é capaz de interpretar as relações de causa e efeito, aplicando seu conhecimento econômico para extrair &lt;em&gt;insights&lt;/em&gt; importantes. Com isso, adquirindo uma posição estratégica em um mundo cada vez mais orientado por dados, impulsionando o progresso econômico e embasando a tomada de decisões fundamentadas.&lt;/p&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

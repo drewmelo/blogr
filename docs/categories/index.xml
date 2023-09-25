@@ -6,36 +6,36 @@
         <description>Recent content in Categories on André Melo</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 07 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://drewmelo.github.io/blogr/categories/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>syntax</title>
-        <link>https://drewmelo.github.io/blogr/categories/syntax/</link>
-        <pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate>
+        <lastBuildDate>Thu, 21 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://drewmelo.github.io/blogr/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Data Science</title>
+        <link>https://drewmelo.github.io/blogr/categorias/data-science/</link>
+        <pubDate>Thu, 21 Sep 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://drewmelo.github.io/blogr/categories/syntax/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>themes</title>
-        <link>https://drewmelo.github.io/blogr/categories/themes/</link>
-        <pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate>
-        
-        <guid>https://drewmelo.github.io/blogr/categories/themes/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Example Category</title>
-        <link>https://drewmelo.github.io/blogr/categories/example-category/</link>
-        <pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate>
-        
-        <guid>https://drewmelo.github.io/blogr/categories/example-category/</guid>
+        <guid>https://drewmelo.github.io/blogr/categorias/data-science/</guid>
         <description></description>
         </item>
         <item>
         <title>R</title>
-        <link>https://drewmelo.github.io/blogr/categories/r/</link>
-        <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
+        <link>https://drewmelo.github.io/blogr/categorias/r/</link>
+        <pubDate>Sat, 16 Sep 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://drewmelo.github.io/blogr/categories/r/</guid>
+        <guid>https://drewmelo.github.io/blogr/categorias/r/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Tutorial</title>
+        <link>https://drewmelo.github.io/blogr/categorias/tutorial/</link>
+        <pubDate>Sat, 16 Sep 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://drewmelo.github.io/blogr/categorias/tutorial/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Categoria</title>
+        <link>https://drewmelo.github.io/blogr/categorias/categoria/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://drewmelo.github.io/blogr/categorias/categoria/</guid>
         <description></description>
         </item>
         

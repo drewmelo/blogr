@@ -8,6 +8,6 @@ menu:
 outputs:
 - html
 - json
-slug: search
-title: Search
+slug: procurar
+title: Procurar
 ---

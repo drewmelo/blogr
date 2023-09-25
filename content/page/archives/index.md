@@ -6,6 +6,6 @@ menu:
     params:
       icon: archives
     weight: 2
-slug: archives
-title: Archives
+slug: arquivos
+title: Arquivos
 ---

@@ -8,9 +8,9 @@ links:
 menu:
   main:
     params:
-      icon: link
+      icon: user
     weight: 4
-title: Links
+title: Sobre
 ---
 
 To use this feature, add `links` section to frontmatter.
