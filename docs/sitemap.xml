@@ -3,7 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://drewmelo.github.io/blogr/</loc>
-    <lastmod>2023-09-22T00:00:00+00:00</lastmod>
+    <lastmod>2023-09-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drewmelo.github.io/blogr/categories/</loc>
+    <lastmod>2023-09-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drewmelo.github.io/blogr/tags/economia/</loc>
+    <lastmod>2023-09-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drewmelo.github.io/blogr/post/</loc>
+    <lastmod>2023-09-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drewmelo.github.io/blogr/categorias/r/</loc>
+    <lastmod>2023-09-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drewmelo.github.io/blogr/tags/</loc>
+    <lastmod>2023-09-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drewmelo.github.io/blogr/p/jogos-sequenciais-e-repetidos/</loc>
+    <lastmod>2023-09-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drewmelo.github.io/blogr/tags/teoriadosjogos/</loc>
+    <lastmod>2023-09-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drewmelo.github.io/blogr/categorias/tutorial/</loc>
+    <lastmod>2023-09-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://drewmelo.github.io/blogr/p/analise-do-sinasc-granja-ce/</loc>
     <lastmod>2023-09-22T00:00:00+00:00</lastmod>
@@ -11,16 +35,7 @@
     <loc>https://drewmelo.github.io/blogr/tags/datascience/</loc>
     <lastmod>2023-09-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://drewmelo.github.io/blogr/post/</loc>
-    <lastmod>2023-09-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://drewmelo.github.io/blogr/tags/</loc>
-    <lastmod>2023-09-22T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://drewmelo.github.io/blogr/tags/bigdata/</loc>
-    <lastmod>2023-09-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://drewmelo.github.io/blogr/categories/</loc>
     <lastmod>2023-09-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://drewmelo.github.io/blogr/p/ciencia-de-dados-na-economia/</loc>
@@ -29,19 +44,7 @@
     <loc>https://drewmelo.github.io/blogr/categorias/data-science/</loc>
     <lastmod>2023-09-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://drewmelo.github.io/blogr/tags/economia/</loc>
-    <lastmod>2023-09-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://drewmelo.github.io/blogr/categorias/r/</loc>
-    <lastmod>2023-09-16T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://drewmelo.github.io/blogr/p/jogos-simultaneos/</loc>
-    <lastmod>2023-09-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://drewmelo.github.io/blogr/tags/teoriadosjogos/</loc>
-    <lastmod>2023-09-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://drewmelo.github.io/blogr/categorias/tutorial/</loc>
     <lastmod>2023-09-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://drewmelo.github.io/blogr/p/sobre-o-blog/</loc>
