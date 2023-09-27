@@ -1,8 +1,8 @@
 ---
 comments: false
 links:
-- description: GitHub is the world's largest software development platform.
-  image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
+- description: Meu usuário - drewmelo
+  image: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
   title: GitHub
   website: https://github.com
 menu:
@@ -13,20 +13,10 @@ menu:
 title: Sobre
 ---
 
-To use this feature, add `links` section to frontmatter.
+# Minha trajetoria
 
-This page's frontmatter:
+Sou graduando em Ciências Econômicas com interesse e experiência na área de edição de vídeo e imagem, além de ter conhecimentos em programação utilizando os softwares Latex e Rstudio, com foco em Data Science. Possuo  conhecimento intermediário em inglês.
 
-```yaml
-links:
-  - title: GitHub
-    description: GitHub is the world's largest software development platform.
-    website: https://github.com
-    image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
-  - title: TypeScript
-    description: TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
-    website: https://www.typescriptlang.org
-    image: ts-logo-128.jpg
-```
+<img src="{{< blogdown/postref >}}index_files/figure-html/avatar.png" width="472" style="display: block; margin: auto;" />
 
-`image` field accepts both local and external images.
+Abaixo se encontra os links para você acompanhar meus projetos:

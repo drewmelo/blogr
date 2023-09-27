@@ -9,7 +9,7 @@ tags:
  - economia
  - bigdata
 description: Esse texto aborda a cerca do impacto da data science em previsão das tendências econômicas e tomada de decisões estratégicas em um cenário de “Big Data”.
-image: ciencia-de-dados-economia.jpg
+image: data-science-economia.jpg
 math: ~
 license: ~
 hidden: no

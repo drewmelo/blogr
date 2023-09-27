@@ -345,7 +345,7 @@
 
 
                 <time class="article-time--reading">
-                    20 minutos de leitura
+                    19 minutos de leitura
                 </time>
             </div>
         
@@ -364,21 +364,11 @@
 <h2 id="introdução">Introdução</h2>
 <h3 id="pacotes">Pacotes</h3>
 <p>Para realização dos passos seguintes, será necessário a instalação e ativação do pacote:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># install.packages(&#34;devtools&#34;)</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># install.packages(&#34;devtools&#34;)</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># devtools::install_github(&#34;yukiyanai/rgamer&#34;)</span>
 </span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">rgamer</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">utf8</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="jogos-sequenciais">Jogos Sequenciais</h2>
+</span></span></code></pre></div><h2 id="jogos-sequenciais">Jogos Sequenciais</h2>
 <p>Jogos sequenciais são modelos que representam a tomada de decisão em sequência, levando em conta as escolhas dos jogadores e as informações disponíveis. A análise desses jogos envolve a busca por estratégias ótimas e a previsão dos desdobramentos com base nessas estratégias. Na aplicação de jogos sequenciais no R, há funções que auxiliam na construção gráfica da forma extensiva e sequencial do jogo.</p>
 <div id="botoesSequencial">
   <button id="botao-sequencial1" class="botao-interativo-sequencial" onclick="showConteudoSequencial('sequencial1')">Forma Extensiva</button>
@@ -622,20 +612,7 @@ function showConteudoSequencial(conteudoId) {
 <div id="sequencial1" class="conteudoSequencial">
 <p>Na representação extensiva, podemos utilizar o exemplo mencionado anteriormente da guerra de preços entre dois postos de gasolina. Nessa estrutura de jogo, ao contrário da forma normal, os jogadores tomam decisões em uma ordem específica. Começando com o posto &ldquo;OilFlex&rdquo;, que é o jogador inicial e tem um nó na árvore de decisão, e &ldquo;EconoGas&rdquo;, que é repetido duas vezes porque possui dois nós, um para cada situação em que pode reagir às ações tomadas pelo outro posto de gasolina. Essa diferenciação ocorre porque o jogador inicial, neste caso, começa a árvore de decisão, enquanto o segundo jogador reage a essa ação inicial. O mesmo princípio se aplica às estratégias no argumento <span class="highlighted-text"><code>actions</code></span>, que consiste nas estratégias <span class="highlighted-text"><code>&quot;Manter&quot;</code></span>&quot; e <span class="highlighted-text"><code>&quot;Reduzir&quot;</code></span> para o jogador 1 e 2.</p>
 <p>Ao definir <span class="highlighted-text"><code>rep(NA, 4)</code></span> dentro do argumento <span class="highlighted-text"><code>players</code></span>, estamos indicando que os nós terminais se repetirão quatro vezes, refletindo as possíveis combinações de ações ao longo da árvore de decisão. A estrutura de <span class="highlighted-text"><code>payoffs</code></span> é feita em uma lista com o nome dos jogadores, seguida pela especificação de seus ganhos para cada combinação de ações. Essa estrutura, diferentemente da forma normal, é necessária porque a representação extensiva é mais detalhada e explícita, mostrando a árvore de decisão completa do jogo, passo a passo, com informações sobre as ações tomadas em cada nó da árvore. Dessa forma, os payoffs são especificados separadamente para cada jogador em cada nó, permitindo uma representação detalhada das recompensas em cada cenário do jogo.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">jogo7</span> <span class="o">&lt;-</span> <span class="nf">extensive_form</span><span class="p">(</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">jogo7</span> <span class="o">&lt;-</span> <span class="nf">extensive_form</span><span class="p">(</span>
 </span></span><span class="line"><span class="cl">          <span class="n">players</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="s">&#34;OilFlex&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">                         <span class="nf">c</span><span class="p">(</span><span class="s">&#34;EconoGas&#34;</span><span class="p">,</span> <span class="s">&#34;EconoGas&#34;</span><span class="p">),</span>
 </span></span><span class="line"><span class="cl">                         <span class="nf">rep</span><span class="p">(</span><span class="kc">NA</span><span class="p">,</span> <span class="m">4</span><span class="p">)),</span>
@@ -644,46 +621,23 @@ function showConteudoSequencial(conteudoId) {
 </span></span><span class="line"><span class="cl">          <span class="n">payoffs</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="n">OilFlex</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">50</span><span class="p">,</span> <span class="m">30</span><span class="p">,</span> <span class="m">60</span><span class="p">,</span> <span class="m">40</span><span class="p">),</span>
 </span></span><span class="line"><span class="cl">                         <span class="n">EconoGas</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">50</span><span class="p">,</span> <span class="m">60</span><span class="p">,</span> <span class="m">30</span><span class="p">,</span> <span class="m">40</span><span class="p">)),</span>
 </span></span><span class="line"><span class="cl">          <span class="n">show_node_id</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><br>
+</span></span></code></pre></div><br>
 <img src="https://drewmelo.github.io/blogr/p/jogos-sequenciais-e-repetidos/index_files/figure-html/game7b-1.png" width="672" style="display: block; margin: auto;" />
 <p>Quando <span class="highlighted-text"><code>show_node_id</code></span> é definido como <span class="highlighted-text"><code>FALSE</code></span> (sendo <span class="highlighted-text"><code>TRUE</code></span> o valor padrão), a árvore de decisões é exibida de maneira simplificada, sem a numeração de cada nó na árvore.</p>
 </div>
 <div id="sequencial2" class="conteudoSequencial">
 <p>Nesse outro método, iniciamos a estruturação do exemplo utilizando a função <span class="highlighted-text"><code>seq_form()</code></span>, o que nos permite especificar as estratégias dos jogadores e os payoffs associados a cada combinação de estratégias.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">sq_jogo8</span> <span class="o">&lt;-</span> <span class="nf">seq_form</span><span class="p">(</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">sq_jogo8</span> <span class="o">&lt;-</span> <span class="nf">seq_form</span><span class="p">(</span>
 </span></span><span class="line"><span class="cl">              <span class="n">players</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;OilFlex&#34;</span><span class="p">,</span> <span class="s">&#34;EconoGas&#34;</span><span class="p">),</span>
 </span></span><span class="line"><span class="cl">              <span class="n">s1</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;Manter&#34;</span><span class="p">,</span> <span class="s">&#34;Reduzir&#34;</span><span class="p">),</span> 
 </span></span><span class="line"><span class="cl">              <span class="n">s2</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;Manter&#34;</span><span class="p">,</span> <span class="s">&#34;Reduzir&#34;</span><span class="p">),</span> 
 </span></span><span class="line"><span class="cl">              <span class="n">payoffs1</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">50</span><span class="p">,</span> <span class="m">60</span><span class="p">,</span> <span class="m">30</span><span class="p">,</span> <span class="m">40</span><span class="p">),</span>
 </span></span><span class="line"><span class="cl">              <span class="n">payoffs2</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">50</span><span class="p">,</span> <span class="m">30</span><span class="p">,</span> <span class="m">60</span><span class="p">,</span> <span class="m">40</span><span class="p">))</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>A partir disso, usamos a função <span class="highlighted-text"><code>seq_extensive()</code></span> para transformar um jogo na forma sequencial, definido com <span class="highlighted-text"><code>seq_form()</code></span>, em um jogo na forma extensiva.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">jogo8</span> <span class="o">&lt;-</span> <span class="nf">seq_extensive</span><span class="p">(</span><span class="n">sq_jogo8</span><span class="p">,</span> 
+</span></span></code></pre></div><p>A partir disso, usamos a função <span class="highlighted-text"><code>seq_extensive()</code></span> para transformar um jogo na forma sequencial, definido com <span class="highlighted-text"><code>seq_form()</code></span>, em um jogo na forma extensiva.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">jogo8</span> <span class="o">&lt;-</span> <span class="nf">seq_extensive</span><span class="p">(</span><span class="n">sq_jogo8</span><span class="p">,</span> 
 </span></span><span class="line"><span class="cl">                       <span class="n">direction</span> <span class="o">=</span> <span class="s">&#34;right&#34;</span><span class="p">,</span> 
 </span></span><span class="line"><span class="cl">                       <span class="n">color_palette</span> <span class="o">=</span> <span class="s">&#34;Dark2&#34;</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><br>
+</span></span></code></pre></div><br>
 <img src="https://drewmelo.github.io/blogr/p/jogos-sequenciais-e-repetidos/index_files/figure-html/game8b-1.png" width="672" style="display: block; margin: auto;" />
 <p>Ao especificarmos o parâmetro <span class="highlighted-text"><code>direction</code></span> como <span class="highlighted-text"><code>&quot;right&quot;</code></span>, a árvore extensiva é direcionada para a direita, e as cores são aplicadas de acordo com a paleta de cores especificada em <span class="highlighted-text"><code>color_palette</code></span>.</p>
 </div>
@@ -720,116 +674,36 @@ function showConteudoPath(conteudoId) {
 </script>
 <div id="path1" class="conteudoPath">
 <p>Com a construção da estrutura da forma extensiva, podemos utilizar a função <span class="highlighted-text"><code>draw_path</code></span> para induzir os caminhos específicos em um jogo representado em forma de árvore, definido pela função <span class="highlighted-text"><code>extensive_form()</code></span>.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">draw_path</span><span class="p">(</span><span class="n">jogo7</span><span class="p">,</span> <span class="n">actions</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="s">&#34;Manter&#34;</span><span class="p">,</span> <span class="s">&#34;Manter&#34;</span><span class="p">))</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">The game reaches at n4. 
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">draw_path</span><span class="p">(</span><span class="n">jogo7</span><span class="p">,</span> <span class="n">actions</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="s">&#34;Manter&#34;</span><span class="p">,</span> <span class="s">&#34;Manter&#34;</span><span class="p">))</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">The game reaches at n4. 
 </span></span><span class="line"><span class="cl">Payoffs:
-</span></span></code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"> OilFlex EconoGas 
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"> OilFlex EconoGas 
 </span></span><span class="line"><span class="cl">      50       50 
-</span></span></code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">The game reaches at n4. 
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">The game reaches at n4. 
 </span></span><span class="line"><span class="cl">Payoffs:
-</span></span></code></pre></td></tr></table>
-</div>
-</div><br>
+</span></span></code></pre></div><br>
 <img src="https://drewmelo.github.io/blogr/p/jogos-sequenciais-e-repetidos/index_files/figure-html/game8cc-1.png" width="672" style="display: block; margin: auto;" />
 <p>No R, é possível restringir as ações dos jogadores através da eliminação de certas sequências de jogadas. Essa restrição pode ser feita utilizando o parâmetro <span class="highlighted-text"><code>actions</code></span> da função <span class="highlighted-text"><code>restrict_action()</code></span>, que recebe uma lista de vetores. Ao utilizar essa função, é possível controlar quais jogadas são permitidas em cada estágio do jogo sequencial.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">restrict_action</span><span class="p">(</span><span class="n">jogo7</span><span class="p">,</span> <span class="n">action</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="s">&#34;n1&#34;</span> <span class="o">=</span> <span class="s">&#34;Reduzir&#34;</span><span class="p">,</span> 
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">restrict_action</span><span class="p">(</span><span class="n">jogo7</span><span class="p">,</span> <span class="n">action</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="s">&#34;n1&#34;</span> <span class="o">=</span> <span class="s">&#34;Reduzir&#34;</span><span class="p">,</span> 
 </span></span><span class="line"><span class="cl">                                     <span class="s">&#34;n2&#34;</span> <span class="o">=</span> <span class="s">&#34;Reduzir&#34;</span><span class="p">))</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><br>
+</span></span></code></pre></div><br>
 <img src="https://drewmelo.github.io/blogr/p/jogos-sequenciais-e-repetidos/index_files/figure-html/game8e-1.png" width="672" style="display: block; margin: auto;" />
 <p>Ao observar o parâmetro <span class="highlighted-text"><code>action</code></span>, percebemos que ele contém a identificação dos nós do jogo, neste caso, <span class="highlighted-text"><code>&quot;n1&quot;</code></span> e <span class="highlighted-text"><code>&quot;n2&quot;</code></span>, juntamente com as ações correspondentes, que são <span class="highlighted-text"><code>&quot;Reduzir&quot;</code></span> e <span class="highlighted-text"><code>&quot;Reduzir&quot;</code></span>.</p>
 </div>
 <div id="path2" class="conteudoPath">
 <p>A função <span class="highlighted-text"><code>subgames()</code></span> é usada para encontrar e identificar os subjogos dentro de um jogo em forma extensiva. Um subjogo é uma parte do jogo que pode ser analisada e tratada separadamente.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">subgames</span><span class="p">(</span><span class="n">jogo7</span><span class="p">,</span> <span class="n">quietly</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">The game has 3 subgames.
-</span></span></code></pre></td></tr></table>
-</div>
-</div><br>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">subgames</span><span class="p">(</span><span class="n">jogo7</span><span class="p">,</span> <span class="n">quietly</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">The game has 3 subgames.
+</span></span></code></pre></div><br>
 <p><img src="https://drewmelo.github.io/blogr/p/jogos-sequenciais-e-repetidos/index_files/figure-html/game8g-1.png" width="672" style="display: block; margin: auto;" /><img src="https://drewmelo.github.io/blogr/p/jogos-sequenciais-e-repetidos/index_files/figure-html/game8g-2.png" width="672" style="display: block; margin: auto;" /><img src="https://drewmelo.github.io/blogr/p/jogos-sequenciais-e-repetidos/index_files/figure-html/game8g-3.png" width="672" style="display: block; margin: auto;" /></p>
 <p>Ao utilizar o parâmetro <span class="highlighted-text"><code>quietly = FALSE</code></span>, a mensagem de contagem de subjogos será exibida juntamente com os gráficos.</p>
 </div>
 <div id="path3" class="conteudoPath">
 <p>A função <span class="highlighted-text"><code>to_matrix</code></span> é usada para transformar um jogo em forma extensiva, com dois jogadores, em um jogo em forma normal. Isso permite representar o jogo em uma matriz de ganhos, onde as estratégias ou perfis de ações são especificados.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">jogo7mx</span> <span class="o">&lt;-</span> <span class="nf">to_matrix</span><span class="p">(</span><span class="n">jogo7</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Para visualizar o data frame que contém as matrizes dos jogadores 1 e 2, basta utilizar o objeto criado anteriormente, nomeado como <span class="highlighted-text"><code>jogo7mx</code></span>, e acrescentar <span class="highlighted-text"><code>$df</code></span>. Nesse data frame, as colunas <span class="highlighted-text"><code>payoff1</code></span> e <span class="highlighted-text"><code>s1</code></span> representam, respectivamente, os ganhos e as estratégias do posto OilFlex, enquanto as colunas <span class="highlighted-text"><code>payoff2</code></span> e <span class="highlighted-text"><code>s2</code></span> representam os ganhos e estratégias da EconoGas.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">jogo7mx</span><span class="o">$</span><span class="n">df</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">  row column        s1                 s2 payoff1 payoff2
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">jogo7mx</span> <span class="o">&lt;-</span> <span class="nf">to_matrix</span><span class="p">(</span><span class="n">jogo7</span><span class="p">)</span>
+</span></span></code></pre></div><p>Para visualizar o data frame que contém as matrizes dos jogadores 1 e 2, basta utilizar o objeto criado anteriormente, nomeado como <span class="highlighted-text"><code>jogo7mx</code></span>, e acrescentar <span class="highlighted-text"><code>$df</code></span>. Nesse data frame, as colunas <span class="highlighted-text"><code>payoff1</code></span> e <span class="highlighted-text"><code>s1</code></span> representam, respectivamente, os ganhos e as estratégias do posto OilFlex, enquanto as colunas <span class="highlighted-text"><code>payoff2</code></span> e <span class="highlighted-text"><code>s2</code></span> representam os ganhos e estratégias da EconoGas.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">jogo7mx</span><span class="o">$</span><span class="n">df</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">  row column        s1                 s2 payoff1 payoff2
 </span></span><span class="line"><span class="cl">1   1      1  (Manter)   (Manter, Manter)      50      50
 </span></span><span class="line"><span class="cl">2   1      2  (Manter)  (Manter, Reduzir)      50      50
 </span></span><span class="line"><span class="cl">3   1      3  (Manter)  (Reduzir, Manter)      30      60
@@ -838,67 +712,25 @@ function showConteudoPath(conteudoId) {
 </span></span><span class="line"><span class="cl">6   2      2 (Reduzir)  (Manter, Reduzir)      40      40
 </span></span><span class="line"><span class="cl">7   2      3 (Reduzir)  (Reduzir, Manter)      60      30
 </span></span><span class="line"><span class="cl">8   2      4 (Reduzir) (Reduzir, Reduzir)      40      40
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Na visualização dos payoffs de cada jogador, é necessário utilizar a função <span class="highlighted-text"><code>matrix()</code></span> em <span class="highlighted-text"><code>jogo7mx$mat$matrix1</code></span>. Desse modo, é possível identificar as jogadas e os ganhos do jogador 1.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Payoff do posto &#34;OilFlex&#34;</span>
+</span></span></code></pre></div><p>Na visualização dos payoffs de cada jogador, é necessário utilizar a função <span class="highlighted-text"><code>matrix()</code></span> em <span class="highlighted-text"><code>jogo7mx$mat$matrix1</code></span>. Desse modo, é possível identificar as jogadas e os ganhos do jogador 1.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Payoff do posto &#34;OilFlex&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="nf">matrix</span><span class="p">(</span><span class="n">jogo7mx</span><span class="o">$</span><span class="n">mat</span><span class="o">$</span><span class="n">matrix1</span><span class="p">,</span> 
 </span></span><span class="line"><span class="cl">       <span class="n">nrow</span> <span class="o">=</span> <span class="m">2</span><span class="p">,</span> 
 </span></span><span class="line"><span class="cl">       <span class="n">dimnames</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;M&#39;</span><span class="p">,</span> <span class="s">&#39;R&#39;</span><span class="p">),</span> 
 </span></span><span class="line"><span class="cl">                       <span class="nf">c</span><span class="p">(</span><span class="s">&#39;MM&#39;</span><span class="p">,</span> <span class="s">&#39;MR&#39;</span><span class="p">,</span> <span class="s">&#39;RM&#39;</span><span class="p">,</span> <span class="s">&#39;RR&#39;</span><span class="p">)))</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">  MM MR RM RR
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">  MM MR RM RR
 </span></span><span class="line"><span class="cl">M 50 50 30 30
 </span></span><span class="line"><span class="cl">R 60 40 60 40
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Ao utilizar o argumento <span class="highlighted-text"><code>dimnames</code></span> para especificar os nomes das colunas e linhas de uma matriz. Dessa forma, é implementada por meio de uma lista, permitindo uma representação mais intuítiva das ações dos jogadores (Manter e Reduzir) e dos payoffs correspondentes ao jogador 1 e 2.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Payoff do posto &#34;EconoGas&#34;</span>
+</span></span></code></pre></div><p>Ao utilizar o argumento <span class="highlighted-text"><code>dimnames</code></span> para especificar os nomes das colunas e linhas de uma matriz. Dessa forma, é implementada por meio de uma lista, permitindo uma representação mais intuítiva das ações dos jogadores (Manter e Reduzir) e dos payoffs correspondentes ao jogador 1 e 2.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Payoff do posto &#34;EconoGas&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="nf">matrix</span><span class="p">(</span><span class="n">jogo7mx</span><span class="o">$</span><span class="n">mat</span><span class="o">$</span><span class="n">matrix2</span><span class="p">,</span> 
 </span></span><span class="line"><span class="cl">       <span class="n">nrow</span> <span class="o">=</span> <span class="m">2</span><span class="p">,</span> 
 </span></span><span class="line"><span class="cl">       <span class="n">dimnames</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;M&#39;</span><span class="p">,</span> <span class="s">&#39;R&#39;</span><span class="p">),</span> 
 </span></span><span class="line"><span class="cl">                       <span class="nf">c</span><span class="p">(</span><span class="s">&#39;MM&#39;</span><span class="p">,</span> <span class="s">&#39;MR&#39;</span><span class="p">,</span> <span class="s">&#39;RM&#39;</span><span class="p">,</span> <span class="s">&#39;RR&#39;</span><span class="p">)))</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">  MM MR RM RR
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">  MM MR RM RR
 </span></span><span class="line"><span class="cl">M 50 50 60 60
 </span></span><span class="line"><span class="cl">R 30 40 30 40
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Quando utilizamos o argumento <span class="highlighted-text"><code>nrow = 2</code></span>, estamos essencialmente informando que a matriz terá duas linhas, cada uma representando as ações &ldquo;Reduzir&rdquo; (<span class="highlighted-text"><code>'R'</code></span>) e &ldquo;Manter&rdquo; (<span class="highlighted-text"><code>'M'</code></span>). Vale notar que, ao especificar o número de linhas, o ambiente R define automaticamente o número de colunas com base nessa especificação.</p>
+</span></span></code></pre></div><p>Quando utilizamos o argumento <span class="highlighted-text"><code>nrow = 2</code></span>, estamos essencialmente informando que a matriz terá duas linhas, cada uma representando as ações &ldquo;Reduzir&rdquo; (<span class="highlighted-text"><code>'R'</code></span>) e &ldquo;Manter&rdquo; (<span class="highlighted-text"><code>'M'</code></span>). Vale notar que, ao especificar o número de linhas, o ambiente R define automaticamente o número de colunas com base nessa especificação.</p>
 </div>
 <h3 id="eq-de-nash-perfeito-em-subjogos">Eq. de Nash Perfeito em Subjogos</h3>
 <p>O Equilíbrio de Nash Perfeito em Subjogos (ENPS) é um conceito utilizado na teoria dos jogos para analisar estratégias em jogos sequenciais. Ele consiste em um conjunto de estratégias, uma para cada jogador, que representa um equilíbrio de Nash em cada subjogo do jogo original.</p>
@@ -933,55 +765,19 @@ function showConteudoENPS(conteudoId) {
 <div id="enps1" class="conteudoENPS">
 <p>O <span class="highlighted-text"><code>solve_efg</code></span> permite encontrar soluções para jogos em forma extensiva. Ele recebe como entrada um jogo em forma extensiva definido previamente e retorna uma lista de soluções encontradas, baseadas no conceito de solução escolhido pelo usuário.</p>
 <p>Existem duas opções para o conceito de solução: <span class="highlighted-text"><code>&quot;backward&quot;</code></span> (Indução Retroativa) e <span class="highlighted-text"><code>&quot;spe&quot;</code></span> (Equilíbrio Perfeito em Subjogos), ambos obtêm o mesmo resultado.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">solve_efg</span><span class="p">(</span><span class="n">jogo7</span><span class="p">,</span> <span class="n">concept</span> <span class="o">=</span> <span class="s">&#34;backward&#34;</span><span class="p">,</span> <span class="n">quietly</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">backward induction: [(Reduzir), (Reduzir, Reduzir)]
-</span></span></code></pre></td></tr></table>
-</div>
-</div><br>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">solve_efg</span><span class="p">(</span><span class="n">jogo7</span><span class="p">,</span> <span class="n">concept</span> <span class="o">=</span> <span class="s">&#34;backward&#34;</span><span class="p">,</span> <span class="n">quietly</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">backward induction: [(Reduzir), (Reduzir, Reduzir)]
+</span></span></code></pre></div><br>
 <img src="https://drewmelo.github.io/blogr/p/jogos-sequenciais-e-repetidos/index_files/figure-html/game10d-1.png" width="672" style="display: block; margin: auto;" />
 <p>Ou pode-se chegar ao gráfico de melhores respostas pelo comando <code>show_path()</code>.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">show_path</span><span class="p">(</span><span class="n">jogo7</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><br>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">show_path</span><span class="p">(</span><span class="n">jogo7</span><span class="p">)</span>
+</span></span></code></pre></div><br>
 <img src="https://drewmelo.github.io/blogr/p/jogos-sequenciais-e-repetidos/index_files/figure-html/game7d-1.png" width="672" style="display: block; margin: auto;" />
 <p>Também é possível obter a tabela a partir da matriz usando a função <span class="highlighted-text"><code>solve_nfg()</code></span> e determinar os equilíbrios de Nash e Equilíbrio de Nash Perfeito em Subjogos a partir das informações mencionadas no tópico anterior.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Matriz do jogo 7</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Matriz do jogo 7</span>
 </span></span><span class="line"><span class="cl"><span class="n">jogo7mxtab</span> <span class="o">&lt;-</span> <span class="nf">solve_nfg</span><span class="p">(</span><span class="n">jogo7mx</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Pure-strategy NE: [(Reduzir), (Reduzir, Reduzir)]
-</span></span></code></pre></td></tr></table>
-</div>
-</div><br>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Pure-strategy NE: [(Reduzir), (Reduzir, Reduzir)]
+</span></span></code></pre></div><br>
  <table class="lightable-classic table" style="font-family: Arial; margin-left: auto; margin-right: auto; width: auto !important; margin-left: auto; margin-right: auto;">
   <thead>
  <tr>
@@ -1021,35 +817,15 @@ function showConteudoENPS(conteudoId) {
 <div id="enps2" class="conteudoENPS">
 <p>O <span class="highlighted-text"><code>solve_seq</code></span> aceita um jogo em forma sequencial como entrada e retorna os equilíbrios de Nash encontrados, se houver. Além disso, ele também pode exibir uma tabela com as jogadas e estratégias ótimas para cada jogador, facilitando a análise e compreensão dos resultados.</p>
 <p>No exemplo anterior, utilizamos a função <span class="highlighted-text"><code>seq_form()</code></span> para estruturar um jogo na forma sequencial, a partir de uma forma normal. Em seguida, aplicamos o <span class="highlighted-text"><code>solve_seq()</code></span> para transformar o jogo da forma extensiva novamente para a forma normal.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">solve_seq</span><span class="p">(</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">solve_seq</span><span class="p">(</span>
 </span></span><span class="line"><span class="cl">  <span class="n">sq_jogo8</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">  <span class="n">show_table</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">  <span class="n">mark_br</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">  <span class="n">precision</span> <span class="o">=</span> <span class="m">1L</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">  <span class="n">quietly</span> <span class="o">=</span> <span class="kc">FALSE</span>
 </span></span><span class="line"><span class="cl">  <span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">SPE outcome: (Reduzir, Reduzir)
-</span></span></code></pre></td></tr></table>
-</div>
-</div><br>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">SPE outcome: (Reduzir, Reduzir)
+</span></span></code></pre></div><br>
  <table class=" lightable-classic table" style="font-family: Arial; margin-left: auto; margin-right: auto; width: auto !important; margin-left: auto; margin-right: auto;">
   <thead>
  <tr>
@@ -1091,31 +867,7 @@ function showConteudoENPS(conteudoId) {
 <p>Comparando com a estrutura de Jogos Sequenciais, onde o argumento <span class="highlighted-text"><code>players</code></span> continha <span class="highlighted-text"><code>rep()</code></span> apenas no final e era definido por <span class="highlighted-text"><code>NA</code></span> juntamente com o número de nós terminais. Em Jogos Repetidos, podemos utilizar a função <span class="highlighted-text"><code>rep()</code></span> de forma mais detalhada.</p>
 <p>Nesse caso, começamos com as jogadas de P2, pois as ações de P2 se repetirão sequencialmente após a ação do jogador inicial. Portanto, usamos <span class="highlighted-text"><code>&quot;P2&quot;, 2</code></span> e assim por diante. Em sequência, teremos <span class="highlighted-text"><code>&quot;P1&quot;, 4</code></span>, o que significa que cada nó da jogada anterior de P2 se ramificará em dois nós, representando os 4 nós de P1. Na configuração <span class="highlighted-text"><code>rep(NA, 16)</code></span>, o valor <span class="highlighted-text"><code>NA</code></span> indica que não há mais jogadas de nenhum jogador, apenas os nós terminais, que serão 16.</p>
 <p>Nessa situação, especificamos duas estratégias para ambos os jogadores. Consequentemente, o número de repetições dos nós será sempre o dobro do anterior, como ilustrado abaixo.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">jogo9</span> <span class="o">&lt;-</span> <span class="nf">extensive_form</span><span class="p">(</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">jogo9</span> <span class="o">&lt;-</span> <span class="nf">extensive_form</span><span class="p">(</span>
 </span></span><span class="line"><span class="cl">            <span class="n">players</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="s">&#34;P1&#34;</span><span class="p">,</span>         <span class="c1"># n1</span>
 </span></span><span class="line"><span class="cl">                           <span class="nf">rep</span><span class="p">(</span><span class="s">&#34;P2&#34;</span><span class="p">,</span> <span class="m">2</span><span class="p">),</span> <span class="c1"># n2 e n3</span>
 </span></span><span class="line"><span class="cl">                           <span class="nf">rep</span><span class="p">(</span><span class="s">&#34;P1&#34;</span><span class="p">,</span> <span class="m">4</span><span class="p">),</span> <span class="c1"># n4 - n7</span>
@@ -1135,65 +887,15 @@ function showConteudoENPS(conteudoId) {
 </span></span><span class="line"><span class="cl">            <span class="n">direction</span> <span class="o">=</span> <span class="s">&#34;down&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">            <span class="n">show_node_id</span> <span class="o">=</span> <span class="kc">FALSE</span>
 </span></span><span class="line"><span class="cl">          <span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><br>
+</span></span></code></pre></div><br>
 <img src="https://drewmelo.github.io/blogr/p/jogos-sequenciais-e-repetidos/index_files/figure-html/game19b-1.png" width="672" style="display: block; margin: auto;" />
 <p>O exemplo acima possui uma estrutura de árvore com 15 nós, numerados de <span class="highlighted-text"><code>n1</code></span> a <span class="highlighted-text"><code>n15</code></span>. Em cada nó, os jogadores têm a opção de escolher entre duas ações. Por exemplo, os três primeiros nós (<span class="highlighted-text"><code>n1</code></span> a <span class="highlighted-text"><code>n3</code></span>) representam as escolhas de ação dos jogadores no primeiro período.</p>
 <p>Ao resolver o jogo acima por indução retroativa é possível visualizar as estratégias escolhidas pelos dois jogadores.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">s_jogo9</span> <span class="o">&lt;-</span> <span class="nf">solve_efg</span><span class="p">(</span><span class="n">jogo9</span><span class="p">,</span> <span class="n">concept</span> <span class="o">=</span> <span class="s">&#34;backward&#34;</span><span class="p">,</span> <span class="n">quietly</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">backward induction: [(P, G, G, G, G), (G, G, G, G, G, P, G, G, G, P)], [(P, G, G, G, G), (G, P, G, G, G, P, G, G, G, P)], [(P, P, G, G, G), (P, G, G, G, G, P, G, G, G, P)], [(P, P, G, G, G), (P, P, G, G, G, P, G, G, G, P)], [(P, G, G, G, G), (G, G, G, G, G, P, G, P, G, P)], [(P, G, G, G, G), (G, P, G, G, G, P, G, P, G, P)], [(P, P, G, G, G), (P, G, G, G, G, P, G, P, G, P)], [(P, P, G, G, G), (P, P, G, G, G, P, G, P, G, P)]
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Em jogos repetidos, as árvores de decisão geralmente se tornam mais complexas, devido à repetição das jogadas pelos jogadores. Como observado anteriormente, foram identificadas oito soluções por meio da análise de indução retroativa.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">s_jogo9</span><span class="o">$</span><span class="n">sols</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[[1]]
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">s_jogo9</span> <span class="o">&lt;-</span> <span class="nf">solve_efg</span><span class="p">(</span><span class="n">jogo9</span><span class="p">,</span> <span class="n">concept</span> <span class="o">=</span> <span class="s">&#34;backward&#34;</span><span class="p">,</span> <span class="n">quietly</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">backward induction: [(P, G, G, G, G), (G, G, G, G, G, P, G, G, G, P)], [(P, G, G, G, G), (G, P, G, G, G, P, G, G, G, P)], [(P, P, G, G, G), (P, G, G, G, G, P, G, G, G, P)], [(P, P, G, G, G), (P, P, G, G, G, P, G, G, G, P)], [(P, G, G, G, G), (G, G, G, G, G, P, G, P, G, P)], [(P, G, G, G, G), (G, P, G, G, G, P, G, P, G, P)], [(P, P, G, G, G), (P, G, G, G, G, P, G, P, G, P)], [(P, P, G, G, G), (P, P, G, G, G, P, G, P, G, P)]
+</span></span></code></pre></div><p>Em jogos repetidos, as árvores de decisão geralmente se tornam mais complexas, devido à repetição das jogadas pelos jogadores. Como observado anteriormente, foram identificadas oito soluções por meio da análise de indução retroativa.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">s_jogo9</span><span class="o">$</span><span class="n">sols</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[[1]]
 </span></span><span class="line"><span class="cl">[1] &#34;[(P, G, G, G, G), (G, G, G, G, G, P, G, G, G, P)]&#34;
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">[[2]]
@@ -1216,18 +918,9 @@ function showConteudoENPS(conteudoId) {
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">[[8]]
 </span></span><span class="line"><span class="cl">[1] &#34;[(P, P, G, G, G), (P, P, G, G, G, P, G, P, G, P)]&#34;
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Utilizando o nome do objeto criado, <span class="highlighted-text"><code>s_jogo9</code></span>, em conjunto com o atributo <span class="highlighted-text"><code>$n_sols</code></span>, é possível obter o número total de soluções, que neste contexto específico é representado como <span class="highlighted-text"><code>[1] 8</code></span>. Em uma análise mais aprofundada de uma das soluções, podemos escolher a primeira solução por meio da combinação entre <span class="highlighted-text"><code>s_jogo9</code></span> e <span class="highlighted-text"><code>$trees[[1]]</code></span>, que corresponde à representação visual da solução <span class="highlighted-text"><code>$sols[[1]]</code></span>, ou seja, a primeira solução em formato de árvore.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">s_jogo9</span><span class="o">$</span><span class="n">trees[[1]]</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><br>
+</span></span></code></pre></div><p>Utilizando o nome do objeto criado, <span class="highlighted-text"><code>s_jogo9</code></span>, em conjunto com o atributo <span class="highlighted-text"><code>$n_sols</code></span>, é possível obter o número total de soluções, que neste contexto específico é representado como <span class="highlighted-text"><code>[1] 8</code></span>. Em uma análise mais aprofundada de uma das soluções, podemos escolher a primeira solução por meio da combinação entre <span class="highlighted-text"><code>s_jogo9</code></span> e <span class="highlighted-text"><code>$trees[[1]]</code></span>, que corresponde à representação visual da solução <span class="highlighted-text"><code>$sols[[1]]</code></span>, ou seja, a primeira solução em formato de árvore.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">s_jogo9</span><span class="o">$</span><span class="n">trees[[1]]</span>
+</span></span></code></pre></div><br>
 <img src="https://drewmelo.github.io/blogr/p/jogos-sequenciais-e-repetidos/index_files/figure-html/game21e-1.png" width="672" style="display: block; margin: auto;" />
 <p>Para cada solução em formato de combinação (<span class="highlighted-text"><code>$sols</code></span>) é possível se chegar a uma representação gráfica em árvore de decisão (<span class="highlighted-text"><code>$trees</code></span>).</p>
 <div id="botoesRepetido">
@@ -1259,33 +952,7 @@ function showConteudoRepetido(conteudoId) {
 </script>
 <div id="repetido1" class="conteudoRepetido">
 <p>Os conjuntos de informações podem ser especificados no argumento <span class="highlighted-text"><code>info_sets</code></span>, agrupando, dessa forma, os nós nos quais um jogador não consegue distinguir as ações tomadas por seu oponente. Por exemplo, os nós <span class="highlighted-text"><code>n2</code></span> e <span class="highlighted-text"><code>n3</code></span> formam um conjunto de informações para o jogador P1, indicando que ele não sabe qual ação o jogador P2 escolheu nos nós <span class="highlighted-text"><code>n2</code></span> e <span class="highlighted-text"><code>n3</code></span>.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">jogo9info</span> <span class="o">&lt;-</span> <span class="nf">extensive_form</span><span class="p">(</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">jogo9info</span> <span class="o">&lt;-</span> <span class="nf">extensive_form</span><span class="p">(</span>
 </span></span><span class="line"><span class="cl">            <span class="n">players</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="s">&#34;P1&#34;</span><span class="p">,</span>         <span class="c1"># n1</span>
 </span></span><span class="line"><span class="cl">                           <span class="nf">rep</span><span class="p">(</span><span class="s">&#34;P2&#34;</span><span class="p">,</span> <span class="m">2</span><span class="p">),</span> <span class="c1"># n2 e n3</span>
 </span></span><span class="line"><span class="cl">                           <span class="nf">rep</span><span class="p">(</span><span class="s">&#34;P1&#34;</span><span class="p">,</span> <span class="m">4</span><span class="p">),</span> <span class="c1"># n4 - n7</span>
@@ -1307,20 +974,11 @@ function showConteudoRepetido(conteudoId) {
 </span></span><span class="line"><span class="cl">                             <span class="nf">c</span><span class="p">(</span><span class="m">12</span><span class="p">,</span> <span class="m">13</span><span class="p">),</span> <span class="nf">c</span><span class="p">(</span><span class="m">14</span><span class="p">,</span> <span class="m">15</span><span class="p">)),</span>
 </span></span><span class="line"><span class="cl">            <span class="n">show_node_id</span> <span class="o">=</span> <span class="kc">FALSE</span>
 </span></span><span class="line"><span class="cl">          <span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><br>
+</span></span></code></pre></div><br>
 <img src="https://drewmelo.github.io/blogr/p/jogos-sequenciais-e-repetidos/index_files/figure-html/game20b-1.png" width="672" style="display: block; margin: auto;" />
 <p>Devido à falta de conhecimento por parte do jogador P1 em relação às estratégias escolhidas pelo jogador P2, encontrar uma solução para esse jogo torna-se um desafio. Especialmente em cenários onde os jogadores estão alheios às estratégias dos demais participantes, como é o caso apresentado abaixo ao tentar aplicar o conceito de indução retroativa para elucidar as escolhas estratégicas de P1 e P2.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">solve_efg</span><span class="p">(</span><span class="n">jogo9info</span><span class="p">,</span> <span class="n">concept</span> <span class="o">=</span> <span class="s">&#34;backward&#34;</span><span class="p">,</span> <span class="n">quietly</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><br>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">solve_efg</span><span class="p">(</span><span class="n">jogo9info</span><span class="p">,</span> <span class="n">concept</span> <span class="o">=</span> <span class="s">&#34;backward&#34;</span><span class="p">,</span> <span class="n">quietly</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+</span></span></code></pre></div><br>
 <div class="callout-container">
   <div>
     <svg viewBox="0 0 512 512" style="position:relative;display:inline-block;top:.1em;fill:#f1faee;height:1.2em;" xmlns="http://www.w3.org/2000/svg">  <path d="M440.5 88.5l-52 52L415 167c9.4 9.4 9.4 24.6 0 33.9l-17.4 17.4c11.8 26.1 18.4 55.1 18.4 85.6 0 114.9-93.1 208-208 208S0 418.9 0 304 93.1 96 208 96c30.5 0 59.5 6.6 85.6 18.4L311 97c9.4-9.4 24.6-9.4 33.9 0l26.5 26.5 52-52 17.1 17zM500 60h-24c-6.6 0-12 5.4-12 12s5.4 12 12 12h24c6.6 0 12-5.4 12-12s-5.4-12-12-12zM440 0c-6.6 0-12 5.4-12 12v24c0 6.6 5.4 12 12 12s12-5.4 12-12V12c0-6.6-5.4-12-12-12zm33.9 55l17-17c4.7-4.7 4.7-12.3 0-17-4.7-4.7-12.3-4.7-17 0l-17 17c-4.7 4.7-4.7 12.3 0 17 4.8 4.7 12.4 4.7 17 0zm-67.8 0c4.7 4.7 12.3 4.7 17 0 4.7-4.7 4.7-12.3 0-17l-17-17c-4.7-4.7-12.3-4.7-17 0-4.7 4.7-4.7 12.3 0 17l17 17zm67.8 34c-4.7-4.7-12.3-4.7-17 0-4.7 4.7-4.7 12.3 0 17l17 17c4.7 4.7 12.3 4.7 17 0 4.7-4.7 4.7-12.3 0-17l-17-17zM112 272c0-35.3 28.7-64 64-64 8.8 0 16-7.2 16-16s-7.2-16-16-16c-52.9 0-96 43.1-96 96 0 8.8 7.2 16 16 16s16-7.2 16-16z"></path></svg>
@@ -1342,47 +1000,7 @@ function showConteudoRepetido(conteudoId) {
 <div id="repetido2" class="conteudoRepetido">
 <p>Ao expandir o exemplo, agora com a introdução de um terceiro país <span class="highlighted-text"><code>&quot;P3&quot;</code></span>, novas dimensões estratégicas emergem. Nessa situação ele possui as opções de &ldquo;Ajudar&rdquo; (<span class="highlighted-text"><code>&quot;A&quot;</code></span>) e &ldquo;Desestabilizar&rdquo; (<span class="highlighted-text"><code>&quot;D&quot;</code></span>). Se P3 escolher &ldquo;Ajudar&rdquo;, seu objetivo é promover uma abordagem cooperativa entre P1 e P2, encorajando tratados de paz e parcerias, podendo ser alcançado através de diplomacia, oferecendo incentivos econômicos ou compartilhando informações sensíveis.</p>
 <p>Por outro lado, se P3 optar por &ldquo;Desestabilizar&rdquo;, suas ações terão como alvo a erosão da confiança entre P1 e P2, ou seja, ele poderia propagar rumores, incentivar disputas territoriais ou minar acordos já existentes. Ao fazer isso, será criado um ambiente de incerteza e rivalidade, aumentando assim as chances de conflito entre os outros dois países.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">jogo10</span> <span class="o">&lt;-</span> <span class="nf">extensive_form</span><span class="p">(</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">jogo10</span> <span class="o">&lt;-</span> <span class="nf">extensive_form</span><span class="p">(</span>
 </span></span><span class="line"><span class="cl">            <span class="n">players</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="s">&#34;P1&#34;</span><span class="p">,</span>          <span class="c1"># n1</span>
 </span></span><span class="line"><span class="cl">                           <span class="nf">rep</span><span class="p">(</span><span class="s">&#34;P2&#34;</span><span class="p">,</span> <span class="m">2</span><span class="p">),</span>  <span class="c1"># n2 e n3</span>
 </span></span><span class="line"><span class="cl">                           <span class="nf">rep</span><span class="p">(</span><span class="s">&#34;P1&#34;</span><span class="p">,</span> <span class="m">4</span><span class="p">),</span>  <span class="c1"># n4 - n7</span>
@@ -1418,47 +1036,24 @@ function showConteudoRepetido(conteudoId) {
 </span></span><span class="line"><span class="cl">            <span class="n">direction</span> <span class="o">=</span> <span class="s">&#34;right&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">            <span class="n">show_node_id</span> <span class="o">=</span> <span class="kc">FALSE</span>
 </span></span><span class="line"><span class="cl">          <span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><br>
+</span></span></code></pre></div><br>
 <div style="text-align:center;">
   <img src="3jogadores.png" alt="Jogo 10">
 </div>
 <p>Nesta situação, ocorre a expansão do exemplo ao adicionar mais 15 nodos, a fim de incluir o terceiro país no jogo. Além disso, a amostragem dos payoffs é estendida para 32 elementos. Uma abordagem alternativa é a definição dos payoffs de forma aleatória para P3, como realizado através da função <span class="highlighted-text"><code>sample()</code></span>, a qual gera uma seleção aleatória de valores a partir de um vetor.</p>
 <p>Ao empregar <span class="highlighted-text"><code>1:9, 32</code></span> como argumento dessa função, é criado um vetor com valores variando de 1 a 9, ou seja, os possíveis ganhos do jogador P3 estão dentro desse intervalo. Esses valores são então repetidos 32 vezes, correspondendo ao número de elementos amostrados. A utilização de <span class="highlighted-text"><code>replace = TRUE</code></span> permite que elementos sejam selecionados mais de uma vez na amostra, possibilitando a repetição de valores nos payoffs do país P3. Caso fosse definido <span class="highlighted-text"><code>replace = FALSE</code></span>, cada valor apareceria apenas uma vez.</p>
 <p>Em resumo, essa abordagem amplia a complexidade do exemplo ao adicionar um terceiro país e introduzir aleatoriedade nos payoffs desse jogador por meio da função <span class="highlighted-text"><code>sample()</code></span>.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">s_jogo10</span> <span class="o">&lt;-</span> <span class="nf">solve_efg</span><span class="p">(</span><span class="n">jogo9</span><span class="p">,</span> <span class="n">concept</span> <span class="o">=</span> <span class="s">&#34;backward&#34;</span><span class="p">,</span> <span class="n">quietly</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">backward induction: [(P, G , G , G , G ), (G, G, G  , G  , G  ,   P, G  , G  , G  ,   P)], [(P, G , G , G , G ), (G, P, G  , G  , G  ,   P, G  , G  , G  ,   P)], [(P,  P, G , G , G ), (P, G, G  , G  , G  ,   P, G  , G  , G  ,   P)], [(P,  P, G , G , G ), (P, P, G  , G  , G  ,   P, G  , G  , G  ,   P)], [(P, G , G , G , G ), (G, G, G  , G  , G  ,   P, G  ,   P, G  ,   P)], [(P, G , G , G , G ), (G, P, G  , G  , G  ,   P, G  ,   P, G  ,   P)], [(P,  P, G , G , G ), (P, G, G  , G  , G  ,   P, G  ,   P, G  ,   P)], [(P,  P, G , G , G ), (P, P, G  , G  , G  ,   P, G  ,   P, G  ,   P)]
-</span></span></code></pre></td></tr></table>
-</div>
-</div><br>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">s_jogo10</span> <span class="o">&lt;-</span> <span class="nf">solve_efg</span><span class="p">(</span><span class="n">jogo9</span><span class="p">,</span> <span class="n">concept</span> <span class="o">=</span> <span class="s">&#34;backward&#34;</span><span class="p">,</span> <span class="n">quietly</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">backward induction: [(P, G , G , G , G ), (G, G, G  , G  , G  ,   P, G  , G  , G  ,   P)], [(P, G , G , G , G ), (G, P, G  , G  , G  ,   P, G  , G  , G  ,   P)], [(P,  P, G , G , G ), (P, G, G  , G  , G  ,   P, G  , G  , G  ,   P)], [(P,  P, G , G , G ), (P, P, G  , G  , G  ,   P, G  , G  , G  ,   P)], [(P, G , G , G , G ), (G, G, G  , G  , G  ,   P, G  ,   P, G  ,   P)], [(P, G , G , G , G ), (G, P, G  , G  , G  ,   P, G  ,   P, G  ,   P)], [(P,  P, G , G , G ), (P, G, G  , G  , G  ,   P, G  ,   P, G  ,   P)], [(P,  P, G , G , G ), (P, P, G  , G  , G  ,   P, G  ,   P, G  ,   P)]
+</span></span></code></pre></div><br>
 <div style="text-align:center;">
   <img src="3jogadoresolved.png" alt="Resolução do jogo 10">
 </div>
 <p>A presença de P3 adiciona uma nova camada de complexidade. Sua escolha de &ldquo;Ajudar&rdquo; em vez de &ldquo;Desestabilizar&rdquo; parece ter desempenhado um papel crucial em incentivar a paz entre P1 e P2 nas primeiras rodadas. No entanto, à medida que P1 opta por &ldquo;Guerra&rdquo; e P2 responde da mesma forma, o equilíbrio entre os três países se torna mais delicado.</p>
 <p>Em síntese, a introdução de P3 com suas estratégias de &ldquo;Ajudar&rdquo; e &ldquo;Desestabilizar&rdquo; transformou a dinâmica geopolítica. As decisões agora são influenciadas pelas ações de três jogadores, levando a resultados variados e demonstrando como diferentes abordagens podem levar a cenários diversos de cooperação e conflito</p>
 <p>Quando se trata de um jogo com três jogadores, como no caso do jogo 9, a função <span class="highlighted-text"><code>to_matrix()</code></span> não pode ser empregada, conforme demonstrado na tentativa a seguir ao utilizá-la.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">to_matrix</span><span class="p">(</span><span class="n">jogo10</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><br>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">to_matrix</span><span class="p">(</span><span class="n">jogo10</span><span class="p">)</span>
+</span></span></code></pre></div><br>
 <div class="callout-container">
   <div>
     <svg viewBox="0 0 512 512" style="position:relative;display:inline-block;top:.1em;fill:#f1faee;height:1.2em;" xmlns="http://www.w3.org/2000/svg">  <path d="M440.5 88.5l-52 52L415 167c9.4 9.4 9.4 24.6 0 33.9l-17.4 17.4c11.8 26.1 18.4 55.1 18.4 85.6 0 114.9-93.1 208-208 208S0 418.9 0 304 93.1 96 208 96c30.5 0 59.5 6.6 85.6 18.4L311 97c9.4-9.4 24.6-9.4 33.9 0l26.5 26.5 52-52 17.1 17zM500 60h-24c-6.6 0-12 5.4-12 12s5.4 12 12 12h24c6.6 0 12-5.4 12-12s-5.4-12-12-12zM440 0c-6.6 0-12 5.4-12 12v24c0 6.6 5.4 12 12 12s12-5.4 12-12V12c0-6.6-5.4-12-12-12zm33.9 55l17-17c4.7-4.7 4.7-12.3 0-17-4.7-4.7-12.3-4.7-17 0l-17 17c-4.7 4.7-4.7 12.3 0 17 4.8 4.7 12.4 4.7 17 0zm-67.8 0c4.7 4.7 12.3 4.7 17 0 4.7-4.7 4.7-12.3 0-17l-17-17c-4.7-4.7-12.3-4.7-17 0-4.7 4.7-4.7 12.3 0 17l17 17zm67.8 34c-4.7-4.7-12.3-4.7-17 0-4.7 4.7-4.7 12.3 0 17l17 17c4.7 4.7 12.3 4.7 17 0 4.7-4.7 4.7-12.3 0-17l-17-17zM112 272c0-35.3 28.7-64 64-64 8.8 0 16-7.2 16-16s-7.2-16-16-16c-52.9 0-96 43.1-96 96 0 8.8 7.2 16 16 16s16-7.2 16-16z"></path></svg>
@@ -1534,12 +1129,12 @@ function showConteudoRepetido(conteudoId) {
                 
 <article class="has-image">
     <a href="/blogr/p/jogos-simultaneos/">
-        
+
         
             <div class="article-image">
-                <img src="/blogr/p/jogos-simultaneos/jogos-simultaneos.6408fcf31f5f931bb7823bae5cb6bdb2.jpg" 
-                        width="1366" 
-                        height="578" 
+                <img src="/blogr/p/jogos-simultaneos/jogos-simultaneos.6408fcf31f5f931bb7823bae5cb6bdb2.jpg"
+                        width="1366"
+                        height="578"
                         loading="lazy"
                         alt="Featured image of post Teoria dos Jogos no R: Jogos Simultâneos"
                         data-key="jogos-simultaneos" 
@@ -1560,7 +1155,7 @@ function showConteudoRepetido(conteudoId) {
 </aside>
 
 
-     
+
     
         
     <div class="disqus-container">

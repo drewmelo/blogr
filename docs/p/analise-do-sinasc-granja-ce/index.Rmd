@@ -7,7 +7,7 @@ categories: []
 tags: 
  - datascience
 description: Neste artigo tratará a cerca da análise das complicações das gestações prematuras em mulheres acima de 30 anos, destacando a relação entre idade, escolaridade, semana de gestação e peso dos bebês prematuros.
-image: analise-sinasc-ce2.jpg
+image: thumb-analise-sinasc-ce.jpg
 math: ~
 license: ~
 hidden: no
