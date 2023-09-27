@@ -21,7 +21,7 @@ comments: yes
 
 <!--more-->
 
-## Introduçã
+## Introdução
 
 ### Pacotes
 
@@ -218,165 +218,69 @@ function showConteudoSequencial(conteudoId) {
     opacity: 0;
     transition: opacity 0.5s;
   }
+</style>
+
+<style type="text/css">
 
 /* ---------- JOGOS REPETIDOS ERROS ------------ */
+
+.callout {
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.callout-title {
+  font-weight: bold;
+  margin-bottom: -10px;
+  margin-left: 0.5rem;
+  margin-top: -10px;
+}
+
+.callout-content {
+  padding: 10px; /* Adicione padding para espaçamento */
+  margin-bottom: -50px;
+}
+
+.callout-container {
+  background: #e63946;
+  color: white;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
 /* ERRO 1 */
 .output-exemplo {
-  font-family: 'Lucida Console' !important;
-  font-size: 14px;
+  font-family: 'Lucida Console';
+  font-size: 15px;
   line-height: 1.4;
-  color: #333; /* Cor do texto */
   white-space: nowrap;
-  padding: 10px;
-  position: relative; /* Ativar posicionamento relativo */
-  top: -20px; /* Mover 10 pixels para cima */
-  margin: 1.4rem;
+  padding: 20px;
+  position: relative;
+  top: -20px;
   border: none;
   background: none;
+  width: 100%; /* Defina a largura como 100% */
 }
-
-.texto-adicional {
-  position: relative; /* Ativar posicionamento relativo */
-  top: -35px; /* Mover 10 pixels para cima */
-  margin: 1rem;
-  opacity: 0; /* Começa praticamente invisível */
-  transition: opacity 3s, transform 3s; /* Adiciona transição suave para opacidade e posição */
-  transform: translateY(5px); /* Começa 10px acima da posição original */
-}
-
-.toggle-details {
-  cursor: pointer;
-  display: inline-block;
-  transition: transform 0.3s ease-in-out;
-  color: black; /* Cor padrão */
-}
-
-.toggle-details:hover,
-.toggle-details:focus,
-.toggle-details.selected {
-  color: #016dea; /* Cor ao passar o cursor, focar ou quando selecionado */
-}
-
-.toggle-details .arrow {
-  display: inline-block;
-  font-size: 30px;
-  vertical-align: middle; /* Alinha verticalmente a seta */
-  margin-top: -0.2rem;
-  margin-right: -5px; /* Espaçamento entre a seta e o texto */
-  transition: transform 0.3s ease-in-out;
-}
-
-.toggle-details.open .arrow {
-  transform: rotate(90deg);
-  color: #016dea;
-}
-
-.toggle-details.open .arrow {
-  transform: rotate(90deg);
-  color: #016dea;
-}
-
-.output-exemplo,
-.texto-adicional {
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
-}
-
-.output-exemplo.visible,
-.texto-adicional.visible {
-  max-height: 350px; /* Ajuste isso conforme necessário */
-  opacity: 1;
-}
-
-@media screen and (max-width: 1024px) {
-  .toggle-details .arrow {
-    margin-right: 5px; /* Aumente o espaço entre a seta e o texto em telas menores */
-  }
-}
-
-/* ERRO 1 - FIM */
 
 /* ERRO 2 - COMEÇO */
 .output-matrix {
   font-family: 'Lucida Console';
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.4;
-  color: #333; /* Cor do texto */
   white-space: nowrap;
-  padding: 10px;
-  position: relative; /* Ativar posicionamento relativo */
-  top: -20px; /* Mover 10 pixels para cima */
-  margin: 1.4rem;
+  padding: 20px;
+  position: relative;
+  top: -20px;
   border: none;
   background: none;
+  width: 100%; /* Defina a largura como 100% */
 }
 
-.texto-matrix {
-  position: relative; /* Ativar posicionamento relativo */
-  top: -35px; /* Mover 10 pixels para cima */
-  margin: 1rem;
-  opacity: 0; /* Começa praticamente invisível */
-  transition: opacity 3s, transform 3s; /* Adiciona transição suave para opacidade e posição */
-  transform: translateY(5px); /* Começa 10px acima da posição original */
-}
-
-.toggle-matrix {
-  cursor: pointer;
-  display: inline-block;
-  transition: transform 0.3s ease-in-out;
-  color: black; /* Cor padrão */
-}
-
-.toggle-matrix:hover,
-.toggle-matrix:focus,
-.toggle-matrix.selected {
-  color: #016dea; /* Cor ao passar o cursor, focar ou quando selecionado */
-}
-
-.toggle-matrix .arrow {
-  display: inline-block;
-  font-size: 30px;
-  vertical-align: middle; /* Alinha verticalmente a seta */
-  margin-top: -0.2rem;
-  margin-right: -5px; /* Espaçamento entre a seta e o texto */
-  transition: transform 0.3s ease-in-out;
-}
-
-.toggle-matrix.open .arrow {
-  transform: rotate(90deg);
-  color: #016dea;
-}
-
-.toggle-matrix.open .arrow {
-  transform: rotate(90deg);
-  color: #016dea;
-}
-
-.output-matrix,
-.texto-matrix {
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
-}
-
-.output-matrix.visible,
-.texto-matrix.visible {
-  max-height: 500px; /* Ajuste isso conforme necessário */
-  opacity: 1;
-}
-
-@media screen and (max-width: 1024px) {
-  .toggle-matrix .arrow {
-    margin-right: 5px; /* Aumente o espaço entre a seta e o texto em telas menores */
-  }
-}
-
-/* ERRO 2 - FIM */
 </style>
-
 
 <div id="sequencial1" class="conteudoSequencial">
 
@@ -397,6 +301,8 @@ jogo7 <- extensive_form(
                          EconoGas = c(50, 60, 30, 40)),
           show_node_id = FALSE)
 ```
+
+<br>
 
 <img src="{{< blogdown/postref >}}index_files/figure-html/game7b-1.png" width="672" style="display: block; margin: auto;" />
 
@@ -427,6 +333,8 @@ jogo8 <- seq_extensive(sq_jogo8,
                        direction = "right", 
                        color_palette = "Dark2")
 ```
+
+<br>
 
 <img src="{{< blogdown/postref >}}index_files/figure-html/game8b-1.png" width="672" style="display: block; margin: auto;" />
 
@@ -493,6 +401,8 @@ The game reaches at n4.
 Payoffs:
 ```
 
+<br>
+
 <img src="{{< blogdown/postref >}}index_files/figure-html/game8cc-1.png" width="672" style="display: block; margin: auto;" />
 
 No R, é possível restringir as ações dos jogadores através da eliminação de certas sequências de jogadas. Essa restrição pode ser feita utilizando o parâmetro <span class="highlighted-text">`actions`</span> da função <span class="highlighted-text">`restrict_action()`</span>, que recebe uma lista de vetores. Ao utilizar essa função, é possível controlar quais jogadas são permitidas em cada estágio do jogo sequencial. 
@@ -502,6 +412,8 @@ No R, é possível restringir as ações dos jogadores através da eliminação 
 restrict_action(jogo7, action = list("n1" = "Reduzir", 
                                      "n2" = "Reduzir"))
 ```
+
+<br>
 
 <img src="{{< blogdown/postref >}}index_files/figure-html/game8e-1.png" width="672" style="display: block; margin: auto;" />
 
@@ -521,6 +433,8 @@ subgames(jogo7, quietly = FALSE)
 ```
 The game has 3 subgames.
 ```
+
+<br>
 
 <img src="{{< blogdown/postref >}}index_files/figure-html/game8g-1.png" width="672" style="display: block; margin: auto;" /><img src="{{< blogdown/postref >}}index_files/figure-html/game8g-2.png" width="672" style="display: block; margin: auto;" /><img src="{{< blogdown/postref >}}index_files/figure-html/game8g-3.png" width="672" style="display: block; margin: auto;" />
 
@@ -643,6 +557,8 @@ solve_efg(jogo7, concept = "backward", quietly = FALSE)
 backward induction: [(Reduzir), (Reduzir, Reduzir)]
 ```
 
+<br>
+
 <img src="{{< blogdown/postref >}}index_files/figure-html/game10d-1.png" width="672" style="display: block; margin: auto;" />
 
 Ou pode-se chegar ao gráfico de melhores respostas pelo comando `show_path()`.
@@ -651,6 +567,8 @@ Ou pode-se chegar ao gráfico de melhores respostas pelo comando `show_path()`.
 ```r
 show_path(jogo7)
 ```
+
+<br>
 
 <img src="{{< blogdown/postref >}}index_files/figure-html/game7d-1.png" width="672" style="display: block; margin: auto;" />
 
@@ -665,6 +583,8 @@ jogo7mxtab <- solve_nfg(jogo7mx)
 ```
 Pure-strategy NE: [(Reduzir), (Reduzir, Reduzir)]
 ```
+
+<br>
 
  <table class=" lightable-classic table" style="font-family: Arial; margin-left: auto; margin-right: auto; width: auto !important; margin-left: auto; margin-right: auto;">
   <thead>
@@ -725,6 +645,8 @@ solve_seq(
 ```
 SPE outcome: (Reduzir, Reduzir)
 ```
+
+<br>
 
  <table class=" lightable-classic table" style="font-family: Arial; margin-left: auto; margin-right: auto; width: auto !important; margin-left: auto; margin-right: auto;">
   <thead>
@@ -803,6 +725,8 @@ jogo9 <- extensive_form(
           )
 ```
 
+<br>
+
 <img src="{{< blogdown/postref >}}index_files/figure-html/game19b-1.png" width="672" style="display: block; margin: auto;" />
 
 O exemplo acima possui uma estrutura de árvore com 15 nós, numerados de <span class="highlighted-text">`n1`</span> a <span class="highlighted-text">`n15`</span>. Em cada nó, os jogadores têm a opção de escolher entre duas ações. Por exemplo, os três primeiros nós (<span class="highlighted-text">`n1`</span> a <span class="highlighted-text">`n3`</span>) representam as escolhas de ação dos jogadores no primeiro período. 
@@ -860,6 +784,8 @@ Utilizando o nome do objeto criado, <span class="highlighted-text">`s_jogo9`</sp
 ```r
 s_jogo9$trees[[1]]
 ```
+
+<br>
 
 <img src="{{< blogdown/postref >}}index_files/figure-html/game21e-1.png" width="672" style="display: block; margin: auto;" />
 
@@ -925,6 +851,8 @@ jogo9info <- extensive_form(
           )
 ```
 
+<br>
+
 <img src="{{< blogdown/postref >}}index_files/figure-html/game20b-1.png" width="672" style="display: block; margin: auto;" />
 
 Devido à falta de conhecimento por parte do jogador P1 em relação às estratégias escolhidas pelo jogador P2, encontrar uma solução para esse jogo torna-se um desafio. Especialmente em cenários onde os jogadores estão alheios às estratégias dos demais participantes, como é o caso apresentado abaixo ao tentar aplicar o conceito de indução retroativa para elucidar as escolhas estratégicas de P1 e P2.
@@ -935,35 +863,27 @@ Devido à falta de conhecimento por parte do jogador P1 em relação às estrat�
 solve_efg(jogo9info, concept = "backward", quietly = FALSE)
 ```
 
-<div class="toggle-details">
-<span class="arrow">&#9656;</span> Error in backward_induction()
+<br>
+
+<div class="callout-container">
+  <div>
+    <svg viewBox="0 0 512 512" style="position:relative;display:inline-block;top:.1em;fill:#f1faee;height:1.2em;" xmlns="http://www.w3.org/2000/svg">  <path d="M440.5 88.5l-52 52L415 167c9.4 9.4 9.4 24.6 0 33.9l-17.4 17.4c11.8 26.1 18.4 55.1 18.4 85.6 0 114.9-93.1 208-208 208S0 418.9 0 304 93.1 96 208 96c30.5 0 59.5 6.6 85.6 18.4L311 97c9.4-9.4 24.6-9.4 33.9 0l26.5 26.5 52-52 17.1 17zM500 60h-24c-6.6 0-12 5.4-12 12s5.4 12 12 12h24c6.6 0 12-5.4 12-12s-5.4-12-12-12zM440 0c-6.6 0-12 5.4-12 12v24c0 6.6 5.4 12 12 12s12-5.4 12-12V12c0-6.6-5.4-12-12-12zm33.9 55l17-17c4.7-4.7 4.7-12.3 0-17-4.7-4.7-12.3-4.7-17 0l-17 17c-4.7 4.7-4.7 12.3 0 17 4.8 4.7 12.4 4.7 17 0zm-67.8 0c4.7 4.7 12.3 4.7 17 0 4.7-4.7 4.7-12.3 0-17l-17-17c-4.7-4.7-12.3-4.7-17 0-4.7 4.7-4.7 12.3 0 17l17 17zm67.8 34c-4.7-4.7-12.3-4.7-17 0-4.7 4.7-4.7 12.3 0 17l17 17c4.7 4.7 12.3 4.7 17 0 4.7-4.7 4.7-12.3 0-17l-17-17zM112 272c0-35.3 28.7-64 64-64 8.8 0 16-7.2 16-16s-7.2-16-16-16c-52.9 0-96 43.1-96 96 0 8.8 7.2 16 16 16s16-7.2 16-16z"></path></svg>
+  </div>
+  <div class="callout-title">
+    Error in backward_induction()
+  </div>
 </div>
-<div class="output-exemplo">
+<div class="callout-content">
+  <div class="output-matrix">
 <pre>
   <span>Error in backward_induction(game, restriction = tree_overlay): This is not a perfect-information game.</span>
 </pre>
 </div>
-<div class="texto-adicional">
+</div>
+
   Nesse caso, há um erro ao empregar a função <span class="highlighted-text">`backward_induction()`</span> ou <span class="highlighted-text">`solve_efg()`</span>, pois o jogo em questão não se encaixa na categoria de informação perfeita (*Perfect-Information*). Em <span class="highlighted-text">`restriction = tree_overlay`</span> ocorre a restrição de sobreposição na estrutura da árvore, especificamente pelo uso do parâmetro <span class="highlighted-text">`info_sets`</span>.
 
 Em jogos de informação perfeita, os jogadores têm conhecimento completo sobre as ações e movimentos realizados por outros jogadores em cada ponto da árvore de decisão, como exemplo o jogo 7, 8 e 9. Se o jogo contém informações imperfeitas ou incertezas sobre as ações de outros jogadores, a indução reversa ou indução retroativa não pode ser aplicada diretamente, já que ela pressupõe informação perfeita.
-</div>
-
-<script>
-(function() {
-  var toggleDetails = document.querySelector('.toggle-details');
-  var outputDiv = document.querySelector('.output-exemplo');
-  var textoDiv = document.querySelector('.texto-adicional');
-  
-  if (toggleDetails && outputDiv && textoDiv) {
-    toggleDetails.addEventListener('click', function() {
-      outputDiv.classList.toggle('visible');
-      textoDiv.classList.toggle('visible');
-      toggleDetails.classList.toggle('open');
-    });
-  }
-})();
-</script>
 
 </div>
 
@@ -1014,6 +934,7 @@ jogo10 <- extensive_form(
 ```
 
 
+<br>
 
 <div style="text-align:center;">
   <img src="3jogadores.png" alt="Jogo 10">
@@ -1035,6 +956,8 @@ s_jogo10 <- solve_efg(jogo9, concept = "backward", quietly = FALSE)
 backward induction: [(P, G , G , G , G ), (G, G, G  , G  , G  ,   P, G  , G  , G  ,   P)], [(P, G , G , G , G ), (G, P, G  , G  , G  ,   P, G  , G  , G  ,   P)], [(P,  P, G , G , G ), (P, G, G  , G  , G  ,   P, G  , G  , G  ,   P)], [(P,  P, G , G , G ), (P, P, G  , G  , G  ,   P, G  , G  , G  ,   P)], [(P, G , G , G , G ), (G, G, G  , G  , G  ,   P, G  ,   P, G  ,   P)], [(P, G , G , G , G ), (G, P, G  , G  , G  ,   P, G  ,   P, G  ,   P)], [(P,  P, G , G , G ), (P, G, G  , G  , G  ,   P, G  ,   P, G  ,   P)], [(P,  P, G , G , G ), (P, P, G  , G  , G  ,   P, G  ,   P, G  ,   P)]
 ```
 
+<br>
+
 <div style="text-align:center;">
   <img src="3jogadoresolved.png" alt="Resolução do jogo 10">
 </div>
@@ -1050,37 +973,28 @@ Quando se trata de um jogo com três jogadores, como no caso do jogo 9, a funç�
 to_matrix(jogo10)
 ```
 
-<div class="toggle-matrix">
-<span class="arrow">&#9656;</span> Error in to_matrix()
+<br>
+
+<div class="callout-container">
+  <div>
+    <svg viewBox="0 0 512 512" style="position:relative;display:inline-block;top:.1em;fill:#f1faee;height:1.2em;" xmlns="http://www.w3.org/2000/svg">  <path d="M440.5 88.5l-52 52L415 167c9.4 9.4 9.4 24.6 0 33.9l-17.4 17.4c11.8 26.1 18.4 55.1 18.4 85.6 0 114.9-93.1 208-208 208S0 418.9 0 304 93.1 96 208 96c30.5 0 59.5 6.6 85.6 18.4L311 97c9.4-9.4 24.6-9.4 33.9 0l26.5 26.5 52-52 17.1 17zM500 60h-24c-6.6 0-12 5.4-12 12s5.4 12 12 12h24c6.6 0 12-5.4 12-12s-5.4-12-12-12zM440 0c-6.6 0-12 5.4-12 12v24c0 6.6 5.4 12 12 12s12-5.4 12-12V12c0-6.6-5.4-12-12-12zm33.9 55l17-17c4.7-4.7 4.7-12.3 0-17-4.7-4.7-12.3-4.7-17 0l-17 17c-4.7 4.7-4.7 12.3 0 17 4.8 4.7 12.4 4.7 17 0zm-67.8 0c4.7 4.7 12.3 4.7 17 0 4.7-4.7 4.7-12.3 0-17l-17-17c-4.7-4.7-12.3-4.7-17 0-4.7 4.7-4.7 12.3 0 17l17 17zm67.8 34c-4.7-4.7-12.3-4.7-17 0-4.7 4.7-4.7 12.3 0 17l17 17c4.7 4.7 12.3 4.7 17 0 4.7-4.7 4.7-12.3 0-17l-17-17zM112 272c0-35.3 28.7-64 64-64 8.8 0 16-7.2 16-16s-7.2-16-16-16c-52.9 0-96 43.1-96 96 0 8.8 7.2 16 16 16s16-7.2 16-16z"></path></svg>
+  </div>
+  <div class="callout-title">
+    Error in to_matrix()
+  </div>
 </div>
-<div class="output-matrix">
+<div class="callout-content">
+  <div class="output-matrix">
 <pre>
   <span>Error in to_matrix(jogo10): This function only works with a two-person game.</span>
 </pre>
 </div>
-<div class="texto-matrix">
+</div>
+
 Esse erro ocorre pois a função <span class="highlighted-text">`to_matrix()`</span> do pacote Rgamer é projetada para trabalhar com jogos de dois jogadores. A mensagem de erro que está sendo mostrada, "*This function only works with a two-person game*", significa que essa função não é capaz de lidar com jogos envolvendo três jogadores ou mais, pois limita-se a jogos de dois jogadores porque ela transforma a estrutura de um jogo em uma matriz, que é mais adequada para jogos de dois jogadores.
 
 Quando há três jogadores, como no exemplo apresentado, a representação em forma extensiva da árvore de decisão se torna mais clara e menos complexa do que a representação em forma normal por matriz, porém a complexidade aumenta ao considerar as possíveis soluções de indução retroativa, em que cada jogador analisa as escolhas dos outros para determinar suas próprias ações.
 
 Com três ou mais jogadores, a quantidade de combinações possíveis de soluções de indução retroativa cresce exponencialmente. Desse modo, surge mais cenários estratégicos a considerar, tornando impraticável a representação por matriz.
-
-</div>
-
-<script>
-(function() {
-  var toggleMatrix = document.querySelector('.toggle-matrix');
-  var outputDiv = document.querySelector('.output-matrix');
-  var textoDiv = document.querySelector('.texto-matrix');
-  
-  if (toggleMatrix && outputDiv && textoDiv) {
-    toggleMatrix.addEventListener('click', function() {
-      outputDiv.classList.toggle('visible');
-      textoDiv.classList.toggle('visible');
-      toggleMatrix.classList.toggle('open');
-    });
-  }
-})();
-</script>
 
 </div>

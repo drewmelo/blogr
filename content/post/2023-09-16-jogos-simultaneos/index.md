@@ -214,6 +214,8 @@ s_jogo1 <- solve_nfg(jogo1, show_table = TRUE)
 Pure-strategy NE: [Confessar, Confessar]
 ```
 
+<br>
+
 <table class="lightable-classic table" style="font-family: Arial; margin-left: auto; margin-right: auto; width: auto !important; margin-left: auto; margin-right: auto;">
   <thead>
     <tr>
@@ -281,6 +283,8 @@ Sendo necessário o comando <span class="highlighted-text">`$table`</span> para 
 s_jogo2$table
 ```
 
+<br>
+
 <table class=" lightable-classic table" style="font-family: Arial; margin-left: auto; margin-right: auto; width: auto !important; margin-left: auto; margin-right: auto;">
  <thead>
 <tr>
@@ -345,6 +349,8 @@ s_jogo3 <- solve_nfg(jogo3,
                      mark_br = FALSE, 
                      quietly = TRUE)
 ```
+
+<br>
 
 <table class=" lightable-classic table" style="font-family: Arial; margin-left: auto; margin-right: auto; width: auto !important; margin-left: auto; margin-right: auto;">
  <thead>
@@ -457,6 +463,8 @@ br_j3 <- solve_nfg(jogo3)
 ```
 Pure-strategy NE: [Bar, Bar]
 ```
+
+<br>
 
 <table class=" lightable-classic table" style="font-family: Arial; margin-left: auto; margin-right: auto; width: auto !important; margin-left: auto; margin-right: auto;">
  <thead>
@@ -580,6 +588,8 @@ Com a função <span class="highlighted-text">`br_plot`</span> (*best response p
 s_jogo4$br_plot
 ```
 
+<br>
+
 <img src="{{< blogdown/postref >}}index_files/figure-html/mixedgraphgame-1.png" width="672" style="display: block; margin: auto;" />
 
 </div>
@@ -626,6 +636,8 @@ approximated NE: (0.1, 0.7)
 The obtained NE might be only a part of the solutions.
 Please examine br_plot (best response plot) carefully.
 ```
+
+<br>
 
 <img src="{{< blogdown/postref >}}index_files/figure-html/game4b-1.png" width="672" style="display: block; margin: auto;" />
 
@@ -720,6 +732,8 @@ Para extrair o gráfico das melhores respostas com o ponto de Equilíbrio de Nas
 ```r
 s_jogo6$br_plot_NE
 ```
+
+<br>
 
 <img src="{{< blogdown/postref >}}index_files/figure-html/game6d-1.png" width="672" style="display: block; margin: auto;" />
 
