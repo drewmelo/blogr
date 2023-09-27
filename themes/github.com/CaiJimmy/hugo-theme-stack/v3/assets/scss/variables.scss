@@ -85,12 +85,16 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
         --card-text-color-tertiary: rgba(255, 255, 255, 0.5);
         --card-separator-color: rgba(255, 255, 255, 0.12);
         table.lightable-classic thead tr:first-child {
-    background-color: #cecccc;/* Cor de fundo desejada para a primeira linha do cabeçalho */;
-}
+    background-color: #22333b;/* Cor de fundo desejada para a primeira linha do cabeçalho */;
+        }
 
-table.lightable-classic tbody tr:nth-child(odd) {
-    background-color: #cecccc; /* Cor de fundo desejada para as linhas ímpares */;
-}
+        table.lightable-classic tbody tr:nth-child(odd) {
+            background-color: #22333b; /* Cor de fundo desejada para as linhas ímpares */;
+        }
+
+        table.lightable-classic th, table.lightable-classic td {
+          color: #f2f2f2; /* Aqui você define a cor do texto */
+        }
     }
 }
 
@@ -133,11 +137,11 @@ table.lightable-classic tbody tr:nth-child(odd) {
     --kbd-border-color: #dadada;
 
     &[data-scheme="dark"] {
-        --code-background-color: #272822;
+        --code-background-color: #1b272c;
         --code-text-color: rgba(255, 255, 255, 0.9);
 
-        --table-border-color: #f2e9e4;
-        --tr-even-background-color: #f2e9e4;
+        --table-border-color: #354f52;
+        --tr-even-background-color: #5c6b73;
 
         --blockquote-background-color: rgb(75 75 75);
     }
@@ -163,7 +167,7 @@ table.lightable-classic tbody tr:nth-child(odd) {
 
 [data-scheme="dark"] {
     --pre-text-color: #f8f8f2;
-    --pre-background-color: #212529;
+    --pre-background-color: #1e2c32;
     @import "partials/highlight/dark.scss";
 }
 

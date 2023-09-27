@@ -234,6 +234,7 @@ function showConteudoSequencial(conteudoId) {
 
 .callout-title {
   font-weight: bold;
+  color: #f1faee;
   margin-bottom: -10px;
   margin-left: 0.5rem;
   margin-top: -10px;
@@ -586,7 +587,7 @@ Pure-strategy NE: [(Reduzir), (Reduzir, Reduzir)]
 
 <br>
 
- <table class=" lightable-classic table" style="font-family: Arial; margin-left: auto; margin-right: auto; width: auto !important; margin-left: auto; margin-right: auto;">
+ <table class="lightable-classic table" style="font-family: Arial; margin-left: auto; margin-right: auto; width: auto !important; margin-left: auto; margin-right: auto;">
   <thead>
  <tr>
  <th style="empty-cells: hide;" colspan="2"></th>
@@ -595,10 +596,10 @@ Pure-strategy NE: [(Reduzir), (Reduzir, Reduzir)]
    <tr>
     <th style="text-align:left;">   </th>
     <th style="text-align:center;"> strategy </th>
-    <th style="text-align:center;"> (Manter, Manter) </th>
-    <th style="text-align:center;"> (Manter, Reduzir) </th>
-    <th style="text-align:center;"> (Reduzir, Manter) </th>
-    <th style="text-align:center;"> (Reduzir, Reduzir) </th>
+    <th style="text-align:center;"> (M, M) </th>
+    <th style="text-align:center;"> (M, R) </th>
+    <th style="text-align:center;"> (R, M) </th>
+    <th style="text-align:center;"> (R, R) </th>
    </tr>
   </thead>
  <tbody>

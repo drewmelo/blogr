@@ -223,6 +223,7 @@ function showConteudoSequencial(conteudoId) {
 
 .callout-title {
   font-weight: bold;
+  color: #f1faee;
   margin-bottom: -10px;
   margin-left: 0.5rem;
   margin-top: -10px;
@@ -633,7 +634,7 @@ function showConteudoENPS(conteudoId) {
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;br&gt;
- &lt;table class=&#34; lightable-classic table&#34; style=&#34;font-family: Arial; margin-left: auto; margin-right: auto; width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+ &lt;table class=&#34;lightable-classic table&#34; style=&#34;font-family: Arial; margin-left: auto; margin-right: auto; width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
   &lt;thead&gt;
  &lt;tr&gt;
  &lt;th style=&#34;empty-cells: hide;&#34; colspan=&#34;2&#34;&gt;&lt;/th&gt;
@@ -642,10 +643,10 @@ function showConteudoENPS(conteudoId) {
    &lt;tr&gt;
     &lt;th style=&#34;text-align:left;&#34;&gt;   &lt;/th&gt;
     &lt;th style=&#34;text-align:center;&#34;&gt; strategy &lt;/th&gt;
-    &lt;th style=&#34;text-align:center;&#34;&gt; (Manter, Manter) &lt;/th&gt;
-    &lt;th style=&#34;text-align:center;&#34;&gt; (Manter, Reduzir) &lt;/th&gt;
-    &lt;th style=&#34;text-align:center;&#34;&gt; (Reduzir, Manter) &lt;/th&gt;
-    &lt;th style=&#34;text-align:center;&#34;&gt; (Reduzir, Reduzir) &lt;/th&gt;
+    &lt;th style=&#34;text-align:center;&#34;&gt; (M, M) &lt;/th&gt;
+    &lt;th style=&#34;text-align:center;&#34;&gt; (M, R) &lt;/th&gt;
+    &lt;th style=&#34;text-align:center;&#34;&gt; (R, M) &lt;/th&gt;
+    &lt;th style=&#34;text-align:center;&#34;&gt; (R, R) &lt;/th&gt;
    &lt;/tr&gt;
   &lt;/thead&gt;
  &lt;tbody&gt;
