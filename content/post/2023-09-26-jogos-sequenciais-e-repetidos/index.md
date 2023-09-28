@@ -1145,8 +1145,4 @@ Com três ou mais jogadores, a quantidade de combinações possíveis de soluç�
 
 ## Referências
 
-HAZRA, Tanmoy; ANJARIA, Kushal. Applications of game theory in deep learning: a survey. **Multimedia Tools and Applications**, v. 81, n. 6, p. 8963-8994, 2022. DOI: <a href="https://doi.org/10.1007/s11042-022-12153-2" target="_blank" style="color:#016dea; text-decoration: none;" onmouseover="this.style.color='#014ba0';" onmouseout="this.style.color='#016dea';">https://doi.org/10.1007/s11042-022-12153-2</a>.
-
-MANKIW, N. Gregory et al. **Introdução à economia**. 2005.
-
 YANAI, Yusei; KAMIJO, Yoshio. **Game Theory With R**. Shin-Ogawacho, Shinjuku-ku, Tóquio, JP: Asakura Publishing Co,. Ltd., 2023. 244 p. ISBN 978-4-254-27024-2 C3050.
