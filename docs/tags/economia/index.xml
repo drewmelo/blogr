@@ -356,6 +356,52 @@ a#rgamer-link:hover {
   width: 100%; /* Defina a largura como 100% */
 }
 
+/* ---------------------------------------------------------- */
+
+/* Estilos para o layout responsivo dos botões */
+@media screen and (max-width: 768px) {
+
+  #botoesSequencial {
+    gap: 10px; /* Espaço entre os botões */
+  }
+  
+  .botao-interativo-sequencial {
+    width: 100%; /* Largura total para preencher a coluna */
+    margin: 0 auto;
+  }
+  
+  #botoesPath {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
+    grid-template-rows: auto auto; /* Duas linhas para os dois primeiros botões */
+    gap: 10px; /* Espaço entre os botões */
+  }
+  
+  .botao-interativo-path {
+    width: 100%; /* Largura total para preencher a coluna */
+    margin: 0 auto;
+  }
+  
+  #botoesENPS {
+    gap: 10px; /* Espaço entre os botões */
+  }
+  
+  .botao-interativo-enps {
+    width: 100%; /* Largura total para preencher a coluna */
+    margin: 0 auto;
+  }
+  
+  #botoesRepetido {
+    gap: 10px; /* Espaço entre os botões */
+  }
+  
+  .botao-interativo-repetido {
+    width: 100%; /* Largura total para preencher a coluna */
+    margin: 0 auto;
+  }
+  
+}  
+  
 &lt;/style&gt;
 &lt;div id=&#34;sequencial1&#34; class=&#34;conteudoSequencial&#34;&gt;
 &lt;p&gt;Na representação extensiva, podemos utilizar o exemplo mencionado anteriormente da guerra de preços entre dois postos de gasolina. Nessa estrutura de jogo, ao contrário da forma normal, os jogadores tomam decisões em uma ordem específica. Começando com o posto &amp;ldquo;OilFlex&amp;rdquo;, que é o jogador inicial e tem um nó na árvore de decisão, e &amp;ldquo;EconoGas&amp;rdquo;, que é repetido duas vezes porque possui dois nós, um para cada situação em que pode reagir às ações tomadas pelo outro posto de gasolina. Essa diferenciação ocorre porque o jogador inicial, neste caso, começa a árvore de decisão, enquanto o segundo jogador reage a essa ação inicial. O mesmo princípio se aplica às estratégias no argumento &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;actions&lt;/code&gt;&lt;/span&gt;, que consiste nas estratégias &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;&amp;quot;Manter&amp;quot;&lt;/code&gt;&lt;/span&gt;&amp;quot; e &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;&amp;quot;Reduzir&amp;quot;&lt;/code&gt;&lt;/span&gt; para o jogador 1 e 2.&lt;/p&gt;

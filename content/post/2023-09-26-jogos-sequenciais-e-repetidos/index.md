@@ -378,6 +378,52 @@ a#rgamer-link:hover {
   width: 100%; /* Defina a largura como 100% */
 }
 
+/* ---------------------------------------------------------- */
+
+/* Estilos para o layout responsivo dos botões */
+@media screen and (max-width: 768px) {
+
+  #botoesSequencial {
+    gap: 10px; /* Espaço entre os botões */
+  }
+  
+  .botao-interativo-sequencial {
+    width: 100%; /* Largura total para preencher a coluna */
+    margin: 0 auto;
+  }
+  
+  #botoesPath {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
+    grid-template-rows: auto auto; /* Duas linhas para os dois primeiros botões */
+    gap: 10px; /* Espaço entre os botões */
+  }
+  
+  .botao-interativo-path {
+    width: 100%; /* Largura total para preencher a coluna */
+    margin: 0 auto;
+  }
+  
+  #botoesENPS {
+    gap: 10px; /* Espaço entre os botões */
+  }
+  
+  .botao-interativo-enps {
+    width: 100%; /* Largura total para preencher a coluna */
+    margin: 0 auto;
+  }
+  
+  #botoesRepetido {
+    gap: 10px; /* Espaço entre os botões */
+  }
+  
+  .botao-interativo-repetido {
+    width: 100%; /* Largura total para preencher a coluna */
+    margin: 0 auto;
+  }
+  
+}  
+  
 </style>
 
 <div id="sequencial1" class="conteudoSequencial">
