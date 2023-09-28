@@ -197,25 +197,8 @@ function showConteudo(conteudoId) {
     background-color: #0f4c5c;
     color: #dedbd2; /* Cor do texto do botão selecionado */
 }
-  
-/* Estilos para o layout responsivo dos botões */
-@media screen and (max-width: 768px) {
-  #botoesExemplo {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
-    grid-template-rows: auto auto; /* Duas linhas para os dois primeiros botões */
-    gap: 10px; /* Espaço entre os botões */
-  }
 
-  .botao-interativo-exemplo {
-    width: 100%; /* Largura total para preencher a coluna */
-  }
-
-  /* O terceiro botão vai para a segunda linha */
-  .botao-interativo-exemplo:nth-child(3) {
-    grid-row: 2; /* Coloca-o na segunda linha */
-  }
-}
+/* ---------------------------------------------------------- */  
 
 a#rgamer-link {
     color: #016dea; /* Cor do texto no modo light */
@@ -235,6 +218,37 @@ a#rgamer-link:hover {
 
 [data-scheme="dark"] a#rgamer-link:hover {
     color: #7eecea; /* Cor do texto quando o mouse passar por cima no modo dark */
+}
+
+/* ---------------------------------------------------------- */  
+  
+/* Estilos para o layout responsivo dos botões */
+@media screen and (max-width: 768px) {
+  #botoesExemplo {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
+    grid-template-rows: auto auto; /* Duas linhas para os dois primeiros botões */
+    gap: 10px; /* Espaço entre os botões */
+  }
+
+  .botao-interativo-exemplo {
+    width: 100%; /* Largura total para preencher a coluna */
+    margin: 0 auto;
+  }
+  
+  #botoes {
+    gap: 10px; /* Espaço entre os botões */
+  }
+  
+  .botao-interativo {
+    width: 100%; /* Largura total para preencher a coluna */
+    margin: 0 auto;
+  }
+
+  /* O terceiro botão vai para a segunda linha */
+  .botao-interativo-exemplo:nth-child(3) {
+    grid-row: 2; /* Coloca-o na segunda linha */
+  }
 }
 
 /* JOGOS SIMULTÂNEOS-MISTAS -- FIM */
