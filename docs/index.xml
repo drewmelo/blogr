@@ -14,6 +14,7 @@
         <guid>https://drewmelo.github.io/blogr/p/jogos-sequenciais-e-repetidos/</guid>
         <description>&lt;img src="https://drewmelo.github.io/blogr/p/jogos-sequenciais-e-repetidos/jogos-sequenciais-repetidos.jpg" alt="Featured image of post Teoria dos Jogos no R: Jogos Sequenciais e Repetidos" /&gt;&lt;link href=&#34;https://drewmelo.github.io/blogr/p/jogos-sequenciais-e-repetidos/index_files/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 &lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
+&lt;p&gt;Se você ainda não conferiu nosso tutorial sobre Teoria dos Jogos no R, abordando Jogos Simultâneos, clique &lt;a href=&#34;https://github.com/yukiyanai/rgamer&#34; id=&#34;rgamer-link&#34; target=&#34;_blank&#34;&gt;aqui&lt;/a&gt; para acessar diretamente o post.&lt;/p&gt;
 &lt;h3 id=&#34;pacotes&#34;&gt;Pacotes&lt;/h3&gt;
 &lt;p&gt;Para realização dos passos seguintes, será necessário a instalação e ativação do pacote:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# install.packages(&amp;#34;devtools&amp;#34;)&lt;/span&gt;
@@ -163,6 +164,60 @@ function showConteudoSequencial(conteudoId) {
     opacity: 0;
     transition: opacity 0.5s;
   }
+  
+/* ---------------------------------------------------------- */  
+  
+  [data-scheme=&#34;dark&#34;] .botao-interativo-sequencial {
+    background-color: transparent;
+    color: #dedbd2; /* Use a variável de cor do texto para o modo dark */
+}
+
+  [data-scheme=&#34;dark&#34;] .botao-interativo-sequencial:hover {
+    background-color: #cfdbd5; 
+    color: #2f3e46;
+}
+
+  [data-scheme=&#34;dark&#34;] .botao-interativo-sequencial.selecionadoSequencial {
+    background-color: #0f4c5c;
+    color: #dedbd2; /* Cor do texto do botão selecionado */
+}
+
+
+/* ---------------------------------------------------------- */
+
+
+  [data-scheme=&#34;dark&#34;] .botao-interativo-path {
+    background-color: transparent;
+    color: #dedbd2; /* Use a variável de cor do texto para o modo dark */
+}
+
+  [data-scheme=&#34;dark&#34;] .botao-interativo-path:hover {
+    background-color: #cfdbd5; 
+    color: #2f3e46;
+}
+
+  [data-scheme=&#34;dark&#34;] .botao-interativo-path.selecionadoPath {
+    background-color: #0f4c5c;
+    color: #dedbd2; /* Cor do texto do botão selecionado */
+}
+
+/* ---------------------------------------------------------- */
+
+
+  [data-scheme=&#34;dark&#34;] .botao-interativo-enps {
+    background-color: transparent;
+    color: #dedbd2; /* Use a variável de cor do texto para o modo dark */
+}
+
+  [data-scheme=&#34;dark&#34;] .botao-interativo-enps:hover {
+    background-color: #cfdbd5; 
+    color: #2f3e46;
+}
+
+  [data-scheme=&#34;dark&#34;] .botao-interativo-enps.selecionadoENPS {
+    background-color: #0f4c5c;
+    color: #dedbd2; /* Cor do texto do botão selecionado */
+}
 
 /* ----------------- JOGOS SEQUENCIAIS FIM ------------------ */
 
@@ -198,6 +253,47 @@ function showConteudoSequencial(conteudoId) {
     opacity: 0;
     transition: opacity 0.5s;
   }
+
+/* ---------------------------------------------------------- */
+
+
+  [data-scheme=&#34;dark&#34;] .botao-interativo-repetido {
+    background-color: transparent;
+    color: #dedbd2; /* Use a variável de cor do texto para o modo dark */
+}
+
+  [data-scheme=&#34;dark&#34;] .botao-interativo-repetido:hover {
+    background-color: #cfdbd5; 
+    color: #2f3e46;
+}
+
+  [data-scheme=&#34;dark&#34;] .botao-interativo-repetido.selecionadoRepetido {
+    background-color: #0f4c5c;
+    color: #dedbd2; /* Cor do texto do botão selecionado */
+}  
+
+/* ---------------------------------------------------------- */
+
+a#rgamer-link {
+    color: #016dea; /* Cor do texto no modo light */
+    text-decoration: none;
+}
+
+a#rgamer-link:hover {
+    color: #014ba0; /* Cor do texto quando o mouse passar por cima no modo light */
+}
+
+/* ---------------------------------------------------------- */  
+
+/* Estilos para o link no modo dark */
+[data-scheme=&#34;dark&#34;] a#rgamer-link {
+    color: #5bc0be; /* Cor do texto no modo dark */
+}
+
+[data-scheme=&#34;dark&#34;] a#rgamer-link:hover {
+    color: #7eecea; /* Cor do texto quando o mouse passar por cima no modo dark */
+}
+  
 &lt;/style&gt;
 &lt;style type=&#34;text/css&#34;&gt;
 
@@ -794,7 +890,7 @@ envolver a coleta, processamento, análise e interpretação desses dados com o 
 &lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
 &lt;p&gt;A teoria dos jogos é um ramo da matemática que explora as interações estratégicas em que as decisões de um indivíduo são influenciadas pelo conflito e cooperação de outros participantes. Em relação ao campo das ciências econômicas, essa teoria desempenha um papel fundamental ao analisar como as pessoas realizam escolhas estratégicas diante de objetivos concorrentes em um contexto de escassez.&lt;/p&gt;
 &lt;p&gt;Uma aplicação interessante da teoria dos jogos na área da economia é a sua combinação com simulações de aprendizado. Por exemplo, em um cenário em que diferentes empresas competem para estabelecer preços em um mercado, é possível utilizar a teoria dos jogos em conjunto com modelos de aprendizado. Nesses modelos, as empresas podem aprender ao longo do tempo a tomar decisões estratégicas mais eficientes e adaptar suas estratégias com base nas escolhas e resultados passados. Dessa forma, as empresas podem ajustar gradualmente suas ações para obter melhores resultados e alcançar equilíbrios de longo prazo em um ambiente competitivo.&lt;/p&gt;
-&lt;p&gt;Este tutorial tem como objetivo ensinar como aplicar a teoria dos jogos no ambiente R, utilizando o pacote &lt;a href=&#34;https://github.com/yukiyanai/rgamer&#34; target=&#34;_blank&#34; style=&#34;color:#016dea; text-decoration: none;&#34; onmouseover=&#34;this.style.color=&#39;#014ba0&#39;;&#34; onmouseout=&#34;this.style.color=&#39;#016dea&#39;;&#34;&gt;Rgamer&lt;/a&gt;, desenvolvido por Yusei Yanai, Ph.D. em Ciência Política, e Yoshio Kamijo, Especialista em Economia Experimental, Teoria dos Jogos, Teoria Comportamental dos Jogos e Design do Futuro. Desse modo, através da integração de funções de modelos de aprendizado, exploraremos a teoria dos jogos e sua aplicação prática. O pacote oferece representações visuais de jogos para dois ou mais jogadores e possibilita encontrar equilíbrios de Nash, proporcionando uma compreensão mais profunda dos conceitos fundamentais no contexto das Ciências Econômicas. Com o &lt;a href=&#34;https://github.com/yukiyanai/rgamer&#34; target=&#34;_blank&#34; style=&#34;color:#016dea; text-decoration: none;&#34; onmouseover=&#34;this.style.color=&#39;#014ba0&#39;;&#34; onmouseout=&#34;this.style.color=&#39;#016dea&#39;;&#34;&gt;Rgamer&lt;/a&gt;, tem-se disponível uma ferramenta poderosa para a análise e simulação de interações estratégicas, tornando o estudo do assunto ainda mais acessível e abrangente.&lt;/p&gt;
+&lt;p&gt;Este tutorial tem como objetivo ensinar como aplicar a teoria dos jogos no ambiente R, utilizando o pacote &lt;a href=&#34;https://github.com/yukiyanai/rgamer&#34; id=&#34;rgamer-link&#34; target=&#34;_blank&#34;&gt;Rgamer&lt;/a&gt;, desenvolvido por Yusei Yanai, Ph.D. em Ciência Política, e Yoshio Kamijo, Especialista em Economia Experimental, Teoria dos Jogos, Teoria Comportamental dos Jogos e Design do Futuro. Desse modo, através da integração de funções de modelos de aprendizado, exploraremos a teoria dos jogos e sua aplicação prática. O pacote oferece representações visuais de jogos para dois ou mais jogadores e possibilita encontrar equilíbrios de Nash, proporcionando uma compreensão mais profunda dos conceitos fundamentais no contexto das Ciências Econômicas. Com o &lt;a href=&#34;https://github.com/yukiyanai/rgamer&#34; id=&#34;rgamer-link&#34; target=&#34;_blank&#34;&gt;Rgamer&lt;/a&gt;, tem-se disponível uma ferramenta poderosa para a análise e simulação de interações estratégicas, tornando o estudo do assunto ainda mais acessível e abrangente.&lt;/p&gt;
 &lt;h3 id=&#34;pacotes&#34;&gt;Pacotes&lt;/h3&gt;
 &lt;p&gt;Para realização dos passos seguintes, será necessário a instalação e ativação do pacote:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# install.packages(&amp;#34;devtools&amp;#34;)&lt;/span&gt;
@@ -876,6 +972,25 @@ function showConteudo(conteudoId) {
     transition: opacity 0.5s;
   }
   
+/* ---------------------------------------------------------- */  
+  
+  [data-scheme=&#34;dark&#34;] .botao-interativo {
+    background-color: transparent;
+    color: #dedbd2; /* Use a variável de cor do texto para o modo dark */
+}
+
+  [data-scheme=&#34;dark&#34;] .botao-interativo:hover {
+    background-color: #cfdbd5; 
+    color: #2f3e46;
+}
+
+  [data-scheme=&#34;dark&#34;] .botao-interativo.selecionado {
+    background-color: #0f4c5c;
+    color: #dedbd2; /* Cor do texto do botão selecionado */
+}
+
+/* ---------------------------------------------------------- */
+  
 /* JOGOS SIMULTÂNEOS-ESTRATÉGIAS PURAS -- FIM */
 
 /* JOGOS SIMULTÂNEOS-MISTAS -- COMEÇO */
@@ -911,6 +1026,23 @@ function showConteudo(conteudoId) {
     transition: opacity 0.5s;
   }
   
+/* ---------------------------------------------------------- */  
+  
+  [data-scheme=&#34;dark&#34;] .botao-interativo-exemplo {
+   background-color: transparent;
+   color: #dedbd2; 
+}
+
+  [data-scheme=&#34;dark&#34;] .botao-interativo-exemplo:hover {
+    background-color: #cfdbd5; 
+    color: #2f3e46;
+}
+
+  [data-scheme=&#34;dark&#34;] .botao-interativo-exemplo.selecionadoExemplo {
+    background-color: #0f4c5c;
+    color: #dedbd2; /* Cor do texto do botão selecionado */
+}
+  
 /* Estilos para o layout responsivo dos botões */
 @media screen and (max-width: 768px) {
   #botoesExemplo {
@@ -928,6 +1060,26 @@ function showConteudo(conteudoId) {
   .botao-interativo-exemplo:nth-child(3) {
     grid-row: 2; /* Coloca-o na segunda linha */
   }
+}
+
+a#rgamer-link {
+    color: #016dea; /* Cor do texto no modo light */
+    text-decoration: none;
+}
+
+a#rgamer-link:hover {
+    color: #014ba0; /* Cor do texto quando o mouse passar por cima no modo light */
+}
+
+/* ---------------------------------------------------------- */  
+
+/* Estilos para o link no modo dark */
+[data-scheme=&#34;dark&#34;] a#rgamer-link {
+    color: #5bc0be; /* Cor do texto no modo dark */
+}
+
+[data-scheme=&#34;dark&#34;] a#rgamer-link:hover {
+    color: #7eecea; /* Cor do texto quando o mouse passar por cima no modo dark */
 }
 
 /* JOGOS SIMULTÂNEOS-MISTAS -- FIM */

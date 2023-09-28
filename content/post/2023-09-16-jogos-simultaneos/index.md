@@ -31,7 +31,7 @@ A teoria dos jogos é um ramo da matemática que explora as interações estrat�
 
 Uma aplicação interessante da teoria dos jogos na área da economia é a sua combinação com simulações de aprendizado. Por exemplo, em um cenário em que diferentes empresas competem para estabelecer preços em um mercado, é possível utilizar a teoria dos jogos em conjunto com modelos de aprendizado. Nesses modelos, as empresas podem aprender ao longo do tempo a tomar decisões estratégicas mais eficientes e adaptar suas estratégias com base nas escolhas e resultados passados. Dessa forma, as empresas podem ajustar gradualmente suas ações para obter melhores resultados e alcançar equilíbrios de longo prazo em um ambiente competitivo.
 
-Este tutorial tem como objetivo ensinar como aplicar a teoria dos jogos no ambiente R, utilizando o pacote <a href="https://github.com/yukiyanai/rgamer" target="_blank" style="color:#016dea; text-decoration: none;" onmouseover="this.style.color='#014ba0';" onmouseout="this.style.color='#016dea';">Rgamer</a>, desenvolvido por Yusei Yanai, Ph.D. em Ciência Política, e Yoshio Kamijo, Especialista em Economia Experimental, Teoria dos Jogos, Teoria Comportamental dos Jogos e Design do Futuro. Desse modo, através da integração de funções de modelos de aprendizado, exploraremos a teoria dos jogos e sua aplicação prática. O pacote oferece representações visuais de jogos para dois ou mais jogadores e possibilita encontrar equilíbrios de Nash, proporcionando uma compreensão mais profunda dos conceitos fundamentais no contexto das Ciências Econômicas. Com o <a href="https://github.com/yukiyanai/rgamer" target="_blank" style="color:#016dea; text-decoration: none;" onmouseover="this.style.color='#014ba0';" onmouseout="this.style.color='#016dea';">Rgamer</a>, tem-se disponível uma ferramenta poderosa para a análise e simulação de interações estratégicas, tornando o estudo do assunto ainda mais acessível e abrangente.
+Este tutorial tem como objetivo ensinar como aplicar a teoria dos jogos no ambiente R, utilizando o pacote <a href="https://github.com/yukiyanai/rgamer" id="rgamer-link" target="_blank">Rgamer</a>, desenvolvido por Yusei Yanai, Ph.D. em Ciência Política, e Yoshio Kamijo, Especialista em Economia Experimental, Teoria dos Jogos, Teoria Comportamental dos Jogos e Design do Futuro. Desse modo, através da integração de funções de modelos de aprendizado, exploraremos a teoria dos jogos e sua aplicação prática. O pacote oferece representações visuais de jogos para dois ou mais jogadores e possibilita encontrar equilíbrios de Nash, proporcionando uma compreensão mais profunda dos conceitos fundamentais no contexto das Ciências Econômicas. Com o <a href="https://github.com/yukiyanai/rgamer" id="rgamer-link" target="_blank">Rgamer</a>, tem-se disponível uma ferramenta poderosa para a análise e simulação de interações estratégicas, tornando o estudo do assunto ainda mais acessível e abrangente.
 
 ### Pacotes
 
@@ -127,6 +127,25 @@ function showConteudo(conteudoId) {
     transition: opacity 0.5s;
   }
   
+/* ---------------------------------------------------------- */  
+  
+  [data-scheme="dark"] .botao-interativo {
+    background-color: transparent;
+    color: #dedbd2; /* Use a variável de cor do texto para o modo dark */
+}
+
+  [data-scheme="dark"] .botao-interativo:hover {
+    background-color: #cfdbd5; 
+    color: #2f3e46;
+}
+
+  [data-scheme="dark"] .botao-interativo.selecionado {
+    background-color: #0f4c5c;
+    color: #dedbd2; /* Cor do texto do botão selecionado */
+}
+
+/* ---------------------------------------------------------- */
+  
 /* JOGOS SIMULTÂNEOS-ESTRATÉGIAS PURAS -- FIM */
 
 /* JOGOS SIMULTÂNEOS-MISTAS -- COMEÇO */
@@ -162,6 +181,23 @@ function showConteudo(conteudoId) {
     transition: opacity 0.5s;
   }
   
+/* ---------------------------------------------------------- */  
+  
+  [data-scheme="dark"] .botao-interativo-exemplo {
+   background-color: transparent;
+   color: #dedbd2; 
+}
+
+  [data-scheme="dark"] .botao-interativo-exemplo:hover {
+    background-color: #cfdbd5; 
+    color: #2f3e46;
+}
+
+  [data-scheme="dark"] .botao-interativo-exemplo.selecionadoExemplo {
+    background-color: #0f4c5c;
+    color: #dedbd2; /* Cor do texto do botão selecionado */
+}
+  
 /* Estilos para o layout responsivo dos botões */
 @media screen and (max-width: 768px) {
   #botoesExemplo {
@@ -179,6 +215,26 @@ function showConteudo(conteudoId) {
   .botao-interativo-exemplo:nth-child(3) {
     grid-row: 2; /* Coloca-o na segunda linha */
   }
+}
+
+a#rgamer-link {
+    color: #016dea; /* Cor do texto no modo light */
+    text-decoration: none;
+}
+
+a#rgamer-link:hover {
+    color: #014ba0; /* Cor do texto quando o mouse passar por cima no modo light */
+}
+
+/* ---------------------------------------------------------- */  
+
+/* Estilos para o link no modo dark */
+[data-scheme="dark"] a#rgamer-link {
+    color: #5bc0be; /* Cor do texto no modo dark */
+}
+
+[data-scheme="dark"] a#rgamer-link:hover {
+    color: #7eecea; /* Cor do texto quando o mouse passar por cima no modo dark */
 }
 
 /* JOGOS SIMULTÂNEOS-MISTAS -- FIM */

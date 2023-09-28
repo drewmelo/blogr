@@ -1,1 +1,7 @@
 /* Place your custom SCSS in HUGO_SITE_FOLDER/assets/scss/custom.scss */
+$button-text-color-dark: #ffffff;
+
+
+[data-scheme="dark"] .botao-interativo {
+    color: $button-text-color-dark; /* Use a variável de cor do texto para o modo dark */
+}

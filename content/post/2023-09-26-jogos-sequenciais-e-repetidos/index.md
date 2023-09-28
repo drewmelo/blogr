@@ -23,6 +23,8 @@ comments: yes
 
 ## Introdução
 
+Se você ainda não conferiu nosso tutorial sobre Teoria dos Jogos no R, abordando Jogos Simultâneos, clique <a href="https://github.com/yukiyanai/rgamer" id="rgamer-link" target="_blank">aqui</a> para acessar diretamente o post.
+
 ### Pacotes
 
 Para realização dos passos seguintes, será necessário a instalação e ativação do pacote:
@@ -183,6 +185,60 @@ function showConteudoSequencial(conteudoId) {
     opacity: 0;
     transition: opacity 0.5s;
   }
+  
+/* ---------------------------------------------------------- */  
+  
+  [data-scheme="dark"] .botao-interativo-sequencial {
+    background-color: transparent;
+    color: #dedbd2; /* Use a variável de cor do texto para o modo dark */
+}
+
+  [data-scheme="dark"] .botao-interativo-sequencial:hover {
+    background-color: #cfdbd5; 
+    color: #2f3e46;
+}
+
+  [data-scheme="dark"] .botao-interativo-sequencial.selecionadoSequencial {
+    background-color: #0f4c5c;
+    color: #dedbd2; /* Cor do texto do botão selecionado */
+}
+
+
+/* ---------------------------------------------------------- */
+
+
+  [data-scheme="dark"] .botao-interativo-path {
+    background-color: transparent;
+    color: #dedbd2; /* Use a variável de cor do texto para o modo dark */
+}
+
+  [data-scheme="dark"] .botao-interativo-path:hover {
+    background-color: #cfdbd5; 
+    color: #2f3e46;
+}
+
+  [data-scheme="dark"] .botao-interativo-path.selecionadoPath {
+    background-color: #0f4c5c;
+    color: #dedbd2; /* Cor do texto do botão selecionado */
+}
+
+/* ---------------------------------------------------------- */
+
+
+  [data-scheme="dark"] .botao-interativo-enps {
+    background-color: transparent;
+    color: #dedbd2; /* Use a variável de cor do texto para o modo dark */
+}
+
+  [data-scheme="dark"] .botao-interativo-enps:hover {
+    background-color: #cfdbd5; 
+    color: #2f3e46;
+}
+
+  [data-scheme="dark"] .botao-interativo-enps.selecionadoENPS {
+    background-color: #0f4c5c;
+    color: #dedbd2; /* Cor do texto do botão selecionado */
+}
 
 /* ----------------- JOGOS SEQUENCIAIS FIM ------------------ */
 
@@ -218,6 +274,47 @@ function showConteudoSequencial(conteudoId) {
     opacity: 0;
     transition: opacity 0.5s;
   }
+
+/* ---------------------------------------------------------- */
+
+
+  [data-scheme="dark"] .botao-interativo-repetido {
+    background-color: transparent;
+    color: #dedbd2; /* Use a variável de cor do texto para o modo dark */
+}
+
+  [data-scheme="dark"] .botao-interativo-repetido:hover {
+    background-color: #cfdbd5; 
+    color: #2f3e46;
+}
+
+  [data-scheme="dark"] .botao-interativo-repetido.selecionadoRepetido {
+    background-color: #0f4c5c;
+    color: #dedbd2; /* Cor do texto do botão selecionado */
+}  
+
+/* ---------------------------------------------------------- */
+
+a#rgamer-link {
+    color: #016dea; /* Cor do texto no modo light */
+    text-decoration: none;
+}
+
+a#rgamer-link:hover {
+    color: #014ba0; /* Cor do texto quando o mouse passar por cima no modo light */
+}
+
+/* ---------------------------------------------------------- */  
+
+/* Estilos para o link no modo dark */
+[data-scheme="dark"] a#rgamer-link {
+    color: #5bc0be; /* Cor do texto no modo dark */
+}
+
+[data-scheme="dark"] a#rgamer-link:hover {
+    color: #7eecea; /* Cor do texto quando o mouse passar por cima no modo dark */
+}
+  
 </style>
 
 <style type="text/css">
