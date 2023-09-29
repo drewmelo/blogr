@@ -1,10 +1,20 @@
 ---
 comments: false
 links:
-- description: Meu usuário - drewmelo
-  image: github-icon.png
-  title: GitHub
-  website: https://github.com
+- description: Github
+  image: github.png
+  title: drewmelo
+  website: https://github.com/drewmelo
+  
+- description: Instagram
+  image: instagram.png
+  title: dreew.mello
+  website: https://www.instagram.com/dreew.mello/
+  
+- description: Youtube
+  image: youtube.png
+  title: Blackpix Productions
+  website: https://www.youtube.com/@BlackpixProductions
 menu:
   main:
     params:
