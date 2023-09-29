@@ -60,8 +60,9 @@ O dilema dos prisioneiros é um clássico exemplo de jogo de estratégia pura em
 
 <script>
 window.onload = function() {
-    showConteudoExemplo('exemplo1'); // Exibir conteúdo do exemplo1 por padrão
-    showConteudo('metodo1'); // Exibir conteúdo do método1 por padrão
+    showConteudoExemplo('exemplo1'); 
+    showConteudo('metodo1'); 
+    showConteudoOutrosExemplos('outrosexemplos1');
   };
 </script>
 
@@ -181,6 +182,41 @@ function showConteudo(conteudoId) {
     transition: opacity 0.5s;
   }
   
+  /* ----------------- OUTROS EXEMPLOS COMEÇO ------------------ */
+  #botoesOutrosExemplos {
+    display: flex;
+    justify-content: center;
+  }
+  .botao-interativo-outrosexemplos {
+    background-color: transparent;
+    border-color: transparent;
+    margin-left: 10px; /* Adicionando margem para separar os botões */
+    padding: 5px 10px; /* Adicionando espaçamento interno para melhor aparência */
+    color: #016dea;
+    border-radius: 0.5rem;
+    font-size: 15px;
+    transition: background-color 0.3s;
+    width: auto; /* Largura automática para ajustar ao tamanho do texto */
+    white-space: nowrap; /* Evita que o texto quebre em várias linhas */
+  }
+
+  .botao-interativo-outrosexemplos:hover {
+    background-color: #E5E5E5;
+    color: #002e63;
+  }
+
+  .botao-interativo-outrosexemplos.selecionadoOutrosExemplos {
+    background-color: #0766a6;
+    color: white;
+  }
+
+  .conteudoOutrosExemplos {
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+/* ----------------- OUTROS EXEMPLOS FIM ------------------ */
+  
 /* ---------------------------------------------------------- */  
   
   [data-scheme="dark"] .botao-interativo-exemplo {
@@ -194,6 +230,23 @@ function showConteudo(conteudoId) {
 }
 
   [data-scheme="dark"] .botao-interativo-exemplo.selecionadoExemplo {
+    background-color: #0f4c5c;
+    color: #dedbd2; /* Cor do texto do botão selecionado */
+}
+
+/* ---------------------------------------------------------- */  
+  
+  [data-scheme="dark"] .botao-interativo-outrosexemplos {
+   background-color: transparent;
+   color: #dedbd2; 
+}
+
+  [data-scheme="dark"] .botao-interativo-outrosexemplos:hover {
+    background-color: #cfdbd5; 
+    color: #2f3e46;
+}
+
+  [data-scheme="dark"] .botao-interativo-outrosexemplos.selecionadoOutrosExemplos {
     background-color: #0f4c5c;
     color: #dedbd2; /* Cor do texto do botão selecionado */
 }
@@ -251,7 +304,6 @@ a#rgamer-link:hover {
   }
 }
 
-/* JOGOS SIMULTÂNEOS-MISTAS -- FIM */
 </style>
 
 <div id="metodo1" class="conteudo">
@@ -811,7 +863,410 @@ s_jogo6$br_plot_NE
 
 Com estratégias mistas, os jogadores podem tomar decisões aleatórias com diferentes probabilidades para cada ação. Isso torna o resultado do jogo mais incerto, pois o desfecho dependerá das escolhas aleatórias feitas por cada jogador.
 
+## Outros Exemplos
+
+<div class="reta">
+  <div class="reta-hover"></div>
+</div>
+
+<div id="botoesOutrosExemplos">
+  <button id="botao-outrosexemplos1" class="botao-interativo-outrosexemplos" onclick="showConteudoOutrosExemplos('outrosexemplos1')">Parâmetro Discretize</button>
+  <button id="botao-outrosexemplos2" class="botao-interativo-outrosexemplos" onclick="showConteudoOutrosExemplos('outrosexemplos2')">Batalha dos Sexos</button>
+</div>
+
+<script>
+function showConteudoOutrosExemplos(conteudoId) {
+  var conteudos = document.getElementsByClassName('conteudoOutrosExemplos');
+  for (var i = 0; i < conteudos.length; i++) {
+    conteudos[i].style.opacity = 0; // Definir a opacidade do conteúdo como 0 (invisível)
+    conteudos[i].style.display = 'none'; // Esconder o conteúdo (display: none)
+  }
+  
+  // Exibir o conteúdo desejado com animação suave
+  var conteudoDesejado = document.getElementById(conteudoId);
+  conteudoDesejado.style.display = 'block'; // Exibir o conteúdo (display: block)
+  setTimeout(function() {
+    conteudoDesejado.style.opacity = 1; // Definir a opacidade do conteúdo como 1 (visível)
+  }, 50); // Aguardar 50 milissegundos para aplicar a opacidade (ajuste conforme desejado)
+  
+  var botoes = document.getElementsByClassName('botao-interativo-outrosexemplos');
+  for (var i = 0; i < botoes.length; i++) {
+    botoes[i].classList.remove('selecionadoOutrosExemplos');
+  }
+  
+  var botaoSelecionado = document.getElementById('botao-' + conteudoId);
+  botaoSelecionado.classList.add('selecionadoOutrosExemplos');
+}
+</script>
+
+<div id="outrosexemplos1" class="conteudoOutrosExemplos">
+
+Neste jogo, duas empresas, a "Empresa A" e a "Empresa B", participam de uma disputa para ganhar um contrato. Cada uma delas deve escolher um lance entre 1 e 10 milhões de reais.
+
+
+- Se a "Empresa A" fizer o lance mais alto, ela ganha o contrato e recebe uma recompensa de 10 milhões. Enquanto isso, a "Empresa B" não ganha o contrato e ela acaba tendo prejuízo de 1 milhão.
+
+
+- Por outro lado, se a "Empresa A" fizer o lance mais alto, ela ganha o contrato e recebe a recompensa de 10 milhões. Enquanto isso, a "Empresa B" não ganha o contrato e perde 1 milhão.
+
+
+- Se ambas as empresas fizerem exatamente o mesmo lance, elas não conseguem diferenciar suas ofertas, e o contrato é anulado. Nesse caso, nenhuma das empresas recebe a recompensa.
+
+
+Com base no exemplo mencionado anteriormente, utilizaremos novamente a palavra-chave <span class="highlighted-text">`function`</span> do R para representar a função de payoff. Isso se deve ao maior espaço estratégico presente no jogo, o qual possibilita mais combinações de lances e, por consequência, mais resultados em comparação com o jogo do dilema dos prisioneiros.
+
+
+```r
+# Payoff do jogador 1
+func_payoff1 <- function(a, b) {
+                  if (a < b) {
+                    profit <- -1
+                    } else if (a == b) {
+                    profit <- 0
+                    } else {
+                    profit <- 10
+                    }
+                  profit
+                  }
+
+# Payoff do jogador 2
+func_payoff2 <- function(a, b){
+                  if (a > b) {
+                    profit <- -1
+                    } else if (a == b) {
+                    profit <- 0
+                    } else {
+                    profit <- 10
+                    }
+                  profit
+                  }
+```
+
+Após a definição das funções de payoff, podemos passar o exemplo acima para a função <span class="highlighted-text">`normal_form()`</span>, utilizando as condições de <span class="highlighted-text">`func_payoff1`</span> e <span class="highlighted-text">`func_payoff2`</span>.
+
+
+```r
+jogo11 <- normal_form(
+            players = c("Empresa A", 
+                        "Empresa B"),
+            payoffs1 = func_payoff1,
+            payoffs2 = func_payoff2,
+            pars = c("a", "b"),
+            s1 = c(seq(1, 10,1)),
+            s2 = c(seq(1, 10,1)),
+            discretize = TRUE)
+```
+
+A opção <span class="highlighted-text">`discretize = TRUE`</span> é usada quando o conjunto contínuo de estratégias é muito grande, tornando a avaliação completa computacionalmente custosa. Nesse caso, o jogo é avaliado apenas em um conjunto específico de pontos discretos, em vez de considerar todas as combinações possíveis de estratégias contínuas. O padrão é <span class="highlighted-text">`discretize = FALSE`</span>, que significa que o jogo é avaliado considerando todas as possíveis combinações contínuas de estratégias.
+
+Nesse contexto, na função <span class="highlighted-text">`solve_nfg()`</span>, o parâmetro <span class="highlighted-text">`mark_br`</span> será definido como <span class="highlighted-text">`FALSE`</span>, uma vez que não haverá marcação das melhores respostas para cada estratégia do oponente, devido à consideração restrita a pontos discretos ao invés de todas as combinações contínuas de estratégias.
+
+
+```r
+s_jogo11 <- solve_nfg(jogo11, mark_br = FALSE)
+```
+
+```
+Pure-strategy NE: [10, 10]
+```
+
+<br>
+
+<table class="lightable-classic table" style="font-family: Arial; margin-left: auto; margin-right: auto; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="empty-cells: hide;" colspan="2"></th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; font-weight: bold; " colspan="10"><div style="border-bottom: 1px solid #111111; margin-bottom: -1px; ">Empresa B</div></th>
+</tr>
+<tr>
+    <th style="text-align:left;">   </th>
+    <th style="text-align:center;"> strategy </th>
+    <th style="text-align:center;"> 1 </th>
+    <th style="text-align:center;"> 2 </th>
+    <th style="text-align:center;"> 3 </th>
+    <th style="text-align:center;"> 4 </th>
+    <th style="text-align:center;"> 5 </th>
+    <th style="text-align:center;"> 6 </th>
+    <th style="text-align:center;"> 7 </th>
+    <th style="text-align:center;"> 8 </th>
+    <th style="text-align:center;"> 9 </th>
+    <th style="text-align:center;"> 10 </th>
+   </tr>
+  </thead>
+ <tbody>
+   <tr>
+    <td style="text-align:left;font-weight: bold;"> Empresa A </td>
+    <td style="text-align:center;"> 1 </td>
+    <td style="text-align:center;"> 0, 0 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+   </tr>
+   <tr>
+    <td style="text-align:left;font-weight: bold;">  </td>
+    <td style="text-align:center;"> 2 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 0, 0 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+   </tr>
+   <tr>
+    <td style="text-align:left;font-weight: bold;">  </td>
+    <td style="text-align:center;"> 3 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 0, 0 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+   </tr>
+   <tr>
+    <td style="text-align:left;font-weight: bold;">  </td>
+    <td style="text-align:center;"> 4 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 0, 0 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+   </tr>
+   <tr>
+    <td style="text-align:left;font-weight: bold;">  </td>
+    <td style="text-align:center;"> 5 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 0, 0 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+   </tr>
+   <tr>
+    <td style="text-align:left;font-weight: bold;">  </td>
+    <td style="text-align:center;"> 6 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 0, 0 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+   </tr>
+   <tr>
+    <td style="text-align:left;font-weight: bold;">  </td>
+    <td style="text-align:center;"> 7 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 0, 0 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+   </tr>
+   <tr>
+    <td style="text-align:left;font-weight: bold;">  </td>
+    <td style="text-align:center;"> 8 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 0, 0 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+   </tr>
+   <tr>
+    <td style="text-align:left;font-weight: bold;">  </td>
+    <td style="text-align:center;"> 9 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 0, 0 </td>
+    <td style="text-align:center;"> -1, 10 </td>
+   </tr>
+   <tr>
+    <td style="text-align:left;font-weight: bold;">  </td>
+    <td style="text-align:center;"> 10 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 10, -1 </td>
+    <td style="text-align:center;"> 0, 0 </td>
+   </tr>
+ </tbody>
+</table>
+
+</div>
+
+<div id="outrosexemplos2" class="conteudoOutrosExemplos">
+
+A Batalha dos Sexos é um exemplo clássico na teoria dos jogos que ilustra a situação em que dois jogadores têm preferências diferentes, mas desejam coordenar suas ações. Neste exemplo, consideramos um casal composto por um homem e uma mulher que precisam decidir entre duas atividades: assistir a um jogo de futebol ou assistir a um balé.
+
+Suponha que o marido prefira assistir a um jogo de futebol, enquanto a esposa prefira assistir a um balé. No entanto, ambos preferem estar juntos do que fazer atividades separadas. Portanto, eles precisam chegar a um acordo sobre qual evento assistir juntos.
+
+
+```r
+  jogo12 <- normal_form(
+              players = c("Marido", "Esposa"),
+              s1 = c("Futebol(p)", "Balé(1-p)"), 
+              s2 = c("Futebol(q)", "Balé(1-q)"), 
+              payoffs1 = c(10, 1, 2, 5), 
+              payoffs2 = c(6, 2, 3, 10))
+
+# Transformando o jogo 12 em tabela
+table_jogo12 <- solve_nfg(jogo12,
+                     show_table = TRUE, 
+                     mark_br = FALSE)
+```
+
+```
+Pure-strategy NE: [Futebol(p), Futebol(q)], [Balé(1-p), Balé(1-q)]
+```
+
+<br>
+
+<table class='lightable-classic table' style='font-family: Arial; margin-left: auto; margin-right: auto; width: auto !important; margin-left: auto; margin-right: auto;'>
+  <thead>
+    <tr>
+      <th style='empty-cells: hide;' colspan='2'></th>
+      <th style='padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; font-weight: bold; ' colspan='2'><div style='border-bottom: 1px solid #111111; margin-bottom: -1px; '>Esposa</div></th>
+    </tr>
+    <tr>
+      <th style='text-align:left;'>   </th>
+      <th style='text-align:center;'> strategy </th>
+      <th style='text-align:center;'> Futebol(q) </th>
+      <th style='text-align:center;'> Balé(1-q) </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style='text-align:left;font-weight: bold;'> Marido </td>
+      <td style='text-align:center;'> Futebol(p) </td>
+      <td style='text-align:center;'> 10, 6 </td>
+      <td style='text-align:center;'> 2, 3 </td>
+    </tr>
+    <tr>
+      <td style='text-align:left;font-weight: bold;'>  </td>
+      <td style='text-align:center;'> Balé(1-p) </td>
+      <td style='text-align:center;'> 1, 2 </td>
+      <td style='text-align:center;'> 5, 10 </td>
+    </tr>
+  </tbody>
+</table>
+
+A utilidade esperada dos dois é calculada com base na fórmula que leva em conta as probabilidades <span style="font-size: 100%;">$p$</span> e <span style="font-size: 100%;">$q$</span> presentes na tabela acima. Simplificamos e combinamos os termos para obter o resultado da utilidade esperada.
+
+   <center>
+   
+   <span style="font-size: 100%;">$E(U_{M}) = 10pq + 2p(1 - q) + 1(1 - p)q + 5(1 - p)(1 - q)$</span>
+
+   <span style="font-size: 100%;">$E(U_{M}) = 10pq + 2p - 2pq + q - pq + 5 - 5p - 5q + 5pq$</span>
+
+   <span style="font-size: 100%;">$E(U_{M}) = 12pq - 4q - 3p + 5$</span>
+
+   <span style="font-size: 100%;">${\large{\frac{\partial U_{M}}{\partial p}}} = 12pq - 4q - 3p + 5$</span>
+   
+   </center>
+    
+<div style="margin-top: 0.25cm;"></div>
+
+Para encontrar o valor de <span style="font-size: 100%;">$q$</span> que maximiza a utilidade esperada do marido, igualamos a derivada parcial em relação a <span style="font-size: 100%;">$q$</span> a zero:
+
+  <center>
+  
+   <span style="font-size: 100%;">$12q - 3 = 0$</span>
+
+   <span style="font-size: 100%;">$q = \frac{1}{4}$</span>
+    
+  </center>
+
+<div style="margin-top: 0.25cm;"></div>
+  
+Com base na resposta anterior, pode-se usar a mesma lógica para calcular a utilidade esperada da esposa.
+
+  <center>
+  
+   <span style="font-size: 100%;">$E(U_{E}) = 6pq + 3p(1-q) + 2(1-p)q + 10(1-p)(1-q)$</span>
+
+   <span style="font-size: 100%;">$E(U_{E}) = 6pq + 3p - 3pq + 2q - 2pq + 10 - 10p - 10q + 10pq$</span>
+
+   <span style="font-size: 100%;">$E(U_{E}) = 11pq - 7p - 8q + 10$</span>
+
+   <span style="font-size: 100%;">${\large{\frac{\partial U_{E}}{\partial q}}} = 11pq - 7p - 8q + 10$</span>
+    
+  </center>
+
+<div style="margin-top: 0.25cm;"></div>
+    
+Para encontrar o valor de <span style="font-size: 100%;">$p$</span> que maximiza a utilidade esperada, igualamos a derivada parcial em relação a <span style="font-size: 100%;">$p$</span> a zero:
+
+  <center>
+  
+   <span style="font-size: 100%;">$11p - 8 = 0$</span>
+
+   <span style="font-size: 100%;">$p = \frac{8}{11}$</span>
+   
+  </center>
+
+<div style="margin-top: 0.25cm;"></div>
+
+O resultado da utilidade esperada do casal pode ser visualizado de forma gráfica utilizando a função <span class="highlighted-text">`br_plot`</span>.
+
+
+```r
+table_jogo12$br_plot
+```
+
+<br>
+
+<img src="{{< blogdown/postref >}}index_files/figure-html/game13b-1.png" width="672" style="display: block; margin: auto;" />
+  
+</div>
+
 ## Referências
+
+HAZRA, Tanmoy; ANJARIA, Kushal. Applications of game theory in deep learning: a survey. **Multimedia Tools and Applications**, v. 81, n. 6, p. 8963-8994, 2022. DOI: <a href="https://doi.org/10.1007/s11042-022-12153-2" target="_blank" style="color:#016dea; text-decoration: none;" onmouseover="this.style.color='#014ba0';" onmouseout="this.style.color='#016dea';">https://doi.org/10.1007/s11042-022-12153-2</a>.
 
 MANKIW, N. Gregory et al. **Introdução à economia**. 2005.
 

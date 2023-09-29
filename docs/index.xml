@@ -955,8 +955,9 @@ envolver a coleta, processamento, análise e interpretação desses dados com o 
 &lt;/div&gt;
 &lt;script&gt;
 window.onload = function() {
-    showConteudoExemplo(&#39;exemplo1&#39;); // Exibir conteúdo do exemplo1 por padrão
-    showConteudo(&#39;metodo1&#39;); // Exibir conteúdo do método1 por padrão
+    showConteudoExemplo(&#39;exemplo1&#39;); 
+    showConteudo(&#39;metodo1&#39;); 
+    showConteudoOutrosExemplos(&#39;outrosexemplos1&#39;);
   };
 &lt;/script&gt;
 &lt;script&gt;
@@ -1074,6 +1075,41 @@ function showConteudo(conteudoId) {
     transition: opacity 0.5s;
   }
   
+  /* ----------------- OUTROS EXEMPLOS COMEÇO ------------------ */
+  #botoesOutrosExemplos {
+    display: flex;
+    justify-content: center;
+  }
+  .botao-interativo-outrosexemplos {
+    background-color: transparent;
+    border-color: transparent;
+    margin-left: 10px; /* Adicionando margem para separar os botões */
+    padding: 5px 10px; /* Adicionando espaçamento interno para melhor aparência */
+    color: #016dea;
+    border-radius: 0.5rem;
+    font-size: 15px;
+    transition: background-color 0.3s;
+    width: auto; /* Largura automática para ajustar ao tamanho do texto */
+    white-space: nowrap; /* Evita que o texto quebre em várias linhas */
+  }
+
+  .botao-interativo-outrosexemplos:hover {
+    background-color: #E5E5E5;
+    color: #002e63;
+  }
+
+  .botao-interativo-outrosexemplos.selecionadoOutrosExemplos {
+    background-color: #0766a6;
+    color: white;
+  }
+
+  .conteudoOutrosExemplos {
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+/* ----------------- OUTROS EXEMPLOS FIM ------------------ */
+  
 /* ---------------------------------------------------------- */  
   
   [data-scheme=&#34;dark&#34;] .botao-interativo-exemplo {
@@ -1087,6 +1123,23 @@ function showConteudo(conteudoId) {
 }
 
   [data-scheme=&#34;dark&#34;] .botao-interativo-exemplo.selecionadoExemplo {
+    background-color: #0f4c5c;
+    color: #dedbd2; /* Cor do texto do botão selecionado */
+}
+
+/* ---------------------------------------------------------- */  
+  
+  [data-scheme=&#34;dark&#34;] .botao-interativo-outrosexemplos {
+   background-color: transparent;
+   color: #dedbd2; 
+}
+
+  [data-scheme=&#34;dark&#34;] .botao-interativo-outrosexemplos:hover {
+    background-color: #cfdbd5; 
+    color: #2f3e46;
+}
+
+  [data-scheme=&#34;dark&#34;] .botao-interativo-outrosexemplos.selecionadoOutrosExemplos {
     background-color: #0f4c5c;
     color: #dedbd2; /* Cor do texto do botão selecionado */
 }
@@ -1144,7 +1197,6 @@ a#rgamer-link:hover {
   }
 }
 
-/* JOGOS SIMULTÂNEOS-MISTAS -- FIM */
 &lt;/style&gt;
 &lt;div id=&#34;metodo1&#34; class=&#34;conteudo&#34;&gt;
 &lt;p&gt;Neste primeiro método, é necessário definir os pagamentos para cada célula da matriz do jogo utilizando o argumento &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;cells&lt;/code&gt;&lt;/span&gt;, que é configurado como uma lista, no caso &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;list()&lt;/code&gt;&lt;/span&gt;. Também é necessário especificar os jogadores, que, neste exemplo, são &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;&amp;quot;Bonnie&amp;quot;&lt;/code&gt;&lt;/span&gt; e &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;&amp;quot;Clyde&amp;quot;&lt;/code&gt;&lt;/span&gt;, utilizando o argumento &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;players&lt;/code&gt;&lt;/span&gt;, em que as estratégias, &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;&amp;quot;Confessar&amp;quot;&lt;/code&gt;&lt;/span&gt; e &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;&amp;quot;Não Confessar&amp;quot;&lt;/code&gt;&lt;/span&gt;, respectivamente, são definidas nos argumentos &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;s1&lt;/code&gt;&lt;/span&gt; e &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;s2&lt;/code&gt;&lt;/span&gt; para eles.&lt;/p&gt;
@@ -1506,7 +1558,336 @@ function showConteudoExemplo(conteudoId) {
 &lt;img src=&#34;https://drewmelo.github.io/blogr/p/jogos-simultaneos/index_files/figure-html/game6d-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;
 &lt;/div&gt;
 &lt;p&gt;Com estratégias mistas, os jogadores podem tomar decisões aleatórias com diferentes probabilidades para cada ação. Isso torna o resultado do jogo mais incerto, pois o desfecho dependerá das escolhas aleatórias feitas por cada jogador.&lt;/p&gt;
+&lt;h2 id=&#34;outros-exemplos&#34;&gt;Outros Exemplos&lt;/h2&gt;
+&lt;div class=&#34;reta&#34;&gt;
+  &lt;div class=&#34;reta-hover&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;botoesOutrosExemplos&#34;&gt;
+  &lt;button id=&#34;botao-outrosexemplos1&#34; class=&#34;botao-interativo-outrosexemplos&#34; onclick=&#34;showConteudoOutrosExemplos(&#39;outrosexemplos1&#39;)&#34;&gt;Parâmetro Discretize&lt;/button&gt;
+  &lt;button id=&#34;botao-outrosexemplos2&#34; class=&#34;botao-interativo-outrosexemplos&#34; onclick=&#34;showConteudoOutrosExemplos(&#39;outrosexemplos2&#39;)&#34;&gt;Batalha dos Sexos&lt;/button&gt;
+&lt;/div&gt;
+&lt;script&gt;
+function showConteudoOutrosExemplos(conteudoId) {
+  var conteudos = document.getElementsByClassName(&#39;conteudoOutrosExemplos&#39;);
+  for (var i = 0; i &lt; conteudos.length; i++) {
+    conteudos[i].style.opacity = 0; // Definir a opacidade do conteúdo como 0 (invisível)
+    conteudos[i].style.display = &#39;none&#39;; // Esconder o conteúdo (display: none)
+  }
+  
+  // Exibir o conteúdo desejado com animação suave
+  var conteudoDesejado = document.getElementById(conteudoId);
+  conteudoDesejado.style.display = &#39;block&#39;; // Exibir o conteúdo (display: block)
+  setTimeout(function() {
+    conteudoDesejado.style.opacity = 1; // Definir a opacidade do conteúdo como 1 (visível)
+  }, 50); // Aguardar 50 milissegundos para aplicar a opacidade (ajuste conforme desejado)
+  
+  var botoes = document.getElementsByClassName(&#39;botao-interativo-outrosexemplos&#39;);
+  for (var i = 0; i &lt; botoes.length; i++) {
+    botoes[i].classList.remove(&#39;selecionadoOutrosExemplos&#39;);
+  }
+  
+  var botaoSelecionado = document.getElementById(&#39;botao-&#39; + conteudoId);
+  botaoSelecionado.classList.add(&#39;selecionadoOutrosExemplos&#39;);
+}
+&lt;/script&gt;
+&lt;div id=&#34;outrosexemplos1&#34; class=&#34;conteudoOutrosExemplos&#34;&gt;
+&lt;p&gt;Neste jogo, duas empresas, a &amp;ldquo;Empresa A&amp;rdquo; e a &amp;ldquo;Empresa B&amp;rdquo;, participam de uma disputa para ganhar um contrato. Cada uma delas deve escolher um lance entre 1 e 10 milhões de reais.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Se a &amp;ldquo;Empresa A&amp;rdquo; fizer o lance mais alto, ela ganha o contrato e recebe uma recompensa de 10 milhões. Enquanto isso, a &amp;ldquo;Empresa B&amp;rdquo; não ganha o contrato e ela acaba tendo prejuízo de 1 milhão.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Por outro lado, se a &amp;ldquo;Empresa A&amp;rdquo; fizer o lance mais alto, ela ganha o contrato e recebe a recompensa de 10 milhões. Enquanto isso, a &amp;ldquo;Empresa B&amp;rdquo; não ganha o contrato e perde 1 milhão.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Se ambas as empresas fizerem exatamente o mesmo lance, elas não conseguem diferenciar suas ofertas, e o contrato é anulado. Nesse caso, nenhuma das empresas recebe a recompensa.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Com base no exemplo mencionado anteriormente, utilizaremos novamente a palavra-chave &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;function&lt;/code&gt;&lt;/span&gt; do R para representar a função de payoff. Isso se deve ao maior espaço estratégico presente no jogo, o qual possibilita mais combinações de lances e, por consequência, mais resultados em comparação com o jogo do dilema dos prisioneiros.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Payoff do jogador 1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;func_payoff1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                  &lt;span class=&#34;nf&#34;&gt;if &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    &lt;span class=&#34;n&#34;&gt;profit&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;-1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;if &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    &lt;span class=&#34;n&#34;&gt;profit&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    &lt;span class=&#34;n&#34;&gt;profit&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                  &lt;span class=&#34;n&#34;&gt;profit&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Payoff do jogador 2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;func_payoff2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;){&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                  &lt;span class=&#34;nf&#34;&gt;if &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    &lt;span class=&#34;n&#34;&gt;profit&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;-1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;if &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    &lt;span class=&#34;n&#34;&gt;profit&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    &lt;span class=&#34;n&#34;&gt;profit&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                  &lt;span class=&#34;n&#34;&gt;profit&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Após a definição das funções de payoff, podemos passar o exemplo acima para a função &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;normal_form()&lt;/code&gt;&lt;/span&gt;, utilizando as condições de &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;func_payoff1&lt;/code&gt;&lt;/span&gt; e &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;func_payoff2&lt;/code&gt;&lt;/span&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;jogo11&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;normal_form&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;players&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Empresa A&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                        &lt;span class=&#34;s&#34;&gt;&amp;#34;Empresa B&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;payoffs1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;func_payoff1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;payoffs2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;func_payoff2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;pars&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;a&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;b&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;s1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;seq&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;s2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;seq&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;discretize&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;TRUE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A opção &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;discretize = TRUE&lt;/code&gt;&lt;/span&gt; é usada quando o conjunto contínuo de estratégias é muito grande, tornando a avaliação completa computacionalmente custosa. Nesse caso, o jogo é avaliado apenas em um conjunto específico de pontos discretos, em vez de considerar todas as combinações possíveis de estratégias contínuas. O padrão é &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;discretize = FALSE&lt;/code&gt;&lt;/span&gt;, que significa que o jogo é avaliado considerando todas as possíveis combinações contínuas de estratégias.&lt;/p&gt;
+&lt;p&gt;Nesse contexto, na função &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;solve_nfg()&lt;/code&gt;&lt;/span&gt;, o parâmetro &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;mark_br&lt;/code&gt;&lt;/span&gt; será definido como &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;FALSE&lt;/code&gt;&lt;/span&gt;, uma vez que não haverá marcação das melhores respostas para cada estratégia do oponente, devido à consideração restrita a pontos discretos ao invés de todas as combinações contínuas de estratégias.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;s_jogo11&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;solve_nfg&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;jogo11&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mark_br&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;FALSE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Pure-strategy NE: [10, 10]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;table class=&#34;lightable-classic table&#34; style=&#34;font-family: Arial; margin-left: auto; margin-right: auto; width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;empty-cells: hide;&#34; colspan=&#34;2&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; font-weight: bold; &#34; colspan=&#34;10&#34;&gt;&lt;div style=&#34;border-bottom: 1px solid #111111; margin-bottom: -1px; &#34;&gt;Empresa B&lt;/div&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;th style=&#34;text-align:left;&#34;&gt;   &lt;/th&gt;
+    &lt;th style=&#34;text-align:center;&#34;&gt; strategy &lt;/th&gt;
+    &lt;th style=&#34;text-align:center;&#34;&gt; 1 &lt;/th&gt;
+    &lt;th style=&#34;text-align:center;&#34;&gt; 2 &lt;/th&gt;
+    &lt;th style=&#34;text-align:center;&#34;&gt; 3 &lt;/th&gt;
+    &lt;th style=&#34;text-align:center;&#34;&gt; 4 &lt;/th&gt;
+    &lt;th style=&#34;text-align:center;&#34;&gt; 5 &lt;/th&gt;
+    &lt;th style=&#34;text-align:center;&#34;&gt; 6 &lt;/th&gt;
+    &lt;th style=&#34;text-align:center;&#34;&gt; 7 &lt;/th&gt;
+    &lt;th style=&#34;text-align:center;&#34;&gt; 8 &lt;/th&gt;
+    &lt;th style=&#34;text-align:center;&#34;&gt; 9 &lt;/th&gt;
+    &lt;th style=&#34;text-align:center;&#34;&gt; 10 &lt;/th&gt;
+   &lt;/tr&gt;
+  &lt;/thead&gt;
+ &lt;tbody&gt;
+   &lt;tr&gt;
+    &lt;td style=&#34;text-align:left;font-weight: bold;&#34;&gt; Empresa A &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 0, 0 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td style=&#34;text-align:left;font-weight: bold;&#34;&gt;  &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 2 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 0, 0 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td style=&#34;text-align:left;font-weight: bold;&#34;&gt;  &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 3 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 0, 0 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td style=&#34;text-align:left;font-weight: bold;&#34;&gt;  &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 4 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 0, 0 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td style=&#34;text-align:left;font-weight: bold;&#34;&gt;  &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 5 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 0, 0 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td style=&#34;text-align:left;font-weight: bold;&#34;&gt;  &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 6 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 0, 0 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td style=&#34;text-align:left;font-weight: bold;&#34;&gt;  &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 7 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 0, 0 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td style=&#34;text-align:left;font-weight: bold;&#34;&gt;  &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 8 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 0, 0 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td style=&#34;text-align:left;font-weight: bold;&#34;&gt;  &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 9 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 0, 0 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; -1, 10 &lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td style=&#34;text-align:left;font-weight: bold;&#34;&gt;  &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 10, -1 &lt;/td&gt;
+    &lt;td style=&#34;text-align:center;&#34;&gt; 0, 0 &lt;/td&gt;
+   &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outrosexemplos2&#34; class=&#34;conteudoOutrosExemplos&#34;&gt;
+&lt;p&gt;A Batalha dos Sexos é um exemplo clássico na teoria dos jogos que ilustra a situação em que dois jogadores têm preferências diferentes, mas desejam coordenar suas ações. Neste exemplo, consideramos um casal composto por um homem e uma mulher que precisam decidir entre duas atividades: assistir a um jogo de futebol ou assistir a um balé.&lt;/p&gt;
+&lt;p&gt;Suponha que o marido prefira assistir a um jogo de futebol, enquanto a esposa prefira assistir a um balé. No entanto, ambos preferem estar juntos do que fazer atividades separadas. Portanto, eles precisam chegar a um acordo sobre qual evento assistir juntos.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;jogo12&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;normal_form&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;              &lt;span class=&#34;n&#34;&gt;players&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Marido&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Esposa&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;              &lt;span class=&#34;n&#34;&gt;s1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Futebol(p)&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Balé(1-p)&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;              &lt;span class=&#34;n&#34;&gt;s2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Futebol(q)&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Balé(1-q)&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;              &lt;span class=&#34;n&#34;&gt;payoffs1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;              &lt;span class=&#34;n&#34;&gt;payoffs2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Transformando o jogo 12 em tabela&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;table_jogo12&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;solve_nfg&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;jogo12&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                     &lt;span class=&#34;n&#34;&gt;show_table&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;TRUE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                     &lt;span class=&#34;n&#34;&gt;mark_br&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;FALSE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Pure-strategy NE: [Futebol(p), Futebol(q)], [Balé(1-p), Balé(1-q)]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;table class=&#39;lightable-classic table&#39; style=&#39;font-family: Arial; margin-left: auto; margin-right: auto; width: auto !important; margin-left: auto; margin-right: auto;&#39;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&#39;empty-cells: hide;&#39; colspan=&#39;2&#39;&gt;&lt;/th&gt;
+      &lt;th style=&#39;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; font-weight: bold; &#39; colspan=&#39;2&#39;&gt;&lt;div style=&#39;border-bottom: 1px solid #111111; margin-bottom: -1px; &#39;&gt;Esposa&lt;/div&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th style=&#39;text-align:left;&#39;&gt;   &lt;/th&gt;
+      &lt;th style=&#39;text-align:center;&#39;&gt; strategy &lt;/th&gt;
+      &lt;th style=&#39;text-align:center;&#39;&gt; Futebol(q) &lt;/th&gt;
+      &lt;th style=&#39;text-align:center;&#39;&gt; Balé(1-q) &lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&#39;text-align:left;font-weight: bold;&#39;&gt; Marido &lt;/td&gt;
+      &lt;td style=&#39;text-align:center;&#39;&gt; Futebol(p) &lt;/td&gt;
+      &lt;td style=&#39;text-align:center;&#39;&gt; 10, 6 &lt;/td&gt;
+      &lt;td style=&#39;text-align:center;&#39;&gt; 2, 3 &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&#39;text-align:left;font-weight: bold;&#39;&gt;  &lt;/td&gt;
+      &lt;td style=&#39;text-align:center;&#39;&gt; Balé(1-p) &lt;/td&gt;
+      &lt;td style=&#39;text-align:center;&#39;&gt; 1, 2 &lt;/td&gt;
+      &lt;td style=&#39;text-align:center;&#39;&gt; 5, 10 &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;A utilidade esperada dos dois é calculada com base na fórmula que leva em conta as probabilidades &lt;span style=&#34;font-size: 100%;&#34;&gt;$p$&lt;/span&gt; e &lt;span style=&#34;font-size: 100%;&#34;&gt;$q$&lt;/span&gt; presentes na tabela acima. Simplificamos e combinamos os termos para obter o resultado da utilidade esperada.&lt;/p&gt;
+   &lt;center&gt;
+&lt;p&gt;&lt;span style=&#34;font-size: 100%;&#34;&gt;$E(U_{M}) = 10pq + 2p(1 - q) + 1(1 - p)q + 5(1 - p)(1 - q)$&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;font-size: 100%;&#34;&gt;$E(U_{M}) = 10pq + 2p - 2pq + q - pq + 5 - 5p - 5q + 5pq$&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;font-size: 100%;&#34;&gt;$E(U_{M}) = 12pq - 4q - 3p + 5$&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;font-size: 100%;&#34;&gt;${\large{\frac{\partial U_{M}}{\partial p}}} = 12pq - 4q - 3p + 5$&lt;/span&gt;&lt;/p&gt;
+   &lt;/center&gt;
+&lt;div style=&#34;margin-top: 0.25cm;&#34;&gt;&lt;/div&gt;
+&lt;p&gt;Para encontrar o valor de &lt;span style=&#34;font-size: 100%;&#34;&gt;$q$&lt;/span&gt; que maximiza a utilidade esperada do marido, igualamos a derivada parcial em relação a &lt;span style=&#34;font-size: 100%;&#34;&gt;$q$&lt;/span&gt; a zero:&lt;/p&gt;
+  &lt;center&gt;
+&lt;p&gt;&lt;span style=&#34;font-size: 100%;&#34;&gt;$12q - 3 = 0$&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;font-size: 100%;&#34;&gt;$q = \frac{1}{4}$&lt;/span&gt;&lt;/p&gt;
+  &lt;/center&gt;
+&lt;div style=&#34;margin-top: 0.25cm;&#34;&gt;&lt;/div&gt;
+&lt;p&gt;Com base na resposta anterior, pode-se usar a mesma lógica para calcular a utilidade esperada da esposa.&lt;/p&gt;
+  &lt;center&gt;
+&lt;p&gt;&lt;span style=&#34;font-size: 100%;&#34;&gt;$E(U_{E}) = 6pq + 3p(1-q) + 2(1-p)q + 10(1-p)(1-q)$&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;font-size: 100%;&#34;&gt;$E(U_{E}) = 6pq + 3p - 3pq + 2q - 2pq + 10 - 10p - 10q + 10pq$&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;font-size: 100%;&#34;&gt;$E(U_{E}) = 11pq - 7p - 8q + 10$&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;font-size: 100%;&#34;&gt;${\large{\frac{\partial U_{E}}{\partial q}}} = 11pq - 7p - 8q + 10$&lt;/span&gt;&lt;/p&gt;
+  &lt;/center&gt;
+&lt;div style=&#34;margin-top: 0.25cm;&#34;&gt;&lt;/div&gt;
+&lt;p&gt;Para encontrar o valor de &lt;span style=&#34;font-size: 100%;&#34;&gt;$p$&lt;/span&gt; que maximiza a utilidade esperada, igualamos a derivada parcial em relação a &lt;span style=&#34;font-size: 100%;&#34;&gt;$p$&lt;/span&gt; a zero:&lt;/p&gt;
+  &lt;center&gt;
+&lt;p&gt;&lt;span style=&#34;font-size: 100%;&#34;&gt;$11p - 8 = 0$&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;font-size: 100%;&#34;&gt;$p = \frac{8}{11}$&lt;/span&gt;&lt;/p&gt;
+  &lt;/center&gt;
+&lt;div style=&#34;margin-top: 0.25cm;&#34;&gt;&lt;/div&gt;
+&lt;p&gt;O resultado da utilidade esperada do casal pode ser visualizado de forma gráfica utilizando a função &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;br_plot&lt;/code&gt;&lt;/span&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;table_jogo12&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;br_plot&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;img src=&#34;https://drewmelo.github.io/blogr/p/jogos-simultaneos/index_files/figure-html/game13b-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;
+&lt;/div&gt;
 &lt;h2 id=&#34;referências&#34;&gt;Referências&lt;/h2&gt;
+&lt;p&gt;HAZRA, Tanmoy; ANJARIA, Kushal. Applications of game theory in deep learning: a survey. &lt;strong&gt;Multimedia Tools and Applications&lt;/strong&gt;, v. 81, n. 6, p. 8963-8994, 2022. DOI: &lt;a href=&#34;https://doi.org/10.1007/s11042-022-12153-2&#34; target=&#34;_blank&#34; style=&#34;color:#016dea; text-decoration: none;&#34; onmouseover=&#34;this.style.color=&#39;#014ba0&#39;;&#34; onmouseout=&#34;this.style.color=&#39;#016dea&#39;;&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://doi.org/10.1007/s11042-022-12153-2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://doi.org/10.1007/s11042-022-12153-2&lt;/a&gt;
+&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;MANKIW, N. Gregory et al. &lt;strong&gt;Introdução à economia&lt;/strong&gt;. 2005.&lt;/p&gt;
 &lt;p&gt;YANAI, Yusei; KAMIJO, Yoshio. &lt;strong&gt;Game Theory With R&lt;/strong&gt;. Shin-Ogawacho, Shinjuku-ku, Tóquio, JP: Asakura Publishing Co,. Ltd., 2023. 244 p. ISBN 978-4-254-27024-2 C3050.&lt;/p&gt;</description>
         </item>
