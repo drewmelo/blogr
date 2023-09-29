@@ -350,34 +350,6 @@ a#rgamer-link:hover {
   align-items: center;
 }
 
-/* ERRO 1 */
-.output-exemplo {
-  font-family: 'Lucida Console';
-  font-size: 15px;
-  line-height: 1.4;
-  white-space: nowrap;
-  padding: 20px;
-  position: relative;
-  top: -20px;
-  border: none;
-  background: none;
-  width: 100%; /* Defina a largura como 100% */
-}
-
-/* ERRO 2 - COMEÇO */
-.output-matrix {
-  font-family: 'Lucida Console';
-  font-size: 15px;
-  line-height: 1.4;
-  white-space: nowrap;
-  padding: 20px;
-  position: relative;
-  top: -20px;
-  border: none;
-  background: none;
-  width: 100%; /* Defina a largura como 100% */
-}
-
 /* ---------------------------------------------------------- */
 
 /* Estilos para o layout responsivo dos botões */
@@ -1018,14 +990,6 @@ jogo9info <- extensive_form(
 
 Devido à falta de conhecimento por parte do jogador P1 em relação às estratégias escolhidas pelo jogador P2, encontrar uma solução para esse jogo torna-se um desafio. Especialmente em cenários onde os jogadores estão alheios às estratégias dos demais participantes, como é o caso apresentado abaixo ao tentar aplicar o conceito de indução retroativa para elucidar as escolhas estratégicas de P1 e P2.
 
-
-
-```r
-solve_efg(jogo9info, concept = "backward", quietly = FALSE)
-```
-
-<br>
-
 <div class="callout-container">
   <div>
     <svg viewBox="0 0 512 512" style="position:relative;display:inline-block;top:.1em;fill:#f1faee;height:1.2em;" xmlns="http://www.w3.org/2000/svg">  <path d="M440.5 88.5l-52 52L415 167c9.4 9.4 9.4 24.6 0 33.9l-17.4 17.4c11.8 26.1 18.4 55.1 18.4 85.6 0 114.9-93.1 208-208 208S0 418.9 0 304 93.1 96 208 96c30.5 0 59.5 6.6 85.6 18.4L311 97c9.4-9.4 24.6-9.4 33.9 0l26.5 26.5 52-52 17.1 17zM500 60h-24c-6.6 0-12 5.4-12 12s5.4 12 12 12h24c6.6 0 12-5.4 12-12s-5.4-12-12-12zM440 0c-6.6 0-12 5.4-12 12v24c0 6.6 5.4 12 12 12s12-5.4 12-12V12c0-6.6-5.4-12-12-12zm33.9 55l17-17c4.7-4.7 4.7-12.3 0-17-4.7-4.7-12.3-4.7-17 0l-17 17c-4.7 4.7-4.7 12.3 0 17 4.8 4.7 12.4 4.7 17 0zm-67.8 0c4.7 4.7 12.3 4.7 17 0 4.7-4.7 4.7-12.3 0-17l-17-17c-4.7-4.7-12.3-4.7-17 0-4.7 4.7-4.7 12.3 0 17l17 17zm67.8 34c-4.7-4.7-12.3-4.7-17 0-4.7 4.7-4.7 12.3 0 17l17 17c4.7 4.7 12.3 4.7 17 0 4.7-4.7 4.7-12.3 0-17l-17-17zM112 272c0-35.3 28.7-64 64-64 8.8 0 16-7.2 16-16s-7.2-16-16-16c-52.9 0-96 43.1-96 96 0 8.8 7.2 16 16 16s16-7.2 16-16z"></path></svg>
@@ -1035,12 +999,18 @@ solve_efg(jogo9info, concept = "backward", quietly = FALSE)
   </div>
 </div>
 <div class="callout-content">
-  <div class="output-matrix">
-<pre>
-  <span>Error in backward_induction(game, restriction = tree_overlay): This is not a perfect-information game.</span>
-</pre>
 </div>
-</div>
+
+<br>
+<br>
+
+```r
+solve_efg(jogo9info, concept = "backward", quietly = FALSE)
+```
+
+```
+Error in backward_induction(game, restriction = tree_overlay): This is not a perfect-information game.
+```
 
   Nesse caso, há um erro ao empregar a função <span class="highlighted-text">`backward_induction()`</span> ou <span class="highlighted-text">`solve_efg()`</span>, pois o jogo em questão não se encaixa na categoria de informação perfeita (*Perfect-Information*). Em <span class="highlighted-text">`restriction = tree_overlay`</span> ocorre a restrição de sobreposição na estrutura da árvore, especificamente pelo uso do parâmetro <span class="highlighted-text">`info_sets`</span>.
 
@@ -1129,13 +1099,6 @@ Em síntese, a introdução de P3 com suas estratégias de "Ajudar" e "Desestabi
 
 Quando se trata de um jogo com três jogadores, como no caso do jogo 9, a função <span class="highlighted-text">`to_matrix()`</span> não pode ser empregada, conforme demonstrado na tentativa a seguir ao utilizá-la.
 
-
-```r
-to_matrix(jogo10)
-```
-
-<br>
-
 <div class="callout-container">
   <div>
     <svg viewBox="0 0 512 512" style="position:relative;display:inline-block;top:.1em;fill:#f1faee;height:1.2em;" xmlns="http://www.w3.org/2000/svg">  <path d="M440.5 88.5l-52 52L415 167c9.4 9.4 9.4 24.6 0 33.9l-17.4 17.4c11.8 26.1 18.4 55.1 18.4 85.6 0 114.9-93.1 208-208 208S0 418.9 0 304 93.1 96 208 96c30.5 0 59.5 6.6 85.6 18.4L311 97c9.4-9.4 24.6-9.4 33.9 0l26.5 26.5 52-52 17.1 17zM500 60h-24c-6.6 0-12 5.4-12 12s5.4 12 12 12h24c6.6 0 12-5.4 12-12s-5.4-12-12-12zM440 0c-6.6 0-12 5.4-12 12v24c0 6.6 5.4 12 12 12s12-5.4 12-12V12c0-6.6-5.4-12-12-12zm33.9 55l17-17c4.7-4.7 4.7-12.3 0-17-4.7-4.7-12.3-4.7-17 0l-17 17c-4.7 4.7-4.7 12.3 0 17 4.8 4.7 12.4 4.7 17 0zm-67.8 0c4.7 4.7 12.3 4.7 17 0 4.7-4.7 4.7-12.3 0-17l-17-17c-4.7-4.7-12.3-4.7-17 0-4.7 4.7-4.7 12.3 0 17l17 17zm67.8 34c-4.7-4.7-12.3-4.7-17 0-4.7 4.7-4.7 12.3 0 17l17 17c4.7 4.7 12.3 4.7 17 0 4.7-4.7 4.7-12.3 0-17l-17-17zM112 272c0-35.3 28.7-64 64-64 8.8 0 16-7.2 16-16s-7.2-16-16-16c-52.9 0-96 43.1-96 96 0 8.8 7.2 16 16 16s16-7.2 16-16z"></path></svg>
@@ -1145,12 +1108,19 @@ to_matrix(jogo10)
   </div>
 </div>
 <div class="callout-content">
-  <div class="output-matrix">
-<pre>
-  <span>Error in to_matrix(jogo10): This function only works with a two-person game.</span>
-</pre>
 </div>
-</div>
+
+<br>
+<br>
+
+
+```r
+to_matrix(jogo10)
+```
+
+```
+Error in to_matrix(jogo10): This function only works with a two-person game.
+```
 
 Esse erro ocorre pois a função <span class="highlighted-text">`to_matrix()`</span> do pacote Rgamer é projetada para trabalhar com jogos de dois jogadores. A mensagem de erro que está sendo mostrada, "*This function only works with a two-person game*", significa que essa função não é capaz de lidar com jogos envolvendo três jogadores ou mais, pois limita-se a jogos de dois jogadores porque ela transforma a estrutura de um jogo em uma matriz, que é mais adequada para jogos de dois jogadores.
 

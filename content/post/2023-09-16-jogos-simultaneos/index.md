@@ -731,13 +731,13 @@ s_jogo4$br_plot
 A função de payoff em estratégias mistas é usada para representar o resultado esperado que um jogador obtém ao escolher uma determinada ação com probabilidade ou com incerteza. No exemplo a seguir estão as funções de payoff para as estratégias dos jogadores A e B.
 
 
-- <p>Jogador: <span style="font-size: 80%;">$\{A, B\}$</span></p>
+- <p>Jogador: <span style="font-size: 100%;">$\{A, B\}$</span></p>
 
 
-- <p>Estratégia: <span style="font-size: 80%;">$\{x \in [0, 1], y \in [0, 1] \}$</span></p>
+- <p>Estratégia: <span style="font-size: 100%;">$\{x \in [0, 1], y \in [0, 1] \}$</span></p>
 
 
-- <p>Payoff: <span style="font-size: 80%;">$\{f_x(x, y) = -3x^2 + (1 - y) \times 2x, f_y(x, y) = -2y^2 + (1 - x) \times 3y\}$</span></p>
+- <p>Payoff: <span style="font-size: 100%;">$\{f_x(x, y) = -3x^2 + (1 - y) \times 2x, f_y(x, y) = -2y^2 + (1 - x) \times 3y\}$</span></p>
 
 
 Desse modo, é possível definir um jogo fornecendo as funções de payoff como vetores de caracteres usando a função <span class="highlighted-text">`normal_form()`</span>. Nos parâmetros <span class="highlighted-text">`par1_lim`</span> e <span class="highlighted-text">`par2_lim`</span> estão configurados os valores entre 0 e 1, o que significa que as estratégias ou escolhas dos jogadores "A" e "B" estão limitadas a esse intervalo. Esses argumentos definem os limites para os eixos, no caso, <span class="highlighted-text">`"x"`</span> e <span class="highlighted-text">`"y"`</span> contidas em <span class="highlighted-text">`pars`</span>.
@@ -780,13 +780,13 @@ Please examine br_plot (best response plot) carefully.
 Nesse método alternativo, é possível definir os resultados de um jogo na forma normal, utilizando <span class="highlighted-text">`function`</span> da linguagem R
 
 
-- <p>Jogador: <span style="font-size: 80%;">$\{A, B\}$</span></p>
+- <p>Jogador: <span style="font-size: 100%;">$\{A, B\}$</span></p>
 
 
-- <p>Estratégia: <span style="font-size: 80%;">$\{x \in [0, 1], y \in [0, 1] \}$</span></p>
+- <p>Estratégia: <span style="font-size: 100%;">$\{x \in [0, 1], y \in [0, 1] \}$</span></p>
 
 
-- <p>Payoff: <span style="font-size: 80%;">$\{f_x(x, y) = -nx^a + (b - y) \times px, f_y(x, y) = -my^s + (t - x) \times qy\}$</span></p>
+- <p>Payoff: <span style="font-size: 100%;">$\{f_x(x, y) = -nx^a + (b - y) \times px, f_y(x, y) = -my^s + (t - x) \times qy\}$</span></p>
 
 <div style="margin-top: 0.5cm;"></div>
 
