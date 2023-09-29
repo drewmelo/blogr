@@ -1136,6 +1136,15 @@ a#rgamer-link:hover {
     width: 100%; /* Largura total para preencher a coluna */
     margin: 0 auto;
   }
+  
+   #botoesOutrosExemplos {
+    gap: 10px; /* Espaço entre os botões */
+  }
+  
+  .botao-interativo-outrosexemplos {
+    width: 100%; /* Largura total para preencher a coluna */
+    margin: 0 auto;
+  }
 
   /* O terceiro botão vai para a segunda linha */
   .botao-interativo-exemplo:nth-child(3) {
@@ -1588,7 +1597,16 @@ function showConteudoOutrosExemplos(conteudoId) {
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;s_jogo11&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;solve_nfg&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;jogo11&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mark_br&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;FALSE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Pure-strategy NE: [10, 10]
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
-&lt;table class=&#34;lightable-classic table&#34; style=&#34;font-family: Arial; margin-left: auto; margin-right: auto; width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;style type=&#34;text/css&#34;&gt;
+
+/* CSS para tornar a tabela responsiva */
+.responsive-table {
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+&lt;/style&gt;
+&lt;table class=&#34;lightable-classic table responsive-table&#34;&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th style=&#34;empty-cells: hide;&#34; colspan=&#34;2&#34;&gt;&lt;/th&gt;

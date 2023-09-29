@@ -620,6 +620,15 @@ a#rgamer-link:hover {
     width: 100%; /* Largura total para preencher a coluna */
     margin: 0 auto;
   }
+  
+   #botoesOutrosExemplos {
+    gap: 10px; /* Espaço entre os botões */
+  }
+  
+  .botao-interativo-outrosexemplos {
+    width: 100%; /* Largura total para preencher a coluna */
+    margin: 0 auto;
+  }
 
   /* O terceiro botão vai para a segunda linha */
   .botao-interativo-exemplo:nth-child(3) {
@@ -1072,7 +1081,16 @@ function showConteudoOutrosExemplos(conteudoId) {
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">s_jogo11</span> <span class="o">&lt;-</span> <span class="nf">solve_nfg</span><span class="p">(</span><span class="n">jogo11</span><span class="p">,</span> <span class="n">mark_br</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Pure-strategy NE: [10, 10]
 </span></span></code></pre></div><br>
-<table class="lightable-classic table" style="font-family: Arial; margin-left: auto; margin-right: auto; width: auto !important; margin-left: auto; margin-right: auto;">
+<style type="text/css">
+
+/* CSS para tornar a tabela responsiva */
+.responsive-table {
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+</style>
+<table class="lightable-classic table responsive-table">
 <thead>
 <tr>
 <th style="empty-cells: hide;" colspan="2"></th>

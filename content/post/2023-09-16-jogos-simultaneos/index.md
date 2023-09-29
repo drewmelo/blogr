@@ -19,6 +19,7 @@ comments: yes
 <script src="{{< blogdown/postref >}}index_files/kePrint/kePrint.js"></script>
 <link href="{{< blogdown/postref >}}index_files/lightable/lightable.css" rel="stylesheet" />
 
+
 <!--more-->
 
 <div style="text-align:center;">
@@ -294,6 +295,15 @@ a#rgamer-link:hover {
   }
   
   .botao-interativo {
+    width: 100%; /* Largura total para preencher a coluna */
+    margin: 0 auto;
+  }
+  
+   #botoesOutrosExemplos {
+    gap: 10px; /* Espaço entre os botões */
+  }
+  
+  .botao-interativo-outrosexemplos {
     width: 100%; /* Largura total para preencher a coluna */
     margin: 0 auto;
   }
@@ -972,7 +982,17 @@ Pure-strategy NE: [10, 10]
 
 <br>
 
-<table class="lightable-classic table" style="font-family: Arial; margin-left: auto; margin-right: auto; width: auto !important; margin-left: auto; margin-right: auto;">
+<style type="text/css">
+
+/* CSS para tornar a tabela responsiva */
+.responsive-table {
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+</style>
+
+<table class="lightable-classic table responsive-table">
 <thead>
 <tr>
 <th style="empty-cells: hide;" colspan="2"></th>
