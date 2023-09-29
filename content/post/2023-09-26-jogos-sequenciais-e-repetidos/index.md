@@ -2,7 +2,7 @@
 title: 'Teoria dos Jogos no R: Jogos Sequenciais e Repetidos'
 author: André Melo
 date: '2023-09-26'
-description: Este tutorial tem como objetivo ensinar como aplicar a teoria dos jogos no ambiente R, utilizando o pacote Rgamer.
+description: Este tutorial tem como objetivo ensinar como aplicar Jogos Sequenciais e Repetidos em teoria dos jogos no ambiente R, utilizando o pacote Rgamer.
 slug: jogos-sequenciais-e-repetidos
 categories: 
  - Tutorial

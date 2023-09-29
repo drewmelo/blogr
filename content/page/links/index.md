@@ -2,7 +2,7 @@
 comments: false
 links:
 - description: Meu usuário - drewmelo
-  image: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+  image: github-icon.png
   title: GitHub
   website: https://github.com
 menu:

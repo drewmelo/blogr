@@ -1924,9 +1924,6 @@ function showConteudoOutrosExemplos(conteudoId) {
 &lt;img src=&#34;https://drewmelo.github.io/blogr/p/jogos-simultaneos/index_files/figure-html/game13b-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;
 &lt;/div&gt;
 &lt;h2 id=&#34;referências&#34;&gt;Referências&lt;/h2&gt;
-&lt;p&gt;HAZRA, Tanmoy; ANJARIA, Kushal. Applications of game theory in deep learning: a survey. &lt;strong&gt;Multimedia Tools and Applications&lt;/strong&gt;, v. 81, n. 6, p. 8963-8994, 2022. DOI: &lt;a href=&#34;https://doi.org/10.1007/s11042-022-12153-2&#34; target=&#34;_blank&#34; style=&#34;color:#016dea; text-decoration: none;&#34; onmouseover=&#34;this.style.color=&#39;#014ba0&#39;;&#34; onmouseout=&#34;this.style.color=&#39;#016dea&#39;;&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://doi.org/10.1007/s11042-022-12153-2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://doi.org/10.1007/s11042-022-12153-2&lt;/a&gt;
-&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;MANKIW, N. Gregory et al. &lt;strong&gt;Introdução à economia&lt;/strong&gt;. 2005.&lt;/p&gt;
 &lt;p&gt;YANAI, Yusei; KAMIJO, Yoshio. &lt;strong&gt;Game Theory With R&lt;/strong&gt;. Shin-Ogawacho, Shinjuku-ku, Tóquio, JP: Asakura Publishing Co,. Ltd., 2023. 244 p. ISBN 978-4-254-27024-2 C3050.&lt;/p&gt;</description>
         </item>
@@ -1936,7 +1933,32 @@ function showConteudoOutrosExemplos(conteudoId) {
         <pubDate>Fri, 15 Sep 2023 00:00:00 +0000</pubDate>
         
         <guid>https://drewmelo.github.io/blogr/p/sobre-o-blog/</guid>
-        <description>&lt;img src="https://drewmelo.github.io/blogr/p/sobre-o-blog/sobre-o-blog2.jpg" alt="Featured image of post Sobre o blog" /&gt;&lt;p&gt;Neste blog, criado por mim, um estudante do curso de Ciência Econômicas&lt;/p&gt;</description>
+        <description>&lt;img src="https://drewmelo.github.io/blogr/p/sobre-o-blog/sobre-o-blog2.jpg" alt="Featured image of post Sobre o blog" /&gt;&lt;style type=&#34;text/css&#34;&gt;
+a#rgamer-link {
+    color: #016dea; /* Cor do texto no modo light */
+    text-decoration: none;
+}
+
+a#rgamer-link:hover {
+    color: #014ba0; /* Cor do texto quando o mouse passar por cima no modo light */
+}
+
+/* ---------------------------------------------------------- */  
+
+/* Estilos para o link no modo dark */
+[data-scheme=&#34;dark&#34;] a#rgamer-link {
+    color: #5bc0be; /* Cor do texto no modo dark */
+}
+
+[data-scheme=&#34;dark&#34;] a#rgamer-link:hover {
+    color: #7eecea; /* Cor do texto quando o mouse passar por cima no modo dark */
+}
+&lt;/style&gt;
+&lt;p&gt;Você já se questionou sobre a intrincada relação entre a economia global e a tecnologia que permeia nosso cotidiano? Ou talvez tenha curiosidade sobre como a programação desempenha um papel crucial na gestação das inovações tecnológicas que moldarão nosso futuro. Se essas indagações estimulam sua mente, você está no lugar certo!&lt;/p&gt;
+&lt;p&gt;A fusão da economia e da programação é um fenômeno em ascensão, com um impacto significativo na configuração financeira e empresarial do século XXI. À medida que empresas e mercados se digitalizam, a habilidade de aplicar princípios econômicos por meio da programação se torna vital.&lt;/p&gt;
+&lt;p&gt;Mas onde a programação se encaixa nisso tudo? Ela desempenha um papel fundamental na análise de dados econômicos. Com a coleta massiva de informações financeiras e econômicas em tempo real, as empresas agora podem empregar algoritmos avançados para extrair insights valiosos, como exploramos em nosso artigo sobre &lt;a href=&#34;https://drewmelo.github.io/blogr/p/ciencia-de-dados-na-economia/&#34; id=&#34;rgamer-link&#34; target=&#34;_blank&#34;&gt;Ciência de Dados na Economia&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;No entanto, nosso blog não se restringe a teoria e texto. Nossa jornada neste espaço dedicado à economia, programação e tecnologia é um convite para explorar a conexão profunda entre esses campos e entender como eles moldam nosso presente e futuro. Aqui, você encontrará análises aprofundadas, tutoriais práticos e informações sobre as mais recentes evoluções.&lt;/p&gt;
+&lt;p&gt;O presente é o agora, e o futuro nos aguarda enquanto desvendamos as complexidades do universo econômico e o papel essencial da tecnologia nele. Portanto, seja bem-vindo ao nosso blog!&lt;/p&gt;</description>
         </item>
         <item>
         <title>Arquivos</title>
