@@ -1599,14 +1599,19 @@ function showConteudoOutrosExemplos(conteudoId) {
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;style type=&#34;text/css&#34;&gt;
 
-/* CSS para tornar a tabela responsiva */
-.responsive-table {
+.container-da-tabela {
     overflow-x: auto;
-    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .table td th{
+        font-size: 12px;
+    }
 }
 
 &lt;/style&gt;
-&lt;table class=&#34;lightable-classic table responsive-table&#34;&gt;
+&lt;div class=&#34;container-da-tabela&#34;&gt;
+&lt;table class=&#34;lightable-classic table&#34; style=&#34;font-family: Arial; margin-left: auto; margin-right: auto; width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th style=&#34;empty-cells: hide;&#34; colspan=&#34;2&#34;&gt;&lt;/th&gt;
@@ -1770,6 +1775,7 @@ function showConteudoOutrosExemplos(conteudoId) {
    &lt;/tr&gt;
  &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;outrosexemplos2&#34; class=&#34;conteudoOutrosExemplos&#34;&gt;
 &lt;p&gt;A Batalha dos Sexos é um exemplo clássico na teoria dos jogos que ilustra a situação em que dois jogadores têm preferências diferentes, mas desejam coordenar suas ações. Neste exemplo, consideramos um casal composto por um homem e uma mulher que precisam decidir entre duas atividades: assistir a um jogo de futebol ou assistir a um balé.&lt;/p&gt;

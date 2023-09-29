@@ -984,15 +984,20 @@ Pure-strategy NE: [10, 10]
 
 <style type="text/css">
 
-/* CSS para tornar a tabela responsiva */
-.responsive-table {
+.container-da-tabela {
     overflow-x: auto;
-    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .table td th{
+        font-size: 12px;
+    }
 }
 
 </style>
 
-<table class="lightable-classic table responsive-table">
+<div class="container-da-tabela">
+<table class="lightable-classic table" style="font-family: Arial; margin-left: auto; margin-right: auto; width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
 <th style="empty-cells: hide;" colspan="2"></th>
@@ -1156,6 +1161,7 @@ Pure-strategy NE: [10, 10]
    </tr>
  </tbody>
 </table>
+</div>
 
 </div>
 

@@ -1083,14 +1083,19 @@ function showConteudoOutrosExemplos(conteudoId) {
 </span></span></code></pre></div><br>
 <style type="text/css">
 
-/* CSS para tornar a tabela responsiva */
-.responsive-table {
+.container-da-tabela {
     overflow-x: auto;
-    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .table td th{
+        font-size: 12px;
+    }
 }
 
 </style>
-<table class="lightable-classic table responsive-table">
+<div class="container-da-tabela">
+<table class="lightable-classic table" style="font-family: Arial; margin-left: auto; margin-right: auto; width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
 <th style="empty-cells: hide;" colspan="2"></th>
@@ -1254,6 +1259,7 @@ function showConteudoOutrosExemplos(conteudoId) {
    </tr>
  </tbody>
 </table>
+</div>
 </div>
 <div id="outrosexemplos2" class="conteudoOutrosExemplos">
 <p>A Batalha dos Sexos é um exemplo clássico na teoria dos jogos que ilustra a situação em que dois jogadores têm preferências diferentes, mas desejam coordenar suas ações. Neste exemplo, consideramos um casal composto por um homem e uma mulher que precisam decidir entre duas atividades: assistir a um jogo de futebol ou assistir a um balé.</p>
