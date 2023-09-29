@@ -23,7 +23,7 @@ comments: yes
 
 ## Introdução
 
-Se você ainda não conferiu nosso tutorial sobre Teoria dos Jogos no R, abordando Jogos Simultâneos, clique <a href="https://github.com/yukiyanai/rgamer" id="rgamer-link" target="_blank">aqui</a> para acessar diretamente o post.
+Se você ainda não conferiu nosso tutorial sobre Teoria dos Jogos no R, abordando Jogos Simultâneos, clique <a href="https://drewmelo.github.io/blogr/p/jogos-simultaneos/" id="rgamer-link">aqui</a> para acessar diretamente o post.
 
 ### Pacotes
 
@@ -730,6 +730,22 @@ Pure-strategy NE: [(Reduzir), (Reduzir, Reduzir)]
 
 <br>
 
+
+<style type="text/css">
+
+.container-da-tabela {
+    overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+    .table td th{
+        font-size: 12px;
+    }
+}
+
+</style>
+
+<div class="container-da-tabela">
  <table class="lightable-classic table" style="font-family: Arial; margin-left: auto; margin-right: auto; width: auto !important; margin-left: auto; margin-right: auto;">
   <thead>
  <tr>
@@ -739,10 +755,10 @@ Pure-strategy NE: [(Reduzir), (Reduzir, Reduzir)]
    <tr>
     <th style="text-align:left;">   </th>
     <th style="text-align:center;"> strategy </th>
-    <th style="text-align:center;"> (M, M) </th>
-    <th style="text-align:center;"> (M, R) </th>
-    <th style="text-align:center;"> (R, M) </th>
-    <th style="text-align:center;"> (R, R) </th>
+    <th style="text-align:center;"> (Manter, Manter) </th>
+    <th style="text-align:center;"> (Manter, Reduzir) </th>
+    <th style="text-align:center;"> (Reduzir, Manter) </th>
+    <th style="text-align:center;"> (Reduzir, Reduzir) </th>
    </tr>
   </thead>
  <tbody>
@@ -764,6 +780,7 @@ Pure-strategy NE: [(Reduzir), (Reduzir, Reduzir)]
    </tr>
  </tbody>
  </table>
+ </div>
  
 Assim, o ENPS ocorre quando o posto EconoGas adota as estratégias de "Reduzir, Reduzir", em resposta à redução de preços realizada pelo posto OilFlex.
 

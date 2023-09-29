@@ -14,7 +14,7 @@
         <guid>https://drewmelo.github.io/blogr/p/jogos-sequenciais-e-repetidos/</guid>
         <description>&lt;img src="https://drewmelo.github.io/blogr/p/jogos-sequenciais-e-repetidos/jogos-sequenciais-repetidos.jpg" alt="Featured image of post Teoria dos Jogos no R: Jogos Sequenciais e Repetidos" /&gt;&lt;link href=&#34;https://drewmelo.github.io/blogr/p/jogos-sequenciais-e-repetidos/index_files/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 &lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
-&lt;p&gt;Se você ainda não conferiu nosso tutorial sobre Teoria dos Jogos no R, abordando Jogos Simultâneos, clique &lt;a href=&#34;https://github.com/yukiyanai/rgamer&#34; id=&#34;rgamer-link&#34; target=&#34;_blank&#34;&gt;aqui&lt;/a&gt; para acessar diretamente o post.&lt;/p&gt;
+&lt;p&gt;Se você ainda não conferiu nosso tutorial sobre Teoria dos Jogos no R, abordando Jogos Simultâneos, clique &lt;a href=&#34;https://drewmelo.github.io/blogr/p/jogos-simultaneos/&#34; id=&#34;rgamer-link&#34;&gt;aqui&lt;/a&gt; para acessar diretamente o post.&lt;/p&gt;
 &lt;h3 id=&#34;pacotes&#34;&gt;Pacotes&lt;/h3&gt;
 &lt;p&gt;Para realização dos passos seguintes, será necessário a instalação e ativação do pacote:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# install.packages(&amp;#34;devtools&amp;#34;)&lt;/span&gt;
@@ -572,6 +572,20 @@ function showConteudoENPS(conteudoId) {
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;jogo7mxtab&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;solve_nfg&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;jogo7mx&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Pure-strategy NE: [(Reduzir), (Reduzir, Reduzir)]
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;style type=&#34;text/css&#34;&gt;
+
+.container-da-tabela {
+    overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+    .table td th{
+        font-size: 12px;
+    }
+}
+
+&lt;/style&gt;
+&lt;div class=&#34;container-da-tabela&#34;&gt;
  &lt;table class=&#34;lightable-classic table&#34; style=&#34;font-family: Arial; margin-left: auto; margin-right: auto; width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
   &lt;thead&gt;
  &lt;tr&gt;
@@ -581,10 +595,10 @@ function showConteudoENPS(conteudoId) {
    &lt;tr&gt;
     &lt;th style=&#34;text-align:left;&#34;&gt;   &lt;/th&gt;
     &lt;th style=&#34;text-align:center;&#34;&gt; strategy &lt;/th&gt;
-    &lt;th style=&#34;text-align:center;&#34;&gt; (M, M) &lt;/th&gt;
-    &lt;th style=&#34;text-align:center;&#34;&gt; (M, R) &lt;/th&gt;
-    &lt;th style=&#34;text-align:center;&#34;&gt; (R, M) &lt;/th&gt;
-    &lt;th style=&#34;text-align:center;&#34;&gt; (R, R) &lt;/th&gt;
+    &lt;th style=&#34;text-align:center;&#34;&gt; (Manter, Manter) &lt;/th&gt;
+    &lt;th style=&#34;text-align:center;&#34;&gt; (Manter, Reduzir) &lt;/th&gt;
+    &lt;th style=&#34;text-align:center;&#34;&gt; (Reduzir, Manter) &lt;/th&gt;
+    &lt;th style=&#34;text-align:center;&#34;&gt; (Reduzir, Reduzir) &lt;/th&gt;
    &lt;/tr&gt;
   &lt;/thead&gt;
  &lt;tbody&gt;
@@ -606,6 +620,7 @@ function showConteudoENPS(conteudoId) {
    &lt;/tr&gt;
  &lt;/tbody&gt;
  &lt;/table&gt;
+ &lt;/div&gt;
 &lt;p&gt;Assim, o ENPS ocorre quando o posto EconoGas adota as estratégias de &amp;ldquo;Reduzir, Reduzir&amp;rdquo;, em resposta à redução de preços realizada pelo posto OilFlex.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;enps2&#34; class=&#34;conteudoENPS&#34;&gt;
