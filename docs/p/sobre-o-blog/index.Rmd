@@ -8,7 +8,7 @@ tags: []
 description: Este texto apresenta um blog que explora a conexão entre economia, programação e tecnologia, convidando os leitores a explorar análises, tutoriais e insights relevantes para o mundo digital atual.
 image: sobre-o-blog2.jpg
 math: ~
-license: yes
+license: no
 hidden: no
 comments: yes
 ---
