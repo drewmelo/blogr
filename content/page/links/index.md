@@ -34,7 +34,7 @@ Entretanto, em 2021, minha trajetória tomou um novo rumo. Ao ingressar no curso
 
 Essa experiência me proporcionou uma compreensão mais profunda sobre como a economia e a tecnologia estão intrinsecamente entrelaçadas. A programação emergiu como uma ferramenta poderosa para aplicar os conceitos econômicos de forma prática e inovadora. Agora, em 2023, dou início a um novo projeto: este blog. Através dele, pretendo compartilhar as descobertas que venho fazendo, explorando temas relacionados à economia, tecnologia e programação. O objetivo é conectar esses mundos de maneira coesa e criativa, oferecendo insights valiosos para aqueles que desejam compreender melhor essa interseção fascinante.
 
-<img src="{{< blogdown/postref >}}index_files/figure-html/pic-sobremim.png" width="750" style="display: block; margin: auto; box-shadow: 0 5px 15px rgba(0,0,0,.25);" />
+<img src="{{< blogdown/postref >}}index_files/figure-html/art-sobre-mim.png" width="700" style="display: block; margin: auto; box-shadow: 0 5px 15px rgba(0,0,0,.25);" />
 
 # Um pouco sobre mim 
 
