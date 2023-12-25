@@ -24,7 +24,7 @@ comments: yes
 
 ## Introdução
 
-Na teoria dos jogos, como discutido anteriormente neste blog, exploramos jogos simultâneos, sequenciais e repetidos, bem como a aplicação do modelo de aprendizagem. Esse modelo usa uma matriz de jogos simultâneos para gerar simulações entre os jogadores, com base em seus payoffs e estratégias
+Na teoria dos jogos, como discutido anteriormente neste blog, exploramos jogos simultâneos, sequenciais e repetidos, bem como a aplicação do modelo de aprendizagem. Esse modelo usa uma matriz de jogos simultâneos para gerar simulações entre os jogadores, com base em seus payoffs e estratégias.
 
 A principal vantagem de utilizar modelo de aprendizagem na teoria dos jogos, especialmente no ambiente R, é a flexibilidade na manipulação das informações. Mas o que exatamente significa essa flexibilidade? Para uma compreensão mais clara, considere o mapa mental abaixo, que ilustra o processo e os objetivos deste tutorial.
 
