@@ -1,0 +1,185 @@
+---
+title: Transformação e Manipulação de Dados em Teoria dos Jogos
+author: André Melo
+date: '2023-12-25'
+slug: transformacao-e-manipulacao-de-dados-em-teoria-dos-jogos
+categories: []
+tags: []
+description: ~
+image: ~
+math: ~
+license: ~
+hidden: no
+comments: yes
+---
+
+<link href="{{< blogdown/postref >}}index_files/lightable/lightable.css" rel="stylesheet" />
+
+<!--more-->
+
+## Introdução
+
+Na teoria dos jogos, como discutido anteriormente neste blog, exploramos jogos simultâneos, sequenciais e repetidos, bem como a aplicação do modelo de aprendizagem. Esse modelo usa uma matriz de jogos simultâneos para gerar simulações entre os jogadores, com base em seus payoffs e estratégias.
+
+A principal vantagem de utilizar modelo de aprendizagem na teoria dos jogos, especialmente no ambiente R, é a flexibilidade na manipulação das informações. Mas o que exatamente significa essa flexibilidade? Para uma compreensão mais clara, considere o mapa mental abaixo, que ilustra o processo e os objetivos deste tutorial.
+
+<img src="{{< blogdown/postref >}}index_files/figure-html/mindmap.png" width="850" style="display: block; margin: auto;" />
+
+Começamos com um jogo na forma normal e, a partir dessa matriz, transferimos as informações para as simulações, nos permitindo obter detalhes adicionais sobre a interação competitiva entre os jogadores. 
+
+No entanto, as possibilidades não se limitam somente a esse processo, pois você pode optar por concluir sua análise após aplicar o jogo ao modelo EWA ou aprofundar-se ainda mais.
+
+É aqui que entra a flexibilidade da programação, já que você pode direcionar seus dados de várias maneiras, seja com base em modelos específicos, como reforço ou crença, ou em qualquer outra direção que sua análise exija.
+
+Neste cenário, realizaremos a extração dos dados gerados pelas simulações do modelo de aprendizagem. Esse processo envolve a preparação e separação dos dados dos jogadores, com a finalidade de simplificar a posterior manipulação, reorganização, limpeza e junção de data frames. A partir disso, teremos uma base de dados sólida e estruturada para fins analíticos categorizados.
+
+### Pacotes
+
+Para a realização dos passos a seguir será necessário o uso desses pacotes:
+```{r package, echo=TRUE, results='hide', message=FALSE, warning=FALSE}
+# install.packages("devtools")
+# devtools::install_github("yukiyanai/rgamer")
+library(rgamer)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(purrr)
+library(utf8)
+```
+
+## Coca-Cola e PepsiCo
+
+Em um jogo, representamos duas empresas, Coca-Cola e PepsiCo, que estão tomando decisões estratégicas em relação a diferentes aspectos de seus negócios para ganhar uma parcela maior do mercado e aumentar seus lucros em milhões de dólares.
+
+Podemos atribuir o exemplo a um objeto chamado `matriz`. Agora nesse exemplo a complexidade fica maior, já que é possível aumentar o número de estratégias dos jogadores, nesse caso aumentaremos para 5 estratégias para os dois jogadores. 
+
+```{r ccpp, echo=TRUE}
+matriz <- normal_form(
+  players = c("Coca-Cola", "PepsiCo"),
+  s1 = c("Marketing e Publicidade", 
+         "Eventos e Parcerias", 
+         "Produtos Alternativos", 
+         "Distribuição Global", 
+         "Aquisição de Marcas"), 
+  s2 = c("Promoção da Marca", 
+         "Patrocício de Eventos", 
+         "Diversificação de Portfólio", 
+         "Estratégias de Preços", 
+         "Parcerias com Restaurantes"), 
+  payoffs1 = c(98, 92, 70, 90, 70, 
+               92, 98, 70, 90, 35, 
+               70, 70, 70, 90, 70, 
+               90, 90, 70, 90, 98, 
+               75, 75, 70, 75, 75), 
+  payoffs2 = c(92, 98, 70, 90, 35, 
+               98, 92, 70, 90, 25, 
+               70, 70, 70, 90, 35, 
+               90, 98, 98, 90, 98, 
+               75, 92, 70, 98, 92))
+```
+
+Consequentemente, nessa configuração, o número de payoffs também terá que satisfazer o número de estratégias, já que a matriz agora será uma 5x5, como é visto na tabela abaixo.
+
+```{r tabela, echo=TRUE, comment="", results='hide'}
+s.matriz <- solve_nfg(matriz, mark_br = FALSE)
+```
+
+<br>
+
+<style type="text/css">
+.container-da-tabela {
+    overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+    .table td th{
+        font-size: 12px;
+    }
+}
+</style>
+
+<div class="container-da-tabela">
+<table class=" lightable-classic table" style="font-family: Arial; margin-left: auto; margin-right: auto; width: auto !important; margin-left: auto; margin-right: auto;">
+ <thead>
+<tr>
+<th style="empty-cells: hide;" colspan="2"></th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; font-weight: bold; " colspan="5"><div style="border-bottom: 1px solid #111111; margin-bottom: -1px; ">PepsiCo</div></th>
+</tr>
+  <tr>
+   <th style="text-align:left;">   </th>
+   <th style="text-align:center;"> strategy </th>
+   <th style="text-align:center;"> Promoção da Marca </th>
+   <th style="text-align:center;"> Patrocício de Eventos </th>
+   <th style="text-align:center;"> Diversificação de Portfólio </th>
+   <th style="text-align:center;"> Estratégias de Preços </th>
+   <th style="text-align:center;"> Parcerias com Restaurantes </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;font-weight: bold;"> Coca-Cola </td>
+   <td style="text-align:center;"> Marketing e Publicidade </td>
+   <td style="text-align:center;"> 98, 92 </td>
+   <td style="text-align:center;"> 92, 98 </td>
+   <td style="text-align:center;"> 70, 70 </td>
+   <td style="text-align:center;"> 90, 90 </td>
+   <td style="text-align:center;"> 75, 75 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;font-weight: bold;">  </td>
+   <td style="text-align:center;"> Eventos e Parcerias </td>
+   <td style="text-align:center;"> 92, 98 </td>
+   <td style="text-align:center;"> 98, 92 </td>
+   <td style="text-align:center;"> 70, 70 </td>
+   <td style="text-align:center;"> 90, 98 </td>
+   <td style="text-align:center;"> 75, 92 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;font-weight: bold;">  </td>
+   <td style="text-align:center;"> Produtos Alternativos </td>
+   <td style="text-align:center;"> 70, 70 </td>
+   <td style="text-align:center;"> 70, 70 </td>
+   <td style="text-align:center;"> 70, 70 </td>
+   <td style="text-align:center;"> 70, 98 </td>
+   <td style="text-align:center;"> 70, 70 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;font-weight: bold;">  </td>
+   <td style="text-align:center;"> Distribuição Global </td>
+   <td style="text-align:center;"> 90, 90 </td>
+   <td style="text-align:center;"> 90, 90 </td>
+   <td style="text-align:center;"> 90, 90 </td>
+   <td style="text-align:center;"> 90, 90 </td>
+   <td style="text-align:center;"> 75, 98 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;font-weight: bold;">  </td>
+   <td style="text-align:center;"> Aquisição de Marcas </td>
+   <td style="text-align:center;"> 70, 35 </td>
+   <td style="text-align:center;"> 35, 25 </td>
+   <td style="text-align:center;"> 70, 35 </td>
+   <td style="text-align:center;"> 98, 98 </td>
+   <td style="text-align:center;"> 75, 92 </td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+Agora que temos o exemplo estruturado na forma normal, podemos prosseguir para a simulação do modelo de aprendizagem. Durante esse processo podemos configurar os parâmetros <span style="font-size: 100%;">$\lambda$</span>, <span style="font-size: 100%;">$\Delta$</span>, <span style="font-size: 100%;">$\rho$</span> e <span style="font-size: 100%;">$\phi$</span>.
+
+```{r ccpp_learning, echo=TRUE}
+pepsicoca <- sim_learning(
+                game = matriz,
+                n_samples = 36,
+                n_periods = 31,
+                type = "EWA",
+                lambda = 1,
+                delta = 0.3,  
+                rho = 0.7,    
+                phi = 0.5,
+              )
+```
+
+Nesse cenário, ajustar o valor de `delta` para 0.3 resulta em uma adaptação mais lenta, o que, por sua vez, permite uma maior incerteza nas escolhas estratégicas. Além disso, definir `rho` como 0.7 atribui mais peso às recompensas passadas, tornando as estratégias com recompensas mais elevadas mais atrativas.
+
+Dessa forma, teremos uma competição um pouco mais incerta entre a Coca-Cola e a Pepsi. Nesse cenário, a empresa que for mais precisa e seguir o equilíbrio de Nash terá um lucro maior do que aquela que for indecisa em relação às suas estratégias em um intervalo específico de tempo.
