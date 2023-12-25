@@ -10,7 +10,7 @@ tags:
  - economia
  - datascience
  - teoriadosjogos
-description: Este tutorial tem como objetivo ensinar como aplicar Jogos Simultâneos em teoria dos jogos no ambiente R, utilizando o pacote Rgamer.
+description: Transferimos dados do jogo para simulações, permitindo análises detalhadas e adaptação a diferentes modelos de aprendizagem. O tutorial destaca a extração e organização dos dados para análises eficientes.
 image: transformacao-manipulacao-teoria-dos-jogos.jpg
 math: ~
 license: ~
@@ -342,19 +342,19 @@ Após as manipulações realizadas, uma análise visual rápida dos dados revela
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Coca-Cola </td>
-   <td style="text-align:left;"> Marketing e Publicidade </td>
+   <td style="text-align:left;"> Produtos Alternativos </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Marketing e Publicidade </td>
    <td style="text-align:right;"> 0.2 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Marketing e Publicidade </td>
-   <td style="text-align:right;"> 98.0 </td>
+   <td style="text-align:right;"> 29.4 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Coca-Cola </td>
-   <td style="text-align:left;"> Marketing e Publicidade </td>
+   <td style="text-align:left;"> Produtos Alternativos </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Eventos e Parcerias </td>
    <td style="text-align:right;"> 0.2 </td>
@@ -366,19 +366,19 @@ Após as manipulações realizadas, uma análise visual rápida dos dados revela
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Coca-Cola </td>
-   <td style="text-align:left;"> Marketing e Publicidade </td>
+   <td style="text-align:left;"> Produtos Alternativos </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Produtos Alternativos </td>
    <td style="text-align:right;"> 0.2 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Produtos Alternativos </td>
-   <td style="text-align:right;"> 21.0 </td>
+   <td style="text-align:right;"> 70.0 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Coca-Cola </td>
-   <td style="text-align:left;"> Marketing e Publicidade </td>
+   <td style="text-align:left;"> Produtos Alternativos </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Distribuição Global </td>
    <td style="text-align:right;"> 0.2 </td>
@@ -390,7 +390,7 @@ Após as manipulações realizadas, uma análise visual rápida dos dados revela
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Coca-Cola </td>
-   <td style="text-align:left;"> Marketing e Publicidade </td>
+   <td style="text-align:left;"> Produtos Alternativos </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Aquisição de Marcas </td>
    <td style="text-align:right;"> 0.2 </td>
@@ -486,16 +486,16 @@ Utilizando a função `arrange()`, podemos efetuar a organização da base de da
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Coca-Cola </td>
-   <td style="text-align:left;"> Marketing e Publicidade </td>
+   <td style="text-align:left;"> Produtos Alternativos </td>
    <td style="text-align:left;"> Marketing e Publicidade </td>
    <td style="text-align:right;"> 0.2 </td>
-   <td style="text-align:right;"> 98.0 </td>
+   <td style="text-align:right;"> 29.4 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Coca-Cola </td>
-   <td style="text-align:left;"> Marketing e Publicidade </td>
+   <td style="text-align:left;"> Produtos Alternativos </td>
    <td style="text-align:left;"> Eventos e Parcerias </td>
    <td style="text-align:right;"> 0.2 </td>
    <td style="text-align:right;"> 27.6 </td>
@@ -504,16 +504,16 @@ Utilizando a função `arrange()`, podemos efetuar a organização da base de da
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Coca-Cola </td>
-   <td style="text-align:left;"> Marketing e Publicidade </td>
+   <td style="text-align:left;"> Produtos Alternativos </td>
    <td style="text-align:left;"> Produtos Alternativos </td>
    <td style="text-align:right;"> 0.2 </td>
-   <td style="text-align:right;"> 21.0 </td>
+   <td style="text-align:right;"> 70.0 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Coca-Cola </td>
-   <td style="text-align:left;"> Marketing e Publicidade </td>
+   <td style="text-align:left;"> Produtos Alternativos </td>
    <td style="text-align:left;"> Distribuição Global </td>
    <td style="text-align:right;"> 0.2 </td>
    <td style="text-align:right;"> 27.0 </td>
@@ -522,7 +522,7 @@ Utilizando a função `arrange()`, podemos efetuar a organização da base de da
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Coca-Cola </td>
-   <td style="text-align:left;"> Marketing e Publicidade </td>
+   <td style="text-align:left;"> Produtos Alternativos </td>
    <td style="text-align:left;"> Aquisição de Marcas </td>
    <td style="text-align:right;"> 0.2 </td>
    <td style="text-align:right;"> 21.0 </td>
@@ -534,7 +534,7 @@ Utilizando a função `arrange()`, podemos efetuar a organização da base de da
    <td style="text-align:left;"> Promoção da Marca </td>
    <td style="text-align:left;"> Promoção da Marca </td>
    <td style="text-align:right;"> 0.2 </td>
-   <td style="text-align:right;"> 92.0 </td>
+   <td style="text-align:right;"> 70.0 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 1 </td>
@@ -543,7 +543,7 @@ Utilizando a função `arrange()`, podemos efetuar a organização da base de da
    <td style="text-align:left;"> Promoção da Marca </td>
    <td style="text-align:left;"> Patrocício de Eventos </td>
    <td style="text-align:right;"> 0.2 </td>
-   <td style="text-align:right;"> 29.4 </td>
+   <td style="text-align:right;"> 21.0 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 1 </td>
@@ -561,7 +561,7 @@ Utilizando a função `arrange()`, podemos efetuar a organização da base de da
    <td style="text-align:left;"> Promoção da Marca </td>
    <td style="text-align:left;"> Estratégias de Preços </td>
    <td style="text-align:right;"> 0.2 </td>
-   <td style="text-align:right;"> 27.0 </td>
+   <td style="text-align:right;"> 29.4 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 1 </td>
@@ -570,7 +570,7 @@ Utilizando a função `arrange()`, podemos efetuar a organização da base de da
    <td style="text-align:left;"> Promoção da Marca </td>
    <td style="text-align:left;"> Parcerias com Restaurantes </td>
    <td style="text-align:right;"> 0.2 </td>
-   <td style="text-align:right;"> 22.5 </td>
+   <td style="text-align:right;"> 21.0 </td>
   </tr>
 </tbody>
 </table>

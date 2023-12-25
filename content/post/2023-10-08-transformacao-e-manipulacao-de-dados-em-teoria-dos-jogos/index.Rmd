@@ -10,7 +10,7 @@ tags:
  - economia
  - datascience
  - teoriadosjogos
-description: Este tutorial tem como objetivo ensinar como aplicar Jogos Simultâneos em teoria dos jogos no ambiente R, utilizando o pacote Rgamer.
+description: Transferimos dados do jogo para simulações, permitindo análises detalhadas e adaptação a diferentes modelos de aprendizagem. O tutorial destaca a extração e organização dos dados para análises eficientes.
 image: transformacao-manipulacao-teoria-dos-jogos.jpg
 math: ~
 license: ~
