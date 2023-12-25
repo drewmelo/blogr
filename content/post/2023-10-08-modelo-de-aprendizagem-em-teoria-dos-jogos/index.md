@@ -4,10 +4,15 @@ author: André Melo
 date: '2023-10-08'
 slug: []
 categories: 
- - Tutorial
  - Data Science
  - R
-tags: []
+tags: 
+ - economia
+ - machinelearning
+ - reinforcementlearning
+ - datascience
+ - teoriadosjogos
+ - probabilidade
 description: O modelo EWA descreve como jogadores tomam decisões estratégicas com base em experiências passadas, ajustando preferências por diferentes estratégias ao longo do tempo, podendo ser configurado como aprendizado por reforço ou crenças.
 image: modelo-de-aprendizagem-em-teoria-dos-jogos.jpg
 math: ~
