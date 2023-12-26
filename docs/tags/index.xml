@@ -6,28 +6,52 @@
         <description>Recent content in Tags on André Melo</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 26 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://drewmelo.github.io/blogr/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 08 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://drewmelo.github.io/blogr/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>datascience</title>
+        <link>https://drewmelo.github.io/blogr/tags/datascience/</link>
+        <pubDate>Sun, 08 Oct 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://drewmelo.github.io/blogr/tags/datascience/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>economia</title>
         <link>https://drewmelo.github.io/blogr/tags/economia/</link>
-        <pubDate>Tue, 26 Sep 2023 00:00:00 +0000</pubDate>
+        <pubDate>Sun, 08 Oct 2023 00:00:00 +0000</pubDate>
         
         <guid>https://drewmelo.github.io/blogr/tags/economia/</guid>
         <description></description>
         </item>
         <item>
-        <title>teoriadosjogos</title>
-        <link>https://drewmelo.github.io/blogr/tags/teoriadosjogos/</link>
-        <pubDate>Tue, 26 Sep 2023 00:00:00 +0000</pubDate>
+        <title>machinelearning</title>
+        <link>https://drewmelo.github.io/blogr/tags/machinelearning/</link>
+        <pubDate>Sun, 08 Oct 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://drewmelo.github.io/blogr/tags/teoriadosjogos/</guid>
+        <guid>https://drewmelo.github.io/blogr/tags/machinelearning/</guid>
         <description></description>
         </item>
         <item>
-        <title>datascience</title>
-        <link>https://drewmelo.github.io/blogr/tags/datascience/</link>
-        <pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate>
+        <title>probabilidade</title>
+        <link>https://drewmelo.github.io/blogr/tags/probabilidade/</link>
+        <pubDate>Sun, 08 Oct 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://drewmelo.github.io/blogr/tags/datascience/</guid>
+        <guid>https://drewmelo.github.io/blogr/tags/probabilidade/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>reinforcementlearning</title>
+        <link>https://drewmelo.github.io/blogr/tags/reinforcementlearning/</link>
+        <pubDate>Sun, 08 Oct 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://drewmelo.github.io/blogr/tags/reinforcementlearning/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>teoriadosjogos</title>
+        <link>https://drewmelo.github.io/blogr/tags/teoriadosjogos/</link>
+        <pubDate>Sun, 08 Oct 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://drewmelo.github.io/blogr/tags/teoriadosjogos/</guid>
         <description></description>
         </item>
         <item>

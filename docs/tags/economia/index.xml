@@ -6,7 +6,458 @@
         <description>Recent content in economia on André Melo</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 26 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://drewmelo.github.io/blogr/tags/economia/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 08 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://drewmelo.github.io/blogr/tags/economia/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Modelo de Aprendizagem em Teoria dos Jogos</title>
+        <link>https://drewmelo.github.io/blogr/p/modelo-de-aprendizagem-em-teoria-dos-jogos/</link>
+        <pubDate>Sun, 08 Oct 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://drewmelo.github.io/blogr/p/modelo-de-aprendizagem-em-teoria-dos-jogos/</guid>
+        <description>&lt;img src="https://drewmelo.github.io/blogr/p/modelo-de-aprendizagem-em-teoria-dos-jogos/modelo-de-aprendizagem-em-teoria-dos-jogos.jpg" alt="Featured image of post Modelo de Aprendizagem em Teoria dos Jogos" /&gt;&lt;link href=&#34;https://drewmelo.github.io/blogr/p/modelo-de-aprendizagem-em-teoria-dos-jogos/index_files/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
+&lt;p&gt;Se você ainda não conferiu nosso tutorial sobre Teoria dos Jogos no R, abordando Jogos Sequenciais e Reptidos, clique &lt;a href=&#34;https://drewmelo.github.io/blogr/p/jogos-simultaneos/&#34; id=&#34;rgamer-link&#34;&gt;aqui&lt;/a&gt; para acessar diretamente o post.&lt;/p&gt;
+&lt;style type=&#34;text/css&#34;&gt;
+/* ---------------------------------------------------------- */
+
+a#rgamer-link {
+    color: #016dea; /* Cor do texto no modo light */
+    text-decoration: none;
+}
+
+a#rgamer-link:hover {
+    color: #014ba0; /* Cor do texto quando o mouse passar por cima no modo light */
+}
+
+/* ---------------------------------------------------------- */  
+
+/* Estilos para o link no modo dark */
+[data-scheme=&#34;dark&#34;] a#rgamer-link {
+    color: #5bc0be; /* Cor do texto no modo dark */
+}
+
+[data-scheme=&#34;dark&#34;] a#rgamer-link:hover {
+    color: #7eecea; /* Cor do texto quando o mouse passar por cima no modo dark */
+}
+
+/* ----------------- MODELO DE APRENDIZAGEM COMEÇO ------------------ */
+  #botoesEWA {
+    display: flex;
+    justify-content: center;
+}
+  .botao-interativo-ewa {
+    background-color: transparent;
+    border-color: transparent;
+    margin-left: 10px;  /* Adicionando margem para separar os botões */
+    padding: 5px 10px; /* Adicionando espaçamento interno para melhor aparência */
+    color: #016dea;
+    border-radius: 0.5rem;
+    font-size: 15px;
+    transition: background-color 0.3s;
+    width: auto; /* Largura automática para ajustar ao tamanho do texto */
+    white-space: nowrap; /* Evita que o texto quebre em várias linhas */
+  }
+
+  .botao-interativo-ewa:hover {
+    background-color: #E5E5E5;
+    color: #002e63;
+  }
+
+  .botao-interativo-ewa.selecionadoEWA {
+    background-color: #0766a6;
+    color: white;
+  }
+
+  .conteudoEWA {
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+/* ---------------------------------------------------------- */  
+
+  [data-scheme=&#34;dark&#34;] .botao-interativo-ewa {
+    background-color: transparent;
+    color: #dedbd2; /* Use a variável de cor do texto para o modo dark */
+}
+
+  [data-scheme=&#34;dark&#34;] .botao-interativo-ewa:hover {
+    background-color: #cfdbd5; 
+    color: #2f3e46;
+}
+
+  [data-scheme=&#34;dark&#34;] .botao-interativo-ewa.selecionadoEWA {
+    background-color: #0f4c5c;
+    color: #dedbd2; /* Cor do texto do botão selecionado */
+}
+
+/* ---------------------------------------------------------- */  
+  
+/* Estilos para o layout responsivo dos botões */
+@media screen and (max-width: 768px) {
+  #botoesEWA {
+    gap: 10px; /* Espaço entre os botões */
+  }
+  
+  .botao-interativo-ewa {
+    width: 100%; /* Largura total para preencher a coluna */
+    margin: 0 auto;
+  }
+}
+
+/* ------------ PROBABILIDADE E ATRAÇÃO ------------ */
+/* probabilidade - COMEÇO */
+.output-learningexemplop1,
+.output-learningexemplop2 {
+  font-family: &#39;Lucida Console&#39; !important;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #333; /* Cor do texto */
+  white-space: nowrap;
+  padding: 10px;
+  margin: 0;
+  border: none;
+  background: none;
+  display: inline-block; /* Defina para inline-block para alinhar horizontalmente */
+  max-width: 45%; /* Defina a largura máxima para cada tabela */
+  vertical-align: top; /* Alinhe as tabelas ao topo uma da outra */
+}
+
+.output-learningexemplop1 {
+  margin-top: -25px; /* Ajuste o valor conforme necessário */
+  margin-bottom: -1rem;
+}
+
+.output-learningexemplop2 {
+  margin-top: -25px; /* Ajuste o valor conforme necessário */
+  margin-bottom: -1rem;
+}
+/* probabilidade - FIM */
+
+/* atração - COMEÇO */
+.output-learningatracaop1,
+.output-learningatracaop2 {
+  font-family: &#39;Lucida Console&#39; !important;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #333; /* Cor do texto */
+  white-space: nowrap;
+  padding: 10px;
+  margin: 0;
+  border: none;
+  background: none;
+  display: inline-block; /* Defina para inline-block para alinhar horizontalmente */
+  max-width: 100%; /* Defina a largura máxima para cada tabela */
+  vertical-align: top; /* Alinhe as tabelas ao topo uma da outra */
+}
+
+.output-learningatracaop1 {
+  margin-top: -25px; /* Ajuste o valor conforme necessário */
+  margin-bottom: -1rem;
+}
+
+.output-learningatracaop2 {
+  margin-top: -25px; /* Ajuste o valor conforme necessário */
+  margin-bottom: -1rem;
+
+/* atração - FIM */
+
+&lt;/style&gt;
+&lt;h2 id=&#34;pacotes&#34;&gt;Pacotes&lt;/h2&gt;
+&lt;p&gt;Para realização dos passos seguintes, será necessário a instalação e ativação do pacote:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# install.packages(&amp;#34;devtools&amp;#34;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# devtools::install_github(&amp;#34;yukiyanai/rgamer&amp;#34;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;library&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rgamer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;library&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;utf8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;modelo-de-aprendizagem&#34;&gt;Modelo de Aprendizagem&lt;/h2&gt;
+&lt;p&gt;O modelo de aprendizagem aplicado à teoria dos jogos refere-se a um conjunto de regras e estratégias que os jogadores usam para aprender e adaptar seu comportamento ao longo do tempo em um jogo. Esses modelos podem ajudar a explicar como os jogadores tomam decisões e como essas decisões evoluem à medida que eles ganham experiência e aprendem com as interações passadas.&lt;/p&gt;
+&lt;h3 id=&#34;experienced-weighted-attraction-ewa&#34;&gt;Experienced-Weighted Attraction (EWA)&lt;/h3&gt;
+&lt;p&gt;O modelo de aprendizagem EWA (&lt;em&gt;Experienced-Weighted Attraction&lt;/em&gt;) ou Atração Ponderada Experiente é uma abordagem em modelagem de aprendizado que busca demonstrar como os jogadores realizam escolhas estratégicas com base em suas experiências passadas e nas atrações associadas a diferentes estratégias. Neste modelo, os jogadores atribuem valores de atração a cada uma das estratégias disponíveis com base nas recompensas (payoffs) que receberam no passado ao escolher essas estratégias. Esses valores de atração refletem a percepção  sobre a utilidade de cada estratégia e são atualizados ao longo do tempo com base nas recompensas obtidas.&lt;/p&gt;
+&lt;p&gt;Em um dos recursos presentes no pacote Rgamer está a função &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;sim_learning()&lt;/code&gt;&lt;/span&gt; que realiza a simulação usando o modelo EWA e fornece resultados como estratégias escolhidas pelos jogadores, valores de atração, probabilidades de escolha de estratégias e gráficos de resultados.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;jogo2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;normal_form&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;n&#34;&gt;players&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;OilFlex&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;EconoGas&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;n&#34;&gt;s1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Manter Preço&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Reduzir Preço&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;n&#34;&gt;s2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Manter Preço&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Reduzir Preço&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;n&#34;&gt;payoffs1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;50&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;60&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;40&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;n&#34;&gt;payoffs2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;50&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;60&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;40&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Utilizando o mesmo exemplo dos dois postos de gasolina, o qual é estruturado por &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;normal_form()&lt;/code&gt;&lt;/span&gt; para criar o jogo que será utilizado na simulação executada pela função &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;sim_learning()&lt;/code&gt;&lt;/span&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;jogo12&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;sim_learning&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;game&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;jogo2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;n_samples&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;n_periods&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;EWA&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;lambda&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;delta&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0.5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;rho&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0.5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;phi&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0.5&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;img src=&#34;https://drewmelo.github.io/blogr/p/modelo-de-aprendizagem-em-teoria-dos-jogos/index_files/figure-html/simlearning.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;
+&lt;p&gt;Em 10 amostras (repetições) definido por &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;n_samples&lt;/code&gt;&lt;/span&gt;, em que cada amostra contém 20 períodos (rodadas) configurado por &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;n_periods&lt;/code&gt;&lt;/span&gt;, é necessário observar que quanto maior o número de amostras e períodos, maior será a precisão da simulação do modelo de aprendizagem. No entanto, isso também exigirá mais tempo e recursos de desempenho da máquina.&lt;/p&gt;
+&lt;p&gt;Abaixo estão as definições e configuração dos parâmetros &lt;code&gt;lambda&lt;/code&gt;, &lt;code&gt;delta&lt;/code&gt;, &lt;code&gt;rho&lt;/code&gt; e &lt;code&gt;phi&lt;/code&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;lambda&lt;/code&gt; &lt;span style=&#34;font-size: 100%;&#34;&gt;$(\lambda)$&lt;/span&gt;: Esse parâmetro controla a rapidez com que os jogadores ajustam suas probabilidades de escolha com base nas experiências passadas. Quando o valor é igual a 1, significa que o jogadores aumentam ao máximo suas taxas de aprendizado.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;delta&lt;/code&gt; &lt;span style=&#34;font-size: 100%;&#34;&gt;$(\Delta)$&lt;/span&gt;: Possui influência na sensibilidade dos jogadores às mudanças nas recompensas. Ao configurar esse parâmetro com o valor 0.5, irá gerar um equilíbrio entre reagir a mudanças e manter estabilidade nas escolhas.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;rho&lt;/code&gt; &lt;span style=&#34;font-size: 100%;&#34;&gt;$(\rho)$&lt;/span&gt;: Ao adicionar esse parâmetro, é possível modificar a sensibilidade dos jogadores às diferenças nas atrações entre estratégias. Um valor de 0.5 indica que as preferências serão moderadamente relativas entre estratégias.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;phi&lt;/code&gt; &lt;span style=&#34;font-size: 100%;&#34;&gt;$(\phi)$&lt;/span&gt;: Esse parâmetro representa a sensibilidade dos jogadores às mudanças nas atrações entre estratégias ao longo das amostras. Um valor de 0.5 significa que as mudanças nas preferências serão graduais.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Em muitos casos, é necessário ajustar esses valores, que variam de 0 a 1, durante a modelagem e testar diferentes combinações para ver como afetam o comportamento do modelo e se ajustam aos dados reais do problema em estudo. É importante notar que cada combinação diferente pode ativar um caso específico do modelo EWA, abordado mais a frente.&lt;/p&gt;
+&lt;h4 id=&#34;probabilidade-de-escolha&#34;&gt;Probabilidade de Escolha&lt;/h4&gt;
+&lt;p&gt;Este modelo não se limita apenas em fornecer representações gráficas, mas também oferece informações sobre as escolhas probabilísticas das estratégias feitas pelos jogadores ao longo dos períodos. Essas informações podem ser acessadas por meio dos comandos &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;$choice_prob$P1&lt;/code&gt;&lt;/span&gt; para o jogador 1 e &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;$choice_prob$P2&lt;/code&gt;&lt;/span&gt; para o jogador 2, ou também &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;$choice_prob&lt;/code&gt;&lt;/span&gt; na visualização geral das probabilidades de escolha dos dois jogadores.&lt;/p&gt;
+&lt;p&gt;Para acessar as escolhas em probabilidade feitas pelo jogador 1 e 2, neste caso, basta utilizar o objeto criado, &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;jogo12&lt;/code&gt;&lt;/span&gt;, em conjunto com esses comandos, como demonstrado abaixo.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Probabilidade das escolhas do posto &amp;#34;OilFlex&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;round&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;jogo12&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;choice_prob&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;P1[[10]]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;digits&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   Manter Preço Reduzir Preço period
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1           0.5           0.5      1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2           1.0           0.0      2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;3           1.0           0.0      3
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;4           1.0           0.0      4
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;5           1.0           0.0      5
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;6           1.0           0.0      6
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;7           1.0           0.0      7
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;8           1.0           0.0      8
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;9           1.0           0.0      9
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;10          1.0           0.0     10
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;11          1.0           0.0     11
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;12          1.0           0.0     12
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;13          1.0           0.0     13
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;14          1.0           0.0     14
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;15          1.0           0.0     15
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;16          1.0           0.0     16
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;17          1.0           0.0     17
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;18          1.0           0.0     18
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;19          1.0           0.0     19
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;20          1.0           0.0     20
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Probabilidade das escolhas do posto &amp;#34;EconoGas&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;round&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;jogo12&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;choice_prob&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;P2[[10]]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;digits&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   Manter Preço Reduzir Preço period
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1           0.5           0.5      1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2           0.0           1.0      2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;3           0.0           1.0      3
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;4           0.0           1.0      4
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;5           0.0           1.0      5
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;6           0.0           1.0      6
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;7           0.0           1.0      7
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;8           0.0           1.0      8
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;9           0.0           1.0      9
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;10          0.0           1.0     10
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;11          0.0           1.0     11
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;12          0.0           1.0     12
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;13          0.0           1.0     13
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;14          0.0           1.0     14
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;15          0.0           1.0     15
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;16          0.0           1.0     16
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;17          0.0           1.0     17
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;18          0.0           1.0     18
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;19          0.0           1.0     19
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;20          0.0           1.0     20
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para garantir a clareza dos resultados, neste cenário, realizamos a formatação dos números por meio do arredondamento utilizando a função &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;round()&lt;/code&gt;&lt;/span&gt;, com precisão de duas casas decimais (&lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;digits = 2&lt;/code&gt;&lt;/span&gt;). A análise foi focada nos períodos (&lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;n_periods&lt;/code&gt;&lt;/span&gt;) da décima amostra (&lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;n_samples&lt;/code&gt;&lt;/span&gt;), que pode ser acessada através da posição &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;[[10]]&lt;/code&gt;&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Ao analisar o resultado, podemos inferir o seguinte:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;No primeiro período, tanto &amp;ldquo;OilFlex&amp;rdquo; quanto &amp;ldquo;EconoGas&amp;rdquo; começam com uma probabilidade equilibrada de 50% para escolher qualquer uma das estratégias disponíveis, ou seja, &amp;ldquo;Manter Preço&amp;rdquo; ou &amp;ldquo;Reduzir Preço&amp;rdquo;. Esse cenário é comum em jogos onde os jogadores têm informações limitadas sobre as estratégias de seus oponentes. Nesse contexto, eles adotam uma abordagem inicial de &amp;ldquo;esperar para ver&amp;rdquo; e fazem suas escolhas de maneira aleatória, com base em suas percepções iniciais, sem conhecimento das escolhas do oponente. Essa abordagem equilibrada reflete a incerteza inicial sobre qual estratégia é a mais vantajosa.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A partir do segundo período, se observa uma mudança significativa no comportamento dos jogadores:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;O jogador 1 (&amp;ldquo;OilFlex&amp;rdquo;) começa a escolher &amp;ldquo;Manter Preço&amp;rdquo; com uma probabilidade de 100%, indicando que ele adotou essa estratégia determinística a partir do segundo período. Essa escolha sugere uma tomada de decisão baseada em um padrão de aprendizado em atração ponderada experiente ou em uma estratégia que ele percebe como mais vantajosa a longo prazo.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;O jogador 2 (&amp;ldquo;EconoGas&amp;rdquo;), por outro lado, começa a escolher &amp;ldquo;Reduzir Preço&amp;rdquo; com probabilidade de 100% a partir do segundo período. Da mesma forma que o jogador 1, o jogador 2 tomou uma decisão consistente de reduzir o preço, independentemente da escolha do oponente.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As escolhas dos jogadores são totalmente aleatórias? A resposta é não. Nesse exemplo, as probabilidades de escolha, representadas pelo termo &amp;ldquo;&lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;$choice_prob&lt;/code&gt;&lt;/span&gt;&amp;rdquo;, determinam as chances de um jogador selecionar uma estratégia específica em um determinado período. Essas probabilidades não são totalmente aleatórias, elas são diretamente influenciadas pelos valores de atração associados a cada estratégia. É importante notar que o modo de configuração dos parâmetros &lt;span style=&#34;font-size: 100%;&#34;&gt;$\lambda$&lt;/span&gt;, &lt;span style=&#34;font-size: 100%;&#34;&gt;$\Delta$&lt;/span&gt;, &lt;span style=&#34;font-size: 100%;&#34;&gt;$\rho$&lt;/span&gt; e &lt;span style=&#34;font-size: 100%;&#34;&gt;$\phi$&lt;/span&gt; também podem desempenhar um papel significativo na forma como o modelo lida com os valores de atrações em cenários específicos.&lt;/p&gt;
+&lt;h4 id=&#34;valor-de-atração-attraction&#34;&gt;Valor de Atração (Attraction)&lt;/h4&gt;
+&lt;p&gt;O valor de atração é uma medida que representa o grau de preferência ou atratividade de uma estratégia para um jogador em uma determinada amostra do jogo. Essencialmente, ele indica o quão valiosa uma estratégia é para o jogador em comparação com outras alternativas disponíveis.&lt;/p&gt;
+&lt;p&gt;Quando o valor de atração é elevado para uma determinada estratégia, isso implica que o jogador percebe essa estratégia como altamente vantajosa ou preferível naquela amostra em particular. Como resultado, a probabilidade dos jogadores escolherem essa estratégia será significativamente alta, aproximando-se de 1, enquanto a probabilidade de optar por outras estratégias será baixa, refletindo um valor de atração menor que influencia a diminuição das escolhas probabilísticas para valores próximos de 0.&lt;/p&gt;
+&lt;p&gt;É possível personalizar o quão atrativas (ou favoráveis) as estratégias são consideradas pelos jogadores no início da simulação. Essa modificação pode ser feito usando os parâmetros &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;A1_init&lt;/code&gt;&lt;/span&gt; para o jogador 1 e &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;A2_init&lt;/code&gt;&lt;/span&gt; para o jogador 2, fornecendo os valores correspondentes para cada parâmetro. Essa personalização afetará a forma como cada jogador começa a jogar no início de cada simulação. Também é relevante mencionar que a influência das experiências passadas na aprendizagem dos jogadores pode ser ajustada por meio do parâmetro &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;N_init&lt;/code&gt;&lt;/span&gt;, que define o peso atribuído às escolhas passadas dos jogadores.&lt;/p&gt;
+&lt;p&gt;Na prática, ao utilizar o objeto de jogo da simulação, &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;$jogo12&lt;/code&gt;&lt;/span&gt;, em conjunto com os comandos de valor de atração &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;$attraction$A1&lt;/code&gt;&lt;/span&gt; para o jogador 1 ou &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;$attraction$A2&lt;/code&gt;&lt;/span&gt; para o jogador 2 (ou simplesmente &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;$attraction&lt;/code&gt;&lt;/span&gt; para uma visão geral), torna-se possível identificar preferências em relação às vantagens.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Valor de atração para o posto &amp;#34;OilFlex&amp;#34; &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;jogo12&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;attraction&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;A1[[10]]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   Manter Preço Reduzir Preço period
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1            30            20      1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2            30            20      2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;3            30            20      3
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;4            30            20      4
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;5            30            20      5
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;6            30            20      6
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;7            30            20      7
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;8            30            20      8
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;9            30            20      9
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;10           30            20     10
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;11           30            20     11
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;12           30            20     12
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;13           30            20     13
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;14           30            20     14
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;15           30            20     15
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;16           30            20     16
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;17           30            20     17
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;18           30            20     18
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;19           30            20     19
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;20           30            20     20
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Valor de atração para o posto &amp;#34;EconoGas&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;jogo12&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;attraction&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;A2[[10]]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   Manter Preço Reduzir Preço period
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1            25            60      1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2            25            60      2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;3            25            60      3
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;4            25            60      4
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;5            25            60      5
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;6            25            60      6
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;7            25            60      7
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;8            25            60      8
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;9            25            60      9
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;10           25            60     10
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;11           25            60     11
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;12           25            60     12
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;13           25            60     13
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;14           25            60     14
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;15           25            60     15
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;16           25            60     16
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;17           25            60     17
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;18           25            60     18
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;19           25            60     19
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;20           25            60     20
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ao analisar o primeiro período, podemos inferir que:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;O jogador &amp;ldquo;OilFlex&amp;rdquo; demonstra uma atratividade quase igual tanto pela estratégia &amp;ldquo;Manter Preço&amp;rdquo; (30) quanto pela &amp;ldquo;Reduzir Preço&amp;rdquo; (20). Essa paridade resulta em probabilidades de escolha equilibradas (0.5 para cada estratégia). Portanto, o jogador parece estar indeciso e faz suas escolhas de forma aleatória.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;O jogador &amp;ldquo;EconoGas&amp;rdquo; encontra-se em uma situação semelhante ao &amp;ldquo;OilFlex&amp;rdquo;. Suas atrações pela estratégia &amp;ldquo;Manter Preço&amp;rdquo; (25) e &amp;ldquo;Reduzir Preço&amp;rdquo; (60) também levam a probabilidades equilibradas (0.5 para cada estratégia), indicando que o jogador também está indeciso e faz escolhas aleatórias.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Nesse período, uma situação interessante e curiosa destaca-se, pois as probabilidades de escolha para ambos os jogadores foram de 0.5, o que equivale a 50%. Essas probabilidades ocorreram independentemente dos valores de atração atribuídos a cada estratégia. Por exemplo, o posto EconoGas pode ter uma preferência maior (valor de atração de 60) por reduzir o preço, mas ainda assim, no primeiro período, há uma probabilidade de 50% de escolher entre manter ou reduzir o preço. Para visualização das escolhas que cada jogador realizou na décima amostra é necessário combinar o objeto de jogo com &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;$data_list[[10]]&lt;/code&gt;&lt;/span&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;estocasticidade-e-valor-de-atração-médio&#34;&gt;Estocasticidade e Valor de Atração Médio&lt;/h4&gt;
+&lt;p&gt;A aparente contradição na análise do primeiro período pode ser atribuída a dois fatores. O primeiro é a Aleatoriedade ou Estocasticidade, um componente inerente à teoria probabilística. Mesmo quando o valor de atração indica uma preferência mais forte por &amp;ldquo;Reduzir Preço&amp;rdquo;, pode haver um elemento estocástico nas decisões do jogador 2. Esse fator demonstra que as escolhas do jogador 2 não são feitas puramente com base em preferências, mas também envolvem um elemento aleatório, principalmente no primeiro período, quando ambos os jogadores estão jogando pela primeira vez em uma amostra.&lt;/p&gt;
+&lt;p&gt;O segundo fator é o Valor de Atração Médio. Com o tempo, é possível observar que o valor médio de atração seja igual para ambas as estratégias, apesar das flutuações de curto prazo. Por exemplo, pode ser que o jogador 2 tenha escolhido &amp;ldquo;Reduzir Preço&amp;rdquo; com mais frequência em amostras passadas, mas em média, as escolhas se equilibram ao longo do tempo, como demonstrado nos períodos subsequentes. Esse valor médio de atração tem um impacto significativo nas probabilidades de escolha, especialmente quando se utiliza uma função de escolha estocástica que leva em consideração as diferenças nas atrações médias das estratégias.&lt;/p&gt;
+&lt;p&gt;Assim, o valor médio de atração desempenha um papel na influência das probabilidades de escolha ao longo das amostras. No entanto, a estocasticidade introduz uma variabilidade nas decisões, mesmo quando existe uma preferência clara por uma estratégia naquele intervalo de tempo. Por exemplo, em uma simulação com 10 amostras, os jogadores podem alternar entre as estratégias de &amp;ldquo;Manter Preço&amp;rdquo; e &amp;ldquo;Reduzir Preço&amp;rdquo;, sendo essa alternância influenciada pelo valor médio de atratividade e pela aleatoriedade na exploração de novas estratégias.&lt;/p&gt;
+&lt;p&gt;A combinação desses fatores pode resultar em probabilidades de escolha que não correspondem diretamente aos valores de atração em um período específico. Essa complexidade reflete a natureza realista das decisões humanas em situações de jogo, onde as preferências individuais, juntamente com elementos estocásticos, contribuem para as escolhas finais dos jogadores.&lt;/p&gt;
+&lt;h3 id=&#34;tipos-de-modelo&#34;&gt;Tipos de Modelo&lt;/h3&gt;
+&lt;p&gt;Além dos parâmetros mencionados anteriormente, o tipo de modelo de aprendizagem também é um elemento importante a ser considerado. Dependendo dos valores dos argumentos fornecidos, o modelo pode ser configurado como um modelo de aprendizagem por reforço ou um modelo de aprendizagem por crenças. Essas configurações especiais são casos específicos do modelo EWA.&lt;/p&gt;
+&lt;p&gt;Na representação gráfica, a opção de ajustar a escala do eixo Y nos gráficos de probabilidade de escolha ao longo do tempo é feita por meio do argumento &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;plot_range_y&lt;/code&gt;&lt;/span&gt;. Existem três valores disponíveis para este argumento: &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;&amp;quot;fixed&amp;quot;&lt;/code&gt;&lt;/span&gt;, &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;&amp;quot;full&amp;quot;&lt;/code&gt;&lt;/span&gt;, e &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;&amp;quot;free&amp;quot;&lt;/code&gt;&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;No caso do primeiro valor, &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;&amp;quot;fixed&amp;quot;&lt;/code&gt;&lt;/span&gt;, a faixa do eixo Y permanece constante e igual para todos os gráficos gerados. A escala vertical dos gráficos permanece inalterada, independentemente das variações nas probabilidades de escolha observadas. Essa abordagem pode ser útil para identificar tendências, diferenças ou padrões entre os gráficos de forma mais consistente.&lt;/p&gt;
+&lt;p&gt;No segundo cenário, &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;&amp;quot;full&amp;quot;&lt;/code&gt;&lt;/span&gt;, a faixa do eixo Y é definida com base nas probabilidades de escolha reais observadas durante a simulação. A escala vertical dos gráficos é automaticamente ajustada para incluir todas as probabilidades observadas, garantindo que os gráficos mostrem todas as variações nas escolhas ao longo do tempo.&lt;/p&gt;
+&lt;p&gt;Já no terceiro caso, &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;&amp;quot;free&amp;quot;&lt;/code&gt;&lt;/span&gt;, a faixa do eixo Y é flexível e depende dos resultados específicos de cada simulação. A escala vertical dos gráficos pode variar de uma execução para outra, dependendo das probabilidades de escolha observadas em cada simulação. Essa opção é útil quando se deseja realizar uma análise detalhada das mudanças nas probabilidades ao longo das amostras e quando é importante obter uma visão precisa das flutuações nas escolhas dos jogadores.&lt;/p&gt;
+&lt;p&gt;A escolha entre esses valores depende dos objetivos da análise. Por exemplo, se precisa fazer comparações consistentes entre gráficos de diferentes simulações, optar por &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;&amp;quot;fixed&amp;quot;&lt;/code&gt;&lt;/span&gt; pode ser mais apropriado. Por outro lado, &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;&amp;quot;full&amp;quot;&lt;/code&gt;&lt;/span&gt; ou &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;&amp;quot;free&amp;quot;&lt;/code&gt;&lt;/span&gt; são escolhas preferíveis quando se tem a escala ajustada automaticamente com base nos resultados da simulação.&lt;/p&gt;
+&lt;div id=&#34;botoesEWA&#34;&gt;
+  &lt;button id=&#34;botao-ewa1&#34; class=&#34;botao-interativo-ewa&#34; onclick=&#34;showConteudoEWA(&#39;ewa1&#39;)&#34;&gt;Modelo por Reforço&lt;/button&gt;
+  &lt;button id=&#34;botao-ewa2&#34; class=&#34;botao-interativo-ewa&#34; onclick=&#34;showConteudoEWA(&#39;ewa2&#39;)&#34;&gt;Modelo por Crenças&lt;/button&gt;
+&lt;/div&gt;
+&lt;script&gt;
+window.onload = function() {
+    showConteudoEWA(&#39;ewa1&#39;);
+}
+&lt;/script&gt;
+&lt;script&gt;
+function showConteudoEWA(conteudoId) {
+  var conteudos = document.getElementsByClassName(&#39;conteudoEWA&#39;);
+  for (var i = 0; i &lt; conteudos.length; i++) {
+    conteudos[i].style.opacity = 0; // Definir a opacidade do conteúdo como 0 (invisível)
+    conteudos[i].style.display = &#39;none&#39;; // Esconder o conteúdo (display: none)
+  }
+  
+  // Exibir o conteúdo desejado com animação suave
+  var conteudoDesejado = document.getElementById(conteudoId);
+  conteudoDesejado.style.display = &#39;block&#39;; // Exibir o conteúdo (display: block)
+  setTimeout(function() {
+    conteudoDesejado.style.opacity = 1; // Definir a opacidade do conteúdo como 1 (visível)
+  }, 50); // Aguardar 50 milissegundos para aplicar a opacidade (ajuste conforme desejado)
+  
+  var botoes = document.getElementsByClassName(&#39;botao-interativo-ewa&#39;);
+  for (var i = 0; i &lt; botoes.length; i++) {
+    botoes[i].classList.remove(&#39;selecionadoEWA&#39;);
+  }
+  
+  var botaoSelecionado = document.getElementById(&#39;botao-&#39; + conteudoId);
+  botaoSelecionado.classList.add(&#39;selecionadoEWA&#39;);
+}
+&lt;/script&gt;
+&lt;div id=&#34;ewa1&#34; class=&#34;conteudoEWA&#34;&gt;
+&lt;p&gt;O modelo por reforço, popularmente conhecido como &lt;em&gt;Reinforcement Learning&lt;/em&gt;, é uma abordagem amplamente utilizada em &lt;em&gt;Machine Learning&lt;/em&gt; e teoria dos jogos. Ele é empregado em cenários nos quais um agente ou jogador precisa tomar decisões sequenciais com o objetivo de maximizar recompensas ao longo do tempo.&lt;/p&gt;
+&lt;p&gt;Neste modelo, os jogadores aprendem quais estratégias são mais vantajosas com base nas recompensas que recebem. É importante notar que no exemplo abaixo, o parâmetro &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;rho&lt;/code&gt;&lt;/span&gt; está definido como 0, o que implica que o modelo não leva em consideração a atração ponderada experiente (EWA) nas escolhas dos jogadores. Portanto, no contexto desse caso específica, as escolhas dos jogadores são influenciadas principalmente pelas recompensas passadas. Dessa forma, quando uma estratégia leva a recompensas positivas, a probabilidade do jogador escolher essa estratégia aumenta ao longo do tempo, refletindo o seu aprendizado e adaptação.&lt;/p&gt;
+&lt;p&gt;Quando &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;type = &amp;quot;reinforcement&amp;quot;&lt;/code&gt;&lt;/span&gt;, utilizamos o modelo de aprendizado por reforço. Os jogadores escolhem a melhor resposta às ações do oponente na rodada anterior, buscando maximizar suas recompensas. Ao considerar o &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;plot_range_y&lt;/code&gt;&lt;/span&gt; como &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;&amp;quot;free&amp;quot;&lt;/code&gt;&lt;/span&gt;, é possível ter uma visão mais detalhada das mudanças nas probabilidades.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;sim_learning&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;game&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;jogo2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;n_samples&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;n_periods&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;reinforcement&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;lambda&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;delta&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0.5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;rho&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;plot_range_y&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;free&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;img src=&#34;https://drewmelo.github.io/blogr/p/modelo-de-aprendizagem-em-teoria-dos-jogos/index_files/figure-html/game15-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;
+&lt;p&gt;Ao utilizar o valor &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;&amp;quot;free&amp;quot;&lt;/code&gt;&lt;/span&gt;, é importante notar que os gráficos podem apresentar escalas diferentes em diversas simulações, o que pode dificultar a comparação visual entre diferentes conjuntos de dados. Contudo, essa configuração é ideal para uma análise minuciosa das variações nas probabilidades ao longo do tempo em um modelo de reforço.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ewa2&#34; class=&#34;conteudoEWA&#34;&gt;
+&lt;p&gt;O modelo por crenças é uma abordagem que se concentra na consideração das crenças dos jogadores sobre as estratégias e informações de seus oponentes ao tomar decisões em um jogo. Essa abordagem leva em conta não apenas as próprias informações do jogador, mas também o que o jogador acredita que seus oponentes sabem ou podem fazer.&lt;/p&gt;
+&lt;p&gt;Nesse modelo, os jogadores formam e atualizam suas crenças sobre as estratégias de seus oponentes com base nas informações disponíveis, podendo ser usado como parte dessas crenças o valor de atração médio. Por exemplo, se um jogador observar que, ao longo de várias rodadas, seu oponente tem consistentemente escolhido uma determinada estratégia, isso afetará suas crenças sobre a probabilidade de o oponente escolher essa estratégia no futuro.&lt;/p&gt;
+&lt;p&gt;No exemplo abaixo, quando temos &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;phi&lt;/code&gt;&lt;/span&gt; igual a 1, os jogadores são racionais, pois realizam uma avaliação precisa e completa das ações passadas de seus oponentes. Eles atualizam suas crenças de forma ótima, pois levam em consideração todas as informações disponíveis, similar a Inferência Bayesiana.&lt;/p&gt;
+&lt;p&gt;Ao definir o &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;type&lt;/code&gt;&lt;/span&gt; como &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;&amp;quot;belief&amp;quot;&lt;/code&gt;&lt;/span&gt; e ajustar os valores de &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;delta&lt;/code&gt;&lt;/span&gt;, &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;rho&lt;/code&gt;&lt;/span&gt;, para 0.5 e &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;phi&lt;/code&gt;&lt;/span&gt; para 1 é possível simular o comportamento de aprendizado baseado em crenças no &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;sim_learning()&lt;/code&gt;&lt;/span&gt;. Também podemos definir o argumento &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;plot_range_y&lt;/code&gt;&lt;/span&gt; como &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;&amp;quot;fixed&amp;quot;&lt;/code&gt;&lt;/span&gt; para ter uma escala vertical fixa nos gráficos.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;sim_learning&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;game&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;jogo2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;n_samples&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;n_periods&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;belief&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;lambda&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;delta&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0.5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;rho&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0.5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;phi&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;plot_range_y&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;fixed&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;img src=&#34;https://drewmelo.github.io/blogr/p/modelo-de-aprendizagem-em-teoria-dos-jogos/index_files/figure-html/game16-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;
+&lt;p&gt;É importante mencionar que ao utilizar o valor &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;&amp;quot;fixed&amp;quot;&lt;/code&gt;&lt;/span&gt;, pode haver a possibilidade de corte das informações visuais se as probabilidades ou crenças observadas ultrapassarem os limites da faixa fixa. O mesmo ocorre com o &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;&amp;quot;full&amp;quot;&lt;/code&gt;&lt;/span&gt;, pois as probabilidades observadas podem variar amplamente em uma simulação específica, tornando difícil a visualização dos detalhes das mudanças nas probabilidades.&lt;/p&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;simulação-de-jogadas&#34;&gt;Simulação de Jogadas&lt;/h3&gt;
+&lt;p&gt;A função &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;sim_game()&lt;/code&gt;&lt;/span&gt; é usada para simular jogadas em um jogo na forma normal, permitindo a simulação de diferentes estratégias e comportamentos esperados com base em regras específicas.&lt;/p&gt;
+&lt;p&gt;Na opção &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;&amp;quot;br&amp;quot;&lt;/code&gt;&lt;/span&gt; do argumento &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;type&lt;/code&gt;&lt;/span&gt;, cada jogador escolhe a melhor resposta à escolha do oponente no período anterior. O valor do argumento &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;eta&lt;/code&gt;&lt;/span&gt; &lt;span style=&#34;font-size: 100%;&#34;&gt;$(\eta)$&lt;/span&gt; é definido como 0.5 para equilibrar a decisão atual em relação à decisão tomada na partida anterior.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;sim_game&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;game&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;jogo2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;n_samples&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;n_periods&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;br&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;eta&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0.5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;lambda&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;img src=&#34;https://drewmelo.github.io/blogr/p/modelo-de-aprendizagem-em-teoria-dos-jogos/index_files/figure-html/game17-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;
+&lt;p&gt;Em outra opção como &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;&amp;quot;imitation&amp;quot;&lt;/code&gt;&lt;/span&gt; em que os jogadores imitam a escolha do outro no período anterior, copiando a estratégia escolhida pelo oponente no período anterior.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;sim_game&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;game&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;jogo2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;n_samples&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;n_periods&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;imitation&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;eta&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0.7&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;lambda&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0.8&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;img src=&#34;https://drewmelo.github.io/blogr/p/modelo-de-aprendizagem-em-teoria-dos-jogos/index_files/figure-html/game18-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;
+&lt;p&gt;Nesse caso, o parâmetro &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;eta&lt;/code&gt;&lt;/span&gt; é definido como 0.7 para controlar a aleatoriedade no comportamento dos jogadores, enquanto o &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;lambda&lt;/code&gt;&lt;/span&gt; é definido como 0.8.&lt;/p&gt;
+&lt;p&gt;Adicionalmente, o parâmetro &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;type&lt;/code&gt;&lt;/span&gt; presente na função &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;sim_game()&lt;/code&gt;&lt;/span&gt; disponibiliza outras opções para simulação, incluindo:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;&amp;quot;sbr&amp;quot;&lt;/code&gt;&lt;/span&gt; (&lt;em&gt;Soft Best Response&lt;/em&gt;): Nessa abordagem, os jogadores optam por uma resposta suavizada às jogadas do oponente em períodos anteriores. Isso implica que eles não mudam suas estratégias abruptamente, mas, ao invés disso, ajustam-nas gradualmente com base nas escolhas prévias do oponente.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;&amp;quot;abr&amp;quot;&lt;/code&gt;&lt;/span&gt; (&lt;em&gt;Alternating Best Response&lt;/em&gt;): Os jogadores tomam decisões alternadas, escolhendo a melhor resposta possível para a ação do oponente. Isso significa que em cada turno, um jogador seleciona a sua melhor opção de acordo com a jogada feita pelo oponente no turno anterior, e no próximo turno, o outro jogador faz o mesmo, baseando-se na escolha do primeiro jogador no turno anterior.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Essas diferentes estratégias de simulação permitem o estudo de como as escolhas dos jogadores evoluem ao longo do tempo e como essas estratégias afetam o resultado do jogo. Cada opção de &lt;span class=&#34;highlighted-text&#34;&gt;&lt;code&gt;type&lt;/code&gt;&lt;/span&gt; fornece uma abordagem diferente para modelar o comportamento dos jogadores e pode levar a resultados distintos na simulação do jogo.&lt;/p&gt;
+&lt;h3 id=&#34;referências&#34;&gt;Referências&lt;/h3&gt;
+&lt;p&gt;HAZRA, Tanmoy; ANJARIA, Kushal. Applications of game theory in deep learning: a survey. &lt;strong&gt;Multimedia Tools and Applications&lt;/strong&gt;, v. 81, n. 6, p. 8963-8994, 2022. DOI: &lt;a href=&#34;https://doi.org/10.1007/s11042-022-12153-2&#34; target=&#34;_blank&#34; style=&#34;color:#016dea; text-decoration: none;&#34; onmouseover=&#34;this.style.color=&#39;#014ba0&#39;;&#34; onmouseout=&#34;this.style.color=&#39;#016dea&#39;;&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://doi.org/10.1007/s11042-022-12153-2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://doi.org/10.1007/s11042-022-12153-2&lt;/a&gt;
+&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;MANKIW, N. Gregory et al. &lt;strong&gt;Introdução à economia&lt;/strong&gt;. 2005.&lt;/p&gt;
+&lt;p&gt;YANAI, Yusei; KAMIJO, Yoshio. &lt;strong&gt;Game Theory With R&lt;/strong&gt;. Shin-Ogawacho, Shinjuku-ku, Tóquio, JP: Asakura Publishing Co,. Ltd., 2023. 244 p. ISBN 978-4-254-27024-2 C3050.&lt;/p&gt;</description>
+        </item>
+        <item>
         <title>Teoria dos Jogos no R: Jogos Sequenciais e Repetidos</title>
         <link>https://drewmelo.github.io/blogr/p/jogos-sequenciais-e-repetidos/</link>
         <pubDate>Tue, 26 Sep 2023 00:00:00 +0000</pubDate>
@@ -862,7 +1313,7 @@ function showConteudoRepetido(conteudoId) {
 envolver a coleta, processamento, análise e interpretação desses dados com o objetivo de obter &lt;em&gt;insights&lt;/em&gt; e conhecimentos relevantes para a área econômica.&lt;/p&gt;
 &lt;p&gt;Algumas técnicas são essenciais para análise ou extração de dados, como &lt;em&gt;Web Scraping&lt;/em&gt;, que consiste na utilização da automatização para obter pontos imensuráveis de dados estruturados da internet, em contraposição ao processo do Text Mining ou &lt;em&gt;Text Analytics&lt;/em&gt;, na extração de dados não estruturados de fontes online. Essas duas técnicas combinadas com &lt;em&gt;Machine Learning&lt;/em&gt; ou Aprendizado de Máquina, podem fazer o diferencial na carreira de um economista no que diz respeito à análise de mercado e previsões econômicas.&lt;/p&gt;
 &lt;p&gt;É durante a fase de análise exploratória de dados que o modelo de previsão de preços de ativos e avaliação de risco financeiro é construído. Além disso, técnicas como &lt;em&gt;Text Analytics&lt;/em&gt; e &lt;em&gt;Machine Learning&lt;/em&gt;, têm uma aplicação valiosa na análise de sentimentos, principalmente quando estamos lidando com dados não estruturados. Dessa forma, é possível detectar as opiniões positivas, negativas ou neutras dos consumidores em relação a um produto ou serviço. Essa capacidade de compreensão do feedback dos clientes em relação aos produtos é de extrema utilidade para identificar tendências e problemas relacionados aos produtos das empresas.&lt;/p&gt;
-&lt;p&gt;a era do &lt;em&gt;“Big Data”&lt;/em&gt;, estamos lidando com um volume excessivo de dados econômicos, como indicadores macroeconômicos, séries temporais e informações de mercado. Esse cenário apresenta desafios significativos em relação ao armazenamento, processamento e privacidade dos dados. No entanto, também oferece aos profissionais a oportunidade de observar padrões complexos no comportamento econômico, o que permite análises abrangentes, previsões mais precisas e o desenvolvimento de estratégias eficientes.&lt;/p&gt;
+&lt;p&gt;a era do &lt;em&gt;“Big Data”&lt;/em&gt;, estamos lidando com um volume excessivo de dados econômicos, como indicadores macroeconômicos, séries temporais e informações de mercado. Esse cenário apresenta desafios significativos em relação ao armazenamento, processamento e privacidade dos dados. No entanto, também oferece aos profissionais a oportunidade de observar padrões complexos no comportamento econômico, o que permite análises abrangentes, previsões mais precisas e o desenvolvimento de estratégias eficientes&lt;/p&gt;
 &lt;p&gt;Os avanços tecnológicos proporcionaram aos cientistas de dados ferramentas inteligentes e poderosas para explorar e compreender as bases de dados. Entretanto, é fundamental destacar o papel crucial do conhecimento e da experiência do economista nesse processo. Ao combinar o conhecimento teórico com as técnicas de Ciência de Dados, o profissional em questão é capaz de interpretar as relações de causa e efeito, aplicando seu conhecimento econômico para extrair &lt;em&gt;insights&lt;/em&gt; importantes. Com isso, adquirindo uma posição estratégica em um mundo cada vez mais orientado por dados, impulsionando o progresso econômico e embasando a tomada de decisões fundamentadas.&lt;/p&gt;</description>
         </item>
         <item>
