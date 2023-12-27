@@ -10,7 +10,7 @@
 <meta property='og:description' content='Transferimos dados do jogo para simulações, permitindo análises detalhadas e adaptação a diferentes modelos de aprendizagem. O tutorial destaca a extração e organização dos dados para análises eficientes.'>
 <meta property='og:url' content='https://drewmelo.github.io/blogr/p/transformacao-e-manipulacao-de-dados-em-teoria-dos-jogos/'>
 <meta property='og:site_name' content='André Melo'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='economia' /><meta property='article:tag' content='datascience' /><meta property='article:tag' content='teoriadosjogos' /><meta property='article:published_time' content='2023-12-25T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-12-25T00:00:00&#43;00:00'/><meta property='og:image' content='https://drewmelo.github.io/blogr/p/transformacao-e-manipulacao-de-dados-em-teoria-dos-jogos/transformacao-manipulacao-teoria-dos-jogos.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='economia' /><meta property='article:tag' content='datascience' /><meta property='article:tag' content='teoriadosjogos' /><meta property='article:published_time' content='2023-12-27T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-12-27T00:00:00&#43;00:00'/><meta property='og:image' content='https://drewmelo.github.io/blogr/p/transformacao-e-manipulacao-de-dados-em-teoria-dos-jogos/transformacao-manipulacao-teoria-dos-jogos.jpg' />
 <meta name="twitter:title" content="Transformação e Manipulação de Dados em Teoria dos Jogos">
 <meta name="twitter:description" content="Transferimos dados do jogo para simulações, permitindo análises detalhadas e adaptação a diferentes modelos de aprendizagem. O tutorial destaca a extração e organização dos dados para análises eficientes."><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://drewmelo.github.io/blogr/p/transformacao-e-manipulacao-de-dados-em-teoria-dos-jogos/transformacao-manipulacao-teoria-dos-jogos.jpg' />
@@ -351,7 +351,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Dec 25, 2023</time>
+                <time class="article-time--published">Dec 27, 2023</time>
             </div>
         
 
@@ -536,7 +536,7 @@
 </span></span><span class="line"><span class="cl">              <span class="nf">pivot_longer</span><span class="p">(</span><span class="n">cols</span> <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">5</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">                           <span class="n">names_to</span> <span class="o">=</span> <span class="s">&#39;estrategia.prob&#39;</span><span class="p">,</span> 
 </span></span><span class="line"><span class="cl">                           <span class="n">values_to</span> <span class="o">=</span> <span class="s">&#39;probabilidade&#39;</span><span class="p">)</span>
-</span></span></code></pre></div><p>Por se tratar de uma lista, podemos utilizar a função <code>do.call()</code> que permite chamar uma função com argumentos armazenados em uma lista, no caso, <code>rbind</code>, que combinará várias estruturas de dados em uma única estrutura de dados.</p>
+</span></span></code></pre></div><p>Por se tratar de uma lista, podemos utilizar a função <code>do.call()</code> que permite chamar uma função com argumentos armazenados em uma lista, no caso, <code>rbind</code>, que combinará várias estruturas de dados em uma única.</p>
 <p>Esse será a probabilidade de escolha da Coca-Cola, demonstrado por <code>coca.prob</code>, abaixo faremos o mesmo com o valor de atração.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Valor de atração da Coca-Cola</span>
 </span></span><span class="line"><span class="cl"><span class="n">coca.atr</span> <span class="o">&lt;-</span> <span class="nf">do.call</span><span class="p">(</span><span class="n">rbind</span><span class="p">,</span> <span class="n">pepsicoca</span><span class="o">$</span><span class="n">attraction</span><span class="o">$</span><span class="n">A1</span><span class="p">)</span> <span class="o">%&gt;%</span> 
@@ -556,8 +556,11 @@
 </span></span><span class="line"><span class="cl"><span class="c1"># Valor de atração da PepsiCo</span>
 </span></span><span class="line"><span class="cl"><span class="n">pepsi.atr</span> <span class="o">&lt;-</span> <span class="nf">do.call</span><span class="p">(</span><span class="n">rbind</span><span class="p">,</span> <span class="n">pepsicoca</span><span class="o">$</span><span class="n">attraction</span><span class="o">$</span><span class="n">A2</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 </span></span><span class="line"><span class="cl">                <span class="nf">pivot_longer</span><span class="p">(</span><span class="n">cols</span> <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">5</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">                             <span class="n">names_to</span> <span class="o">=</span> <span class="s">&#39;estrategia.atr&#39;</span><span class="p">,</span> <span class="n">values_to</span> <span class="o">=</span> <span class="s">&#39;lucro.atr&#39;</span><span class="p">)</span> <span class="o">%&gt;%</span>
-</span></span><span class="line"><span class="cl">                <span class="nf">mutate</span><span class="p">(</span><span class="n">estrategia.atr</span> <span class="o">=</span> <span class="nf">str_replace_all</span><span class="p">(</span><span class="n">estrategia.atr</span><span class="p">,</span> <span class="s">&#34;\\.1&#34;</span><span class="p">,</span> <span class="s">&#34;&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">                             <span class="n">names_to</span> <span class="o">=</span> <span class="s">&#39;estrategia.atr&#39;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                             <span class="n">values_to</span> <span class="o">=</span> <span class="s">&#39;lucro.atr&#39;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">                <span class="nf">mutate</span><span class="p">(</span><span class="n">estrategia.atr</span> <span class="o">=</span> <span class="nf">str_replace_all</span><span class="p">(</span><span class="n">estrategia.atr</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                                                        <span class="s">&#34;\\.1&#34;</span><span class="p">,</span> <span class="s">&#34;&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                       <span class="p">)</span>
 </span></span></code></pre></div><p>Nesse caso, <code>.1</code> será o padrão que será substituido na nova coluna gerada após o uso do <code>pivot_longer()</code>. Substiuiremos esse padrão por <code>&quot;&quot;</code>, ou seja, será substituído por uma string vazia, removendo o <code>.1</code> da coluna.</p>
 <h2 id="manipulação-dos-dados-i">Manipulação dos Dados I</h2>
 <p>Neste segundo passo, após a extração dos dados provenientes da simulação do modelo de aprendizagem usando o pacote Rgamer, iniciaremos a preparação das bases de dados. O objetivo é permitir a combinação dos data frames referentes tanto à Coca-Cola quanto à Pepsi. Estamos considerando não apenas as escolhas de probabilidade, mas também os valores de atração registrados para ambos os jogadores.</p>
@@ -570,10 +573,10 @@
 </span></span></code></pre></div><p>Em seguida, é essencial multiplicar essas observações por um fator de 5. Isso se deve ao fato de haver 5 estratégias para cada jogador, como resultado da transformação realizada anteriormente, na qual as 5 colunas (representando estratégias) se tornaram linhas (observações), cada uma com seus respectivos valores associados.</p>
 <p>Essa multiplicação é necessária para garantir que, ao realizar a junção dos data frames, as strings estejam perfeitamente alinhadas com as 5 estratégias correspondentes.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">cocacola</span> <span class="o">&lt;-</span> <span class="nf">do.call</span><span class="p">(</span><span class="n">rbind</span><span class="p">,</span> <span class="nf">replicate</span><span class="p">(</span><span class="m">5</span><span class="p">,</span> <span class="n">cocacola</span><span class="p">,</span> <span class="n">simplify</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">))</span> <span class="o">%&gt;%</span> 
-</span></span><span class="line"><span class="cl">  <span class="nf">arrange</span><span class="p">(</span><span class="n">sample</span><span class="p">,</span> <span class="n">period</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">              <span class="nf">arrange</span><span class="p">(</span><span class="n">sample</span><span class="p">,</span> <span class="n">period</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">pepsico</span> <span class="o">&lt;-</span> <span class="nf">do.call</span><span class="p">(</span><span class="n">rbind</span><span class="p">,</span> <span class="nf">replicate</span><span class="p">(</span><span class="m">5</span><span class="p">,</span> <span class="n">pepsico</span><span class="p">,</span> <span class="n">simplify</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">))</span> <span class="o">%&gt;%</span> 
-</span></span><span class="line"><span class="cl">  <span class="nf">arrange</span><span class="p">(</span><span class="n">sample</span><span class="p">,</span> <span class="n">period</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">              <span class="nf">arrange</span><span class="p">(</span><span class="n">sample</span><span class="p">,</span> <span class="n">period</span><span class="p">)</span>
 </span></span></code></pre></div><p>Aqui utilizamos a função <code>replicate()</code> é usada para criar cópias de um objeto. Neste caso, estamos replicando os data frames da Coca-Cola e Pepsi. É importante notar que o argumento <code>simplify = FALSE</code> garante que cada replicação seja mantida como uma lista, em vez de ser simplificada em um vetor, para que possamos combinar essas cópias posteriormente.</p>
 <h4 id="junção-dos-dados-i">Junção dos dados I</h4>
 <p>Após essa breve manipulação, agora é possível realizar a junção dos dados do jogador 1 e 2.</p>
@@ -605,7 +608,7 @@
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Coca-Cola </td>
-   <td style="text-align:left;"> Aquisição de Marcas </td>
+   <td style="text-align:left;"> Eventos e Parcerias </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Marketing e Publicidade </td>
    <td style="text-align:right;"> 0.2 </td>
@@ -617,19 +620,19 @@
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Coca-Cola </td>
-   <td style="text-align:left;"> Aquisição de Marcas </td>
+   <td style="text-align:left;"> Eventos e Parcerias </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Eventos e Parcerias </td>
    <td style="text-align:right;"> 0.2 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Eventos e Parcerias </td>
-   <td style="text-align:right;"> 22.5 </td>
+   <td style="text-align:right;"> 75.0 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Coca-Cola </td>
-   <td style="text-align:left;"> Aquisição de Marcas </td>
+   <td style="text-align:left;"> Eventos e Parcerias </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Produtos Alternativos </td>
    <td style="text-align:right;"> 0.2 </td>
@@ -641,7 +644,7 @@
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Coca-Cola </td>
-   <td style="text-align:left;"> Aquisição de Marcas </td>
+   <td style="text-align:left;"> Eventos e Parcerias </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Distribuição Global </td>
    <td style="text-align:right;"> 0.2 </td>
@@ -653,13 +656,13 @@
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Coca-Cola </td>
-   <td style="text-align:left;"> Aquisição de Marcas </td>
+   <td style="text-align:left;"> Eventos e Parcerias </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Aquisição de Marcas </td>
    <td style="text-align:right;"> 0.2 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Aquisição de Marcas </td>
-   <td style="text-align:right;"> 75.0 </td>
+   <td style="text-align:right;"> 22.5 </td>
   </tr>
 </tbody>
 </table></div>
@@ -686,7 +689,7 @@
 <h4 id="junção-dos-dados-ii">Junção dos dados II</h4>
 <p>Após a conclusão da limpeza nas colunas das bases de dados individuais, estamos prontos para realizar a junção, unindo-as em um único conjunto de dados. Vale ressaltar que os data frames dos dois jogadores foram previamente ajustados para conter colunas com nomes idênticos. Nessa etapa, é possível empregar a função <code>bind_rows()</code> do pacote dplyr, facilitando o processo de combinação dos dados de ambos os jogadores.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">base</span> <span class="o">&lt;-</span> <span class="nf">bind_rows</span><span class="p">(</span><span class="n">cocacola</span><span class="p">,</span> <span class="n">pepsico</span><span class="p">)</span>
-</span></span></code></pre></div><p>Nesse caso, a escolha da função para unir os data frames torna-se opcional. Em fases anteriores, empregamos funções do pacote base, como <code>rbind()</code>, e também mencionamos a alternativa do <code>bind_rows()</code> do pacote dplyr. Ambas as abordagens resultarão no mesmo resultado final. Portanto, a flexibilidade na seleção da função de união permite ao usuário optar por aquela que melhor se adequa à sua preferência ou ao contexto específico do projeto.</p>
+</span></span></code></pre></div><p>Nesse caso, a escolha da função para unir os data frames torna-se opcional. Em fases anteriores, empregamos funções do pacote base, como <code>rbind()</code>, e também mencionamos a alternativa do <code>bind_rows()</code> do pacote dplyr. Ambas as abordagens terão o mesmo resultado. Portanto, a flexibilidade na seleção da função de união permite ao usuário optar por aquela que melhor se adequa à sua preferência ou ao contexto específico do projeto.</p>
 <h3 id="nomeação-de-colunas">Nomeação de colunas</h3>
 <p>Nesse momento, a etapa de nomear colunas também é opcional, uma vez que se refere à atribuição de nomes específicos às colunas. No presente caso, optou-se por realizar essa nomeação, visando facilitar a posterior identificação das colunas no conjunto de dados.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">names</span><span class="p">(</span><span class="n">base</span><span class="p">)</span><span class="n">[1</span><span class="o">:</span><span class="m">4</span><span class="n">]</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#39;amostra&#39;</span><span class="p">,</span> <span class="s">&#39;periodo&#39;</span><span class="p">,</span> <span class="s">&#39;jogador&#39;</span><span class="p">,</span> <span class="s">&#39;estrategia&#39;</span><span class="p">)</span>  
@@ -694,8 +697,8 @@
 <h2 id="conclusão">Conclusão</h2>
 <p>Como último passo, é possível aprimorar a organização e representação da base principal ordenando-a pela amostra e período. Essa ordenação é particularmente significativa na teoria dos jogos, onde cada jogador tem a oportunidade de efetuar uma escolha com base em sua estratégia a cada período. Dessa maneira, a disposição sequencial da informação reflete de forma mais clara e coerente a dinâmica temporal das decisões tomadas pelos jogadores ao longo do processo analisado.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">dados</span> <span class="o">&lt;-</span> <span class="n">base</span> <span class="o">%&gt;%</span>
-</span></span><span class="line"><span class="cl">  <span class="nf">arrange</span><span class="p">(</span><span class="n">amostra</span><span class="p">,</span> <span class="n">periodo</span><span class="p">)</span> <span class="o">%&gt;%</span> 
-</span></span><span class="line"><span class="cl">  <span class="nf">select</span><span class="p">(</span><span class="o">-</span><span class="n">estrategia.atr</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">          <span class="nf">arrange</span><span class="p">(</span><span class="n">amostra</span><span class="p">,</span> <span class="n">periodo</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">          <span class="nf">select</span><span class="p">(</span><span class="o">-</span><span class="n">estrategia.atr</span><span class="p">)</span>
 </span></span></code></pre></div><p>Utilizando a função <code>arrange()</code>, podemos efetuar a organização da base de dados pelas colunas &lsquo;amostra&rsquo; e &lsquo;periodo&rsquo;. Além disso, optamos por remover a coluna &rsquo;estrategia.atr&rsquo; para evitar redundâncias junto à coluna &rsquo;estrategia&rsquo;. Ao conduzir essas etapas, os dados são apresentados da seguinte maneira:</p>
 <div class="table-wrapper"><table>
  <thead>
@@ -714,7 +717,7 @@
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Coca-Cola </td>
-   <td style="text-align:left;"> Aquisição de Marcas </td>
+   <td style="text-align:left;"> Eventos e Parcerias </td>
    <td style="text-align:left;"> Marketing e Publicidade </td>
    <td style="text-align:right;"> 0.2 </td>
    <td style="text-align:right;"> 22.5 </td>
@@ -723,16 +726,16 @@
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Coca-Cola </td>
-   <td style="text-align:left;"> Aquisição de Marcas </td>
+   <td style="text-align:left;"> Eventos e Parcerias </td>
    <td style="text-align:left;"> Eventos e Parcerias </td>
    <td style="text-align:right;"> 0.2 </td>
-   <td style="text-align:right;"> 22.5 </td>
+   <td style="text-align:right;"> 75.0 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Coca-Cola </td>
-   <td style="text-align:left;"> Aquisição de Marcas </td>
+   <td style="text-align:left;"> Eventos e Parcerias </td>
    <td style="text-align:left;"> Produtos Alternativos </td>
    <td style="text-align:right;"> 0.2 </td>
    <td style="text-align:right;"> 21.0 </td>
@@ -741,7 +744,7 @@
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Coca-Cola </td>
-   <td style="text-align:left;"> Aquisição de Marcas </td>
+   <td style="text-align:left;"> Eventos e Parcerias </td>
    <td style="text-align:left;"> Distribuição Global </td>
    <td style="text-align:right;"> 0.2 </td>
    <td style="text-align:right;"> 22.5 </td>
@@ -750,10 +753,10 @@
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Coca-Cola </td>
-   <td style="text-align:left;"> Aquisição de Marcas </td>
+   <td style="text-align:left;"> Eventos e Parcerias </td>
    <td style="text-align:left;"> Aquisição de Marcas </td>
    <td style="text-align:right;"> 0.2 </td>
-   <td style="text-align:right;"> 75.0 </td>
+   <td style="text-align:right;"> 22.5 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 1 </td>
@@ -762,7 +765,7 @@
    <td style="text-align:left;"> Parcerias com Restaurantes </td>
    <td style="text-align:left;"> Promoção da Marca </td>
    <td style="text-align:right;"> 0.2 </td>
-   <td style="text-align:right;"> 10.5 </td>
+   <td style="text-align:right;"> 29.4 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 1 </td>
@@ -771,7 +774,7 @@
    <td style="text-align:left;"> Parcerias com Restaurantes </td>
    <td style="text-align:left;"> Patrocício de Eventos </td>
    <td style="text-align:right;"> 0.2 </td>
-   <td style="text-align:right;"> 7.5 </td>
+   <td style="text-align:right;"> 27.6 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 1 </td>
@@ -780,7 +783,7 @@
    <td style="text-align:left;"> Parcerias com Restaurantes </td>
    <td style="text-align:left;"> Diversificação de Portfólio </td>
    <td style="text-align:right;"> 0.2 </td>
-   <td style="text-align:right;"> 10.5 </td>
+   <td style="text-align:right;"> 21.0 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 1 </td>

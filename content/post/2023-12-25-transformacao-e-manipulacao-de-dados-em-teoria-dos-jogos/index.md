@@ -1,7 +1,7 @@
 ---
 title: Transformação e Manipulação de Dados em Teoria dos Jogos
 author: André Melo
-date: '2023-12-25'
+date: '2023-12-27'
 slug: transformacao-e-manipulacao-de-dados-em-teoria-dos-jogos
 categories: 
  - Tutorial
@@ -233,7 +233,7 @@ coca.prob <- do.call(rbind, pepsicoca$choice_prob$P1) %>%
                            values_to = 'probabilidade')
 ```
 
-Por se tratar de uma lista, podemos utilizar a função `do.call()` que permite chamar uma função com argumentos armazenados em uma lista, no caso, `rbind`, que combinará várias estruturas de dados em uma única estrutura de dados.
+Por se tratar de uma lista, podemos utilizar a função `do.call()` que permite chamar uma função com argumentos armazenados em uma lista, no caso, `rbind`, que combinará várias estruturas de dados em uma única.
 
 Esse será a probabilidade de escolha da Coca-Cola, demonstrado por `coca.prob`, abaixo faremos o mesmo com o valor de atração.
 
@@ -265,8 +265,11 @@ pepsi.prob <- do.call(rbind, pepsicoca$choice_prob$P2) %>%
 # Valor de atração da PepsiCo
 pepsi.atr <- do.call(rbind, pepsicoca$attraction$A2) %>% 
                 pivot_longer(cols = 1:5,
-                             names_to = 'estrategia.atr', values_to = 'lucro.atr') %>%
-                mutate(estrategia.atr = str_replace_all(estrategia.atr, "\\.1", ""))
+                             names_to = 'estrategia.atr', 
+                             values_to = 'lucro.atr') %>%
+                mutate(estrategia.atr = str_replace_all(estrategia.atr, 
+                                                        "\\.1", "")
+                       )
 ```
 
 Nesse caso, `.1` será o padrão que será substituido na nova coluna gerada após o uso do `pivot_longer()`. Substiuiremos esse padrão por `""`, ou seja, será substituído por uma string vazia, removendo o `.1` da coluna.
@@ -295,10 +298,10 @@ Essa multiplicação é necessária para garantir que, ao realizar a junção do
 
 ```r
 cocacola <- do.call(rbind, replicate(5, cocacola, simplify = FALSE)) %>% 
-  arrange(sample, period)
+              arrange(sample, period)
 
 pepsico <- do.call(rbind, replicate(5, pepsico, simplify = FALSE)) %>% 
-  arrange(sample, period)
+              arrange(sample, period)
 ```
 
 Aqui utilizamos a função `replicate()` é usada para criar cópias de um objeto. Neste caso, estamos replicando os data frames da Coca-Cola e Pepsi. É importante notar que o argumento `simplify = FALSE` garante que cada replicação seja mantida como uma lista, em vez de ser simplificada em um vetor, para que possamos combinar essas cópias posteriormente.
@@ -342,7 +345,7 @@ Após as manipulações realizadas, uma análise visual rápida dos dados revela
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Coca-Cola </td>
-   <td style="text-align:left;"> Aquisição de Marcas </td>
+   <td style="text-align:left;"> Eventos e Parcerias </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Marketing e Publicidade </td>
    <td style="text-align:right;"> 0.2 </td>
@@ -354,19 +357,19 @@ Após as manipulações realizadas, uma análise visual rápida dos dados revela
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Coca-Cola </td>
-   <td style="text-align:left;"> Aquisição de Marcas </td>
+   <td style="text-align:left;"> Eventos e Parcerias </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Eventos e Parcerias </td>
    <td style="text-align:right;"> 0.2 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Eventos e Parcerias </td>
-   <td style="text-align:right;"> 22.5 </td>
+   <td style="text-align:right;"> 75.0 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Coca-Cola </td>
-   <td style="text-align:left;"> Aquisição de Marcas </td>
+   <td style="text-align:left;"> Eventos e Parcerias </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Produtos Alternativos </td>
    <td style="text-align:right;"> 0.2 </td>
@@ -378,7 +381,7 @@ Após as manipulações realizadas, uma análise visual rápida dos dados revela
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Coca-Cola </td>
-   <td style="text-align:left;"> Aquisição de Marcas </td>
+   <td style="text-align:left;"> Eventos e Parcerias </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Distribuição Global </td>
    <td style="text-align:right;"> 0.2 </td>
@@ -390,13 +393,13 @@ Após as manipulações realizadas, uma análise visual rápida dos dados revela
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Coca-Cola </td>
-   <td style="text-align:left;"> Aquisição de Marcas </td>
+   <td style="text-align:left;"> Eventos e Parcerias </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Aquisição de Marcas </td>
    <td style="text-align:right;"> 0.2 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Aquisição de Marcas </td>
-   <td style="text-align:right;"> 75.0 </td>
+   <td style="text-align:right;"> 22.5 </td>
   </tr>
 </tbody>
 </table>
@@ -443,7 +446,7 @@ Após a conclusão da limpeza nas colunas das bases de dados individuais, estamo
 base <- bind_rows(cocacola, pepsico)
 ```
 
-Nesse caso, a escolha da função para unir os data frames torna-se opcional. Em fases anteriores, empregamos funções do pacote base, como `rbind()`, e também mencionamos a alternativa do `bind_rows()` do pacote dplyr. Ambas as abordagens resultarão no mesmo resultado final. Portanto, a flexibilidade na seleção da função de união permite ao usuário optar por aquela que melhor se adequa à sua preferência ou ao contexto específico do projeto.
+Nesse caso, a escolha da função para unir os data frames torna-se opcional. Em fases anteriores, empregamos funções do pacote base, como `rbind()`, e também mencionamos a alternativa do `bind_rows()` do pacote dplyr. Ambas as abordagens terão o mesmo resultado. Portanto, a flexibilidade na seleção da função de união permite ao usuário optar por aquela que melhor se adequa à sua preferência ou ao contexto específico do projeto.
 
 ### Nomeação de colunas
 
@@ -463,8 +466,8 @@ Como último passo, é possível aprimorar a organização e representação da 
 
 ```r
 dados <- base %>%
-  arrange(amostra, periodo) %>% 
-  select(-estrategia.atr)
+          arrange(amostra, periodo) %>% 
+          select(-estrategia.atr)
 ```
 
 Utilizando a função `arrange()`, podemos efetuar a organização da base de dados pelas colunas 'amostra' e 'periodo'. Além disso, optamos por remover a coluna 'estrategia.atr' para evitar redundâncias junto à coluna 'estrategia'. Ao conduzir essas etapas, os dados são apresentados da seguinte maneira:
@@ -486,7 +489,7 @@ Utilizando a função `arrange()`, podemos efetuar a organização da base de da
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Coca-Cola </td>
-   <td style="text-align:left;"> Aquisição de Marcas </td>
+   <td style="text-align:left;"> Eventos e Parcerias </td>
    <td style="text-align:left;"> Marketing e Publicidade </td>
    <td style="text-align:right;"> 0.2 </td>
    <td style="text-align:right;"> 22.5 </td>
@@ -495,16 +498,16 @@ Utilizando a função `arrange()`, podemos efetuar a organização da base de da
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Coca-Cola </td>
-   <td style="text-align:left;"> Aquisição de Marcas </td>
+   <td style="text-align:left;"> Eventos e Parcerias </td>
    <td style="text-align:left;"> Eventos e Parcerias </td>
    <td style="text-align:right;"> 0.2 </td>
-   <td style="text-align:right;"> 22.5 </td>
+   <td style="text-align:right;"> 75.0 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Coca-Cola </td>
-   <td style="text-align:left;"> Aquisição de Marcas </td>
+   <td style="text-align:left;"> Eventos e Parcerias </td>
    <td style="text-align:left;"> Produtos Alternativos </td>
    <td style="text-align:right;"> 0.2 </td>
    <td style="text-align:right;"> 21.0 </td>
@@ -513,7 +516,7 @@ Utilizando a função `arrange()`, podemos efetuar a organização da base de da
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Coca-Cola </td>
-   <td style="text-align:left;"> Aquisição de Marcas </td>
+   <td style="text-align:left;"> Eventos e Parcerias </td>
    <td style="text-align:left;"> Distribuição Global </td>
    <td style="text-align:right;"> 0.2 </td>
    <td style="text-align:right;"> 22.5 </td>
@@ -522,10 +525,10 @@ Utilizando a função `arrange()`, podemos efetuar a organização da base de da
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Coca-Cola </td>
-   <td style="text-align:left;"> Aquisição de Marcas </td>
+   <td style="text-align:left;"> Eventos e Parcerias </td>
    <td style="text-align:left;"> Aquisição de Marcas </td>
    <td style="text-align:right;"> 0.2 </td>
-   <td style="text-align:right;"> 75.0 </td>
+   <td style="text-align:right;"> 22.5 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 1 </td>
@@ -534,7 +537,7 @@ Utilizando a função `arrange()`, podemos efetuar a organização da base de da
    <td style="text-align:left;"> Parcerias com Restaurantes </td>
    <td style="text-align:left;"> Promoção da Marca </td>
    <td style="text-align:right;"> 0.2 </td>
-   <td style="text-align:right;"> 10.5 </td>
+   <td style="text-align:right;"> 29.4 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 1 </td>
@@ -543,7 +546,7 @@ Utilizando a função `arrange()`, podemos efetuar a organização da base de da
    <td style="text-align:left;"> Parcerias com Restaurantes </td>
    <td style="text-align:left;"> Patrocício de Eventos </td>
    <td style="text-align:right;"> 0.2 </td>
-   <td style="text-align:right;"> 7.5 </td>
+   <td style="text-align:right;"> 27.6 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 1 </td>
@@ -552,7 +555,7 @@ Utilizando a função `arrange()`, podemos efetuar a organização da base de da
    <td style="text-align:left;"> Parcerias com Restaurantes </td>
    <td style="text-align:left;"> Diversificação de Portfólio </td>
    <td style="text-align:right;"> 0.2 </td>
-   <td style="text-align:right;"> 10.5 </td>
+   <td style="text-align:right;"> 21.0 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 1 </td>

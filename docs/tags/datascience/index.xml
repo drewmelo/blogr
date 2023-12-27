@@ -6,10 +6,10 @@
         <description>Recent content in datascience on André Melo</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 25 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://drewmelo.github.io/blogr/tags/datascience/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 27 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://drewmelo.github.io/blogr/tags/datascience/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Transformação e Manipulação de Dados em Teoria dos Jogos</title>
         <link>https://drewmelo.github.io/blogr/p/transformacao-e-manipulacao-de-dados-em-teoria-dos-jogos/</link>
-        <pubDate>Mon, 25 Dec 2023 00:00:00 +0000</pubDate>
+        <pubDate>Wed, 27 Dec 2023 00:00:00 +0000</pubDate>
         
         <guid>https://drewmelo.github.io/blogr/p/transformacao-e-manipulacao-de-dados-em-teoria-dos-jogos/</guid>
         <description>&lt;img src="https://drewmelo.github.io/blogr/p/transformacao-e-manipulacao-de-dados-em-teoria-dos-jogos/transformacao-manipulacao-teoria-dos-jogos.jpg" alt="Featured image of post Transformação e Manipulação de Dados em Teoria dos Jogos" /&gt;&lt;link href=&#34;https://drewmelo.github.io/blogr/p/transformacao-e-manipulacao-de-dados-em-teoria-dos-jogos/index_files/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
@@ -167,7 +167,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;              &lt;span class=&#34;nf&#34;&gt;pivot_longer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cols&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                           &lt;span class=&#34;n&#34;&gt;names_to&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;estrategia.prob&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; 
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                           &lt;span class=&#34;n&#34;&gt;values_to&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;probabilidade&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Por se tratar de uma lista, podemos utilizar a função &lt;code&gt;do.call()&lt;/code&gt; que permite chamar uma função com argumentos armazenados em uma lista, no caso, &lt;code&gt;rbind&lt;/code&gt;, que combinará várias estruturas de dados em uma única estrutura de dados.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Por se tratar de uma lista, podemos utilizar a função &lt;code&gt;do.call()&lt;/code&gt; que permite chamar uma função com argumentos armazenados em uma lista, no caso, &lt;code&gt;rbind&lt;/code&gt;, que combinará várias estruturas de dados em uma única.&lt;/p&gt;
 &lt;p&gt;Esse será a probabilidade de escolha da Coca-Cola, demonstrado por &lt;code&gt;coca.prob&lt;/code&gt;, abaixo faremos o mesmo com o valor de atração.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Valor de atração da Coca-Cola&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;coca.atr&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;do.call&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rbind&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pepsicoca&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;attraction&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;A1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&amp;gt;%&lt;/span&gt; 
@@ -187,8 +187,11 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Valor de atração da PepsiCo&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;pepsi.atr&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;do.call&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rbind&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pepsicoca&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;attraction&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;A2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&amp;gt;%&lt;/span&gt; 
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;nf&#34;&gt;pivot_longer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cols&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                             &lt;span class=&#34;n&#34;&gt;names_to&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;estrategia.atr&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;values_to&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;lucro.atr&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&amp;gt;%&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;nf&#34;&gt;mutate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;estrategia.atr&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;str_replace_all&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;estrategia.atr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;\\.1&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                             &lt;span class=&#34;n&#34;&gt;names_to&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;estrategia.atr&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                             &lt;span class=&#34;n&#34;&gt;values_to&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;lucro.atr&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;nf&#34;&gt;mutate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;estrategia.atr&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;str_replace_all&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;estrategia.atr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                                                        &lt;span class=&#34;s&#34;&gt;&amp;#34;\\.1&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                       &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Nesse caso, &lt;code&gt;.1&lt;/code&gt; será o padrão que será substituido na nova coluna gerada após o uso do &lt;code&gt;pivot_longer()&lt;/code&gt;. Substiuiremos esse padrão por &lt;code&gt;&amp;quot;&amp;quot;&lt;/code&gt;, ou seja, será substituído por uma string vazia, removendo o &lt;code&gt;.1&lt;/code&gt; da coluna.&lt;/p&gt;
 &lt;h2 id=&#34;manipulação-dos-dados-i&#34;&gt;Manipulação dos Dados I&lt;/h2&gt;
 &lt;p&gt;Neste segundo passo, após a extração dos dados provenientes da simulação do modelo de aprendizagem usando o pacote Rgamer, iniciaremos a preparação das bases de dados. O objetivo é permitir a combinação dos data frames referentes tanto à Coca-Cola quanto à Pepsi. Estamos considerando não apenas as escolhas de probabilidade, mas também os valores de atração registrados para ambos os jogadores.&lt;/p&gt;
@@ -201,10 +204,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Em seguida, é essencial multiplicar essas observações por um fator de 5. Isso se deve ao fato de haver 5 estratégias para cada jogador, como resultado da transformação realizada anteriormente, na qual as 5 colunas (representando estratégias) se tornaram linhas (observações), cada uma com seus respectivos valores associados.&lt;/p&gt;
 &lt;p&gt;Essa multiplicação é necessária para garantir que, ao realizar a junção dos data frames, as strings estejam perfeitamente alinhadas com as 5 estratégias correspondentes.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;cocacola&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;do.call&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rbind&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;replicate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cocacola&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;simplify&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;FALSE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&amp;gt;%&lt;/span&gt; 
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nf&#34;&gt;arrange&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sample&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;period&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;              &lt;span class=&#34;nf&#34;&gt;arrange&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sample&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;period&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;pepsico&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;do.call&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rbind&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;replicate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pepsico&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;simplify&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;FALSE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&amp;gt;%&lt;/span&gt; 
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nf&#34;&gt;arrange&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sample&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;period&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;              &lt;span class=&#34;nf&#34;&gt;arrange&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sample&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;period&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Aqui utilizamos a função &lt;code&gt;replicate()&lt;/code&gt; é usada para criar cópias de um objeto. Neste caso, estamos replicando os data frames da Coca-Cola e Pepsi. É importante notar que o argumento &lt;code&gt;simplify = FALSE&lt;/code&gt; garante que cada replicação seja mantida como uma lista, em vez de ser simplificada em um vetor, para que possamos combinar essas cópias posteriormente.&lt;/p&gt;
 &lt;h4 id=&#34;junção-dos-dados-i&#34;&gt;Junção dos dados I&lt;/h4&gt;
 &lt;p&gt;Após essa breve manipulação, agora é possível realizar a junção dos dados do jogador 1 e 2.&lt;/p&gt;
@@ -236,7 +239,7 @@
    &lt;td style=&#34;text-align:right;&#34;&gt; 1 &lt;/td&gt;
    &lt;td style=&#34;text-align:right;&#34;&gt; 1 &lt;/td&gt;
    &lt;td style=&#34;text-align:left;&#34;&gt; Coca-Cola &lt;/td&gt;
-   &lt;td style=&#34;text-align:left;&#34;&gt; Aquisição de Marcas &lt;/td&gt;
+   &lt;td style=&#34;text-align:left;&#34;&gt; Eventos e Parcerias &lt;/td&gt;
    &lt;td style=&#34;text-align:right;&#34;&gt; 1 &lt;/td&gt;
    &lt;td style=&#34;text-align:left;&#34;&gt; Marketing e Publicidade &lt;/td&gt;
    &lt;td style=&#34;text-align:right;&#34;&gt; 0.2 &lt;/td&gt;
@@ -248,19 +251,19 @@
    &lt;td style=&#34;text-align:right;&#34;&gt; 1 &lt;/td&gt;
    &lt;td style=&#34;text-align:right;&#34;&gt; 1 &lt;/td&gt;
    &lt;td style=&#34;text-align:left;&#34;&gt; Coca-Cola &lt;/td&gt;
-   &lt;td style=&#34;text-align:left;&#34;&gt; Aquisição de Marcas &lt;/td&gt;
+   &lt;td style=&#34;text-align:left;&#34;&gt; Eventos e Parcerias &lt;/td&gt;
    &lt;td style=&#34;text-align:right;&#34;&gt; 1 &lt;/td&gt;
    &lt;td style=&#34;text-align:left;&#34;&gt; Eventos e Parcerias &lt;/td&gt;
    &lt;td style=&#34;text-align:right;&#34;&gt; 0.2 &lt;/td&gt;
    &lt;td style=&#34;text-align:right;&#34;&gt; 1 &lt;/td&gt;
    &lt;td style=&#34;text-align:left;&#34;&gt; Eventos e Parcerias &lt;/td&gt;
-   &lt;td style=&#34;text-align:right;&#34;&gt; 22.5 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 75.0 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style=&#34;text-align:right;&#34;&gt; 1 &lt;/td&gt;
    &lt;td style=&#34;text-align:right;&#34;&gt; 1 &lt;/td&gt;
    &lt;td style=&#34;text-align:left;&#34;&gt; Coca-Cola &lt;/td&gt;
-   &lt;td style=&#34;text-align:left;&#34;&gt; Aquisição de Marcas &lt;/td&gt;
+   &lt;td style=&#34;text-align:left;&#34;&gt; Eventos e Parcerias &lt;/td&gt;
    &lt;td style=&#34;text-align:right;&#34;&gt; 1 &lt;/td&gt;
    &lt;td style=&#34;text-align:left;&#34;&gt; Produtos Alternativos &lt;/td&gt;
    &lt;td style=&#34;text-align:right;&#34;&gt; 0.2 &lt;/td&gt;
@@ -272,7 +275,7 @@
    &lt;td style=&#34;text-align:right;&#34;&gt; 1 &lt;/td&gt;
    &lt;td style=&#34;text-align:right;&#34;&gt; 1 &lt;/td&gt;
    &lt;td style=&#34;text-align:left;&#34;&gt; Coca-Cola &lt;/td&gt;
-   &lt;td style=&#34;text-align:left;&#34;&gt; Aquisição de Marcas &lt;/td&gt;
+   &lt;td style=&#34;text-align:left;&#34;&gt; Eventos e Parcerias &lt;/td&gt;
    &lt;td style=&#34;text-align:right;&#34;&gt; 1 &lt;/td&gt;
    &lt;td style=&#34;text-align:left;&#34;&gt; Distribuição Global &lt;/td&gt;
    &lt;td style=&#34;text-align:right;&#34;&gt; 0.2 &lt;/td&gt;
@@ -284,13 +287,13 @@
    &lt;td style=&#34;text-align:right;&#34;&gt; 1 &lt;/td&gt;
    &lt;td style=&#34;text-align:right;&#34;&gt; 1 &lt;/td&gt;
    &lt;td style=&#34;text-align:left;&#34;&gt; Coca-Cola &lt;/td&gt;
-   &lt;td style=&#34;text-align:left;&#34;&gt; Aquisição de Marcas &lt;/td&gt;
+   &lt;td style=&#34;text-align:left;&#34;&gt; Eventos e Parcerias &lt;/td&gt;
    &lt;td style=&#34;text-align:right;&#34;&gt; 1 &lt;/td&gt;
    &lt;td style=&#34;text-align:left;&#34;&gt; Aquisição de Marcas &lt;/td&gt;
    &lt;td style=&#34;text-align:right;&#34;&gt; 0.2 &lt;/td&gt;
    &lt;td style=&#34;text-align:right;&#34;&gt; 1 &lt;/td&gt;
    &lt;td style=&#34;text-align:left;&#34;&gt; Aquisição de Marcas &lt;/td&gt;
-   &lt;td style=&#34;text-align:right;&#34;&gt; 75.0 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 22.5 &lt;/td&gt;
   &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -317,7 +320,7 @@
 &lt;h4 id=&#34;junção-dos-dados-ii&#34;&gt;Junção dos dados II&lt;/h4&gt;
 &lt;p&gt;Após a conclusão da limpeza nas colunas das bases de dados individuais, estamos prontos para realizar a junção, unindo-as em um único conjunto de dados. Vale ressaltar que os data frames dos dois jogadores foram previamente ajustados para conter colunas com nomes idênticos. Nessa etapa, é possível empregar a função &lt;code&gt;bind_rows()&lt;/code&gt; do pacote dplyr, facilitando o processo de combinação dos dados de ambos os jogadores.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;base&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;bind_rows&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cocacola&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pepsico&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Nesse caso, a escolha da função para unir os data frames torna-se opcional. Em fases anteriores, empregamos funções do pacote base, como &lt;code&gt;rbind()&lt;/code&gt;, e também mencionamos a alternativa do &lt;code&gt;bind_rows()&lt;/code&gt; do pacote dplyr. Ambas as abordagens resultarão no mesmo resultado final. Portanto, a flexibilidade na seleção da função de união permite ao usuário optar por aquela que melhor se adequa à sua preferência ou ao contexto específico do projeto.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Nesse caso, a escolha da função para unir os data frames torna-se opcional. Em fases anteriores, empregamos funções do pacote base, como &lt;code&gt;rbind()&lt;/code&gt;, e também mencionamos a alternativa do &lt;code&gt;bind_rows()&lt;/code&gt; do pacote dplyr. Ambas as abordagens terão o mesmo resultado. Portanto, a flexibilidade na seleção da função de união permite ao usuário optar por aquela que melhor se adequa à sua preferência ou ao contexto específico do projeto.&lt;/p&gt;
 &lt;h3 id=&#34;nomeação-de-colunas&#34;&gt;Nomeação de colunas&lt;/h3&gt;
 &lt;p&gt;Nesse momento, a etapa de nomear colunas também é opcional, uma vez que se refere à atribuição de nomes específicos às colunas. No presente caso, optou-se por realizar essa nomeação, visando facilitar a posterior identificação das colunas no conjunto de dados.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;names&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;base&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;[1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;amostra&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;periodo&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;jogador&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;estrategia&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;  
@@ -325,8 +328,8 @@
 &lt;h2 id=&#34;conclusão&#34;&gt;Conclusão&lt;/h2&gt;
 &lt;p&gt;Como último passo, é possível aprimorar a organização e representação da base principal ordenando-a pela amostra e período. Essa ordenação é particularmente significativa na teoria dos jogos, onde cada jogador tem a oportunidade de efetuar uma escolha com base em sua estratégia a cada período. Dessa maneira, a disposição sequencial da informação reflete de forma mais clara e coerente a dinâmica temporal das decisões tomadas pelos jogadores ao longo do processo analisado.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;dados&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;base&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&amp;gt;%&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nf&#34;&gt;arrange&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;amostra&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;periodo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&amp;gt;%&lt;/span&gt; 
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nf&#34;&gt;select&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;estrategia.atr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;nf&#34;&gt;arrange&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;amostra&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;periodo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&amp;gt;%&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;nf&#34;&gt;select&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;estrategia.atr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Utilizando a função &lt;code&gt;arrange()&lt;/code&gt;, podemos efetuar a organização da base de dados pelas colunas &amp;lsquo;amostra&amp;rsquo; e &amp;lsquo;periodo&amp;rsquo;. Além disso, optamos por remover a coluna &amp;rsquo;estrategia.atr&amp;rsquo; para evitar redundâncias junto à coluna &amp;rsquo;estrategia&amp;rsquo;. Ao conduzir essas etapas, os dados são apresentados da seguinte maneira:&lt;/p&gt;
 &lt;table&gt;
  &lt;thead&gt;
@@ -345,7 +348,7 @@
    &lt;td style=&#34;text-align:right;&#34;&gt; 1 &lt;/td&gt;
    &lt;td style=&#34;text-align:right;&#34;&gt; 1 &lt;/td&gt;
    &lt;td style=&#34;text-align:left;&#34;&gt; Coca-Cola &lt;/td&gt;
-   &lt;td style=&#34;text-align:left;&#34;&gt; Aquisição de Marcas &lt;/td&gt;
+   &lt;td style=&#34;text-align:left;&#34;&gt; Eventos e Parcerias &lt;/td&gt;
    &lt;td style=&#34;text-align:left;&#34;&gt; Marketing e Publicidade &lt;/td&gt;
    &lt;td style=&#34;text-align:right;&#34;&gt; 0.2 &lt;/td&gt;
    &lt;td style=&#34;text-align:right;&#34;&gt; 22.5 &lt;/td&gt;
@@ -354,16 +357,16 @@
    &lt;td style=&#34;text-align:right;&#34;&gt; 1 &lt;/td&gt;
    &lt;td style=&#34;text-align:right;&#34;&gt; 1 &lt;/td&gt;
    &lt;td style=&#34;text-align:left;&#34;&gt; Coca-Cola &lt;/td&gt;
-   &lt;td style=&#34;text-align:left;&#34;&gt; Aquisição de Marcas &lt;/td&gt;
+   &lt;td style=&#34;text-align:left;&#34;&gt; Eventos e Parcerias &lt;/td&gt;
    &lt;td style=&#34;text-align:left;&#34;&gt; Eventos e Parcerias &lt;/td&gt;
    &lt;td style=&#34;text-align:right;&#34;&gt; 0.2 &lt;/td&gt;
-   &lt;td style=&#34;text-align:right;&#34;&gt; 22.5 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 75.0 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style=&#34;text-align:right;&#34;&gt; 1 &lt;/td&gt;
    &lt;td style=&#34;text-align:right;&#34;&gt; 1 &lt;/td&gt;
    &lt;td style=&#34;text-align:left;&#34;&gt; Coca-Cola &lt;/td&gt;
-   &lt;td style=&#34;text-align:left;&#34;&gt; Aquisição de Marcas &lt;/td&gt;
+   &lt;td style=&#34;text-align:left;&#34;&gt; Eventos e Parcerias &lt;/td&gt;
    &lt;td style=&#34;text-align:left;&#34;&gt; Produtos Alternativos &lt;/td&gt;
    &lt;td style=&#34;text-align:right;&#34;&gt; 0.2 &lt;/td&gt;
    &lt;td style=&#34;text-align:right;&#34;&gt; 21.0 &lt;/td&gt;
@@ -372,7 +375,7 @@
    &lt;td style=&#34;text-align:right;&#34;&gt; 1 &lt;/td&gt;
    &lt;td style=&#34;text-align:right;&#34;&gt; 1 &lt;/td&gt;
    &lt;td style=&#34;text-align:left;&#34;&gt; Coca-Cola &lt;/td&gt;
-   &lt;td style=&#34;text-align:left;&#34;&gt; Aquisição de Marcas &lt;/td&gt;
+   &lt;td style=&#34;text-align:left;&#34;&gt; Eventos e Parcerias &lt;/td&gt;
    &lt;td style=&#34;text-align:left;&#34;&gt; Distribuição Global &lt;/td&gt;
    &lt;td style=&#34;text-align:right;&#34;&gt; 0.2 &lt;/td&gt;
    &lt;td style=&#34;text-align:right;&#34;&gt; 22.5 &lt;/td&gt;
@@ -381,10 +384,10 @@
    &lt;td style=&#34;text-align:right;&#34;&gt; 1 &lt;/td&gt;
    &lt;td style=&#34;text-align:right;&#34;&gt; 1 &lt;/td&gt;
    &lt;td style=&#34;text-align:left;&#34;&gt; Coca-Cola &lt;/td&gt;
-   &lt;td style=&#34;text-align:left;&#34;&gt; Aquisição de Marcas &lt;/td&gt;
+   &lt;td style=&#34;text-align:left;&#34;&gt; Eventos e Parcerias &lt;/td&gt;
    &lt;td style=&#34;text-align:left;&#34;&gt; Aquisição de Marcas &lt;/td&gt;
    &lt;td style=&#34;text-align:right;&#34;&gt; 0.2 &lt;/td&gt;
-   &lt;td style=&#34;text-align:right;&#34;&gt; 75.0 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 22.5 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style=&#34;text-align:right;&#34;&gt; 1 &lt;/td&gt;
@@ -393,7 +396,7 @@
    &lt;td style=&#34;text-align:left;&#34;&gt; Parcerias com Restaurantes &lt;/td&gt;
    &lt;td style=&#34;text-align:left;&#34;&gt; Promoção da Marca &lt;/td&gt;
    &lt;td style=&#34;text-align:right;&#34;&gt; 0.2 &lt;/td&gt;
-   &lt;td style=&#34;text-align:right;&#34;&gt; 10.5 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 29.4 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style=&#34;text-align:right;&#34;&gt; 1 &lt;/td&gt;
@@ -402,7 +405,7 @@
    &lt;td style=&#34;text-align:left;&#34;&gt; Parcerias com Restaurantes &lt;/td&gt;
    &lt;td style=&#34;text-align:left;&#34;&gt; Patrocício de Eventos &lt;/td&gt;
    &lt;td style=&#34;text-align:right;&#34;&gt; 0.2 &lt;/td&gt;
-   &lt;td style=&#34;text-align:right;&#34;&gt; 7.5 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 27.6 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style=&#34;text-align:right;&#34;&gt; 1 &lt;/td&gt;
@@ -411,7 +414,7 @@
    &lt;td style=&#34;text-align:left;&#34;&gt; Parcerias com Restaurantes &lt;/td&gt;
    &lt;td style=&#34;text-align:left;&#34;&gt; Diversificação de Portfólio &lt;/td&gt;
    &lt;td style=&#34;text-align:right;&#34;&gt; 0.2 &lt;/td&gt;
-   &lt;td style=&#34;text-align:right;&#34;&gt; 10.5 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 21.0 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style=&#34;text-align:right;&#34;&gt; 1 &lt;/td&gt;

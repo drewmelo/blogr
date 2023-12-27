@@ -1,7 +1,7 @@
 ---
 title: Ciência de Dados na Economia
 author: André Melo
-date: '2023-09-21'
+date: '2023-10-02'
 slug: ciencia-de-dados-na-economia
 categories: 
  - Data Science
@@ -18,7 +18,7 @@ comments: yes
 
 <!--more-->
 
-Ao longo das últimas décadas, testemunhamos avanços tecnológicos que alteraram a forma como vivemos, seja no trabalho ou no modo como nos comunicamos. No cerne dessa revolução está a internet, um sistema global de informações que conecta pessoas, empresas e instituições em diferentes partes do mundo. Seu surgimento, juntamente com o crescimento exponencial da quantidade de dados gerados e armazenados em servidores levaram a uma necessidade sem precedentes para aplicar esses conhecimentos em uma escala maior. Dessa forma, com o avanço dessa tecnologia ascendeu o desenvolvimento e popularização da *Data Science*, ou simplesmente Ciência de Dados.
+Ao longo das últimas décadas, testemunhamos avanços tecnológicos que alteraram a forma como vivemos, seja no trabalho ou no modo como nos comunicamos. No cerne dessa revolução está a internet, um sistema global de informações que conecta pessoas, empresas e instituições em diferentes partes do mundo. Seu surgimento, juntamente com o crescimento exponencial da quantidade de dados gerados e armazenados em servidores levaram a uma necessidade sem precedentes para aplicar esses conhecimentos em uma escala maior. Dessa forma, com o avanço dessa tecnologia ascendeu o desenvolvimento e popularização da *Data Science*, ou simplesmente Ciência de Dado.
 
 A Ciência de Dados é um campo multidisciplinar que abrange a análise de dados estruturados, que são fixos e organizados, bem como de dados não estruturados, que são flexíveis e dinâmicos, com técnicas e algoritmos para extração e exploração de informações a partir de conjuntos de bases complexas. Nesse quesito, um especialista buscará
 envolver a coleta, processamento, análise e interpretação desses dados com o objetivo de obter *insights* e conhecimentos relevantes para a área econômica.

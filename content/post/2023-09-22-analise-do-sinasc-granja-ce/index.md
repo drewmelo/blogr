@@ -3,7 +3,8 @@ title: Análise do SINASC - Granja - CE
 author: André Melo
 date: '2023-09-22'
 slug: analise-do-sinasc-granja-ce
-categories: []
+categories: 
+ - Data Science
 tags: 
  - datascience
 description: Neste artigo tratará a cerca da análise das complicações das gestações prematuras em mulheres acima de 30 anos, destacando a relação entre idade, escolaridade, semana de gestação e peso dos bebês prematuros.
