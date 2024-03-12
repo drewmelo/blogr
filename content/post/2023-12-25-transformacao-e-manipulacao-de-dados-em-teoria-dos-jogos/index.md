@@ -244,7 +244,9 @@ coca.atr <- do.call(rbind, pepsicoca$attraction$A1) %>%
               pivot_longer(cols = 1:5,
                            names_to = 'estrategia.atr', 
                            values_to = 'lucro.atr') %>%
-              mutate(estrategia.atr = str_replace_all(estrategia.atr, "\\.1", ""))
+              mutate(estrategia.atr = str_replace_all(estrategia.atr, 
+                                                      "\\.1", "")
+                     )
 ```
 
 Em ambas as operações realizamos a pivotagem dos dados, ou seja, transformará dados de um formato mais amplo para um formato mais longo, onde as estratégias se tornam valores de uma coluna chamada `estrategia.prob`, e as probabilidades associadas a essas estratégias se tornam valores de outra coluna chamada `probabilidade`.
@@ -345,31 +347,31 @@ Após as manipulações realizadas, uma análise visual rápida dos dados revela
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Coca-Cola </td>
-   <td style="text-align:left;"> Eventos e Parcerias </td>
+   <td style="text-align:left;"> Marketing e Publicidade </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Marketing e Publicidade </td>
    <td style="text-align:right;"> 0.2 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Marketing e Publicidade </td>
-   <td style="text-align:right;"> 22.5 </td>
+   <td style="text-align:right;"> 90.0 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Coca-Cola </td>
-   <td style="text-align:left;"> Eventos e Parcerias </td>
+   <td style="text-align:left;"> Marketing e Publicidade </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Eventos e Parcerias </td>
    <td style="text-align:right;"> 0.2 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Eventos e Parcerias </td>
-   <td style="text-align:right;"> 75.0 </td>
+   <td style="text-align:right;"> 27.0 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Coca-Cola </td>
-   <td style="text-align:left;"> Eventos e Parcerias </td>
+   <td style="text-align:left;"> Marketing e Publicidade </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Produtos Alternativos </td>
    <td style="text-align:right;"> 0.2 </td>
@@ -381,25 +383,25 @@ Após as manipulações realizadas, uma análise visual rápida dos dados revela
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Coca-Cola </td>
-   <td style="text-align:left;"> Eventos e Parcerias </td>
+   <td style="text-align:left;"> Marketing e Publicidade </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Distribuição Global </td>
    <td style="text-align:right;"> 0.2 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Distribuição Global </td>
-   <td style="text-align:right;"> 22.5 </td>
+   <td style="text-align:right;"> 27.0 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Coca-Cola </td>
-   <td style="text-align:left;"> Eventos e Parcerias </td>
+   <td style="text-align:left;"> Marketing e Publicidade </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Aquisição de Marcas </td>
    <td style="text-align:right;"> 0.2 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Aquisição de Marcas </td>
-   <td style="text-align:right;"> 22.5 </td>
+   <td style="text-align:right;"> 29.4 </td>
   </tr>
 </tbody>
 </table>
@@ -489,25 +491,25 @@ Utilizando a função `arrange()`, podemos efetuar a organização da base de da
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Coca-Cola </td>
-   <td style="text-align:left;"> Eventos e Parcerias </td>
+   <td style="text-align:left;"> Marketing e Publicidade </td>
    <td style="text-align:left;"> Marketing e Publicidade </td>
    <td style="text-align:right;"> 0.2 </td>
-   <td style="text-align:right;"> 22.5 </td>
+   <td style="text-align:right;"> 90.0 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Coca-Cola </td>
-   <td style="text-align:left;"> Eventos e Parcerias </td>
+   <td style="text-align:left;"> Marketing e Publicidade </td>
    <td style="text-align:left;"> Eventos e Parcerias </td>
    <td style="text-align:right;"> 0.2 </td>
-   <td style="text-align:right;"> 75.0 </td>
+   <td style="text-align:right;"> 27.0 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Coca-Cola </td>
-   <td style="text-align:left;"> Eventos e Parcerias </td>
+   <td style="text-align:left;"> Marketing e Publicidade </td>
    <td style="text-align:left;"> Produtos Alternativos </td>
    <td style="text-align:right;"> 0.2 </td>
    <td style="text-align:right;"> 21.0 </td>
@@ -516,26 +518,17 @@ Utilizando a função `arrange()`, podemos efetuar a organização da base de da
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Coca-Cola </td>
-   <td style="text-align:left;"> Eventos e Parcerias </td>
+   <td style="text-align:left;"> Marketing e Publicidade </td>
    <td style="text-align:left;"> Distribuição Global </td>
    <td style="text-align:right;"> 0.2 </td>
-   <td style="text-align:right;"> 22.5 </td>
+   <td style="text-align:right;"> 27.0 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> Coca-Cola </td>
-   <td style="text-align:left;"> Eventos e Parcerias </td>
+   <td style="text-align:left;"> Marketing e Publicidade </td>
    <td style="text-align:left;"> Aquisição de Marcas </td>
-   <td style="text-align:right;"> 0.2 </td>
-   <td style="text-align:right;"> 22.5 </td>
-  </tr>
-  <tr>
-   <td style="text-align:right;"> 1 </td>
-   <td style="text-align:right;"> 1 </td>
-   <td style="text-align:left;"> PepsiCo </td>
-   <td style="text-align:left;"> Parcerias com Restaurantes </td>
-   <td style="text-align:left;"> Promoção da Marca </td>
    <td style="text-align:right;"> 0.2 </td>
    <td style="text-align:right;"> 29.4 </td>
   </tr>
@@ -543,8 +536,8 @@ Utilizando a função `arrange()`, podemos efetuar a organização da base de da
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> PepsiCo </td>
-   <td style="text-align:left;"> Parcerias com Restaurantes </td>
-   <td style="text-align:left;"> Patrocício de Eventos </td>
+   <td style="text-align:left;"> Estratégias de Preços </td>
+   <td style="text-align:left;"> Promoção da Marca </td>
    <td style="text-align:right;"> 0.2 </td>
    <td style="text-align:right;"> 27.6 </td>
   </tr>
@@ -552,7 +545,16 @@ Utilizando a função `arrange()`, podemos efetuar a organização da base de da
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> PepsiCo </td>
-   <td style="text-align:left;"> Parcerias com Restaurantes </td>
+   <td style="text-align:left;"> Estratégias de Preços </td>
+   <td style="text-align:left;"> Patrocício de Eventos </td>
+   <td style="text-align:right;"> 0.2 </td>
+   <td style="text-align:right;"> 29.4 </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:left;"> PepsiCo </td>
+   <td style="text-align:left;"> Estratégias de Preços </td>
    <td style="text-align:left;"> Diversificação de Portfólio </td>
    <td style="text-align:right;"> 0.2 </td>
    <td style="text-align:right;"> 21.0 </td>
@@ -561,19 +563,19 @@ Utilizando a função `arrange()`, podemos efetuar a organização da base de da
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> PepsiCo </td>
-   <td style="text-align:left;"> Parcerias com Restaurantes </td>
+   <td style="text-align:left;"> Estratégias de Preços </td>
    <td style="text-align:left;"> Estratégias de Preços </td>
    <td style="text-align:right;"> 0.2 </td>
-   <td style="text-align:right;"> 29.4 </td>
+   <td style="text-align:right;"> 90.0 </td>
   </tr>
   <tr>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> PepsiCo </td>
-   <td style="text-align:left;"> Parcerias com Restaurantes </td>
+   <td style="text-align:left;"> Estratégias de Preços </td>
    <td style="text-align:left;"> Parcerias com Restaurantes </td>
    <td style="text-align:right;"> 0.2 </td>
-   <td style="text-align:right;"> 92.0 </td>
+   <td style="text-align:right;"> 22.5 </td>
   </tr>
 </tbody>
 </table>
