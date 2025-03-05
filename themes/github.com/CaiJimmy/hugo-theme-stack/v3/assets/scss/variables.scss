@@ -106,22 +106,22 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
 */
 :root {
     --article-font-family: var(--base-font-family);
-    --article-font-size: 1.8rem; /* Aumentado para celulares */
+    --article-font-size: 1.7rem; /* Aumentado para celulares */
 
     @include respond(sm) {
         --article-font-size: 1.9rem; /* Para celulares maiores */
     }
 
     @include respond(md) {
-        --article-font-size: 2rem; /* Para tablets */
+        --article-font-size: 1.9rem; /* Para tablets */
     }
 
     @include respond(lg) {
-        --article-font-size: 2.2rem; /* Para notebooks e desktops */
+        --article-font-size: 2.1rem; /* Para notebooks e desktops */
     }
 
     @include respond(xl) {
-        --article-font-size: 1.9rem; /* Para telas grandes */
+        --article-font-size: 1.8rem; /* Para telas grandes */
     }
 
     --article-line-height: 1.9; /* Aumentando o espaçamento entre linhas */
