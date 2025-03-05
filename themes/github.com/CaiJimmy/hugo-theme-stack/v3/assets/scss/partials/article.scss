@@ -53,6 +53,11 @@
     gap: 15px;
 }
 
+/* Aplicando espaçamento entre letras no corpo do artigo */
+.article-content {
+    letter-spacing: var(--article-letter-spacing); /* Aplica o espaçamento entre letras */
+}
+
 .article-title {
     font-family: var(--article-font-family);
     font-weight: 800;
@@ -260,7 +265,6 @@
             justify-content: flex-end;
             z-index: 2;
             padding: 15px;
-            letter-spacing: var(--article-letter-spacing) !important;
 
             @include respond(sm) {
                 padding: 20px;

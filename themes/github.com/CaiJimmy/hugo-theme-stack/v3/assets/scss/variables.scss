@@ -123,7 +123,6 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
 
     @include respond(xl) {
         --article-font-size: 1.8rem; /* Mantido para telas grandes */
-        letter-spacing: var(--article-letter-spacing) !important;
     }
 
     --article-line-height: 1.9; /* Mantido o espaçamento entre linhas */
