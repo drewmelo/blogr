@@ -3,6 +3,7 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 
+
 /*
 *   Global style
 */
@@ -100,19 +101,32 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
     }
 }
 
-/**
+/*
 *   Article content font settings
 */
 :root {
     --article-font-family: var(--base-font-family);
-    --article-font-size: 1.6rem;
+    --article-font-size: 1.8rem; /* Aumentado para celulares */
 
-    @include respond(md) {
-        --article-font-size: 1.7rem;
+    @include respond(sm) {
+        --article-font-size: 1.9rem; /* Para celulares maiores */
     }
 
-    --article-line-height: 1.85;
+    @include respond(md) {
+        --article-font-size: 2rem; /* Para tablets */
+    }
+
+    @include respond(lg) {
+        --article-font-size: 2.2rem; /* Para notebooks e desktops */
+    }
+
+    @include respond(xl) {
+        --article-font-size: 1.9rem; /* Para telas grandes */
+    }
+
+    --article-line-height: 1.9; /* Aumentando o espaçamento entre linhas */
 }
+
 
 /*
 *   Article content style
