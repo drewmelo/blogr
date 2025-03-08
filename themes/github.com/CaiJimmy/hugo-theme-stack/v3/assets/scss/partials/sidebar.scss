@@ -72,6 +72,7 @@
     display: none;
     flex-direction: column;
     gap: var(--widget-separation);
+    font-family: "Roboto", sans-serif; /* cor do texto do menu (alterado) */
 
     &.sticky {
         top: 0;
@@ -128,6 +129,7 @@
         flex-direction: column;
         gap: 10px;
         justify-content: center;
+        font-family: "Roboto", sans-serif; /* cor do texto abaixo do avatar (alterado) */
     }
 
     .site-name {
