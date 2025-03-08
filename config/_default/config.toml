@@ -16,3 +16,8 @@ hasCJKLanguage = false
 disqusShortname = "andremelo"
 
 publishDir = "docs/"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
