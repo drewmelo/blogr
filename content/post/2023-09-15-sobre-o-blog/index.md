@@ -1,14 +1,14 @@
 ---
 title: Sobre o blog
 author: André Melo
-date: '2023-09-15'
+date: '2025-03-15'
 slug: sobre-o-blog
 categories: []
 tags: []
-description: Este texto apresenta um blog que explora a conexão entre economia, programação e tecnologia, convidando os leitores a explorar análises, tutoriais e insights relevantes para o mundo digital atual.
+description: Uma jornada pela economia e programação, usando dados para compreender melhor a sociedade e suas dinâmicas.
 image: sobre-o-blog2.jpg
 math: ~
-license: no
+license: ~
 hidden: no
 comments: yes
 ---
@@ -37,10 +37,10 @@ a#rgamer-link:hover {
 
 <!--more-->
 
-Você já se questionou sobre a intrincada relação entre a economia global e a tecnologia que permeia nosso cotidiano? Ou talvez tenha curiosidade sobre como a programação desempenha um papel crucial na gestação das inovações tecnológicas que moldarão nosso futuro. Se essas indagações estimulam sua mente, você está no lugar certo!
+Você já parou para pensar como a economia pode ganhar vida através da programação? Ou como uma análise cuidadosa de dados econômicos pode revelar histórias surpreendentes sobre o mundo em que vivemos?
 
-A fusão da economia e da programação é um fenômeno em ascensão, com um impacto significativo na configuração financeira e empresarial do século XXI. À medida que empresas e mercados se digitalizam, a habilidade de aplicar princípios econômicos por meio da programação se torna vital.
+Este espaço é dedicado justamente a isso. Aqui, economia, programação e ciência de dados conversam entre si, transformando números frios em conhecimento que realmente importa. Meu objetivo não é apenas explorar teorias econômicas ou somente apresentar códigos, mas conectar tudo isso à realidade que nos cerca — como fiz ao investigar se a riqueza realmente pode influenciar a inteligência média de uma população, em meu artigo [*QI vs. Desenvolvimento Econômico: o dinheiro compra inteligência?*](http://localhost:4321/blogr/p/qi-vs-desenvolvimento-o-dinheiro-compra-inteligencia/)
 
-Mas onde a programação se encaixa nisso tudo? Ela desempenha um papel fundamental na análise de dados econômicos. Com a coleta massiva de informações financeiras e econômicas em tempo real, as empresas agora podem empregar algoritmos avançados para extrair insights valiosos, como exploramos em nosso artigo sobre <a href="https://drewmelo.github.io/blogr/p/ciencia-de-dados-na-economia/" id="rgamer-link" target="_blank">Ciência de Dados na Economia</a>.
+Mais do que estatísticas isoladas, quero trazer verdadeiras reflexões sobre como os dados podem nos ajudar a entender melhor as complexas dinâmicas sociais, econômicas e tecnológicas do nosso tempo. É um convite para pensar além das aparências, perceber padrões ocultos nas informações e questionar o que realmente impulsiona o avanço das sociedades.
 
-No entanto, nosso blog não se restringe a teoria e texto. Nossa jornada neste espaço dedicado à economia, programação e tecnologia é um convite para explorar a conexão profunda entre esses campos e entender como eles moldam nosso presente e futuro. Aqui, oferecemos análises aprofundadas, tutoriais práticos e atualizações sobre as tendências mais recentes. Portanto, seja bem-vindo! Acompanhe nossas postagens enquanto mergulhamos nas complexidades do universo econômico e exploramos o papel fundamental da tecnologia nele.2
+Se você, assim como eu, gosta de analisar o mundo com olhar curioso e crítico, este blog é para você. Aqui, cada texto é uma oportunidade de descobrir algo novo e, quem sabe, entender melhor as engrenagens que movem nossa realidade. Seja bem-vindo a essa jornada pela economia, programação e ciência de dados aplicada à vida real!
