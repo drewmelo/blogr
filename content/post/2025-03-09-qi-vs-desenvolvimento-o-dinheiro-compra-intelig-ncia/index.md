@@ -76,11 +76,20 @@ QI médio por país. Além dele, há também o *iq_classification.csv*, que clas
 *"Dotado"*, *"Acima da média"*, e entre outras categorias, de acordo com a faixa de pontuação. Todavia, 
 esse segundo arquivo não será abordado neste artigo.
 
+Afim de facilitar a replicação da análise apresentada neste artigo, disponibilizei os dados no meu *GitHub*. Se preferir, você também pode baixá-los diretamente do *Kaggle* – basta conferir a nota de rodapé e a seção *Referências* ao final.
+
 [^2]: Algumas variáveis, como média de anos de escolaridade, IDH e renda nacional bruta, referem-se a 2021, enquanto os dados populacionais são de 2023.
 
 
 ``` r
-df <- read_csv("dados/avgIQpercountry.csv") |>
+url <- "https://raw.githubusercontent.com/drewmelo/blogr/master/content/post/2025-03-09-qi-vs-desenvolvimento-o-dinheiro-compra-intelig-ncia/dados/avgIQpercountry.csv"
+```
+
+A partir disso, podemos importar os nossos dados:
+
+
+``` r
+df <- read_csv(url) |>
   drop_na() |>
   clean_names() |>
   select(!c(continent, literacy_rate)) |> 
@@ -150,7 +159,7 @@ df |>
   theme_minimal() 
 ```
 
-<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-7-1.png" width="672" style="display: block; margin: auto;" />
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-8-1.png" width="672" style="display: block; margin: auto;" />
 
 
 ### Tipos de correlação em estatística
@@ -222,7 +231,7 @@ mais forte com o desenvolvimento cognitivo da população do que a renda naciona
 um reflexo de melhores condições gerais, **mas é o acesso ao conhecimento e às oportunidades que parecem 
 desempenhar um papel mais decisivo**.
 
-<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-10-1.png" width="672" style="display: block; margin: auto;" />
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-11-1.png" width="672" style="display: block; margin: auto;" />
 
 ### Gigantes invisíveis ou viés histórico?
 
@@ -291,7 +300,7 @@ como ilustrado na Figura (b). Uma relação torna-se exposta e contrária ao que
 > contexto da nossa análise?*
 
 
-<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-14-1.png" width="672" style="display: block; margin: auto;" />
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-15-1.png" width="672" style="display: block; margin: auto;" />
 
 No fim das contas, esse é um exemplo perfeito de como a estatística pode nos fazer ver padrões diferentes dependendo de como tratamos os dados. Como Darrell Huff argumenta em *Como Mentir com Estatística*, os números, por si só, não contam toda a verdade — **é a forma como os apresentamos que molda a narrativa**.
 
@@ -380,7 +389,7 @@ E graficamente, teriamos esta representação:
 ggcorrplot(matriz_corr, lab = T)
 ```
 
-<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-19-1.png" width="672" style="display: block; margin: auto;" />
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-20-1.png" width="672" style="display: block; margin: auto;" />
 
 Se quisermos melhorar a apresentação podemos ordenar os coeficientes de correlação hierarquicamente e 
 exibir apenas a metade inferior da matriz, de forma a eliminar redundâncias e tornar a leitura mais intuitiva.
@@ -392,7 +401,7 @@ ggcorrplot(matriz_corr, lab = T,
             outline.color = "white")
 ```
 
-<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-21-1.png" width="672" style="display: block; margin: auto;" />
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-22-1.png" width="672" style="display: block; margin: auto;" />
 
 ## E então, dinheiro compra inteligência?
 

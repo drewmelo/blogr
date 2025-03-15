@@ -81,10 +81,18 @@ QI médio por país. Além dele, há também o *iq_classification.csv*, que clas
 *"Dotado"*, *"Acima da média"*, e entre outras categorias, de acordo com a faixa de pontuação. Todavia, 
 esse segundo arquivo não será abordado neste artigo.
 
+Afim de facilitar a replicação da análise apresentada neste artigo, disponibilizei os dados no meu *GitHub*. Se preferir, você também pode baixá-los diretamente do *Kaggle* – basta conferir a nota de rodapé e a seção *Referências* ao final.
+
 [^2]: Algumas variáveis, como média de anos de escolaridade, IDH e renda nacional bruta, referem-se a 2021, enquanto os dados populacionais são de 2023.
 
+```{r}
+url <- "https://raw.githubusercontent.com/drewmelo/blogr/master/content/post/2025-03-09-qi-vs-desenvolvimento-o-dinheiro-compra-intelig-ncia/dados/avgIQpercountry.csv"
+```
+
+A partir disso, podemos importar os nossos dados:
+
 ```{r, message=F}
-df <- read_csv("dados/avgIQpercountry.csv") |>
+df <- read_csv(url) |>
   drop_na() |>
   clean_names() |>
   select(!c(continent, literacy_rate)) |> 

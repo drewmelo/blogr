@@ -354,7 +354,7 @@
 
 
                 <time class="article-time--reading">
-                    12 minutos de leitura
+                    13 minutos de leitura
                 </time>
             </div>
         
@@ -401,7 +401,10 @@ países. A base também conta com informações sobre QI médio e o número de P
 QI médio por país. Além dele, há também o <em>iq_classification.csv</em>, que classifica os níveis de QI em <em>&ldquo;Gênio&rdquo;</em>,
 <em>&ldquo;Dotado&rdquo;</em>, <em>&ldquo;Acima da média&rdquo;</em>, e entre outras categorias, de acordo com a faixa de pontuação. Todavia,
 esse segundo arquivo não será abordado neste artigo.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">df</span> <span class="o">&lt;-</span> <span class="nf">read_csv</span><span class="p">(</span><span class="s">&#34;dados/avgIQpercountry.csv&#34;</span><span class="p">)</span> <span class="o">|&gt;</span>
+<p>Afim de facilitar a replicação da análise apresentada neste artigo, disponibilizei os dados no meu <em>GitHub</em>. Se preferir, você também pode baixá-los diretamente do <em>Kaggle</em> – basta conferir a nota de rodapé e a seção <em>Referências</em> ao final.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">url</span> <span class="o">&lt;-</span> <span class="s">&#34;https://raw.githubusercontent.com/drewmelo/blogr/master/content/post/2025-03-09-qi-vs-desenvolvimento-o-dinheiro-compra-intelig-ncia/dados/avgIQpercountry.csv&#34;</span>
+</span></span></code></pre></div><p>A partir disso, podemos importar os nossos dados:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">df</span> <span class="o">&lt;-</span> <span class="nf">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span> <span class="o">|&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="nf">drop_na</span><span class="p">()</span> <span class="o">|&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="nf">clean_names</span><span class="p">()</span> <span class="o">|&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="nf">select</span><span class="p">(</span><span class="o">!</span><span class="nf">c</span><span class="p">(</span><span class="n">continent</span><span class="p">,</span> <span class="n">literacy_rate</span><span class="p">))</span> <span class="o">|&gt;</span> 
@@ -453,7 +456,7 @@ médio. Vale lembrar que correlação não implica causalidade, mesmo que os dad
 </span></span><span class="line"><span class="cl">  <span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">hdi_2021</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">average_iq</span><span class="p">))</span> <span class="o">+</span>
 </span></span><span class="line"><span class="cl">  <span class="nf">geom_point</span><span class="p">(</span><span class="n">col</span> <span class="o">=</span> <span class="s">&#39;steelblue&#39;</span><span class="p">)</span> <span class="o">+</span>
 </span></span><span class="line"><span class="cl">  <span class="nf">theme_minimal</span><span class="p">()</span> 
-</span></span></code></pre></div><img src="https://drewmelo.github.io/blogr/p/qi-vs-desenvolvimento-o-dinheiro-compra-inteligencia/index_files/figure-html/unnamed-chunk-7-1.png" width="672" style="display: block; margin: auto;" />
+</span></span></code></pre></div><img src="https://drewmelo.github.io/blogr/p/qi-vs-desenvolvimento-o-dinheiro-compra-inteligencia/index_files/figure-html/unnamed-chunk-8-1.png" width="672" style="display: block; margin: auto;" />
 <h3 id="tipos-de-correlação-em-estatística">Tipos de correlação em estatística</h3>
 <p>Por padrão, a função <code>cor()</code> calcula o coeficiente de correlação de Pearson, cuja fórmula é dada por:
 $$
@@ -505,7 +508,7 @@ observada com o IDH (0,755) e os anos médios de escolaridade (0,705).</p>
 mais forte com o desenvolvimento cognitivo da população do que a renda nacional bruta isoladamente. A renda pode ser
 um reflexo de melhores condições gerais, <strong>mas é o acesso ao conhecimento e às oportunidades que parecem
 desempenhar um papel mais decisivo</strong>.</p>
-<img src="https://drewmelo.github.io/blogr/p/qi-vs-desenvolvimento-o-dinheiro-compra-inteligencia/index_files/figure-html/unnamed-chunk-10-1.png" width="672" style="display: block; margin: auto;" />
+<img src="https://drewmelo.github.io/blogr/p/qi-vs-desenvolvimento-o-dinheiro-compra-inteligencia/index_files/figure-html/unnamed-chunk-11-1.png" width="672" style="display: block; margin: auto;" />
 <h3 id="gigantes-invisíveis-ou-viés-histórico">Gigantes invisíveis ou viés histórico?</h3>
 <blockquote>
 <p><em>A relação entre o tamanho da população de um país e o número de Prêmios Nobel concedidos a seus cidadãos parece óbvia.</em>
@@ -549,7 +552,7 @@ como ilustrado na Figura (b). Uma relação torna-se exposta e contrária ao que
 <p><em>Até que ponto remover valores extremos ajuda a compreender melhor um fenômeno sem perder parte do
 contexto da nossa análise?</em></p>
 </blockquote>
-<img src="https://drewmelo.github.io/blogr/p/qi-vs-desenvolvimento-o-dinheiro-compra-inteligencia/index_files/figure-html/unnamed-chunk-14-1.png" width="672" style="display: block; margin: auto;" />
+<img src="https://drewmelo.github.io/blogr/p/qi-vs-desenvolvimento-o-dinheiro-compra-inteligencia/index_files/figure-html/unnamed-chunk-15-1.png" width="672" style="display: block; margin: auto;" />
 <p>No fim das contas, esse é um exemplo perfeito de como a estatística pode nos fazer ver padrões diferentes dependendo de como tratamos os dados. Como Darrell Huff argumenta em <em>Como Mentir com Estatística</em>, os números, por si só, não contam toda a verdade — <strong>é a forma como os apresentamos que molda a narrativa</strong>.</p>
 <h3 id="além-da-correlação-de-pearson">Além da correlação de Pearson</h3>
 <p>Para evitar o tipo de situação anterior é importante destacar que, <strong>em um estudo de alcance global, a
@@ -603,13 +606,13 @@ as relações entre todas as variáveis em vez de calcular coeficientes separada
 </span></span><span class="line"><span class="cl">## population_2023                   1.00000000
 </span></span></code></pre></div><p>E graficamente, teriamos esta representação:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">ggcorrplot</span><span class="p">(</span><span class="n">matriz_corr</span><span class="p">,</span> <span class="n">lab</span> <span class="o">=</span> <span class="bp">T</span><span class="p">)</span>
-</span></span></code></pre></div><img src="https://drewmelo.github.io/blogr/p/qi-vs-desenvolvimento-o-dinheiro-compra-inteligencia/index_files/figure-html/unnamed-chunk-19-1.png" width="672" style="display: block; margin: auto;" />
+</span></span></code></pre></div><img src="https://drewmelo.github.io/blogr/p/qi-vs-desenvolvimento-o-dinheiro-compra-inteligencia/index_files/figure-html/unnamed-chunk-20-1.png" width="672" style="display: block; margin: auto;" />
 <p>Se quisermos melhorar a apresentação podemos ordenar os coeficientes de correlação hierarquicamente e
 exibir apenas a metade inferior da matriz, de forma a eliminar redundâncias e tornar a leitura mais intuitiva.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">ggcorrplot</span><span class="p">(</span><span class="n">matriz_corr</span><span class="p">,</span> <span class="n">lab</span> <span class="o">=</span> <span class="bp">T</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">            <span class="n">hc.order</span> <span class="o">=</span> <span class="bp">T</span><span class="p">,</span> <span class="n">type</span> <span class="o">=</span> <span class="s">&#34;lower&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">            <span class="n">outline.color</span> <span class="o">=</span> <span class="s">&#34;white&#34;</span><span class="p">)</span>
-</span></span></code></pre></div><img src="https://drewmelo.github.io/blogr/p/qi-vs-desenvolvimento-o-dinheiro-compra-inteligencia/index_files/figure-html/unnamed-chunk-21-1.png" width="672" style="display: block; margin: auto;" />
+</span></span></code></pre></div><img src="https://drewmelo.github.io/blogr/p/qi-vs-desenvolvimento-o-dinheiro-compra-inteligencia/index_files/figure-html/unnamed-chunk-22-1.png" width="672" style="display: block; margin: auto;" />
 <h2 id="e-então-dinheiro-compra-inteligência">E então, dinheiro compra inteligência?</h2>
 <p>Ao longo desta análise investigamos a relação entre o QI médio e diferentes indicadores de desenvolvimento
 econômico, como o IDH, a média de escolaridade, a renda nacional bruta, além do número de Prêmios Nobel
