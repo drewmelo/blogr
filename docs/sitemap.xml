@@ -3,37 +3,46 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://drewmelo.github.io/blogr/</loc>
-    <lastmod>2023-09-26T00:00:00+00:00</lastmod>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://drewmelo.github.io/blogr/categories/</loc>
-    <lastmod>2023-09-26T00:00:00+00:00</lastmod>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://drewmelo.github.io/blogr/tags/economia/</loc>
-    <lastmod>2023-09-26T00:00:00+00:00</lastmod>
+    <loc>https://drewmelo.github.io/blogr/tags/correla%C3%A7%C3%A3o/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drewmelo.github.io/blogr/categorias/data-science/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drewmelo.github.io/blogr/tags/desenvolvimento-econ%C3%B4mico/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drewmelo.github.io/blogr/tags/estat%C3%ADstica/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drewmelo.github.io/blogr/tags/ggplot2/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drewmelo.github.io/blogr/tags/kaggle/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://drewmelo.github.io/blogr/post/</loc>
-    <lastmod>2023-09-26T00:00:00+00:00</lastmod>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drewmelo.github.io/blogr/p/qi-vs-desenvolvimento-o-dinheiro-compra-inteligencia/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://drewmelo.github.io/blogr/categorias/r/</loc>
-    <lastmod>2023-09-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://drewmelo.github.io/blogr/tags/</loc>
-    <lastmod>2023-09-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://drewmelo.github.io/blogr/p/jogos-sequenciais-e-repetidos/</loc>
-    <lastmod>2023-09-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://drewmelo.github.io/blogr/tags/teoriadosjogos/</loc>
-    <lastmod>2023-09-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://drewmelo.github.io/blogr/categorias/tutorial/</loc>
-    <lastmod>2023-09-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://drewmelo.github.io/blogr/p/jogos-simultaneos/</loc>
-    <lastmod>2023-09-16T00:00:00+00:00</lastmod>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://drewmelo.github.io/blogr/p/sobre-o-blog/</loc>
-    <lastmod>2023-09-15T00:00:00+00:00</lastmod>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drewmelo.github.io/blogr/tags/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drewmelo.github.io/blogr/tags/visualiza%C3%A7%C3%A3o-de-dados/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://drewmelo.github.io/blogr/arquivos/</loc>
     <lastmod>2022-03-06T00:00:00+00:00</lastmod>
@@ -41,10 +50,10 @@
     <loc>https://drewmelo.github.io/blogr/page/</loc>
     <lastmod>2022-03-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://drewmelo.github.io/blogr/categorias/data-science/</loc>
-  </url><url>
     <loc>https://drewmelo.github.io/blogr/procurar/</loc>
   </url><url>
     <loc>https://drewmelo.github.io/blogr/sobre/</loc>
+  </url><url>
+    <loc>https://drewmelo.github.io/blogr/categorias/tutorial/</loc>
   </url>
 </urlset>

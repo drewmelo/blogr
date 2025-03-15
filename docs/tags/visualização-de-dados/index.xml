@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>visualização de dados on André Melo</title>
+        <link>https://drewmelo.github.io/blogr/tags/visualiza%C3%A7%C3%A3o-de-dados/</link>
+        <description>Recent content in visualização de dados on André Melo</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sat, 15 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://drewmelo.github.io/blogr/tags/visualiza%C3%A7%C3%A3o-de-dados/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>QI vs. Desenvolvimento Econômico: o dinheiro compra inteligência?</title>
+        <link>https://drewmelo.github.io/blogr/p/qi-vs-desenvolvimento-o-dinheiro-compra-inteligencia/</link>
+        <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://drewmelo.github.io/blogr/p/qi-vs-desenvolvimento-o-dinheiro-compra-inteligencia/</guid>
+        <description>&lt;img src="https://drewmelo.github.io/blogr/p/qi-vs-desenvolvimento-o-dinheiro-compra-inteligencia/thumb.jpg" alt="Featured image of post QI vs. Desenvolvimento Econômico: o dinheiro compra inteligência?" /&gt;&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
+&lt;p&gt;A ligação entre inteligência, desenvolvimento econômico e produção científica desperta certo interesse.
+Desde a Revolução Científica, quando Galileu e Newton desafiaram os paradigmas do conhecimento,
+até os dias atuais, com os avanços em inteligência artificial, o saber esteve no centro das grandes
+transformações da humanidade. &lt;strong&gt;Mas o que realmente impulsiona esse avanço?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Entre os símbolos máximos da inovação e do avanço científico está o Prêmio Nobel,
+uma honraria concedida às mentes que mais contribuíram para o progresso do conhecimento.
+Algumas nações acumulam dezenas, até centenas de premiações, enquanto outras mal figuram nas estatísticas.
+Essa disparidade levanta uma reflexão:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Será que países com mais laureados possuem QI médio mais alto&lt;/strong&gt;&lt;/em&gt;
+&lt;em&gt;&lt;strong&gt;ou o Prêmio Nobel reflete sobretudo o investimento em ciência e educação?&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Para entender melhor essas relações, recorremos a uma ferramenta fundamental da estatística:
+&lt;strong&gt;o coeficiente de correlação&lt;/strong&gt;. A análise parte da base de dados
+&lt;cite&gt;&lt;em&gt;Average global IQ per country with other stats&lt;/em&gt;&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/cite&gt; (disponível no &lt;em&gt;Kaggle&lt;/em&gt;) extraída do Programa
+das Nações Unidas para o Desenvolvimento (também conhecido internacionalmente como &lt;em&gt;United Nations Development Programme&lt;/em&gt;),
+que inclui informações sobre Índice de Desenvolvimento Humano (IDH), escolaridade e renda nacional bruta dos
+países. A base também conta com informações sobre QI médio e o número de Prêmios Nobel.&lt;/p&gt;
+&lt;h3 id=&#34;pacotes-a-serem-utilizados&#34;&gt;Pacotes a serem utilizados&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;library&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tidyverse&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;library&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;janitor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;library&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ggcorrplot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Caso estes pacotes não estejam instalados, executar comando abaixo.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;install.packages&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;tidyverse&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;install.packages&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;janitor&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;install.packages&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;ggcorrplot&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;importação-de-dados&#34;&gt;Importação de dados&lt;/h3&gt;
+&lt;p&gt;Para esta análise utilizamos o arquivo &lt;cite&gt;avgIQpercountry.csv&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/cite&gt; que reúne informações sobre o
+QI médio por país. Além dele, há também o &lt;em&gt;iq_classification.csv&lt;/em&gt;, que classifica os níveis de QI em &lt;em&gt;&amp;ldquo;Gênio&amp;rdquo;&lt;/em&gt;,
+&lt;em&gt;&amp;ldquo;Dotado&amp;rdquo;&lt;/em&gt;, &lt;em&gt;&amp;ldquo;Acima da média&amp;rdquo;&lt;/em&gt;, e entre outras categorias, de acordo com a faixa de pontuação. Todavia,
+esse segundo arquivo não será abordado neste artigo.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;df&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;read_csv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;dados/avgIQpercountry.csv&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;|&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nf&#34;&gt;drop_na&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;|&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nf&#34;&gt;clean_names&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;|&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nf&#34;&gt;select&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;continent&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;literacy_rate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;|&amp;gt;&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nf&#34;&gt;mutate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;population_2023&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;as.numeric&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;population_2023&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Visualizando estrutura dos dados&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;glimpse&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## Rows: 179
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## Columns: 8
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## $ rank                         &amp;lt;dbl&amp;gt; 1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 1…
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## $ country                      &amp;lt;chr&amp;gt; &amp;#34;Japan&amp;#34;, &amp;#34;Singapore&amp;#34;, &amp;#34;Hong Kong&amp;#34;, &amp;#34;China…
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## $ average_iq                   &amp;lt;dbl&amp;gt; 106.48, 105.89, 105.37, 104.10, 102.35, 1…
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## $ nobel_prices                 &amp;lt;dbl&amp;gt; 29, 0, 1, 8, 0, 2, 5, 0, 111, 22, 0, 2, 0…
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## $ hdi_2021                     &amp;lt;dbl&amp;gt; 0.925, 0.939, 0.952, 0.768, 0.925, 0.808,…
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## $ mean_years_of_schooling_2021 &amp;lt;dbl&amp;gt; 13.4, 11.9, 12.2, 7.6, 12.5, 12.1, 12.9, …
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## $ gni_2021                     &amp;lt;dbl&amp;gt; 42274, 90919, 62607, 17504, 44501, 18849,…
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## $ population_2023              &amp;lt;dbl&amp;gt; 1.232945e+08, 6.014723e+06, 7.491609e+06,…
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Removemos os valores ausentes (&lt;em&gt;NA&lt;/em&gt;) que aparecem nas variáveis &lt;em&gt;hdi_2021&lt;/em&gt;, &lt;em&gt;mean_years_of_schooling_2021&lt;/em&gt; e
+&lt;em&gt;gni_2021&lt;/em&gt;. Se não fossem eliminados, a correlação retornaria um resultado inválido (&lt;em&gt;NA&lt;/em&gt;), a menos que o argumento
+&lt;code&gt;use = &amp;quot;pairwise.complete.obs&amp;quot;&lt;/code&gt; fosse especificado na função &lt;code&gt;cor()&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;o-papel-do-idh-na-inteligência-média-dos-países&#34;&gt;O papel do IDH na inteligência média dos países&lt;/h2&gt;
+&lt;p&gt;Para começar nossa análise podemos pegar e quantificar a relação entre as variaveis &lt;em&gt;average_iq&lt;/em&gt; e
+&lt;em&gt;hdi_2021&lt;/em&gt;. A correlação é feita através da função &lt;code&gt;cor()&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;cor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;average_iq&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hdi_2021&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## [1] 0.7554595
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Por meio do resultado pode-se observar uma correlação positiva forte entre essas variáveis. &lt;strong&gt;Mas como
+posso afirmar que é uma correlação positiva forte?&lt;/strong&gt; Vejamos&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Se $ r $ for positivo (isto é, $ r $ &amp;gt; 0), há uma relação direta: conforme uma variável aumenta,
+a outra tende a crescer também.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Se $ r $ for negativo (isto é, $ r $ &amp;lt; 0), a relação é inversa: o aumento de uma variável está associado
+à redução da outra.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Se $ r = 0$, não há correlação, e se o valor estiver muito próximo de zero, a relação pode ser
+considerada inexistente.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Correlações perfeitas ocorrem quando $ r $ é exatamente 1 (positiva) ou -1 (negativa), mas esse cenário
+tende a ser raro na maioria das análises.&lt;/p&gt;
+&lt;p&gt;No caso em questão, o IDH apresenta uma correlação de 0,755 com o QI médio dos países. Mas como interpretar
+este resultado? Bem, podemos dizer que quanto maior o nível de desenvolvimento humano, maior tende a ser o QI
+médio. Vale lembrar que correlação não implica causalidade, mesmo que os dados mostrem que melhores condições de vida e acesso à educação podem favorecer o desenvolvimento cognitivo de uma população.&lt;/p&gt;
+&lt;p&gt;A visualização dos dados ficaria dessa forma:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;df&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;|&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nf&#34;&gt;ggplot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;aes&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;hdi_2021&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;average_iq&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nf&#34;&gt;geom_point&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;col&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;steelblue&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nf&#34;&gt;theme_minimal&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;https://drewmelo.github.io/blogr/p/qi-vs-desenvolvimento-o-dinheiro-compra-inteligencia/index_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;
+&lt;h3 id=&#34;tipos-de-correlação-em-estatística&#34;&gt;Tipos de correlação em estatística&lt;/h3&gt;
+&lt;p&gt;Por padrão, a função &lt;code&gt;cor()&lt;/code&gt; calcula o coeficiente de correlação de Pearson, cuja fórmula é dada por:
+$$
+r =  \frac{ \sum_{i = 1}^{n} \left( x_{i}- \overline{x} \right) \left( y_{i}- \overline{y} \right)}{ \sqrt{ \left[ \sum_{i = 1}^{n} \left( x_{i}- \overline{x} \right)^{2} \right] \left[ \sum_{i = 1}^{n} \left( y_{i}- \overline{y} \right)^{2} \right]}} \tag{1}
+$$
+onde&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$ x_i, \ y_i $ são os valores individuais das variáveis $ X $ e $ Y $&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$ \bar{x}, \bar{y} $ são as médias de $ X $ e $ Y $&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Na Equação 1 o numerador pode ser representado como $ Cov(X, \ Y) $, que corresponde à covariância, ou seja,
+à média dos produtos dos valores centrados das variáveis. Já o denominador contém $ S_x $ e $ S_y $, que
+representam os desvios padrões amostrais de cada variável (ver Equação 2).&lt;/p&gt;
+&lt;p&gt;$$
+r = \frac{Cov(X, Y)}{S_x \times S_y} \tag{2}
+$$&lt;/p&gt;
+&lt;p&gt;No nosso caso, $ X $ corresponde à variável &lt;em&gt;hdi_2021&lt;/em&gt; e $ Y $ a &lt;em&gt;average_iq&lt;/em&gt;, o qual é facilmente visto na Figura 1.
+O mesmo pode ser feito com outras variáveis, que é o que faremos neste artigo.&lt;/p&gt;
+&lt;p&gt;Além da correlação de pearson, a função &lt;code&gt;cor()&lt;/code&gt; permite outros métodos de cálculo:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;cor(x, y, method = &amp;quot;spearman&amp;quot;)&lt;/code&gt; mede a correlação com base no &lt;em&gt;rank&lt;/em&gt; (posição) dos valores, em vez dos
+valores absolutos. Por ser uma medida não paramétrica, é útil quando os dados não seguem uma distribuição normal.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;cor(x, y, method = &amp;quot;kendall&amp;quot;)&lt;/code&gt; avalia a concordância entre as ordens dos valores das variáveis, ou seja,
+verifica se a relação entre elas se mantém ordenada (exemplo: pares concordantes e discordantes). Além de ser
+menos sensível a &lt;em&gt;outliers&lt;/em&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;educação-e-riqueza-qual-influencia-mais-no-qi-médio&#34;&gt;Educação e riqueza: qual influencia mais no QI médio?&lt;/h2&gt;
+&lt;p&gt;Ao analisarmos outras variáveis também podemos observar a relação entre o QI médio e a média de anos
+de escolaridade.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;cor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;average_iq&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mean_years_of_schooling_2021&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## [1] 0.7054428
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ou alternativamente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;cor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;average_iq&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;gni_2021&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## [1] 0.6348542
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Os resultados mostram uma forte correlação positiva entre o QI médio e a renda nacional bruta, ou neste caso,
+países mais ricos tendem a apresentar populações com elevada inteligência média. Entretanto, mesmo que a
+relação com a renda nacional bruta seja moderadamente forte (0,635), ela não chega a ser tão robusta quanto a
+observada com o IDH (0,755) e os anos médios de escolaridade (0,705).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mas o que isso quer dizer, afinal?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Através dessas comparações e como os dados mostram, fatores como educação e qualidade de vida apresentam correlação
+mais forte com o desenvolvimento cognitivo da população do que a renda nacional bruta isoladamente. A renda pode ser
+um reflexo de melhores condições gerais, &lt;strong&gt;mas é o acesso ao conhecimento e às oportunidades que parecem
+desempenhar um papel mais decisivo&lt;/strong&gt;.&lt;/p&gt;
+&lt;img src=&#34;https://drewmelo.github.io/blogr/p/qi-vs-desenvolvimento-o-dinheiro-compra-inteligencia/index_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;
+&lt;h3 id=&#34;gigantes-invisíveis-ou-viés-histórico&#34;&gt;Gigantes invisíveis ou viés histórico?&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;A relação entre o tamanho da população de um país e o número de Prêmios Nobel concedidos a seus cidadãos parece óbvia.&lt;/em&gt;
+&lt;em&gt;&lt;strong&gt;Quanto mais habitantes, maior a chance de surgir um gênio, certo? Mas os dados contam outra história.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Se olharmos apenas para os números absolutos, os Estados Unidos aparecem como líderes em Prêmios Nobel,
+enquanto China e Índia se tornam praticamente invisíveis. Esse tipo de comparação, porém, desconsidera um
+aspecto fundamental: &lt;strong&gt;o tamanho da população&lt;/strong&gt;. Para tornar a análise mais justa, faz sentido calcular o número
+de prêmios por milhão de habitantes.&lt;/p&gt;
+&lt;p&gt;Os Estados Unidos acumulam 400 Prêmios Nobel para uma população de 340 milhões de pessoas, o que equivale a 1,18
+prêmios por milhão de habitantes. Já o Reino Unido, com 137 prêmios e apenas 67,7 milhões de habitantes,
+registra uma taxa de 2,02 prêmios por milhão, sendo a mais alta entre os países analisados. A China, apesar de
+ter 1,4 bilhão de habitantes e possuir apenas 8 Prêmios Nobel, possui uma taxa de 0,006 prêmios por milhão.&lt;/p&gt;
+&lt;p&gt;Esses números mostram que uma população numerosa não garante uma produção científica de forma proporcional.
+Países menores, mas com tradição científica já estabelecida, como Reino Unido e Alemanha, acabam exercendo um papel desproporcionalmente grande na produção intelectual global. Vemos que &lt;strong&gt;o avanço do conhecimento não depende
+apenas da quantidade de habitantes, mas da prioridade que cada nação dá à ciência&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Para entender melhor a relação entre os dados que mencionamos anteriormente podemos ver que a correlação entre
+população e Prêmios Nobel foi de 0,16, praticamente inexistente, neste caso.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;cor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;population_2023&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nobel_prices&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## [1] 0.1641867
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;quando-os-números-contam-histórias-diferentes&#34;&gt;Quando os números contam histórias diferentes&lt;/h4&gt;
+&lt;p&gt;Existem vários métodos estatísticos para detectar pontos extremos em relação a distribuição dos dados,
+um exemplo é a distância interquatil. De forma bem resumida, esse ponto extremo (ou &lt;em&gt;outlier&lt;/em&gt;, como é
+encontrado na literatura) seria um valor muito distante da média geral, podendo representar tanto
+especificidades interessantes quanto possíveis erros. Contudo, como nosso objetivo aqui é apresentar
+a relação geral entre as variáveis, deixaremos essa investigação mais detalhada dos &lt;em&gt;outliers&lt;/em&gt; para um
+futuro artigo.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Para a variável população&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;outliers_varx&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;boxplot.stats&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;population_2023&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;out&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Para a variável prêmio nobel&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;outliers_vary&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;boxplot.stats&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nobel_prices&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;out&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Aplicamos, então, um filtro para retirar esses valores da base de dados.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;df_outlier&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;df&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;|&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nf&#34;&gt;filter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;population_2023&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%in%&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;outliers_varx&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nobel_prices&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%in%&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;outliers_vary&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Deixamos a cargo do leitor para plotar o objeto &lt;em&gt;df_outlier&lt;/em&gt; em um gráfico de dispersão (representado na Figura 3(a)), semelhante ao que fizemos na Seção 2. &lt;em&gt;O papel do IDH na inteligência média dos países&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;A remoção dos &lt;em&gt;outliers&lt;/em&gt; alterou substancialmente o resultado, elevando a correlação para 0,53,
+como ilustrado na Figura (b). Uma relação torna-se exposta e contrária ao que presenciamos anteriormente: &lt;strong&gt;entre países de porte médio, aqueles com maior população passaram a exibir uma tendência de acumular Prêmios Nobel&lt;/strong&gt;. Porém esse ajuste traz um dilema, ao excluir &lt;em&gt;outliers&lt;/em&gt; deixamos de fora as grandes potências científicas, como os Estados Unidos, que dominam o Prêmio Nobel.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tal ocorrência nos levanta uma importante questão:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Até que ponto remover valores extremos ajuda a compreender melhor um fenômeno sem perder parte do
+contexto da nossa análise?&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;img src=&#34;https://drewmelo.github.io/blogr/p/qi-vs-desenvolvimento-o-dinheiro-compra-inteligencia/index_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;
+&lt;p&gt;No fim das contas, esse é um exemplo perfeito de como a estatística pode nos fazer ver padrões diferentes dependendo de como tratamos os dados. Como Darrell Huff argumenta em &lt;em&gt;Como Mentir com Estatística&lt;/em&gt;, os números, por si só, não contam toda a verdade — &lt;strong&gt;é a forma como os apresentamos que molda a narrativa&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;além-da-correlação-de-pearson&#34;&gt;Além da correlação de Pearson&lt;/h3&gt;
+&lt;p&gt;Para evitar o tipo de situação anterior é importante destacar que, &lt;strong&gt;em um estudo de alcance global, a
+remoção de &lt;em&gt;outliers&lt;/em&gt; nem sempre seria justificável&lt;/strong&gt;. Além do risco de eliminar informações relevantes,
+&lt;strong&gt;reduzir demais a amostra pode comprometer a representatividade dos dados&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Como mencionado na Seção 2.1. &lt;em&gt;Tipos de correlação em estatística&lt;/em&gt;, há diferentes formas de calcular o
+coeficiente de correlação. O método de Pearson, por sua vez, resultou em uma correlação de 0,16
+entre população e Prêmios Nobel. Quando aplicamos o método de Kendall, que é mais resistente para dados
+com &lt;em&gt;outliers&lt;/em&gt; ou relações não lineares, o coeficiente aumentou para 0,29. Ainda é uma correlação fraca,
+mas um pouco mais crível.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;cor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;population_2023&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nobel_prices&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;method&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;kendall&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## [1] 0.2895059
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Se a análise envolver variáveis ordinais, como &lt;em&gt;rankings&lt;/em&gt;, o coeficiente de Spearman pode ser mais adequado.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;cor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rank&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hdi_2021&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;method&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;spearman&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## [1] -0.7945742
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A variável &lt;em&gt;rank&lt;/em&gt; representa a posição dos países em um determinado &lt;em&gt;ranking&lt;/em&gt;, como primeiro, segundo,
+terceiro lugar e assim por diante. Quando esse &lt;em&gt;ranking&lt;/em&gt; se refere ao QI médio, é natural observar que
+países mais bem posicionados (com valores menores de &lt;em&gt;rank&lt;/em&gt;) tendem a apresentar um IDH mais elevado. A
+relação inversa entre essas duas variáveis explica a forte correlação negativa.&lt;/p&gt;
+&lt;h3 id=&#34;matriz-de-correlações&#34;&gt;Matriz de correlações&lt;/h3&gt;
+&lt;p&gt;Outra abordagem, bastante útil por sinal, é a matriz de correlações, que nos ajuda a visualizar de forma geral
+as relações entre todas as variáveis em vez de calcular coeficientes separadamente. Assim como ocorre com o resultado da função &lt;code&gt;cor()&lt;/code&gt;, cada célula dessa matriz contém um valor entre -1 e 1 entre uma variável (linha) e outra variável (coluna).&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;matriz_corr&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;df&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;|&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nf&#34;&gt;select&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;country&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;|&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nf&#34;&gt;cor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;matriz_corr&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##                                     rank  average_iq nobel_prices    hdi_2021
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## rank                          1.00000000 -0.97445416   -0.2302831 -0.77737636
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## average_iq                   -0.97445416  1.00000000    0.2144355  0.75545950
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## nobel_prices                 -0.23028314  0.21443550    1.0000000  0.23089587
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## hdi_2021                     -0.77737636  0.75545950    0.2308959  1.00000000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## mean_years_of_schooling_2021 -0.72746085  0.70544282    0.2339327  0.91475026
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## gni_2021                     -0.66128515  0.63485419    0.2692844  0.78779905
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## population_2023              -0.04848491  0.07333404    0.1641867 -0.02836039
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##                              mean_years_of_schooling_2021    gni_2021
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## rank                                          -0.72746085 -0.66128515
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## average_iq                                     0.70544282  0.63485419
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## nobel_prices                                   0.23393267  0.26928442
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## hdi_2021                                       0.91475026  0.78779905
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## mean_years_of_schooling_2021                   1.00000000  0.66183364
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## gni_2021                                       0.66183364  1.00000000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## population_2023                               -0.07112675 -0.05311802
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##                              population_2023
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## rank                             -0.04848491
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## average_iq                        0.07333404
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## nobel_prices                      0.16418671
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## hdi_2021                         -0.02836039
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## mean_years_of_schooling_2021     -0.07112675
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## gni_2021                         -0.05311802
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## population_2023                   1.00000000
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;E graficamente, teriamos esta representação:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;ggcorrplot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;matriz_corr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;lab&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;https://drewmelo.github.io/blogr/p/qi-vs-desenvolvimento-o-dinheiro-compra-inteligencia/index_files/figure-html/unnamed-chunk-19-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;
+&lt;p&gt;Se quisermos melhorar a apresentação podemos ordenar os coeficientes de correlação hierarquicamente e
+exibir apenas a metade inferior da matriz, de forma a eliminar redundâncias e tornar a leitura mais intuitiva.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;ggcorrplot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;matriz_corr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;lab&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;hc.order&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;lower&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;outline.color&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;white&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;https://drewmelo.github.io/blogr/p/qi-vs-desenvolvimento-o-dinheiro-compra-inteligencia/index_files/figure-html/unnamed-chunk-21-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;
+&lt;h2 id=&#34;e-então-dinheiro-compra-inteligência&#34;&gt;E então, dinheiro compra inteligência?&lt;/h2&gt;
+&lt;p&gt;Ao longo desta análise investigamos a relação entre o QI médio e diferentes indicadores de desenvolvimento
+econômico, como o IDH, a média de escolaridade, a renda nacional bruta, além do número de Prêmios Nobel
+conquistados. A questão central — se o dinheiro pode comprar inteligência — &lt;strong&gt;não tem uma resposta
+simples&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Os dados sugerem que países com IDH elevado e maior acesso à educação costumam apresentar um QI médio mais alto.
+A forte correlação entre essas variáveis mostra que &lt;strong&gt;um ambiente propício ao aprendizado e à qualidade de vida
+influencia diretamente o desenvolvimento cognitivo da população&lt;/strong&gt;. Já a relação com a riqueza isolada, medida
+pela renda nacional bruta, é menos evidente. Uma economia forte, por si só, não garante uma população
+mais inteligente, &lt;strong&gt;a menos que os recursos sejam direcionados para educação e bem-estar social&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;A distribuição dos prêmios Nobel nos reforça essa complexidade. Países populosos, como China e Índia,
+não necessariamente acumulam mais laureados, enquanto nações menores, como Reino Unido e Alemanha,
+concentram grande parte das premiações.&lt;/p&gt;
+&lt;p&gt;Vale ressaltar que, &lt;strong&gt;embora os dados mostrem padrões interessantes, isso não significa que uma variável seja a
+causa direta da outra&lt;/strong&gt;. O fato de países com maior IDH e mais anos de escolaridade apresentarem QI médio mais
+alto não implica, necessariamente, que um fator seja a causa direta do outro. Assim como inteligência e
+inovação não surgem apenas da riqueza ou do tamanho da população, mas de um ambiente que amplie o
+acesso ao conhecimento e estimule a pesquisa. Se há algo que os dados deixam claro, como também me
+arrisco a afirmar, &lt;strong&gt;é que o progresso intelectual de um país não está no dinheiro em si, mas na forma
+como ele é investido&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;referências&#34;&gt;Referências&lt;/h2&gt;
+&lt;p&gt;BUSSAB, Wilton de Oliveira; MORETTIN, Pedro Alberto. &lt;em&gt;Estatística Básica&lt;/em&gt;. 10. ed. São Paulo: Saraiva Uni, 2023. 624 p. ISBN 978-6587958491.&lt;/p&gt;
+&lt;p&gt;MLIPPO. Average global IQ per country with other stats. Kaggle, 2024. Disponível em: &lt;a class=&#34;link&#34; href=&#34;https://www.kaggle.com/datasets/mlippo/average-global-iq-per-country-with-other-stats&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.kaggle.com/datasets/mlippo/average-global-iq-per-country-with-other-stats&lt;/a&gt;
+. Acesso em: 12 mar. 2025.&lt;/p&gt;
+&lt;p&gt;HUFF, Darrell. &lt;em&gt;Como mentir com estatística&lt;/em&gt;. Editora Intrinseca, 2016.&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;Os dados podem ser baixados &lt;a class=&#34;link&#34; href=&#34;https://www.kaggle.com/datasets/mlippo/average-global-iq-per-country-with-other-stats/data?select=iq_classification.csv&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;aqui&lt;/a&gt;
+.&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
+&lt;p&gt;Algumas variáveis, como média de anos de escolaridade, IDH e renda nacional bruta, referem-se a 2021, enquanto os dados populacionais são de 2023.&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

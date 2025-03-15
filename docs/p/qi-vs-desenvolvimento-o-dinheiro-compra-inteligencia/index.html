@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Se um país se torna mais rico, sua população também se torna mais inteligente? O coeficiente de correlação nos ajuda a interpretar essa relação.'>
+<title>QI vs. Desenvolvimento Econômico: o dinheiro compra inteligência?</title>
+
+<link rel='canonical' href='https://drewmelo.github.io/blogr/p/qi-vs-desenvolvimento-o-dinheiro-compra-inteligencia/'>
+
+<link rel="stylesheet" href="/blogr/scss/style.min.9f7d7a2ee698af80358224ed462ba8784436bb2e451dc79d1e00c75f2790e9a0.css"><meta property='og:title' content='QI vs. Desenvolvimento Econômico: o dinheiro compra inteligência?'>
+<meta property='og:description' content='Se um país se torna mais rico, sua população também se torna mais inteligente? O coeficiente de correlação nos ajuda a interpretar essa relação.'>
+<meta property='og:url' content='https://drewmelo.github.io/blogr/p/qi-vs-desenvolvimento-o-dinheiro-compra-inteligencia/'>
+<meta property='og:site_name' content='André Melo'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='desenvolvimento econômico' /><meta property='article:tag' content='kaggle' /><meta property='article:tag' content='estatística' /><meta property='article:tag' content='ggplot2' /><meta property='article:tag' content='correlação' /><meta property='article:tag' content='visualização de dados' /><meta property='article:published_time' content='2025-03-15T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-03-15T00:00:00&#43;00:00'/><meta property='og:image' content='https://drewmelo.github.io/blogr/p/qi-vs-desenvolvimento-o-dinheiro-compra-inteligencia/thumb.jpg' />
+<meta name="twitter:title" content="QI vs. Desenvolvimento Econômico: o dinheiro compra inteligência?">
+<meta name="twitter:description" content="Se um país se torna mais rico, sua população também se torna mais inteligente? O coeficiente de correlação nos ajuda a interpretar essa relação."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://drewmelo.github.io/blogr/p/qi-vs-desenvolvimento-o-dinheiro-compra-inteligencia/thumb.jpg' />
+    <link rel="shortcut icon" href="/static/favicon.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Alternar Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/blogr/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/blogr/img/avatar_hua6a247bdde62458d08bf780fd26538db_182098_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/blogr">André Melo</a></h1>
+            <h2 class="site-description">Seja bem vindo ao blog!</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/drewmelo'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.instagram.com/dreew.mello/'
+                        target="_blank"
+                        title="Instagram"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
+  <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+  <path d="M16.5 7.5l0 .01" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/blogr/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blogr/arquivos/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Arquivos</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blogr/procurar/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Procurar</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blogr/sobre/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>Sobre</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Modo Dark</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Índice</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#introdução">Introdução</a>
+      <ol>
+        <li><a href="#pacotes-a-serem-utilizados">Pacotes a serem utilizados</a></li>
+        <li><a href="#importação-de-dados">Importação de dados</a></li>
+      </ol>
+    </li>
+    <li><a href="#o-papel-do-idh-na-inteligência-média-dos-países">O papel do IDH na inteligência média dos países</a>
+      <ol>
+        <li><a href="#tipos-de-correlação-em-estatística">Tipos de correlação em estatística</a></li>
+      </ol>
+    </li>
+    <li><a href="#educação-e-riqueza-qual-influencia-mais-no-qi-médio">Educação e riqueza: qual influencia mais no QI médio?</a>
+      <ol>
+        <li><a href="#gigantes-invisíveis-ou-viés-histórico">Gigantes invisíveis ou viés histórico?</a>
+          <ol>
+            <li><a href="#quando-os-números-contam-histórias-diferentes">Quando os números contam histórias diferentes</a></li>
+          </ol>
+        </li>
+        <li><a href="#além-da-correlação-de-pearson">Além da correlação de Pearson</a></li>
+        <li><a href="#matriz-de-correlações">Matriz de correlações</a></li>
+      </ol>
+    </li>
+    <li><a href="#e-então-dinheiro-compra-inteligência">E então, dinheiro compra inteligência?</a></li>
+    <li><a href="#referências">Referências</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/blogr/p/qi-vs-desenvolvimento-o-dinheiro-compra-inteligencia/">
+                <img src="/blogr/p/qi-vs-desenvolvimento-o-dinheiro-compra-inteligencia/thumb.jpg"
+                        
+                        width="1365" 
+                        height="768" 
+                        loading="lazy"
+                        alt="Featured image of post QI vs. Desenvolvimento Econômico: o dinheiro compra inteligência?" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/blogr/categorias/data-science/" style="background-color: #22668D; color: #fff;">
+                Data Science
+            </a>
+        
+            <a href="/blogr/categorias/r/" style="background-color: #475bb2; color: #fff;">
+                R
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/blogr/p/qi-vs-desenvolvimento-o-dinheiro-compra-inteligencia/">QI vs. Desenvolvimento Econômico: o dinheiro compra inteligência?</a>
+        </h2>
+
+        
+        <h3 class="article-subtitle">
+            Se um país se torna mais rico, sua população também se torna mais inteligente? O coeficiente de correlação nos ajuda a interpretar essa relação.
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 15, 2025</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    12 minutos de leitura
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="introdução">Introdução</h2>
+<p>A ligação entre inteligência, desenvolvimento econômico e produção científica desperta certo interesse.
+Desde a Revolução Científica, quando Galileu e Newton desafiaram os paradigmas do conhecimento,
+até os dias atuais, com os avanços em inteligência artificial, o saber esteve no centro das grandes
+transformações da humanidade. <strong>Mas o que realmente impulsiona esse avanço?</strong></p>
+<p>Entre os símbolos máximos da inovação e do avanço científico está o Prêmio Nobel,
+uma honraria concedida às mentes que mais contribuíram para o progresso do conhecimento.
+Algumas nações acumulam dezenas, até centenas de premiações, enquanto outras mal figuram nas estatísticas.
+Essa disparidade levanta uma reflexão:</p>
+<blockquote>
+<p><em><strong>Será que países com mais laureados possuem QI médio mais alto</strong></em>
+<em><strong>ou o Prêmio Nobel reflete sobretudo o investimento em ciência e educação?</strong></em></p>
+</blockquote>
+<p>Para entender melhor essas relações, recorremos a uma ferramenta fundamental da estatística:
+<strong>o coeficiente de correlação</strong>. A análise parte da base de dados
+<cite><em>Average global IQ per country with other stats</em><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></cite> (disponível no <em>Kaggle</em>) extraída do Programa
+das Nações Unidas para o Desenvolvimento (também conhecido internacionalmente como <em>United Nations Development Programme</em>),
+que inclui informações sobre Índice de Desenvolvimento Humano (IDH), escolaridade e renda nacional bruta dos
+países. A base também conta com informações sobre QI médio e o número de Prêmios Nobel.</p>
+<h3 id="pacotes-a-serem-utilizados">Pacotes a serem utilizados</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">janitor</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">ggcorrplot</span><span class="p">)</span>
+</span></span></code></pre></div><p>Caso estes pacotes não estejam instalados, executar comando abaixo.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">install.packages</span><span class="p">(</span><span class="s">&#34;tidyverse&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">install.packages</span><span class="p">(</span><span class="s">&#34;janitor&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">install.packages</span><span class="p">(</span><span class="s">&#34;ggcorrplot&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><h3 id="importação-de-dados">Importação de dados</h3>
+<p>Para esta análise utilizamos o arquivo <cite>avgIQpercountry.csv<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></cite> que reúne informações sobre o
+QI médio por país. Além dele, há também o <em>iq_classification.csv</em>, que classifica os níveis de QI em <em>&ldquo;Gênio&rdquo;</em>,
+<em>&ldquo;Dotado&rdquo;</em>, <em>&ldquo;Acima da média&rdquo;</em>, e entre outras categorias, de acordo com a faixa de pontuação. Todavia,
+esse segundo arquivo não será abordado neste artigo.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">df</span> <span class="o">&lt;-</span> <span class="nf">read_csv</span><span class="p">(</span><span class="s">&#34;dados/avgIQpercountry.csv&#34;</span><span class="p">)</span> <span class="o">|&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">drop_na</span><span class="p">()</span> <span class="o">|&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">clean_names</span><span class="p">()</span> <span class="o">|&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">select</span><span class="p">(</span><span class="o">!</span><span class="nf">c</span><span class="p">(</span><span class="n">continent</span><span class="p">,</span> <span class="n">literacy_rate</span><span class="p">))</span> <span class="o">|&gt;</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">mutate</span><span class="p">(</span><span class="n">population_2023</span> <span class="o">=</span> <span class="nf">as.numeric</span><span class="p">(</span><span class="n">population_2023</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Visualizando estrutura dos dados</span>
+</span></span><span class="line"><span class="cl"><span class="nf">glimpse</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## Rows: 179
+</span></span><span class="line"><span class="cl">## Columns: 8
+</span></span><span class="line"><span class="cl">## $ rank                         &lt;dbl&gt; 1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 1…
+</span></span><span class="line"><span class="cl">## $ country                      &lt;chr&gt; &#34;Japan&#34;, &#34;Singapore&#34;, &#34;Hong Kong&#34;, &#34;China…
+</span></span><span class="line"><span class="cl">## $ average_iq                   &lt;dbl&gt; 106.48, 105.89, 105.37, 104.10, 102.35, 1…
+</span></span><span class="line"><span class="cl">## $ nobel_prices                 &lt;dbl&gt; 29, 0, 1, 8, 0, 2, 5, 0, 111, 22, 0, 2, 0…
+</span></span><span class="line"><span class="cl">## $ hdi_2021                     &lt;dbl&gt; 0.925, 0.939, 0.952, 0.768, 0.925, 0.808,…
+</span></span><span class="line"><span class="cl">## $ mean_years_of_schooling_2021 &lt;dbl&gt; 13.4, 11.9, 12.2, 7.6, 12.5, 12.1, 12.9, …
+</span></span><span class="line"><span class="cl">## $ gni_2021                     &lt;dbl&gt; 42274, 90919, 62607, 17504, 44501, 18849,…
+</span></span><span class="line"><span class="cl">## $ population_2023              &lt;dbl&gt; 1.232945e+08, 6.014723e+06, 7.491609e+06,…
+</span></span></code></pre></div><p>Removemos os valores ausentes (<em>NA</em>) que aparecem nas variáveis <em>hdi_2021</em>, <em>mean_years_of_schooling_2021</em> e
+<em>gni_2021</em>. Se não fossem eliminados, a correlação retornaria um resultado inválido (<em>NA</em>), a menos que o argumento
+<code>use = &quot;pairwise.complete.obs&quot;</code> fosse especificado na função <code>cor()</code>.</p>
+<h2 id="o-papel-do-idh-na-inteligência-média-dos-países">O papel do IDH na inteligência média dos países</h2>
+<p>Para começar nossa análise podemos pegar e quantificar a relação entre as variaveis <em>average_iq</em> e
+<em>hdi_2021</em>. A correlação é feita através da função <code>cor()</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">cor</span><span class="p">(</span><span class="n">df</span><span class="o">$</span><span class="n">average_iq</span><span class="p">,</span> <span class="n">df</span><span class="o">$</span><span class="n">hdi_2021</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## [1] 0.7554595
+</span></span></code></pre></div><p>Por meio do resultado pode-se observar uma correlação positiva forte entre essas variáveis. <strong>Mas como
+posso afirmar que é uma correlação positiva forte?</strong> Vejamos</p>
+<ul>
+<li>
+<p>Se $ r $ for positivo (isto é, $ r $ &gt; 0), há uma relação direta: conforme uma variável aumenta,
+a outra tende a crescer também.</p>
+</li>
+<li>
+<p>Se $ r $ for negativo (isto é, $ r $ &lt; 0), a relação é inversa: o aumento de uma variável está associado
+à redução da outra.</p>
+</li>
+<li>
+<p>Se $ r = 0$, não há correlação, e se o valor estiver muito próximo de zero, a relação pode ser
+considerada inexistente.</p>
+</li>
+</ul>
+<p>Correlações perfeitas ocorrem quando $ r $ é exatamente 1 (positiva) ou -1 (negativa), mas esse cenário
+tende a ser raro na maioria das análises.</p>
+<p>No caso em questão, o IDH apresenta uma correlação de 0,755 com o QI médio dos países. Mas como interpretar
+este resultado? Bem, podemos dizer que quanto maior o nível de desenvolvimento humano, maior tende a ser o QI
+médio. Vale lembrar que correlação não implica causalidade, mesmo que os dados mostrem que melhores condições de vida e acesso à educação podem favorecer o desenvolvimento cognitivo de uma população.</p>
+<p>A visualização dos dados ficaria dessa forma:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">df</span> <span class="o">|&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">hdi_2021</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">average_iq</span><span class="p">))</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">geom_point</span><span class="p">(</span><span class="n">col</span> <span class="o">=</span> <span class="s">&#39;steelblue&#39;</span><span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">theme_minimal</span><span class="p">()</span> 
+</span></span></code></pre></div><img src="https://drewmelo.github.io/blogr/p/qi-vs-desenvolvimento-o-dinheiro-compra-inteligencia/index_files/figure-html/unnamed-chunk-7-1.png" width="672" style="display: block; margin: auto;" />
+<h3 id="tipos-de-correlação-em-estatística">Tipos de correlação em estatística</h3>
+<p>Por padrão, a função <code>cor()</code> calcula o coeficiente de correlação de Pearson, cuja fórmula é dada por:
+$$
+r =  \frac{ \sum_{i = 1}^{n} \left( x_{i}- \overline{x} \right) \left( y_{i}- \overline{y} \right)}{ \sqrt{ \left[ \sum_{i = 1}^{n} \left( x_{i}- \overline{x} \right)^{2} \right] \left[ \sum_{i = 1}^{n} \left( y_{i}- \overline{y} \right)^{2} \right]}} \tag{1}
+$$
+onde</p>
+<ul>
+<li>
+<p>$ x_i, \ y_i $ são os valores individuais das variáveis $ X $ e $ Y $</p>
+</li>
+<li>
+<p>$ \bar{x}, \bar{y} $ são as médias de $ X $ e $ Y $</p>
+</li>
+</ul>
+<p>Na Equação 1 o numerador pode ser representado como $ Cov(X, \ Y) $, que corresponde à covariância, ou seja,
+à média dos produtos dos valores centrados das variáveis. Já o denominador contém $ S_x $ e $ S_y $, que
+representam os desvios padrões amostrais de cada variável (ver Equação 2).</p>
+<p>$$
+r = \frac{Cov(X, Y)}{S_x \times S_y} \tag{2}
+$$</p>
+<p>No nosso caso, $ X $ corresponde à variável <em>hdi_2021</em> e $ Y $ a <em>average_iq</em>, o qual é facilmente visto na Figura 1.
+O mesmo pode ser feito com outras variáveis, que é o que faremos neste artigo.</p>
+<p>Além da correlação de pearson, a função <code>cor()</code> permite outros métodos de cálculo:</p>
+<ul>
+<li>
+<p><code>cor(x, y, method = &quot;spearman&quot;)</code> mede a correlação com base no <em>rank</em> (posição) dos valores, em vez dos
+valores absolutos. Por ser uma medida não paramétrica, é útil quando os dados não seguem uma distribuição normal.</p>
+</li>
+<li>
+<p><code>cor(x, y, method = &quot;kendall&quot;)</code> avalia a concordância entre as ordens dos valores das variáveis, ou seja,
+verifica se a relação entre elas se mantém ordenada (exemplo: pares concordantes e discordantes). Além de ser
+menos sensível a <em>outliers</em>.</p>
+</li>
+</ul>
+<h2 id="educação-e-riqueza-qual-influencia-mais-no-qi-médio">Educação e riqueza: qual influencia mais no QI médio?</h2>
+<p>Ao analisarmos outras variáveis também podemos observar a relação entre o QI médio e a média de anos
+de escolaridade.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">cor</span><span class="p">(</span><span class="n">df</span><span class="o">$</span><span class="n">average_iq</span><span class="p">,</span> <span class="n">df</span><span class="o">$</span><span class="n">mean_years_of_schooling_2021</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## [1] 0.7054428
+</span></span></code></pre></div><p>Ou alternativamente:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">cor</span><span class="p">(</span><span class="n">df</span><span class="o">$</span><span class="n">average_iq</span><span class="p">,</span> <span class="n">df</span><span class="o">$</span><span class="n">gni_2021</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## [1] 0.6348542
+</span></span></code></pre></div><p>Os resultados mostram uma forte correlação positiva entre o QI médio e a renda nacional bruta, ou neste caso,
+países mais ricos tendem a apresentar populações com elevada inteligência média. Entretanto, mesmo que a
+relação com a renda nacional bruta seja moderadamente forte (0,635), ela não chega a ser tão robusta quanto a
+observada com o IDH (0,755) e os anos médios de escolaridade (0,705).</p>
+<p><strong>Mas o que isso quer dizer, afinal?</strong></p>
+<p>Através dessas comparações e como os dados mostram, fatores como educação e qualidade de vida apresentam correlação
+mais forte com o desenvolvimento cognitivo da população do que a renda nacional bruta isoladamente. A renda pode ser
+um reflexo de melhores condições gerais, <strong>mas é o acesso ao conhecimento e às oportunidades que parecem
+desempenhar um papel mais decisivo</strong>.</p>
+<img src="https://drewmelo.github.io/blogr/p/qi-vs-desenvolvimento-o-dinheiro-compra-inteligencia/index_files/figure-html/unnamed-chunk-10-1.png" width="672" style="display: block; margin: auto;" />
+<h3 id="gigantes-invisíveis-ou-viés-histórico">Gigantes invisíveis ou viés histórico?</h3>
+<blockquote>
+<p><em>A relação entre o tamanho da população de um país e o número de Prêmios Nobel concedidos a seus cidadãos parece óbvia.</em>
+<em><strong>Quanto mais habitantes, maior a chance de surgir um gênio, certo? Mas os dados contam outra história.</strong></em></p>
+</blockquote>
+<p>Se olharmos apenas para os números absolutos, os Estados Unidos aparecem como líderes em Prêmios Nobel,
+enquanto China e Índia se tornam praticamente invisíveis. Esse tipo de comparação, porém, desconsidera um
+aspecto fundamental: <strong>o tamanho da população</strong>. Para tornar a análise mais justa, faz sentido calcular o número
+de prêmios por milhão de habitantes.</p>
+<p>Os Estados Unidos acumulam 400 Prêmios Nobel para uma população de 340 milhões de pessoas, o que equivale a 1,18
+prêmios por milhão de habitantes. Já o Reino Unido, com 137 prêmios e apenas 67,7 milhões de habitantes,
+registra uma taxa de 2,02 prêmios por milhão, sendo a mais alta entre os países analisados. A China, apesar de
+ter 1,4 bilhão de habitantes e possuir apenas 8 Prêmios Nobel, possui uma taxa de 0,006 prêmios por milhão.</p>
+<p>Esses números mostram que uma população numerosa não garante uma produção científica de forma proporcional.
+Países menores, mas com tradição científica já estabelecida, como Reino Unido e Alemanha, acabam exercendo um papel desproporcionalmente grande na produção intelectual global. Vemos que <strong>o avanço do conhecimento não depende
+apenas da quantidade de habitantes, mas da prioridade que cada nação dá à ciência</strong>.</p>
+<p>Para entender melhor a relação entre os dados que mencionamos anteriormente podemos ver que a correlação entre
+população e Prêmios Nobel foi de 0,16, praticamente inexistente, neste caso.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">cor</span><span class="p">(</span><span class="n">df</span><span class="o">$</span><span class="n">population_2023</span><span class="p">,</span> <span class="n">df</span><span class="o">$</span><span class="n">nobel_prices</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## [1] 0.1641867
+</span></span></code></pre></div><h4 id="quando-os-números-contam-histórias-diferentes">Quando os números contam histórias diferentes</h4>
+<p>Existem vários métodos estatísticos para detectar pontos extremos em relação a distribuição dos dados,
+um exemplo é a distância interquatil. De forma bem resumida, esse ponto extremo (ou <em>outlier</em>, como é
+encontrado na literatura) seria um valor muito distante da média geral, podendo representar tanto
+especificidades interessantes quanto possíveis erros. Contudo, como nosso objetivo aqui é apresentar
+a relação geral entre as variáveis, deixaremos essa investigação mais detalhada dos <em>outliers</em> para um
+futuro artigo.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Para a variável população</span>
+</span></span><span class="line"><span class="cl"><span class="n">outliers_varx</span> <span class="o">&lt;-</span> <span class="nf">boxplot.stats</span><span class="p">(</span><span class="n">df</span><span class="o">$</span><span class="n">population_2023</span><span class="p">)</span><span class="o">$</span><span class="n">out</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Para a variável prêmio nobel</span>
+</span></span><span class="line"><span class="cl"><span class="n">outliers_vary</span> <span class="o">&lt;-</span> <span class="nf">boxplot.stats</span><span class="p">(</span><span class="n">df</span><span class="o">$</span><span class="n">nobel_prices</span><span class="p">)</span><span class="o">$</span><span class="n">out</span>
+</span></span></code></pre></div><p>Aplicamos, então, um filtro para retirar esses valores da base de dados.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">df_outlier</span> <span class="o">&lt;-</span> <span class="n">df</span> <span class="o">|&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">filter</span><span class="p">(</span><span class="o">!</span><span class="n">population_2023</span> <span class="o">%in%</span> <span class="n">outliers_varx</span> <span class="o">&amp;</span> <span class="n">nobel_prices</span> <span class="o">%in%</span> <span class="n">outliers_vary</span><span class="p">)</span>
+</span></span></code></pre></div><p>Deixamos a cargo do leitor para plotar o objeto <em>df_outlier</em> em um gráfico de dispersão (representado na Figura 3(a)), semelhante ao que fizemos na Seção 2. <em>O papel do IDH na inteligência média dos países</em>.</p>
+<p>A remoção dos <em>outliers</em> alterou substancialmente o resultado, elevando a correlação para 0,53,
+como ilustrado na Figura (b). Uma relação torna-se exposta e contrária ao que presenciamos anteriormente: <strong>entre países de porte médio, aqueles com maior população passaram a exibir uma tendência de acumular Prêmios Nobel</strong>. Porém esse ajuste traz um dilema, ao excluir <em>outliers</em> deixamos de fora as grandes potências científicas, como os Estados Unidos, que dominam o Prêmio Nobel.</p>
+<p><strong>Tal ocorrência nos levanta uma importante questão:</strong></p>
+<blockquote>
+<p><em>Até que ponto remover valores extremos ajuda a compreender melhor um fenômeno sem perder parte do
+contexto da nossa análise?</em></p>
+</blockquote>
+<img src="https://drewmelo.github.io/blogr/p/qi-vs-desenvolvimento-o-dinheiro-compra-inteligencia/index_files/figure-html/unnamed-chunk-14-1.png" width="672" style="display: block; margin: auto;" />
+<p>No fim das contas, esse é um exemplo perfeito de como a estatística pode nos fazer ver padrões diferentes dependendo de como tratamos os dados. Como Darrell Huff argumenta em <em>Como Mentir com Estatística</em>, os números, por si só, não contam toda a verdade — <strong>é a forma como os apresentamos que molda a narrativa</strong>.</p>
+<h3 id="além-da-correlação-de-pearson">Além da correlação de Pearson</h3>
+<p>Para evitar o tipo de situação anterior é importante destacar que, <strong>em um estudo de alcance global, a
+remoção de <em>outliers</em> nem sempre seria justificável</strong>. Além do risco de eliminar informações relevantes,
+<strong>reduzir demais a amostra pode comprometer a representatividade dos dados</strong>.</p>
+<p>Como mencionado na Seção 2.1. <em>Tipos de correlação em estatística</em>, há diferentes formas de calcular o
+coeficiente de correlação. O método de Pearson, por sua vez, resultou em uma correlação de 0,16
+entre população e Prêmios Nobel. Quando aplicamos o método de Kendall, que é mais resistente para dados
+com <em>outliers</em> ou relações não lineares, o coeficiente aumentou para 0,29. Ainda é uma correlação fraca,
+mas um pouco mais crível.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">cor</span><span class="p">(</span><span class="n">df</span><span class="o">$</span><span class="n">population_2023</span><span class="p">,</span> <span class="n">df</span><span class="o">$</span><span class="n">nobel_prices</span><span class="p">,</span> <span class="n">method</span> <span class="o">=</span> <span class="s">&#34;kendall&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## [1] 0.2895059
+</span></span></code></pre></div><p>Se a análise envolver variáveis ordinais, como <em>rankings</em>, o coeficiente de Spearman pode ser mais adequado.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">cor</span><span class="p">(</span><span class="n">df</span><span class="o">$</span><span class="n">rank</span><span class="p">,</span> <span class="n">df</span><span class="o">$</span><span class="n">hdi_2021</span><span class="p">,</span> <span class="n">method</span> <span class="o">=</span> <span class="s">&#34;spearman&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## [1] -0.7945742
+</span></span></code></pre></div><p>A variável <em>rank</em> representa a posição dos países em um determinado <em>ranking</em>, como primeiro, segundo,
+terceiro lugar e assim por diante. Quando esse <em>ranking</em> se refere ao QI médio, é natural observar que
+países mais bem posicionados (com valores menores de <em>rank</em>) tendem a apresentar um IDH mais elevado. A
+relação inversa entre essas duas variáveis explica a forte correlação negativa.</p>
+<h3 id="matriz-de-correlações">Matriz de correlações</h3>
+<p>Outra abordagem, bastante útil por sinal, é a matriz de correlações, que nos ajuda a visualizar de forma geral
+as relações entre todas as variáveis em vez de calcular coeficientes separadamente. Assim como ocorre com o resultado da função <code>cor()</code>, cada célula dessa matriz contém um valor entre -1 e 1 entre uma variável (linha) e outra variável (coluna).</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">matriz_corr</span> <span class="o">&lt;-</span> <span class="n">df</span> <span class="o">|&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">select</span><span class="p">(</span><span class="o">!</span><span class="n">country</span><span class="p">)</span> <span class="o">|&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">cor</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">matriz_corr</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">##                                     rank  average_iq nobel_prices    hdi_2021
+</span></span><span class="line"><span class="cl">## rank                          1.00000000 -0.97445416   -0.2302831 -0.77737636
+</span></span><span class="line"><span class="cl">## average_iq                   -0.97445416  1.00000000    0.2144355  0.75545950
+</span></span><span class="line"><span class="cl">## nobel_prices                 -0.23028314  0.21443550    1.0000000  0.23089587
+</span></span><span class="line"><span class="cl">## hdi_2021                     -0.77737636  0.75545950    0.2308959  1.00000000
+</span></span><span class="line"><span class="cl">## mean_years_of_schooling_2021 -0.72746085  0.70544282    0.2339327  0.91475026
+</span></span><span class="line"><span class="cl">## gni_2021                     -0.66128515  0.63485419    0.2692844  0.78779905
+</span></span><span class="line"><span class="cl">## population_2023              -0.04848491  0.07333404    0.1641867 -0.02836039
+</span></span><span class="line"><span class="cl">##                              mean_years_of_schooling_2021    gni_2021
+</span></span><span class="line"><span class="cl">## rank                                          -0.72746085 -0.66128515
+</span></span><span class="line"><span class="cl">## average_iq                                     0.70544282  0.63485419
+</span></span><span class="line"><span class="cl">## nobel_prices                                   0.23393267  0.26928442
+</span></span><span class="line"><span class="cl">## hdi_2021                                       0.91475026  0.78779905
+</span></span><span class="line"><span class="cl">## mean_years_of_schooling_2021                   1.00000000  0.66183364
+</span></span><span class="line"><span class="cl">## gni_2021                                       0.66183364  1.00000000
+</span></span><span class="line"><span class="cl">## population_2023                               -0.07112675 -0.05311802
+</span></span><span class="line"><span class="cl">##                              population_2023
+</span></span><span class="line"><span class="cl">## rank                             -0.04848491
+</span></span><span class="line"><span class="cl">## average_iq                        0.07333404
+</span></span><span class="line"><span class="cl">## nobel_prices                      0.16418671
+</span></span><span class="line"><span class="cl">## hdi_2021                         -0.02836039
+</span></span><span class="line"><span class="cl">## mean_years_of_schooling_2021     -0.07112675
+</span></span><span class="line"><span class="cl">## gni_2021                         -0.05311802
+</span></span><span class="line"><span class="cl">## population_2023                   1.00000000
+</span></span></code></pre></div><p>E graficamente, teriamos esta representação:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">ggcorrplot</span><span class="p">(</span><span class="n">matriz_corr</span><span class="p">,</span> <span class="n">lab</span> <span class="o">=</span> <span class="bp">T</span><span class="p">)</span>
+</span></span></code></pre></div><img src="https://drewmelo.github.io/blogr/p/qi-vs-desenvolvimento-o-dinheiro-compra-inteligencia/index_files/figure-html/unnamed-chunk-19-1.png" width="672" style="display: block; margin: auto;" />
+<p>Se quisermos melhorar a apresentação podemos ordenar os coeficientes de correlação hierarquicamente e
+exibir apenas a metade inferior da matriz, de forma a eliminar redundâncias e tornar a leitura mais intuitiva.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">ggcorrplot</span><span class="p">(</span><span class="n">matriz_corr</span><span class="p">,</span> <span class="n">lab</span> <span class="o">=</span> <span class="bp">T</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">hc.order</span> <span class="o">=</span> <span class="bp">T</span><span class="p">,</span> <span class="n">type</span> <span class="o">=</span> <span class="s">&#34;lower&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">outline.color</span> <span class="o">=</span> <span class="s">&#34;white&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><img src="https://drewmelo.github.io/blogr/p/qi-vs-desenvolvimento-o-dinheiro-compra-inteligencia/index_files/figure-html/unnamed-chunk-21-1.png" width="672" style="display: block; margin: auto;" />
+<h2 id="e-então-dinheiro-compra-inteligência">E então, dinheiro compra inteligência?</h2>
+<p>Ao longo desta análise investigamos a relação entre o QI médio e diferentes indicadores de desenvolvimento
+econômico, como o IDH, a média de escolaridade, a renda nacional bruta, além do número de Prêmios Nobel
+conquistados. A questão central — se o dinheiro pode comprar inteligência — <strong>não tem uma resposta
+simples</strong>.</p>
+<p>Os dados sugerem que países com IDH elevado e maior acesso à educação costumam apresentar um QI médio mais alto.
+A forte correlação entre essas variáveis mostra que <strong>um ambiente propício ao aprendizado e à qualidade de vida
+influencia diretamente o desenvolvimento cognitivo da população</strong>. Já a relação com a riqueza isolada, medida
+pela renda nacional bruta, é menos evidente. Uma economia forte, por si só, não garante uma população
+mais inteligente, <strong>a menos que os recursos sejam direcionados para educação e bem-estar social</strong>.</p>
+<p>A distribuição dos prêmios Nobel nos reforça essa complexidade. Países populosos, como China e Índia,
+não necessariamente acumulam mais laureados, enquanto nações menores, como Reino Unido e Alemanha,
+concentram grande parte das premiações.</p>
+<p>Vale ressaltar que, <strong>embora os dados mostrem padrões interessantes, isso não significa que uma variável seja a
+causa direta da outra</strong>. O fato de países com maior IDH e mais anos de escolaridade apresentarem QI médio mais
+alto não implica, necessariamente, que um fator seja a causa direta do outro. Assim como inteligência e
+inovação não surgem apenas da riqueza ou do tamanho da população, mas de um ambiente que amplie o
+acesso ao conhecimento e estimule a pesquisa. Se há algo que os dados deixam claro, como também me
+arrisco a afirmar, <strong>é que o progresso intelectual de um país não está no dinheiro em si, mas na forma
+como ele é investido</strong>.</p>
+<h2 id="referências">Referências</h2>
+<p>BUSSAB, Wilton de Oliveira; MORETTIN, Pedro Alberto. <em>Estatística Básica</em>. 10. ed. São Paulo: Saraiva Uni, 2023. 624 p. ISBN 978-6587958491.</p>
+<p>MLIPPO. Average global IQ per country with other stats. Kaggle, 2024. Disponível em: <a class="link" href="https://www.kaggle.com/datasets/mlippo/average-global-iq-per-country-with-other-stats"  target="_blank" rel="noopener"
+    >https://www.kaggle.com/datasets/mlippo/average-global-iq-per-country-with-other-stats</a>
+. Acesso em: 12 mar. 2025.</p>
+<p>HUFF, Darrell. <em>Como mentir com estatística</em>. Editora Intrinseca, 2016.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Os dados podem ser baixados <a class="link" href="https://www.kaggle.com/datasets/mlippo/average-global-iq-per-country-with-other-stats/data?select=iq_classification.csv"  target="_blank" rel="noopener"
+    >aqui</a>
+.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>Algumas variáveis, como média de anos de escolaridade, IDH e renda nacional bruta, referem-se a 2021, enquanto os dados populacionais são de 2023.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/blogr/tags/desenvolvimento-econ%C3%B4mico/">desenvolvimento econômico</a>
+        
+            <a href="/blogr/tags/kaggle/">kaggle</a>
+        
+            <a href="/blogr/tags/estat%C3%ADstica/">estatística</a>
+        
+            <a href="/blogr/tags/ggplot2/">ggplot2</a>
+        
+            <a href="/blogr/tags/correla%C3%A7%C3%A3o/">correlação</a>
+        
+            <a href="/blogr/tags/visualiza%C3%A7%C3%A3o-de-dados/">visualização de dados</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Sob licença CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css"integrity="sha256-J&#43;iAE0sgH8QSz9hpcDxXIftnj65JEZgNhGcgReTTK9s="crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js"integrity="sha256-InsNdER1b2xUewP&#43;pKCUJpkhiqwHgqiPXDlIk7GzBu4="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js"integrity="sha256-y39Mpg7V3D4lhBX4x6O0bUqTV4pSrfgwEfGKfxkOdgI="crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+    
+</article>
+
+    
+
+    
+
+
+
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "andremelo" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy;
+        
+            2023 -
+        
+        2025 André Melo
+    </section>
+
+    <section class="powerby">
+        Criado com <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>. <br />
+        Todos os direitos reservados.
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/blogr/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
