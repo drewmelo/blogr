@@ -63,11 +63,11 @@ Um exemplo prático da Teoria das Vantagens Comparativas ocorreu após as tarifa
 
 Por outro lado, o Brasil, que mantinha custos mais baixos e uma produção eficiente, aproveitou essa abertura para ocupar quase toda a participação anteriormente pertencente aos Estados Unidos, conforme relatado pelo Departamento de Agricultura dos Estados Unidos em seu relatório *Brazil Soybeans 2020/21: Another Season with a Record Harvest*, ano em que o país colheu 137 milhões de toneladas em uma safra histórica, um desempenho que colocou o Brasil no centro do fornecimento global de soja. Esse caso demonstra como políticas comerciais restritivas podem distorcer custos relativos e beneficiar economias com menores barreiras comerciais e maior eficiência produtiva.
 
-Na indústria automobilística, setor tradicionalmente forte nos Estados Unidos, as tarifas impostas a partir de 2025 sobre importações do Canadá, México e China trouxeram sérias consequências. As cadeias produtivas integradas desses países sofreram um aumento expressivo nos custos, chegando até 10 mil dólares adicionais por veículo. As indústrias canadense e mexicana, diretamente ameaçadas, podem ser obrigadas a fechar suas fábricas, o que leva a uma perda considerável de empregos, de acordo com a análise de Partsinevelos (2025).
+Na indústria automobilística, setor tradicionalmente forte nos Estados Unidos, as tarifas impostas a partir de 2025 sobre importações do Canadá, México e China trouxeram sérias consequências. As cadeias produtivas integradas desses países sofreram um farto aumento nos custos, chegando até 10 mil dólares adicionais por veículo. As indústrias canadense e mexicana, diretamente ameaçadas, podem ser obrigadas a fechar suas fábricas, o que leva a uma perda considerável de empregos, de acordo com a análise de Partsinevelos (2025).
 
 #### Mundell-Fleming em tempos de guerra comercial
 
-Do ponto de vista macroeconômico, as consequências recentes dessa disputa comercial ilustram claramente o Modelo Mundell-Fleming. Após as novas tarifas americanas, moedas como euro, iene e libra tiveram valorização, enquanto o yuan foi intencionalmente desvalorizado pelo governo chinês para atenuar o impacto tarifário ao tornar seus produtos mais acessíveis nos Estados Unidos. 
+Do ponto de vista macroeconômico, as consequências recentes dessa disputa comercial ilustram a teoria edificada pelo Modelo Mundell-Fleming. Após as novas tarifas americanas, moedas como euro, iene e libra tiveram valorização, enquanto o yuan foi intencionalmente desvalorizado pelo governo chinês para atenuar o impacto tarifário ao tornar seus produtos mais acessíveis nos Estados Unidos. 
 
 De igual modo, cresce a especulação de que a China possa responder financeiramente vendendo títulos da dívida norte-americana, já que o país é o segundo maior detentor desses ativos, com aproximadamente 760 bilhões de dólares, segundo informações divulgadas pelo Jornal Nacional em sua reportagem intitulada *Após tarifaço, investidores buscam alternativas seguras fora dos EUA*.
 
@@ -96,6 +96,8 @@ Nenhuma ação chinesa foi aleatória ou impulsiva, mas cuidadosamente planejada
 Se a teoria econômica já havia antecipado os riscos envolvidos, confirmados posteriormente na prática, parece que Trump prefere continuar acreditando que o problema não está na estratégia, mas na intensidade com que ela é aplicada. Afinal, se da primeira vez não funcionou, talvez o segredo esteja simplesmente em tentar com mais força... ou talvez não.
 
 No fim das contas, talvez a questão mais importante não seja determinar quem saiu vitorioso, mas sim quem perdeu menos. Guerras — comerciais ou não — raramente têm ardentes vencedores. Geralmente, o que vemos são perdas distribuídas de maneira desigual, atingindo principalmente aqueles que pouco ou nada têm a ver com as decisões tomadas: trabalhadores, consumidores e famílias comuns. Enquanto líderes disputam influência, é a vida cotidiana que paga o preço. Esse talvez seja o custo que a teoria não mensura, mas que a história conhece bem.
+
+**Eaí, o que você acha? Concorda, discorda ou tem algo a acrescentar? Comente abaixo e reaja ao *post*!**
 
 ## Referências
 
