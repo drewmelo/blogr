@@ -27,7 +27,7 @@ A guerra comercial entre Estados Unidos e China, iniciada em 2018, é um exemplo
 
 Para compreender as consequências dessa rivalidade, é útil recorrer a duas teorias fundamentais da economia. A primeira, o Modelo Mundell-Fleming, explica que em economias abertas com câmbio flutuante e livre circulação de capital, políticas comerciais protecionistas têm poucos efeitos, podendo até enfraquecer economicamente o país que as adota, ou seja, haverá perda de eficiência. 
 
-Originalmente concebido para economias menores, o modelo pressupõe que as taxas de juros internas se alinham automaticamente às internacionais. No entanto, quando estendido para a grandes potências como Estados Unidos e China, fatores internos passam a influenciar, como por exemplo a maior propensão marginal a importar à medida que a renda cresce, o que influi em uma taxa de juros doméstica maior e, consequentemente, exige-se correções via política monetária.
+Originalmente formulado para pequenas economias, o modelo pressupõe que as taxas de juros domésticas se alinham automaticamente às internacionais. No entanto, quando estendido para a grandes potências como Estados Unidos e China, fatores internos passam a influenciar, como por exemplo a maior propensão marginal a importar à medida que a renda cresce, o que influi em uma taxa de juros doméstica maior e, consequentemente, exige-se correções via política monetária.
 
 Dessa forma, quando essas potências implementam tarifas ou restrições comerciais, os impactos ultrapassam os limites teóricos clássicos e reverberam amplamente no cenário econômico global — como se observa atualmente, e como será demonstrado a seguir.
 
