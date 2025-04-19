@@ -3,6 +3,12 @@ library(beautyxtrar)
 library(ggtext)
 library(scales)
 
+library(showtext)
+
+font_add_google("Merriweather", "merri")
+
+showtext_auto()
+
 dados <- read_csv("content/post/2025-04-14-teoria-dos-jogos-na-guerra-comercial-de-2025/TradeData_4_17_2025_15_10_56.csv") |> 
   select(
     ano = refYear,
@@ -230,22 +236,3 @@ ggsave(plot = p,
   filename = "content/post/2025-04-14-teoria-dos-jogos-na-guerra-comercial-de-2025/figura_01.pdf",
   width = 10.81, height = 7.75, units = "in",
   device = cairo_pdf)
-
-
-  library(extrafont)
-
-  # Só precisa rodar isso uma vez (demora um pouco):
-  font_import(paths = NULL, prompt = FALSE)
-  
-  # Depois em toda sessão R, use:
-  loadfonts(device = "win", quiet = TRUE)
-
-  fonts() |> grep("Merriweather", value = TRUE)
-
-  library(showtext)
-  font_add_google("Merriweather", "merri")
-  showtext_auto()
-  
-  # No ggplot
-  theme_academic(base_family = "merri")
-  

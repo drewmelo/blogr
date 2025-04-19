@@ -27,6 +27,10 @@ A guerra comercial entre Estados Unidos e China, iniciada em 2018, é um exemplo
 
 Para compreender as consequências dessa rivalidade, é útil recorrer a duas teorias fundamentais da economia. A primeira, o Modelo Mundell-Fleming, explica que em economias abertas com câmbio flutuante e livre circulação de capital, políticas comerciais protecionistas têm poucos efeitos, podendo até enfraquecer economicamente o país que as adota, ou seja, haverá perda de eficiência. 
 
+Originalmente concebido para economias menores, o modelo pressupõe que as taxas de juros internas se alinham automaticamente às internacionais. No entanto, quando estendido para a grandes potências como Estados Unidos e China, fatores internos passam a influenciar, como por exemplo a maior propensão marginal a importar à medida que a renda cresce, o que influi em uma taxa de juros doméstica maior e, consequentemente, exige-se correções via política monetária.
+
+Dessa forma, quando essas potências implementam tarifas ou restrições comerciais, os impactos ultrapassam os limites teóricos clássicos e reverberam amplamente no cenário econômico global — como se observa atualmente, e como será demonstrado a seguir.
+
 Já a clássica teoria das Vantagens Comparativas, proposta por David Ricardo, sugere que cada nação deveria se especializar em produzir aquilo em que é relativamente mais eficiente, resultando em benefícios mútuos para todos os envolvidos — desde que não haja barreiras comerciais impedindo esse comércio.
 
 Este estudo explora a guerra comercial através dessas perspectivas. Avalia as consequências dessa disputa sobre setores econômicos estratégicos, seu impacto nas balanças comerciais e as mudanças geopolíticas impulsionadas por decisões políticas aparentemente simples, mas de profunda repercussão. O que emerge dessa análise é um cenário em constante transformação, onde cada movimento altera sutilmente o panorama global das relações econômicas.
@@ -73,7 +77,7 @@ De igual modo, cresce a especulação de que a China possa responder financeiram
 
 Essas estratégias revelam que a guerra comercial ultrapassa questões tarifárias, de forma que impacta diretamente o sistema financeiro global. Tal situação pode levar ao aumento dos juros nos Estados Unidos e reduzir a competitividade do país no mercado internacional (D’Amorim, 2025). 
 
-O crédito mais caro desencoraja investimentos privados e limita o crescimento econômico. Simultaneamente, a valorização do dólar, impulsionada pela fuga de capitais ou pela desvalorização de outras moedas, reduz a competitividade dos produtos americanos no exterior, e assim, prejudica-se as exportações. 
+O crédito mais caro, devido às maiores taxas de juros, desencoraja investimentos privados e limita o crescimento econômico. Simultaneamente, a valorização do dólar — resultado do aumento dessas taxas para atrair capital estrangeiro ou da desvalorização de outras moedas — reduz a competitividade dos produtos americanos no exterior e, assim, prejudica as exportações.
 
 Portanto, as políticas protecionistas que tinham como objetivo estimular a indústria doméstica podem, paradoxalmente, resultar em uma desaceleração econômica generalizada.
 
@@ -89,11 +93,11 @@ A indústria automobilística, tradicional orgulho norte-americano, sentiu forte
 
 Para piorar, a valorização do dólar em 2024 dificultou ainda mais as exportações americanas, aprofundando os problemas econômicos internos. Tudo isso sob uma estratégia aparentemente baseada na crença de que falar mais alto pode convencer o resto do mundo a ceder.
 
-Do outro lado do tabuleiro, a China escolheu uma abordagem diferente: em vez de barulho, cálculo e precisão. Desvalorizou discretamente sua moeda, redirecionou importações, fortaleceu relações comerciais, de forma tática, com parceiros como o Brasil e começou a utilizar seu peso financeiro de forma sutil vendendo títulos da dívida americana em retaliação silenciosa, porém eficaz. 
+Do outro lado do tabuleiro, a China escolheu uma abordagem diferente: em vez de barulho, optou por cálculo e precisão. Desvalorizou discretamente sua moeda, redirecionou importações, fortaleceu relações comerciais, de forma tática, com parceiros como o Brasil e começou a utilizar seu peso financeiro de forma sutil vendendo títulos da dívida americana em retaliação silenciosa, porém eficaz. 
 
 Nenhuma ação chinesa foi aleatória ou impulsiva, mas cuidadosamente planejada em uma espécie de jogo onde os Estados Unidos parecem insistir em jogar sozinhos — e com regras próprias.
 
-Se a teoria econômica já havia antecipado os riscos envolvidos, confirmados posteriormente na prática, parece que Trump prefere continuar acreditando que o problema não está na estratégia, mas na intensidade com que ela é aplicada. Afinal, se da primeira vez não funcionou, talvez o segredo esteja simplesmente em tentar com mais força... ou talvez não.
+Se a teoria econômica já havia antecipado os riscos envolvidos, confirmados posteriormente na prática, parece que Trump prefere continuar acreditando que o problema não está na estratégia, mas na intensidade com que ela é aplicada. Afinal, se da primeira vez não funcionou, talvez o segredo esteja simplesmente em tentar com mais força... ou não.
 
 No fim das contas, talvez a questão mais importante não seja determinar quem saiu vitorioso, mas sim quem perdeu menos. Guerras — comerciais ou não — raramente têm ardentes vencedores. Geralmente, o que vemos são perdas distribuídas de maneira desigual, atingindo principalmente aqueles que pouco ou nada têm a ver com as decisões tomadas: trabalhadores, consumidores e famílias comuns. Enquanto líderes disputam influência, é a vida cotidiana que paga o preço. Esse talvez seja o custo que a teoria não mensura, mas que a história conhece bem.
 
