@@ -7,12 +7,12 @@ categories:
   - Data Science
   - R
 tags:
-  - desenvolvimento econômico
+  - desenvolvimento-econômico
   - kaggle
   - estatística
   - ggplot2
   - correlação
-  - visualização de dados
+  - visualização-de-dados
 description: Se um país se torna mais rico, sua população também se torna mais inteligente? O coeficiente de correlação nos ajuda a interpretar essa relação.
 image: thumb.jpg
 math: yes

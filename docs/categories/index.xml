@@ -6,7 +6,15 @@
         <description>Recent content in Categories on André Melo</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 15 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://drewmelo.github.io/blogr/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 18 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://drewmelo.github.io/blogr/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Macroeconomia</title>
+        <link>https://drewmelo.github.io/blogr/categorias/macroeconomia/</link>
+        <pubDate>Fri, 18 Apr 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://drewmelo.github.io/blogr/categorias/macroeconomia/</guid>
+        <description>&lt;img src="https://drewmelo.github.io/blogr/categorias/macroeconomia/macroeconomics-categorie.jpg" alt="Featured image of post Macroeconomia" /&gt;</description>
+        </item>
+        <item>
         <title>Data Science</title>
         <link>https://drewmelo.github.io/blogr/categorias/data-science/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
@@ -21,6 +29,14 @@
         
         <guid>https://drewmelo.github.io/blogr/categorias/r/</guid>
         <description>&lt;img src="https://drewmelo.github.io/blogr/categorias/r/rlanguage-categorie.jpg" alt="Featured image of post R" /&gt;</description>
+        </item>
+        <item>
+        <title>Microeconomia</title>
+        <link>https://drewmelo.github.io/blogr/categorias/microeconomia/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://drewmelo.github.io/blogr/categorias/microeconomia/</guid>
+        <description>&lt;img src="https://drewmelo.github.io/blogr/categorias/microeconomia/microeconomics-categorie.jpg" alt="Featured image of post Microeconomia" /&gt;</description>
         </item>
         <item>
         <title>Tutorial</title>
