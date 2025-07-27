@@ -6,21 +6,21 @@
         <description>Recent content in Categories on André Melo</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 18 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://drewmelo.github.io/blogr/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 27 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://drewmelo.github.io/blogr/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Data Science</title>
+        <link>https://drewmelo.github.io/blogr/categorias/data-science/</link>
+        <pubDate>Sun, 27 Jul 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://drewmelo.github.io/blogr/categorias/data-science/</guid>
+        <description>&lt;img src="https://drewmelo.github.io/blogr/categorias/data-science/data-science-categorie3.jpg" alt="Featured image of post Data Science" /&gt;</description>
+        </item>
+        <item>
         <title>Macroeconomia</title>
         <link>https://drewmelo.github.io/blogr/categorias/macroeconomia/</link>
         <pubDate>Fri, 18 Apr 2025 00:00:00 +0000</pubDate>
         
         <guid>https://drewmelo.github.io/blogr/categorias/macroeconomia/</guid>
         <description>&lt;img src="https://drewmelo.github.io/blogr/categorias/macroeconomia/macroeconomics-categorie.jpg" alt="Featured image of post Macroeconomia" /&gt;</description>
-        </item>
-        <item>
-        <title>Data Science</title>
-        <link>https://drewmelo.github.io/blogr/categorias/data-science/</link>
-        <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
-        
-        <guid>https://drewmelo.github.io/blogr/categorias/data-science/</guid>
-        <description>&lt;img src="https://drewmelo.github.io/blogr/categorias/data-science/data-science-categorie3.jpg" alt="Featured image of post Data Science" /&gt;</description>
         </item>
         <item>
         <title>R</title>
