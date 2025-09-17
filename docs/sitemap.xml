@@ -3,13 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://drewmelo.github.io/blogr/</loc>
-    <lastmod>2025-07-27T00:00:00+00:00</lastmod>
+    <lastmod>2025-09-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://drewmelo.github.io/blogr/categories/</loc>
-    <lastmod>2025-07-27T00:00:00+00:00</lastmod>
+    <lastmod>2025-09-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://drewmelo.github.io/blogr/categorias/data-science/</loc>
-    <lastmod>2025-07-27T00:00:00+00:00</lastmod>
+    <lastmod>2025-09-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drewmelo.github.io/blogr/p/e-se-o-brasil-jogasse-a-copa-como-nas-eliminat%C3%B3rias/</loc>
+    <lastmod>2025-09-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drewmelo.github.io/blogr/tags/estat%C3%ADstica/</loc>
+    <lastmod>2025-09-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drewmelo.github.io/blogr/tags/numpy/</loc>
+    <lastmod>2025-09-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drewmelo.github.io/blogr/post/</loc>
+    <lastmod>2025-09-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drewmelo.github.io/blogr/tags/probabilidade/</loc>
+    <lastmod>2025-09-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drewmelo.github.io/blogr/categorias/python/</loc>
+    <lastmod>2025-09-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drewmelo.github.io/blogr/tags/simula%C3%A7%C3%A3o/</loc>
+    <lastmod>2025-09-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://drewmelo.github.io/blogr/tags/</loc>
+    <lastmod>2025-09-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://drewmelo.github.io/blogr/tags/data-visualization/</loc>
     <lastmod>2025-07-27T00:00:00+00:00</lastmod>
@@ -17,19 +41,10 @@
     <loc>https://drewmelo.github.io/blogr/tags/demografia/</loc>
     <lastmod>2025-07-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://drewmelo.github.io/blogr/tags/estat%C3%ADstica/</loc>
-    <lastmod>2025-07-27T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://drewmelo.github.io/blogr/p/para-quem-se-conta-uma-hist%C3%B3ria-o-impacto-da-demografia-nas-avalia%C3%A7%C3%B5es-de-animes/</loc>
     <lastmod>2025-07-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://drewmelo.github.io/blogr/post/</loc>
-    <lastmod>2025-07-27T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://drewmelo.github.io/blogr/tags/psicologia-social/</loc>
-    <lastmod>2025-07-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://drewmelo.github.io/blogr/tags/</loc>
     <lastmod>2025-07-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://drewmelo.github.io/blogr/tags/economia-internacional/</loc>
@@ -88,7 +103,5 @@
     <loc>https://drewmelo.github.io/blogr/procurar/</loc>
   </url><url>
     <loc>https://drewmelo.github.io/blogr/sobre/</loc>
-  </url><url>
-    <loc>https://drewmelo.github.io/blogr/categorias/tutorial/</loc>
   </url>
 </urlset>

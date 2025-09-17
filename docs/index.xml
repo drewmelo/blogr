@@ -6,13 +6,161 @@
         <description>Recent content on André Melo</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 27 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://drewmelo.github.io/blogr/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 17 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://drewmelo.github.io/blogr/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>E se o Brasil jogasse a Copa como nas Eliminatórias?</title>
+        <link>https://drewmelo.github.io/blogr/p/e-se-o-brasil-jogasse-a-copa-como-nas-eliminat%C3%B3rias/</link>
+        <pubDate>Wed, 17 Sep 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://drewmelo.github.io/blogr/p/e-se-o-brasil-jogasse-a-copa-como-nas-eliminat%C3%B3rias/</guid>
+        <description>&lt;img src="https://drewmelo.github.io/blogr/p/e-se-o-brasil-jogasse-a-copa-como-nas-eliminat%C3%B3rias/thumb.jpg" alt="Featured image of post E se o Brasil jogasse a Copa como nas Eliminatórias?" /&gt;&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;&amp;ldquo;E se o craque se machucar no aquecimento? E se o sorteio nos colocar entre gigantes como Alemanha e França? E se a final for decidida nos pênaltis? E se a confiança subir depois de uma vitória improvável&amp;rdquo;?&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Muitos &lt;em&gt;&amp;ldquo;e se&amp;rdquo;&lt;/em&gt;, né? ficaria louco só de imaginar, porém a ferramenta certa para explorar isso existe e atende por um nome: Monte Carlo.&lt;/p&gt;
+&lt;p&gt;A vida costuma reagir a pequenos empurrões com consequências desproporcionais. A teoria do caos descreve essa sensibilidade às condições iniciais. Um detalhe no começo pode alterar o percurso inteiro lá na frente. Em vez de perseguir uma fórmula complexa e extraordinária que pretenda domar essa instabilidade, abrimos espaço para muitos mundos possíveis e perguntamos o que se repete neles.&lt;/p&gt;
+&lt;p&gt;Com o método do Monte Carlo, criamos esses mundos em série, sorteamos resultados muitas vezes e observamos como as frequências se comportam. A repetição transforma o acaso em informação. Quando o problema tem incerteza em cada esquina e várias rotas possíveis, a simulação oferece o que precisamos, um mapa. Ela exige escolhas explícitas sobre como o mundo funciona em pequenas etapas, como a chance de um evento acontecer, e devolve um retrato estatístico do que é provável.&lt;/p&gt;
+&lt;p&gt;Quanto mais rodadas, mais estável fica a estimativa. Inclusive exploro essa ideia em um &lt;em&gt;post&lt;/em&gt; no &lt;em&gt;Medium&lt;/em&gt;, &lt;a class=&#34;link&#34; href=&#34;https://medium.com/@andremelopix/a-ci%C3%AAncia-da-sorte-simulando-a-lei-dos-grandes-n%C3%BAmeros-no-r-9aa9dc6564fa&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;em&gt;A Ciência da Sorte: simulando a Lei dos Grandes Números no R&lt;/em&gt;&lt;/a&gt;
+, no qual simulo o lançamento de três moedas e mostro como as frequências se aproximam das probabilidades à medida que o número de tentativas cresce. O valor do método, portanto, está na franqueza das hipóteses e na possibilidade de testar cenários sem prometer certezas que a realidade não dá.&lt;/p&gt;
+&lt;p&gt;Voltando ao experimento do nosso estudo, ligamos a simulação a um caso real do futebol masculino. Neste caso, a seleção brasileira, que encerrou as Eliminatórias da Copa de 2026 com 28 pontos em 54 possíveis, com um aproveitamento de 51,9% e sendo a pior campanha já registrada no formato por pontos corridos. O número fica abaixo do ciclo de 2002, quando a equipe somou 30 pontos, o que corresponde a 55,6%, como mostra a reportagem &lt;em&gt;Seleção brasileira encerra Eliminatórias com a pior campanha da história&lt;/em&gt; de Cassucci (2025). A pergunta que orienta o estudo é simples e incômoda.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Esse aproveitamento de 51,9% é realmente ruim para fins de projeção ou quão desfavorável ele se torna quando o usamos como referência para estimar a chance de título em um torneio decidido em sete jogos?&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;parâmetros-do-experimento-e-hipóteses-do-modelo&#34;&gt;Parâmetros do experimento e hipóteses do modelo&lt;/h2&gt;
+&lt;p&gt;Tomamos $ p $ como a probabilidade de o Brasil vencer um jogo. Para este estudo usamos $ p = 0,519 $ porque a equipe somou 28 pontos em 54 possíveis nas Eliminatórias, o que dá uma taxa de 28/54 aproximadamente. Essa taxa mistura vitórias e empates, mas a adotamos como um &lt;em&gt;proxy&lt;/em&gt; simples para a chance de vitória por jogo, o que de certa forma mantém o modelo enxuto.&lt;/p&gt;
+&lt;p&gt;Definimos $ m $ como o número de partidas necessárias até o título. A partir disso, $ m = 7 $ corresponde a três jogos na fase de grupos e quatro no mata mata. Além disso, exigimos 7 vitórias somando fase de grupos e mata mata, o que é um forte simplificador (um torneio conta também com empates e classificação por saldo), mas que facilitará nossa vida na construção do modelo.&lt;/p&gt;
+&lt;p&gt;Assumimos os jogos, assim como as copas, como independentes e com a mesma probabilidade $ p $. Mais uma vez, opta-se por simplicidade. Na vida real $ p $ não é constante entre seleções/fases, e Copas não são totalmente independentes (explicarei isso na última seção).&lt;/p&gt;
+&lt;h3 id=&#34;do-aproveitamento-à-probabilidade-de-título&#34;&gt;Do aproveitamento à probabilidade de título&lt;/h3&gt;
+&lt;p&gt;Na Equação (1) $\theta $ representa a probabilidade de título em um único torneio, pois o time precisa vencer $ m $ jogos seguidos.&lt;/p&gt;
+&lt;p&gt;$$
+\theta = p{^m} \tag{1}
+$$
+Na Equação (2) a variável aleatória $ X $ indica título em uma Copa. O termo $ P(X = x) $ interpreta dois casos em uma única escrita. Quando $ x = 1 $ a probabilidade é $ \theta $ e representa a campanha perfeita. Quando $ x = 0 $ a probabilidade é $ 1 - \theta $ e representa qualquer resultado que não leva ao título.&lt;/p&gt;
+&lt;p&gt;$$
+P(X = x)=\theta^{x}(1-\theta)^{1-x} \tag{2}
+$$&lt;/p&gt;
+&lt;p&gt;Na Equação (3) somamos $ N $ indicadores $ X_i $ e obtemos $ S $ que conta quantos títulos ocorreram em $ N $ Copas simuladas. A expressão $ P(S = s) $ descreve a chance de observar exatamente $ s $ títulos. O coeficiente $ \binom{N}{s} $ contabiliza as escolhas de quais Copas terminaram em título. O fator $ \theta^s $ corresponde aos $ s $ torneios vencidos e o fator $ (1-\theta)^{N-s} $ corresponde aos $ N - s $ torneios não vencidos, sob a hipótese de independência entre as edições.&lt;/p&gt;
+&lt;p&gt;$$
+P(S = s) = \binom{N}{s}\theta^{s}(1-\theta)^{N-s},
+\qquad s = 0,1,\ldots,N \tag{3}
+$$
+Se a nossa variável aleatória $ S $ (isto porque depende do sorteio dos $ X_i $) tem distribuição binomial com parâmetros $ N $ e $ \theta $ como na Equação (3), então as Equações (4) e (5) dão o valor esperado e a variância do número de títulos ao longo das $ N $ simulações.&lt;/p&gt;
+&lt;p&gt;$$
+E[S] = N\theta \tag{4}
+$$&lt;/p&gt;
+&lt;p&gt;$$
+\mathrm{Var}(S) = N\theta (1 - \theta) \tag{5}
+$$&lt;/p&gt;
+&lt;p&gt;A proporção observada, portanto, é um estimador não viesado de $ \theta $ como nas Equações (6) e (7).&lt;/p&gt;
+&lt;p&gt;$$
+\hat{\theta} = \frac{S}{N} \tag{6}
+$$&lt;/p&gt;
+&lt;p&gt;$$
+\mathrm{Var}(\hat{\theta}) = \frac{\theta (1 - \theta)}{N} \tag{7}
+$$&lt;/p&gt;
+&lt;p&gt;A variável aleatória $ K $ conta o número de Copas até o primeiro título. A Equação (8) representa uma sequência com $ k - 1 $ fracassos seguida de um sucesso. Cada fracasso contribui com o fator $ 1 - \theta $ e o título encerra com $ \theta $. O suporte começa em $ k = 1 $ porque se inclui a própria edição em que o título ocorre. Trata-se da forma clássica da distribuição geométrica quando se mede o total de tentativas até o primeiro sucesso.&lt;/p&gt;
+&lt;p&gt;$$
+P(K = k) = (1 - \theta)^{k-1}\theta,
+\qquad k = 1,2,\ldots \tag{8}
+$$
+Neste caso, $ K $ segue distribuição geométrica com parâmetro fixo $ \theta $, nisto, as Equações (9) e (10) mostram a espera média e a variância do tempo até um título, ambas determinadas por $ \theta $ que por sua vez depende de $ p $ e $ m $, ambos fixados.&lt;/p&gt;
+&lt;p&gt;$$
+E[K] = \frac{1}{\theta} \tag{9}
+$$
+$$
+\mathrm{Var}(K) = \frac{1 - \theta}{\theta^2} \tag{10}
+$$&lt;/p&gt;
+&lt;h2 id=&#34;da-teoria-ao-código-em-python&#34;&gt;Da teoria ao código em Python&lt;/h2&gt;
+&lt;p&gt;Começamos importando o NumPy, que fornece o motor de números aleatórios usado para simular os ensaios de Bernoulli definidos no modelo.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;numpy&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;np&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Criamos &lt;code&gt;rng = np.random.default_rng()&lt;/code&gt; para gerar amostras independentes coerentes com a Equação (2), onde cada tentativa representa um jogo com probabilidade $ p $ de sucesso. Definimos &lt;code&gt;n_simulacoes&lt;/code&gt; como o número de torneios hipotéticos, que corresponde ao $ N $ nas Equações (3) a (7).  Em seguida fixamos &lt;code&gt;n_jogos_copa&lt;/code&gt; e &lt;code&gt;prob_vitoria&lt;/code&gt;, que é, respectivamente, o $ m $ e $ p $ do nosso modelo.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;rng&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;np&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;random&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;default_rng&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;20251709&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# reprodutibilidade&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;n_simulacoes&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;100000&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;n_jogos_copa&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;7&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;prob_vitoria&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.519&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# prob. de vencer cada jogo&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esses três parâmetros conectam o código às equações do modelo, pois determinam $ \theta = p{^m} $ e, quando amostrarmos os resultados, permitirão contar títulos por torneio e ao longo das $ N $ simulações como em $ X $ e $ S $.&lt;/p&gt;
+&lt;p&gt;Observação breve sobre repetibilidade. Se desejarmos reproduzir exatamente os mesmos números em execuções diferentes, convém passar uma semente fixa, por exemplo &lt;code&gt;np.random.default_rng(20251709)&lt;/code&gt;. A escolha do número fica a critério do leitor.&lt;/p&gt;
+&lt;h3 id=&#34;simulando-as-copas-e-identificando-títulos&#34;&gt;Simulando as Copas e identificando títulos&lt;/h3&gt;
+&lt;p&gt;No passo da simulação, geramos uma matriz chamada &lt;code&gt;resultados&lt;/code&gt;com $ N $ linhas e $ m $ colunas. Cada entrada vale 0 para derrota ou 1 para vitória e segue um ensaio de Bernoulli com parâmetro $ p $, de acordo com a Equação (2). O tamanho da matriz reproduz $ N $ torneios de $ m $ jogos.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Matriz (n_simulacoes x n_jogos_copa) com 0/1 para derrota/vitória&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;resultados&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rng&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;binomial&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;prob_vitoria&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;size&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n_simulacoes&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n_jogos_copa&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;resultados&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## [[0 1 1 ... 0 0 0]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##  [0 1 0 ... 1 1 0]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##  [1 0 0 ... 0 0 0]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##  ...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##  [0 1 0 ... 0 1 1]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##  [0 0 0 ... 0 0 1]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##  [0 0 1 ... 1 1 0]]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Em seguida somamos cada linha e comparamos ao número de jogos $ m $. Quando a soma de uma linha é igual a $ m $, aquele torneio registra vitórias em todos os jogos e portanto título. O vetor lógico &lt;code&gt;simulacoes&lt;/code&gt; marca essas ocorrências, que correspondem a $ X = 1 $ e têm probabilidade $ \theta = p{^m} $ conforme a Equação (1). A contagem total de verdadeiros neste vetor forma $ S $, a variável binomial da Equação (3).&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# True se venceu todos os 7 jogos (título)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;simulacoes&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;resultados&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sum&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;axis&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n_jogos_copa&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;simulacoes&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## [False False False ... False False False]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Por fim obtemos os índices das dez primeiras Copas com título por meio de &lt;code&gt;ids_titulos&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# IDs (1-based) das primeiras 10 Copas vencidas&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ids_titulos&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;np&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;flatnonzero&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;simulacoes&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)[:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ids_titulos&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## [197 252 255 329 693 742 752 789 810 848]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A soma de &lt;code&gt;simulacoes&lt;/code&gt; produz &lt;code&gt;titulos&lt;/code&gt;, que corresponde a $ S $ na Equação (3) e conta quantos torneios terminaram em título no conjunto de $ N $ simulações. A média de &lt;code&gt;simulacoes&lt;/code&gt; produz &lt;code&gt;prob_titulo&lt;/code&gt;, que é $ \hat{\theta} = S / N $ (Eq. 6) e estima a probabilidade de título $ \theta $. Ou seja, em uma linha obtemos a contagem efetiva e a fração observada.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;titulos&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;simulacoes&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sum&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;titulos&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 1017
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;prob_titulo&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;simulacoes&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mean&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;prob_titulo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 0.01017
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;como-ler-os-números-da-simulação&#34;&gt;Como ler os números da simulação&lt;/h4&gt;
+&lt;p&gt;Oras, se a chance de título em uma Copa é $ \theta = p{^m} $ e o time precisa vencer sete jogos seguidos, adotemos $ \theta = 0,519^7 $ (lembre-se da taxa de 51,9% de aproveitamento da seleção). Com essa suposição, obtemos $ \theta \approx 0,01014 $, algo próximo de 1% (observe o &lt;em&gt;output&lt;/em&gt; do nosso objeto &lt;code&gt;prob_titulo&lt;/code&gt;). Trata-se de um evento raro dentro do nosso modelo simplificado.&lt;/p&gt;
+&lt;p&gt;Para medir a espera até um título, usamos a média de $ K $. Vale $ E[K] = 1 / \theta \approx 98,62$. Em outras palavras, seriam em torno de 99 Copas até o próximo título quando mantidas as hipóteses de probabilidade constante por jogo e independência entre partidas.&lt;/p&gt;
+&lt;p&gt;A dispersão dessa espera é grande. A variância resulta em $ \mathrm{Var}(K) $, que nos dá aproximadamente 9.627,15 e o desvio padrão (A raiz quadrada de $ \mathrm{Var}(K) $) fica perto de 98,12. Isto nos diz que algumas sequências trariam um título cedo enquanto outras esticariam a fila por muito tempo. Reforça-se ainda mais a ideia de eventos raros mesmo quando a média sugere um horizonte estável.&lt;/p&gt;
+&lt;p&gt;Trazendo para a linguagem de programação, obtemos a probabilidade estimada de título pela escala desejada. Em &lt;code&gt;titulos_por_100&lt;/code&gt;, traduzimos $ \hat{\theta} $ para a linguagem de expectativa em 100 edições. É a mesma ideia da Equação (4) que dá $ E[S] = N\theta $ com $ N = 100 $. No resultado aparece aproximadamente 1,017, o que diz que, sob essas hipóteses, esperaríamos cerca de um título a cada 100 Copas.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;titulos_por_100&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;100&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;prob_titulo&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;titulos_por_100&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 1.0170000000000001
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A mesma conversão pode ser feita para uma escala maior. Tomamos $ N = 1000 $ e obtemos por volta de 10,17 títulos esperados em mil edições.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;titulos_por_1000&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1000&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;prob_titulo&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;titulos_por_1000&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 10.17
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Também é possível medir o tempo de espera até um título (bem como já fizemos isso anteriormente). Em &lt;code&gt;copas_por_titulo = 1 / prob_titulo&lt;/code&gt; invertemos a probabilidade estimada e recuperamos a média da distribuição geométrica usada na seção anterior. O valor ficou perto de 98,33 Copas por título, em linha com a interpretação de $ E[K] = 1 / \theta $ da Equação (9) que deriva da distribuição geométrica da Equação (8) onde $ K $ conta quantas Copas ocorrem até o primeiro título.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;copas_por_titulo&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;prob_titulo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;prob_titulo&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;float&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;inf&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;copas_por_titulo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 98.32841691248771
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Os três números contam a mesma história por ângulos diferentes. A chance por Copa é pequena, logo a contagem esperada em 100 edições fica próxima de um e a espera média gira em torno de um século de torneios no cenário simplificado que adotamos.&lt;/p&gt;
+&lt;h2 id=&#34;considerações-finais&#34;&gt;Considerações finais&lt;/h2&gt;
+&lt;p&gt;A pergunta do início pede uma resposta, é claro. Com o desempenho de 51,9% nas Eliminatórias e sob as hipóteses do nosso modelo, a chance de título por Copa fica perto de 1%. Nas simulações, isso transpõe-se de forma aproximada em algo como 1 título a cada 100 edições, cerca de 10 a cada mil, e uma espera média próxima de, aproximadamente, 98 Copas para um novo troféu. Para o objetivo de vencer um torneio de sete jogos, esse aproveitamento pesa contra.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Então este achado irá se concretizar?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;E a resposta é óbvia: NÃO!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Para fins de comparação, testei um cenário alternativo com a taxa de 55,6%, a das Eliminatórias para 2002. A simulação estimou 1,66% de chance de título. Teve-se algo próximo de 2 títulos a cada 100 Copas e uma razão perto de 60 Copas por título. Ainda assim, o Brasil foi campeão em 2002. Em ciclos seguintes, mesmo com aproveitamentos mais altos nas Eliminatórias — 63% em 2006 e 2010, 75,9% em 2018, 88,2% em 2022 — o troféu não veio.&lt;/p&gt;
+&lt;p&gt;O contraponto entre esses números nos deixa uma lição (sobre o papel do acaso, especificamente). O nosso resultado não serve como previsão do que vai acontecer. Ele é uma estimativa condicional, ancorada em hipóteses que varrem o terreno para raciocinar mais claramente sobre determinada situação. Na prática, $ p $ não fica fixo. A chance contra um adversário fraco na fase de grupos costuma ser maior que contra uma potência na final. O aproveitamento nas Eliminatórias tampouco traduz, sozinho, o desempenho esperado na Copa. O torneio é curto, muda o nível dos rivais, muda-se o esboço do chaveamento e detalhes contam.&lt;/p&gt;
+&lt;p&gt;Tomado como régua, o exercício mostra que um aproveitamento ao redor de metade dos pontos quase não sustenta uma campanha perfeita. Tomado como reflexão, ele lembra que o futebol vive de picos, contextos e desvios que uma média não captura. Se a taxa recente parece menos aceitável, então a pergunta que fica é outra. O que precisa acontecer dentro de campo (ou mesmo fora dele) para que a probabilidade por jogo mude de patamar e a história volte a sorrir?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Eaí, o que você acha? Concorda, discorda ou tem algo a acrescentar? Comente abaixo e reaja ao post!&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;referências&#34;&gt;Referências&lt;/h2&gt;
+&lt;p&gt;CASSUCCI, Bruno. Seleção brasileira encerra Eliminatórias com a pior campanha da história. ge. São Paulo, 9 set. 2025. Atualizado em 10 set. 2025. Disponível em: &lt;a class=&#34;link&#34; href=&#34;https://ge.globo.com/futebol/selecao-brasileira/noticia/2025/09/09/selecao-brasileira-encerra-eliminatorias-com-a-pior-campanha-da-historia.ghtml&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://ge.globo.com/futebol/selecao-brasileira/noticia/2025/09/09/selecao-brasileira-encerra-eliminatorias-com-a-pior-campanha-da-historia.ghtml&lt;/a&gt;
+. Acesso em: 15 set. 2025.&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Para quem se conta uma história? O impacto da demografia nas avaliações de animes</title>
         <link>https://drewmelo.github.io/blogr/p/para-quem-se-conta-uma-hist%C3%B3ria-o-impacto-da-demografia-nas-avalia%C3%A7%C3%B5es-de-animes/</link>
         <pubDate>Sun, 27 Jul 2025 00:00:00 +0000</pubDate>
         
         <guid>https://drewmelo.github.io/blogr/p/para-quem-se-conta-uma-hist%C3%B3ria-o-impacto-da-demografia-nas-avalia%C3%A7%C3%B5es-de-animes/</guid>
-        <description>&lt;img src="https://drewmelo.github.io/blogr/p/para-quem-se-conta-uma-hist%C3%B3ria-o-impacto-da-demografia-nas-avalia%C3%A7%C3%B5es-de-animes/thumb.jpg" alt="Featured image of post Para quem se conta uma história? O impacto da demografia nas avaliações de animes" /&gt;&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
+        <description>&lt;img src="https://drewmelo.github.io/blogr/p/para-quem-se-conta-uma-hist%C3%B3ria-o-impacto-da-demografia-nas-avalia%C3%A7%C3%B5es-de-animes/thumb.jpg" alt="Featured image of post Para quem se conta uma história? O impacto da demografia nas avaliações de animes" /&gt;
+
+
+&lt;div id=&#34;introdução&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Introdução&lt;/h2&gt;
 &lt;p&gt;Quando pensamos em animes, é quase automático lembrar dos gêneros: ação, romance, comédia, fantasia. Mas existe uma divisão menos falada — e nem por isso menos determinante — que molda não apenas o que se conta, mas como se conta, e sobretudo, como essas histórias são recebidas pelo público. Trata-se da demografia. Em outras palavras, &lt;strong&gt;para quem aquela história foi pensada?&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Na indústria japonesa, essa distinção é levada a sério. Algumas obras são criadas com os olhos voltados para meninos adolescentes — o universo shounen. Outras, para meninas da mesma faixa etária, formando o delicado e intenso mundo shoujo. O selo seinen costuma guardar tramas dirigidas a homens adultos; já o josei contempla narrativas voltadas às mulheres adultas, com outra cadência, outras inquietações. Essas categorias vão além do público-alvo, elas moldam o ritmo, os temas, os dilemas morais e até os silêncios da narrativa.&lt;/p&gt;
 &lt;p&gt;Foi a partir disso que uma pergunta começou a me rondar: será que a nota média de um anime tem relação com o público para o qual ele foi feito? Para tentar entender isso, mergulhei em uma base de dados extraída do &lt;em&gt;MyAnimeList&lt;/em&gt;, uma das maiores plataformas de recomendação e avaliação de animes do mundo.&lt;/p&gt;
@@ -20,19 +168,23 @@
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;a quem se destina uma história influencia o modo como ela é julgada?&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;o-ponto-de-virada-entre-os-grupos-demográficos&#34;&gt;O ponto de virada entre os grupos demográficos&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;o-ponto-de-virada-entre-os-grupos-demográficos&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;O ponto de virada entre os grupos demográficos&lt;/h2&gt;
 &lt;p&gt;Ao olharmos para a Figura 1, que acompanha a evolução das notas médias atribuídas aos animes destinados aos públicos feminino (Shoujo/Josei) e masculino (Shounen/Seinen), um ponto chama a atenção: a curva do tempo se dobra na década de 1990. Os animes shounen e seinen já vinham desfrutando de prestígio, embalados por fenômenos como &lt;em&gt;Dragon Ball Z&lt;/em&gt; e &lt;em&gt;Yu Yu Hakusho&lt;/em&gt;, que conquistaram gerações com seu apelo direto ao carisma e adrenalina. Mas é por volta de 1995 que algo começa a mudar do lado oposto do espectro.&lt;/p&gt;
 &lt;p&gt;A nota média dos animes shoujo e josei, antes relegados a patamares mais baixos, inicia uma ascensão que se manteria firme nas décadas seguintes. Aqueles enredos antes associados a romances açucarados e personagens unidimensionais passaram a abrigar conflitos mais densos com reflexões íntimas.&lt;/p&gt;
 &lt;p&gt;Produções como &lt;em&gt;Revolutionary Girl Utena&lt;/em&gt; (1997) — com sua estética provocadora e suas metáforas afiadíssimas — e, mais adiante, &lt;em&gt;Fruits Basket&lt;/em&gt; (2001), com sua delicadeza devastadora, mostraram que o universo feminino no anime não era sinônimo de superficialidade. Identidade, dor, amadurecimento, crítica social: tudo isso passou a compor o repertório dessas narrativas. E foi justamente aí que elas começaram a ser vistas com outros olhos.&lt;/p&gt;
 &lt;p&gt;Do outro lado, o domínio dos shounen/seinen começou a perder fôlego. A partir dos anos 2000, um certo cansaço se instalou. Multiplicaram-se os títulos com fórmulas previsíveis, batalhas colossais mas sem peso dramático, personagens replicados em série com motivações recicladas. Ainda houve resistência — &lt;em&gt;Naruto&lt;/em&gt;, &lt;em&gt;Bleach&lt;/em&gt; e outros nomes seguraram as pontas por um bom tempo —, porém o público, cada vez mais exigente, passou a cobrar algo além da ação. Queriam histórias que os surpreendessem, que os tirassem do lugar. Paradoxalmente, foi no shoujo, historicamente visto como um gênero &lt;em&gt;“menor”&lt;/em&gt;, que encontraram respostas mais ousadas, ou melhor, mais humanas.&lt;/p&gt;
 &lt;figure style=&#34;text-align: center;&#34;&gt;
-  &lt;img src=&#34;figura_1.png&#34; style=&#34;width:100%; max-width:100%; height:auto;&#34; /&gt;
-  &lt;figcaption style=&#34;margin-top: -2em; font-size: 0.95em;&#34;&gt;
-    &lt;strong&gt;Figura 1:&lt;/strong&gt; Média móvel das avaliações por grupo demográfico (shoujo/josei e shounen/seinen)
-  &lt;/figcaption&gt;
+&lt;img src=&#34;figura_1.png&#34; style=&#34;width:100%; max-width:100%; height:auto;&#34; /&gt;
+&lt;figcaption style=&#34;margin-top: -2em; font-size: 0.95em;&#34;&gt;
+&lt;strong&gt;Figura 1:&lt;/strong&gt; Média móvel das avaliações por grupo demográfico (shoujo/josei e shounen/seinen)
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;Antes de comparar as avaliações médias entre os grupos, testei a homogeneidade de variâncias. O resultado apontou diferenças entre os animes voltados ao público masculino (shounen e seinen), o que me levou a aplicar o teste t de Welch, mais apropriado nesses casos.&lt;/p&gt;
-&lt;h2 id=&#34;o-que-revelam-os-testes-de-welch-sobre-a-audiência&#34;&gt;O que revelam os testes de Welch sobre a audiência&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;o-que-revelam-os-testes-de-welch-sobre-a-audiência&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;O que revelam os testes de Welch sobre a audiência&lt;/h2&gt;
 &lt;p&gt;Os testes de Welch revelam contrastes marcantes entre os grupos analisados. Ao comparar os animes voltados ao público masculino, observou-se que os títulos classificados como shounen apresentaram, em média, avaliações mais altas do que os da categoria seinen. A diferença, embora estatisticamente significativa, não é ampla: cerca de 0,19 pontos separa as médias (7,05 contra 6,86). Ainda assim, esse pequeno desvio pode carregar significados como a preferência ainda que tênue do público por narrativas mais juvenis e idealistas, típicas do shounen, em detrimento dos enredos mais introspectivos e maduros do seinen.&lt;/p&gt;
 &lt;p&gt;No universo feminino, o movimento foi o oposto. Animes josei superaram os shoujo em média de avaliação. A diferença de aproximadamente 0,41 pontos (7,26 para josei e 6,85 para shoujo) é relevante e aponta para uma crescente valorização de histórias que abordam temas mais densos, com personagens complexas e tramas emocionalmente mais realistas. É possível enxergar, nesse resultado, um reconhecimento maior da audiência por obras que rompem com o simples romantismo e apostam em camadas de profundidade e amadurecimento narrativo.&lt;/p&gt;
 &lt;p&gt;A Tabela 1 mostra que o público shounen concentra a maioria das produções em gêneros como ação (21,1%), sobrenatural (22,5%) e comédia (18,4%), enquanto o seinen apresenta alta proporção de ecchi (21,3%) e também valoriza ação e temas sobrenaturais. Já no shoujo o destaque vai para romance (15,6%) e drama (10,2%), com presença menor, mas relevante, de fantasia e ação. Por fim, o josei se concentra mais modestamente em romance (2,1%), sobrenatural (1,8%) e drama (1%), o que evidencia um foco em tramas realistas voltadas à vida adulta.&lt;/p&gt;
@@ -45,26 +197,31 @@
 }
 &lt;/style&gt;
 &lt;div class=&#34;iframe-container&#34; style=&#34;border:0px solid #ccc; padding:10px; margin-top:-10px; margin-bottom:-90px;&#34;&gt;
-  &lt;iframe src=&#34;tabela_1.html&#34; style=&#34;width:100%; height:600px; border:none;&#34;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;iframe src=&#34;tabela_1.html&#34; style=&#34;width:100%; height:600px; border:none;&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;O cruzamento entre o mapeamento de gêneros e os testes estatísticos — que mostraram melhores avaliações para o josei em relação ao shoujo e notas mais baixas para o seinen frente ao shounen — nos revela algo interessante. Embora a produção ainda seja dominada por títulos voltados a garotos, é no público feminino adulto que têm surgido narrativas mais maduras, assim como emocionalmente intensas. Um lembrete de que, no mundo dos animes, impacto não se mede em volume e que, muitas vezes, a sutileza de um drama bem contado pode deixar marcas mais duradouras do que qualquer cena de ação.&lt;/p&gt;
-&lt;h3 id=&#34;narrativas-que-crescem-com-o-público-o-mérito-da-medida-certa&#34;&gt;Narrativas que crescem com o público: o mérito da medida certa&lt;/h3&gt;
+&lt;div id=&#34;narrativas-que-crescem-com-o-público-o-mérito-da-medida-certa&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Narrativas que crescem com o público: o mérito da medida certa&lt;/h3&gt;
 &lt;p&gt;Já a Figura 2 revela como a avaliação média dos animes varia conforme a classificação indicativa. Animes voltados ao público geral (G) e infantil (PG) tendem a receber notas próximas, mas um pouco abaixo das faixas adolescentes e adultas. O destaque vai para os títulos classificados como R (17+), que obtêm as médias mais altas. A média de R (6,9) supera, por exemplo, a de PG-13 (6,7).&lt;/p&gt;
 &lt;figure style=&#34;text-align: center;&#34;&gt;
-  &lt;img src=&#34;figura_2.png&#34; style=&#34;width:100%; max-width:100%; height:auto;&#34; /&gt;
-  &lt;figcaption style=&#34;margin-top: -1em; font-size: 0.95em;&#34;&gt;
-    &lt;strong&gt;Figura 2:&lt;/strong&gt; Classificação indicativa e avaliação média dos animes
-  &lt;/figcaption&gt;
+&lt;img src=&#34;figura_2.png&#34; style=&#34;width:100%; max-width:100%; height:auto;&#34; /&gt;
+&lt;figcaption style=&#34;margin-top: -1em; font-size: 0.95em;&#34;&gt;
+&lt;strong&gt;Figura 2:&lt;/strong&gt; Classificação indicativa e avaliação média dos animes
+&lt;/figcaption&gt;
 &lt;/figure&gt;
-&lt;p&gt;Curiosamente, a nota volta a cair nas classificações mais extremas (R+, com nudez leve, e Rx, voltado ao público adulto com conteúdo explícito),  ou seja, exageros sensacionalistas não são necessariamente bem avaliados. O público parece recompensar obras que sabem amadurecer com ele — aquelas que tratam temas adultos com equilíbrio, sem cair na superficialidade nem na provocação vazia.&lt;/p&gt;
-&lt;h2 id=&#34;conclusão&#34;&gt;Conclusão&lt;/h2&gt;
+&lt;p&gt;Curiosamente, a nota volta a cair nas classificações mais extremas (R+, com nudez leve, e Rx, voltado ao público adulto com conteúdo explícito), ou seja, exageros sensacionalistas não são necessariamente bem avaliados. O público parece recompensar obras que sabem amadurecer com ele — aquelas que tratam temas adultos com equilíbrio, sem cair na superficialidade nem na provocação vazia.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;conclusão&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Conclusão&lt;/h2&gt;
 &lt;p&gt;O público para o qual um anime é feito ainda influencia elementos como estética e linguagem, mas não determina, por si só, como ele será avaliado. Os dados analisados mostram que obras destinadas a demografias menores, como josei e seinen, frequentemente recebem notas mais altas, como é o caso de josei, e sugere que o conteúdo emocionalmente mais pesado tem ressoado com o público em geral — e não apenas com seu nicho original.&lt;/p&gt;
 &lt;p&gt;Talvez esse padrão reflita mudanças geracionais mais profundas. Como apontou o psicólogo Peter Gray em entrevista à BBC News Brasil (2024), o crescimento da ansiedade e da depressão entre jovens está ligado à falta de autonomia desde a infância. Sem espaço para enfrentar desafios reais, muitos buscam na ficção um espelho onde possam se ver e sentir o que não encontram fora dela.&lt;/p&gt;
-&lt;p&gt;Nesse contexto, animes mais introspectivos e realistas oferecem não só entretenimento, mas também uma forma de catarse. A forma como avaliamos essas obras parece menos ligada ao seu &lt;em&gt;&amp;ldquo;alvo de mercado&amp;rdquo;&lt;/em&gt; e mais ao quanto elas nos ajudam a lidar com questões internas. Em tempos de fragilidade emocional, o público valoriza histórias que tratam com profundidade os dilemas da vida.&lt;/p&gt;
-&lt;h2 id=&#34;referências&#34;&gt;Referências&lt;/h2&gt;
-&lt;p&gt;BBC NEWS BRASIL. &lt;em&gt;&amp;ldquo;Falta de independência está por trás de crise de saúde mental em crianças&amp;rdquo;, diz psicólogo americano&lt;/em&gt;. YouTube, 27 jan. 2024. Disponível em: &lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=1GGFvQoltXA&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://www.youtube.com/watch?v=1GGFvQoltXA&lt;/a&gt;
-. Acesso em: 26 jul. 2025.&lt;/p&gt;
+&lt;p&gt;Nesse contexto, animes mais introspectivos e realistas oferecem não só entretenimento, mas também uma forma de catarse. A forma como avaliamos essas obras parece menos ligada ao seu &lt;em&gt;“alvo de mercado”&lt;/em&gt; e mais ao quanto elas nos ajudam a lidar com questões internas. Em tempos de fragilidade emocional, o público valoriza histórias que tratam com profundidade os dilemas da vida.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;referências&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Referências&lt;/h2&gt;
+&lt;p&gt;BBC NEWS BRASIL. &lt;em&gt;“Falta de independência está por trás de crise de saúde mental em crianças”, diz psicólogo americano&lt;/em&gt;. YouTube, 27 jan. 2024. Disponível em: &lt;a href=&#34;https://www.youtube.com/watch?v=1GGFvQoltXA&#34; class=&#34;uri&#34;&gt;https://www.youtube.com/watch?v=1GGFvQoltXA&lt;/a&gt;. Acesso em: 26 jul. 2025.&lt;/p&gt;
+&lt;/div&gt;
 </description>
         </item>
         <item>
@@ -73,7 +230,11 @@
         <pubDate>Fri, 18 Apr 2025 00:00:00 +0000</pubDate>
         
         <guid>https://drewmelo.github.io/blogr/p/quando-a-pr%C3%A1tica-desafia-a-teoria-os-paradoxos-da-guerra-comercial-de-trump/</guid>
-        <description>&lt;img src="https://drewmelo.github.io/blogr/p/quando-a-pr%C3%A1tica-desafia-a-teoria-os-paradoxos-da-guerra-comercial-de-trump/thumb.jpg" alt="Featured image of post Quando a prática desafia a teoria: os paradoxos da guerra comercial de Trump" /&gt;&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
+        <description>&lt;img src="https://drewmelo.github.io/blogr/p/quando-a-pr%C3%A1tica-desafia-a-teoria-os-paradoxos-da-guerra-comercial-de-trump/thumb.jpg" alt="Featured image of post Quando a prática desafia a teoria: os paradoxos da guerra comercial de Trump" /&gt;
+
+
+&lt;div id=&#34;introdução&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Introdução&lt;/h2&gt;
 &lt;p&gt;Ao longo da história econômica, disputas comerciais têm sido muito mais do que meras discordâncias sobre tarifas ou questões de saldo comercial. Em um mundo cada vez mais interdependente, decisões tomadas pelas grandes potências repercutem globalmente, alterando caminhos, influenciando estratégias e mudando as dinâmicas entre nações.&lt;/p&gt;
 &lt;p&gt;A guerra comercial entre Estados Unidos e China, iniciada em 2018, é um exemplo emblemático dessa complexidade. Muito além de sanções pontuais, a disputa evidenciou profundas tensões entre diferentes modelos econômicos, interesses geopolíticos, de tal modo influenciado por visões conflitantes sobre o papel do comércio internacional.&lt;/p&gt;
 &lt;p&gt;Para compreender as consequências dessa rivalidade, é útil recorrer a duas teorias fundamentais da economia. A primeira, o Modelo Mundell-Fleming, explica que em economias abertas com câmbio flutuante e livre circulação de capital, políticas comerciais protecionistas têm poucos efeitos, podendo até enfraquecer economicamente o país que as adota, ou seja, haverá perda de eficiência.&lt;/p&gt;
@@ -83,32 +244,42 @@
 &lt;p&gt;Este estudo explora a guerra comercial através dessas perspectivas. Avalia as consequências dessa disputa sobre setores econômicos estratégicos, seu impacto nas balanças comerciais e as mudanças geopolíticas impulsionadas por decisões políticas aparentemente simples, mas de profunda repercussão. O que emerge dessa análise é um cenário em constante transformação, onde cada movimento altera sutilmente o panorama global das relações econômicas.&lt;/p&gt;
 &lt;p&gt;Sem oferecer conclusões definitivas, este artigo convida o leitor a refletir sobre algumas questões importantes:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;O que revelam sobre a racionalidade — ou a ausência dela — as decisões políticas movidas por ideologias que desafiam teorias econômicas consagradas, em disputas internacionais por mercados e influência?&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;O que revelam sobre a racionalidade — ou a ausência dela — as decisões políticas movidas por ideologias que desafiam teorias econômicas consagradas, em disputas internacionais por mercados e influência?&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Para responder a essas perguntas, recorremos a evidências empíricas extraídas da base de dados da Organização das Nações Unidas, a partir da qual foram organizados os fluxos de importação e exportação dos países envolvidos. Com base nesses dados, foi possível calcular as exportações líquidas e observar, de forma mais elucidativa, como os efeitos dessa disputa se materializaram ao longo do tempo tanto para os protagonistas quanto para aqueles que, estrategicamente, souberam ocupar os espaços deixados pelas tensões comerciais.&lt;/p&gt;
-&lt;h2 id=&#34;a-lógica-do-jogo-quem-ganhou-com-as-tarifas&#34;&gt;A Lógica do Jogo: quem ganhou com as tarifas?&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;a-lógica-do-jogo-quem-ganhou-com-as-tarifas&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;A Lógica do Jogo: quem ganhou com as tarifas?&lt;/h2&gt;
 &lt;p&gt;Entre 2018 e 2020, apesar das tarifas impostas pelos Estados Unidos, as exportações da China aumentaram para 42,7%, com um superávit nas exportações líquidas de 519,5 bilhões em 2020. O país manteve forte presença no mercado internacional durante a pandemia, pois atingiu um superávit comercial recorde de 877,6 bilhões de dólares em 2022. A Figura 1 ilustra essa trajetória ascendente da China em contraposição com o agravamento do déficit americano ao longo do mesmo período.&lt;/p&gt;
 &lt;p&gt;Nos Estados Unidos, o déficit comercial, já expressivo antes das medidas protecionistas, se agravou ainda mais após as novas tarifas. De 2018 a 2020, o saldo negativo cresceu 3,2%, com um déficit nas exportações líquidas de 975,1 bilhões de dólares durante 2020, e seguiu crescendo até alcançar a marca histórica de 1,31 trilhão de dólares negativos em 2022.&lt;/p&gt;
 &lt;figure style=&#34;text-align: center;&#34;&gt;
-  &lt;img src=&#34;figura.png&#34; style=&#34;width:100%; max-width:100%; height:auto;&#34; /&gt;
-  &lt;figcaption style=&#34;margin-top: -1em; font-size: 0.95em;&#34;&gt;
-    &lt;strong&gt;Figura 1:&lt;/strong&gt; Exportações líquidas na guerra comercial entre Estados Unidos e China
-  &lt;/figcaption&gt;
+&lt;img src=&#34;figura.png&#34; style=&#34;width:100%; max-width:100%; height:auto;&#34; /&gt;
+&lt;figcaption style=&#34;margin-top: -1em; font-size: 0.95em;&#34;&gt;
+&lt;strong&gt;Figura 1:&lt;/strong&gt; Exportações líquidas na guerra comercial entre Estados Unidos e China
+&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;Já o Brasil, ainda que não estivesse diretamente envolvido na disputa, identificou oportunidades para expandir sua posição comercial. Após uma queda nas exportações em 2019, o país viu seu saldo comercial aumentar em 53,2% em 2020, chegando a mais que duplicar em 2023.&lt;/p&gt;
 &lt;p&gt;Essas mudanças nas rotas comerciais globais permitiram que o Brasil se destacasse como um parceiro alternativo em um cenário marcado pela tensão entre as duas maiores economias.&lt;/p&gt;
-&lt;h3 id=&#34;onde-a-teoria-falha-ou-o-mundo-muda&#34;&gt;Onde a teoria falha ou o mundo muda&lt;/h3&gt;
-&lt;h4 id=&#34;o-paradoxo-de-proteger-e-perder&#34;&gt;O paradoxo de proteger e perder&lt;/h4&gt;
+&lt;div id=&#34;onde-a-teoria-falha-ou-o-mundo-muda&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Onde a teoria falha ou o mundo muda&lt;/h3&gt;
+&lt;div id=&#34;o-paradoxo-de-proteger-e-perder&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;O paradoxo de proteger e perder&lt;/h4&gt;
 &lt;p&gt;Um exemplo prático da Teoria das Vantagens Comparativas ocorreu após as tarifas americanas sobre produtos chineses em 2018, quando o Brasil substituiu os Estados Unidos como principal fornecedor de soja para a China. Com o aumento nos preços devido às tarifas, os produtores americanos perderam competitividade num setor onde antes dominavam.&lt;/p&gt;
 &lt;p&gt;Por outro lado, o Brasil, que mantinha custos mais baixos e uma produção eficiente, aproveitou essa abertura para ocupar quase toda a participação anteriormente pertencente aos Estados Unidos, conforme relatado pelo Departamento de Agricultura dos Estados Unidos em seu relatório &lt;em&gt;Brazil Soybeans 2020/21: Another Season with a Record Harvest&lt;/em&gt;, ano em que o país colheu 137 milhões de toneladas em uma safra histórica, um desempenho que colocou o Brasil no centro do fornecimento global de soja. Esse caso demonstra como políticas comerciais restritivas podem distorcer custos relativos e beneficiar economias com menores barreiras comerciais e maior eficiência produtiva.&lt;/p&gt;
 &lt;p&gt;Na indústria automobilística, setor tradicionalmente forte nos Estados Unidos, as tarifas impostas a partir de 2025 sobre importações do Canadá, México e China trouxeram sérias consequências. As cadeias produtivas integradas desses países sofreram um farto aumento nos custos, chegando até 10 mil dólares adicionais por veículo. As indústrias canadense e mexicana, diretamente ameaçadas, podem ser obrigadas a fechar suas fábricas, o que leva a uma perda considerável de empregos, de acordo com a análise de Partsinevelos (2025).&lt;/p&gt;
-&lt;h4 id=&#34;mundell-fleming-em-tempos-de-guerra-comercial&#34;&gt;Mundell-Fleming em tempos de guerra comercial&lt;/h4&gt;
+&lt;/div&gt;
+&lt;div id=&#34;mundell-fleming-em-tempos-de-guerra-comercial&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Mundell-Fleming em tempos de guerra comercial&lt;/h4&gt;
 &lt;p&gt;Do ponto de vista macroeconômico, as consequências recentes dessa disputa comercial ilustram a teoria edificada pelo Modelo Mundell-Fleming. Após as novas tarifas americanas, moedas como euro, iene e libra tiveram valorização, enquanto o yuan foi intencionalmente desvalorizado pelo governo chinês para atenuar o impacto tarifário ao tornar seus produtos mais acessíveis nos Estados Unidos.&lt;/p&gt;
 &lt;p&gt;De igual modo, cresce a especulação de que a China possa responder financeiramente vendendo títulos da dívida norte-americana, já que o país é o segundo maior detentor desses ativos, com aproximadamente 760 bilhões de dólares, segundo informações divulgadas pelo Jornal Nacional em sua reportagem intitulada &lt;em&gt;Após tarifaço, investidores buscam alternativas seguras fora dos EUA&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Essas estratégias revelam que a guerra comercial ultrapassa questões tarifárias, de forma que impacta diretamente o sistema financeiro global. Tal situação pode levar ao aumento dos juros nos Estados Unidos e reduzir a competitividade do país no mercado internacional (D’Amorim, 2025).&lt;/p&gt;
 &lt;p&gt;O crédito mais caro, devido às maiores taxas de juros, desencoraja investimentos privados e limita o crescimento econômico. Simultaneamente, a valorização do dólar — resultado do aumento dessas taxas para atrair capital estrangeiro ou da desvalorização de outras moedas — reduz a competitividade dos produtos americanos no exterior e, assim, prejudica as exportações.&lt;/p&gt;
 &lt;p&gt;Portanto, as políticas protecionistas que tinham como objetivo estimular a indústria doméstica podem, paradoxalmente, resultar em uma desaceleração econômica generalizada.&lt;/p&gt;
-&lt;h2 id=&#34;considerações-finais&#34;&gt;Considerações Finais&lt;/h2&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;considerações-finais&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Considerações Finais&lt;/h2&gt;
 &lt;p&gt;Ao revisitar a guerra comercial iniciada em 2018 e reacendida com entusiasmo renovado em 2025, fica difícil não notar o padrão de insistir em estratégias já comprovadamente fracassadas. Durante seu primeiro mandato, Donald Trump apostou em tarifas agressivas com promessas de revitalizar a indústria americana e conter a ascensão chinesa.&lt;/p&gt;
 &lt;p&gt;Contudo, os resultados foram inversamente proporcionais às intenções: enquanto o déficit comercial dos Estados Unidos piorava, a China tranquilamente ampliava seu superávit, e até mesmo países como o Brasil, inicialmente coadjuvantes, passaram a ganhar destaque em mercados antes dominados pelos americanos.&lt;/p&gt;
 &lt;p&gt;Curiosamente, ao invés de ajustar a rota diante dos resultados pouco animadores, Trump optou por dobrar a aposta no segundo mandato. Tarifas ainda mais altas e amplas trouxeram efeitos colaterais visíveis e imediatos.&lt;/p&gt;
@@ -116,20 +287,17 @@
 &lt;p&gt;Para piorar, a valorização do dólar em 2024 dificultou ainda mais as exportações americanas, aprofundando os problemas econômicos internos. Tudo isso sob uma estratégia aparentemente baseada na crença de que falar mais alto pode convencer o resto do mundo a ceder.&lt;/p&gt;
 &lt;p&gt;Do outro lado do tabuleiro, a China escolheu uma abordagem diferente: em vez de barulho, optou por cálculo e precisão. Desvalorizou discretamente sua moeda, redirecionou importações, fortaleceu relações comerciais, de forma tática, com parceiros como o Brasil e começou a utilizar seu peso financeiro de forma sutil vendendo títulos da dívida americana em retaliação silenciosa, porém eficaz.&lt;/p&gt;
 &lt;p&gt;Nenhuma ação chinesa foi aleatória ou impulsiva, mas cuidadosamente planejada em uma espécie de jogo onde os Estados Unidos parecem insistir em jogar sozinhos — e com regras próprias.&lt;/p&gt;
-&lt;p&gt;Se a teoria econômica já havia antecipado os riscos envolvidos, confirmados posteriormente na prática, parece que Trump prefere continuar acreditando que o problema não está na estratégia, mas na intensidade com que ela é aplicada. Afinal, se da primeira vez não funcionou, talvez o segredo esteja simplesmente em tentar com mais força&amp;hellip; ou não.&lt;/p&gt;
+&lt;p&gt;Se a teoria econômica já havia antecipado os riscos envolvidos, confirmados posteriormente na prática, parece que Trump prefere continuar acreditando que o problema não está na estratégia, mas na intensidade com que ela é aplicada. Afinal, se da primeira vez não funcionou, talvez o segredo esteja simplesmente em tentar com mais força… ou não.&lt;/p&gt;
 &lt;p&gt;No fim das contas, talvez a questão mais importante não seja determinar quem saiu vitorioso, mas sim quem perdeu menos. Guerras — comerciais ou não — raramente têm ardentes vencedores. Geralmente, o que vemos são perdas distribuídas de maneira desigual, atingindo principalmente aqueles que pouco ou nada têm a ver com as decisões tomadas: trabalhadores, consumidores e famílias comuns. Enquanto líderes disputam influência, é a vida cotidiana que paga o preço. Esse talvez seja o custo que a teoria não mensura, mas que a história conhece bem.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Eaí, o que você acha? Concorda, discorda ou tem algo a acrescentar? Comente abaixo e reaja ao &lt;em&gt;post&lt;/em&gt;!&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&#34;referências&#34;&gt;Referências&lt;/h2&gt;
-&lt;p&gt;D’AMORIM, S. &lt;em&gt;Nem só tarifas alimentam a guerra comercial iniciada pelos Estados Unidos&lt;/em&gt;. O Globo, Rio de Janeiro, 9 abr. 2025. Disponível em: &lt;a class=&#34;link&#34; href=&#34;https://www.em.com.br/politica/platobr/2025/04/7105714-nem-so-tarifas-alimentam-a-guerra-comercial-iniciada-pelos-estados-unidos.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://www.em.com.br/politica/platobr/2025/04/7105714-nem-so-tarifas-alimentam-a-guerra-comercial-iniciada-pelos-estados-unidos.html&lt;/a&gt;
-. Acesso em: 16 abr. 2025.&lt;/p&gt;
-&lt;p&gt;JORNAL NACIONAL. &lt;em&gt;Após tarifaço, investidores buscam alternativas seguras fora dos EUA&lt;/em&gt;. TV Globo, Rio de Janeiro, 10 abr. 2025. Disponível em: &lt;a class=&#34;link&#34; href=&#34;https://g1.globo.com/jornal-nacional/noticia/2025/04/10/investidores-vendem-titulos-do-tesouro-americano-normalmente-considerados-um-porto-seguro.ghtml&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://g1.globo.com/jornal-nacional/noticia/2025/04/10/investidores-vendem-titulos-do-tesouro-americano-normalmente-considerados-um-porto-seguro.ghtml&lt;/a&gt;
-. Acesso em: 16 abr. 2025.&lt;/p&gt;
-&lt;p&gt;PARTSINEVELOS, D. &lt;em&gt;Auto industry turmoil: which carmakers are suffering most from tariffs?&lt;/em&gt; Ed. DEEPALI SINGH. Invezz, 3 fev. 2025. Disponível em: &lt;a class=&#34;link&#34; href=&#34;https://invezz.com/pt/noticias/2025/02/03/turbulencia-na-industria-automobilistica-quais-fabricantes-de-automoveis-estao-sofrendo-mais-com-as-tarifas/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://invezz.com/pt/noticias/2025/02/03/turbulencia-na-industria-automobilistica-quais-fabricantes-de-automoveis-estao-sofrendo-mais-com-as-tarifas/&lt;/a&gt;
-. Acesso em: 16 abr. 2025.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;referências&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Referências&lt;/h2&gt;
+&lt;p&gt;D’AMORIM, S. &lt;em&gt;Nem só tarifas alimentam a guerra comercial iniciada pelos Estados Unidos&lt;/em&gt;. O Globo, Rio de Janeiro, 9 abr. 2025. Disponível em: &lt;a href=&#34;https://www.em.com.br/politica/platobr/2025/04/7105714-nem-so-tarifas-alimentam-a-guerra-comercial-iniciada-pelos-estados-unidos.html&#34; class=&#34;uri&#34;&gt;https://www.em.com.br/politica/platobr/2025/04/7105714-nem-so-tarifas-alimentam-a-guerra-comercial-iniciada-pelos-estados-unidos.html&lt;/a&gt;. Acesso em: 16 abr. 2025.&lt;/p&gt;
+&lt;p&gt;JORNAL NACIONAL. &lt;em&gt;Após tarifaço, investidores buscam alternativas seguras fora dos EUA&lt;/em&gt;. TV Globo, Rio de Janeiro, 10 abr. 2025. Disponível em: &lt;a href=&#34;https://g1.globo.com/jornal-nacional/noticia/2025/04/10/investidores-vendem-titulos-do-tesouro-americano-normalmente-considerados-um-porto-seguro.ghtml&#34; class=&#34;uri&#34;&gt;https://g1.globo.com/jornal-nacional/noticia/2025/04/10/investidores-vendem-titulos-do-tesouro-americano-normalmente-considerados-um-porto-seguro.ghtml&lt;/a&gt;. Acesso em: 16 abr. 2025.&lt;/p&gt;
+&lt;p&gt;PARTSINEVELOS, D. &lt;em&gt;Auto industry turmoil: which carmakers are suffering most from tariffs?&lt;/em&gt; Ed. DEEPALI SINGH. Invezz, 3 fev. 2025. Disponível em: &lt;a href=&#34;https://invezz.com/pt/noticias/2025/02/03/turbulencia-na-industria-automobilistica-quais-fabricantes-de-automoveis-estao-sofrendo-mais-com-as-tarifas/&#34; class=&#34;uri&#34;&gt;https://invezz.com/pt/noticias/2025/02/03/turbulencia-na-industria-automobilistica-quais-fabricantes-de-automoveis-estao-sofrendo-mais-com-as-tarifas/&lt;/a&gt;. Acesso em: 16 abr. 2025.&lt;/p&gt;
 &lt;p&gt;UNITED STATES DEPARTMENT OF AGRICULTURE. &lt;em&gt;Brazil soybeans 2020/21: another season with a record harvest&lt;/em&gt;. Foreign Agricultural Service – Global Market Analysis. Washington, D.C., 6 jul. 2021.&lt;/p&gt;
+&lt;/div&gt;
 </description>
         </item>
         <item>
@@ -430,33 +598,11 @@ como ele é investido&lt;/strong&gt;.&lt;/p&gt;
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
         <guid>https://drewmelo.github.io/blogr/p/sobre-o-blog/</guid>
-        <description>&lt;img src="https://drewmelo.github.io/blogr/p/sobre-o-blog/sobre-o-blog2.jpg" alt="Featured image of post Sobre o blog" /&gt;&lt;style type=&#34;text/css&#34;&gt;
-a#rgamer-link {
-    color: #016dea; /* Cor do texto no modo light */
-    text-decoration: none;
-}
-
-a#rgamer-link:hover {
-    color: #014ba0; /* Cor do texto quando o mouse passar por cima no modo light */
-}
-
-/* ---------------------------------------------------------- */  
-
-/* Estilos para o link no modo dark */
-[data-scheme=&#34;dark&#34;] a#rgamer-link {
-    color: #5bc0be; /* Cor do texto no modo dark */
-}
-
-[data-scheme=&#34;dark&#34;] a#rgamer-link:hover {
-    color: #7eecea; /* Cor do texto quando o mouse passar por cima no modo dark */
-}
-&lt;/style&gt;
-&lt;p&gt;Você já parou para pensar como a economia pode ganhar vida através da programação? Ou como uma análise cuidadosa de dados econômicos pode revelar histórias surpreendentes sobre o mundo em que vivemos?&lt;/p&gt;
-&lt;p&gt;Este espaço é dedicado justamente a isso. Aqui, economia, programação e ciência de dados conversam entre si, transformando números frios em conhecimento que realmente importa. Meu objetivo não é apenas explorar teorias econômicas ou somente apresentar códigos, mas conectar tudo isso à realidade que nos cerca — como fiz ao investigar se a riqueza realmente pode influenciar a inteligência média de uma população, em meu artigo &lt;a class=&#34;link&#34; href=&#34;http://localhost:4321/blogr/p/qi-vs-desenvolvimento-o-dinheiro-compra-inteligencia/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;&lt;em&gt;QI vs. Desenvolvimento Econômico: o dinheiro compra inteligência?&lt;/em&gt;&lt;/a&gt;
-&lt;/p&gt;
+        <description>&lt;img src="https://drewmelo.github.io/blogr/p/sobre-o-blog/sobre-o-blog2.jpg" alt="Featured image of post Sobre o blog" /&gt;&lt;p&gt;Você já parou para pensar como a economia pode ganhar vida através da programação? Ou como uma análise cuidadosa de dados econômicos pode revelar histórias surpreendentes sobre o mundo em que vivemos?&lt;/p&gt;
+&lt;p&gt;Este espaço é dedicado justamente a isso. Aqui, economia, programação e ciência de dados conversam entre si, transformando números frios em conhecimento que realmente importa. Meu objetivo não é apenas explorar teorias econômicas ou somente apresentar códigos, mas conectar tudo isso à realidade que nos cerca — como fiz ao investigar se a riqueza realmente pode influenciar a inteligência média de uma população, em meu artigo &lt;a href=&#34;http://localhost:4321/blogr/p/qi-vs-desenvolvimento-o-dinheiro-compra-inteligencia/&#34;&gt;&lt;em&gt;QI vs. Desenvolvimento Econômico: o dinheiro compra inteligência?&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Mais do que estatísticas isoladas, quero trazer verdadeiras reflexões sobre como os dados podem nos ajudar a entender melhor as complexas dinâmicas sociais, econômicas e tecnológicas do nosso tempo. É um convite para pensar além das aparências, perceber padrões ocultos nas informações e questionar o que realmente impulsiona o avanço das sociedades.&lt;/p&gt;
-&lt;p&gt;Se você, assim como eu, gosta de analisar o mundo com olhar curioso e crítico, este blog é para você. Aqui, cada texto é uma oportunidade de descobrir algo novo e, quem sabe, entender melhor as engrenagens que movem nossa realidade. Seja bem-vindo a essa jornada pela economia, programação e ciência de dados aplicada à vida real!&lt;/p&gt;</description>
+&lt;p&gt;Se você, assim como eu, gosta de analisar o mundo com olhar curioso e crítico, este blog é para você. Aqui, cada texto é uma oportunidade de descobrir algo novo e, quem sabe, entender melhor as engrenagens que movem nossa realidade. Seja bem-vindo a essa jornada pela economia, programação e ciência de dados aplicada à vida real!&lt;/p&gt;
+</description>
         </item>
         <item>
         <title>Arquivos</title>

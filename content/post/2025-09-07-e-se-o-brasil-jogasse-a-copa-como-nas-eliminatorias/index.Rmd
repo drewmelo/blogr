@@ -1,0 +1,221 @@
+---
+title: E se o Brasil jogasse a Copa como nas Eliminatórias?
+date: '2025-09-17'
+slug: []
+categories: 
+- Data Science
+- Python
+tags: 
+- estatística
+- numpy
+- probabilidade
+- simulação
+description: "Aplicamos Monte Carlo para ver o que o aproveitamento de 51,9% nas Eliminatórias da Copa do Mundo de 2026 representa em sete jogos decisivos."
+image: thumb.jpg
+math: yes
+license: ~
+hidden: no
+comments: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(reticulate)
+use_python("C:/Users/andre/AppData/Local/Programs/Python/Python313/python.exe", required = T)
+```
+
+## Introdução
+
+*"E se o craque se machucar no aquecimento? E se o sorteio nos colocar entre gigantes como Alemanha e França? E se a final for decidida nos pênaltis? E se a confiança subir depois de uma vitória improvável"?*
+
+Muitos *"e se"*, né? ficaria louco só de imaginar, porém a ferramenta certa para explorar isso existe e atende por um nome: Monte Carlo. 
+
+A vida costuma reagir a pequenos empurrões com consequências desproporcionais. A teoria do caos descreve essa sensibilidade às condições iniciais. Um detalhe no começo pode alterar o percurso inteiro lá na frente. Em vez de perseguir uma fórmula complexa e extraordinária que pretenda domar essa instabilidade, abrimos espaço para muitos mundos possíveis e perguntamos o que se repete neles.
+
+Com o método do Monte Carlo, criamos esses mundos em série, sorteamos resultados muitas vezes e observamos como as frequências se comportam. A repetição transforma o acaso em informação. Quando o problema tem incerteza em cada esquina e várias rotas possíveis, a simulação oferece o que precisamos, um mapa. Ela exige escolhas explícitas sobre como o mundo funciona em pequenas etapas, como a chance de um evento acontecer, e devolve um retrato estatístico do que é provável. 
+
+Quanto mais rodadas, mais estável fica a estimativa. Inclusive exploro essa ideia em um *post* no *Medium*, [*A Ciência da Sorte: simulando a Lei dos Grandes Números no R*](https://medium.com/@andremelopix/a-ci%C3%AAncia-da-sorte-simulando-a-lei-dos-grandes-n%C3%BAmeros-no-r-9aa9dc6564fa), no qual simulo o lançamento de três moedas e mostro como as frequências se aproximam das probabilidades à medida que o número de tentativas cresce. O valor do método, portanto, está na franqueza das hipóteses e na possibilidade de testar cenários sem prometer certezas que a realidade não dá.
+
+Voltando ao experimento do nosso estudo, ligamos a simulação a um caso real do futebol masculino. Neste caso, a seleção brasileira, que encerrou as Eliminatórias da Copa de 2026 com 28 pontos em 54 possíveis, com um aproveitamento de 51,9% e sendo a pior campanha já registrada no formato por pontos corridos. O número fica abaixo do ciclo de 2002, quando a equipe somou 30 pontos, o que corresponde a 55,6%, como mostra a reportagem *Seleção brasileira encerra Eliminatórias com a pior campanha da história* de Cassucci (2025). A pergunta que orienta o estudo é simples e incômoda. 
+
+> *Esse aproveitamento de 51,9% é realmente ruim para fins de projeção ou quão desfavorável ele se torna quando o usamos como referência para estimar a chance de título em um torneio decidido em sete jogos?*
+
+## Parâmetros do experimento e hipóteses do modelo
+
+Tomamos $ p $ como a probabilidade de o Brasil vencer um jogo. Para este estudo usamos $ p = 0,519 $ porque a equipe somou 28 pontos em 54 possíveis nas Eliminatórias, o que dá uma taxa de 28/54 aproximadamente. Essa taxa mistura vitórias e empates, mas a adotamos como um *proxy* simples para a chance de vitória por jogo, o que de certa forma mantém o modelo enxuto. 
+
+Definimos $ m $ como o número de partidas necessárias até o título. A partir disso, $ m = 7 $ corresponde a três jogos na fase de grupos e quatro no mata mata. Além disso, exigimos 7 vitórias somando fase de grupos e mata mata, o que é um forte simplificador (um torneio conta também com empates e classificação por saldo), mas que facilitará nossa vida na construção do modelo.
+
+Assumimos os jogos, assim como as copas, como independentes e com a mesma probabilidade $ p $. Mais uma vez, opta-se por simplicidade. Na vida real $ p $ não é constante entre seleções/fases, e Copas não são totalmente independentes (explicarei isso na última seção).
+
+### Do aproveitamento à probabilidade de título
+
+Na Equação (1) $\theta $ representa a probabilidade de título em um único torneio, pois o time precisa vencer $ m $ jogos seguidos.
+
+$$
+\theta = p{^m} \tag{1}
+$$
+Na Equação (2) a variável aleatória $ X $ indica título em uma Copa. O termo $ P(X = x) $ interpreta dois casos em uma única escrita. Quando $ x = 1 $ a probabilidade é $ \theta $ e representa a campanha perfeita. Quando $ x = 0 $ a probabilidade é $ 1 - \theta $ e representa qualquer resultado que não leva ao título.
+
+$$
+P(X = x)=\theta^{x}(1-\theta)^{1-x} \tag{2}
+$$
+
+Na Equação (3) somamos $ N $ indicadores $ X_i $ e obtemos $ S $ que conta quantos títulos ocorreram em $ N $ Copas simuladas. A expressão $ P(S = s) $ descreve a chance de observar exatamente $ s $ títulos. O coeficiente $ \binom{N}{s} $ contabiliza as escolhas de quais Copas terminaram em título. O fator $ \theta^s $ corresponde aos $ s $ torneios vencidos e o fator $ (1-\theta)^{N-s} $ corresponde aos $ N - s $ torneios não vencidos, sob a hipótese de independência entre as edições.
+
+$$
+P(S = s) = \binom{N}{s}\theta^{s}(1-\theta)^{N-s},
+\qquad s = 0,1,\ldots,N \tag{3}
+$$
+Se a nossa variável aleatória $ S $ (isto porque depende do sorteio dos $ X_i $) tem distribuição binomial com parâmetros $ N $ e $ \theta $ como na Equação (3), então as Equações (4) e (5) dão o valor esperado e a variância do número de títulos ao longo das $ N $ simulações. 
+
+$$
+E[S] = N\theta \tag{4}
+$$
+
+$$
+\mathrm{Var}(S) = N\theta (1 - \theta) \tag{5}
+$$
+
+A proporção observada, portanto, é um estimador não viesado de $ \theta $ como nas Equações (6) e (7).
+
+$$
+\hat{\theta} = \frac{S}{N} \tag{6}
+$$
+
+$$
+\mathrm{Var}(\hat{\theta}) = \frac{\theta (1 - \theta)}{N} \tag{7}
+$$
+
+A variável aleatória $ K $ conta o número de Copas até o primeiro título. A Equação (8) representa uma sequência com $ k - 1 $ fracassos seguida de um sucesso. Cada fracasso contribui com o fator $ 1 - \theta $ e o título encerra com $ \theta $. O suporte começa em $ k = 1 $ porque se inclui a própria edição em que o título ocorre. Trata-se da forma clássica da distribuição geométrica quando se mede o total de tentativas até o primeiro sucesso.
+
+$$
+P(K = k) = (1 - \theta)^{k-1}\theta,
+\qquad k = 1,2,\ldots \tag{8}
+$$
+Neste caso, $ K $ segue distribuição geométrica com parâmetro fixo $ \theta $, nisto, as Equações (9) e (10) mostram a espera média e a variância do tempo até um título, ambas determinadas por $ \theta $ que por sua vez depende de $ p $ e $ m $, ambos fixados.
+
+$$
+E[K] = \frac{1}{\theta} \tag{9}
+$$
+$$
+\mathrm{Var}(K) = \frac{1 - \theta}{\theta^2} \tag{10}
+$$
+
+## Da teoria ao código em Python
+
+Começamos importando o NumPy, que fornece o motor de números aleatórios usado para simular os ensaios de Bernoulli definidos no modelo. 
+
+```{python}
+import numpy as np
+```
+
+Criamos `rng = np.random.default_rng()` para gerar amostras independentes coerentes com a Equação (2), onde cada tentativa representa um jogo com probabilidade $ p $ de sucesso. Definimos `n_simulacoes` como o número de torneios hipotéticos, que corresponde ao $ N $ nas Equações (3) a (7).  Em seguida fixamos `n_jogos_copa` e `prob_vitoria`, que é, respectivamente, o $ m $ e $ p $ do nosso modelo.  
+
+```{python}
+rng = np.random.default_rng(20251709)  # reprodutibilidade
+
+n_simulacoes = 100000
+n_jogos_copa = 7
+prob_vitoria = 0.519  # prob. de vencer cada jogo
+```
+
+Esses três parâmetros conectam o código às equações do modelo, pois determinam $ \theta = p{^m} $ e, quando amostrarmos os resultados, permitirão contar títulos por torneio e ao longo das $ N $ simulações como em $ X $ e $ S $. 
+
+Observação breve sobre repetibilidade. Se desejarmos reproduzir exatamente os mesmos números em execuções diferentes, convém passar uma semente fixa, por exemplo `np.random.default_rng(20251709)`. A escolha do número fica a critério do leitor.
+
+### Simulando as Copas e identificando títulos
+
+No passo da simulação, geramos uma matriz chamada `resultados`com $ N $ linhas e $ m $ colunas. Cada entrada vale 0 para derrota ou 1 para vitória e segue um ensaio de Bernoulli com parâmetro $ p $, de acordo com a Equação (2). O tamanho da matriz reproduz $ N $ torneios de $ m $ jogos. 
+
+```{python}
+# Matriz (n_simulacoes x n_jogos_copa) com 0/1 para derrota/vitória
+resultados = rng.binomial(1, prob_vitoria, size=(n_simulacoes, n_jogos_copa))
+
+print(resultados)
+```
+
+Em seguida somamos cada linha e comparamos ao número de jogos $ m $. Quando a soma de uma linha é igual a $ m $, aquele torneio registra vitórias em todos os jogos e portanto título. O vetor lógico `simulacoes` marca essas ocorrências, que correspondem a $ X = 1 $ e têm probabilidade $ \theta = p{^m} $ conforme a Equação (1). A contagem total de verdadeiros neste vetor forma $ S $, a variável binomial da Equação (3).
+
+```{python}
+# True se venceu todos os 7 jogos (título)
+simulacoes = (resultados.sum(axis=1) == n_jogos_copa)
+
+print(simulacoes)
+```
+
+Por fim obtemos os índices das dez primeiras Copas com título por meio de `ids_titulos`. 
+
+```{python}
+# IDs (1-based) das primeiras 10 Copas vencidas
+ids_titulos = (np.flatnonzero(simulacoes)[:10] + 1)
+
+print(ids_titulos)
+```
+
+A soma de `simulacoes` produz `titulos`, que corresponde a $ S $ na Equação (3) e conta quantos torneios terminaram em título no conjunto de $ N $ simulações. A média de `simulacoes` produz `prob_titulo`, que é $ \hat{\theta} = S / N $ (Eq. 6) e estima a probabilidade de título $ \theta $. Ou seja, em uma linha obtemos a contagem efetiva e a fração observada.
+
+```{python}
+titulos = simulacoes.sum()
+
+print(titulos)
+
+prob_titulo = simulacoes.mean()
+
+print(prob_titulo)
+```
+
+#### Como ler os números da simulação
+
+Oras, se a chance de título em uma Copa é $ \theta = p{^m} $ e o time precisa vencer sete jogos seguidos, adotemos $ \theta = 0,519^7 $ (lembre-se da taxa de 51,9% de aproveitamento da seleção). Com essa suposição, obtemos $ \theta \approx 0,01014 $, algo próximo de 1% (observe o *output* do nosso objeto `prob_titulo`). Trata-se de um evento raro dentro do nosso modelo simplificado.
+
+Para medir a espera até um título, usamos a média de $ K $. Vale $ E[K] = 1 / \theta \approx 98,62$. Em outras palavras, seriam em torno de 99 Copas até o próximo título quando mantidas as hipóteses de probabilidade constante por jogo e independência entre partidas.
+
+A dispersão dessa espera é grande. A variância resulta em $ \mathrm{Var}(K) $, que nos dá aproximadamente 9.627,15 e o desvio padrão (A raiz quadrada de $ \mathrm{Var}(K) $) fica perto de 98,12. Isto nos diz que algumas sequências trariam um título cedo enquanto outras esticariam a fila por muito tempo. Reforça-se ainda mais a ideia de eventos raros mesmo quando a média sugere um horizonte estável.
+ 
+Trazendo para a linguagem de programação, obtemos a probabilidade estimada de título pela escala desejada. Em `titulos_por_100`, traduzimos $ \hat{\theta} $ para a linguagem de expectativa em 100 edições. É a mesma ideia da Equação (4) que dá $ E[S] = N\theta $ com $ N = 100 $. No resultado aparece aproximadamente 1,017, o que diz que, sob essas hipóteses, esperaríamos cerca de um título a cada 100 Copas.  
+
+```{python}
+titulos_por_100  = 100  * prob_titulo
+
+print(titulos_por_100)
+```
+
+A mesma conversão pode ser feita para uma escala maior. Tomamos $ N = 1000 $ e obtemos por volta de 10,17 títulos esperados em mil edições.
+
+```{python}
+titulos_por_1000 = 1000 * prob_titulo
+
+print(titulos_por_1000)
+```
+
+Também é possível medir o tempo de espera até um título (bem como já fizemos isso anteriormente). Em `copas_por_titulo = 1 / prob_titulo` invertemos a probabilidade estimada e recuperamos a média da distribuição geométrica usada na seção anterior. O valor ficou perto de 98,33 Copas por título, em linha com a interpretação de $ E[K] = 1 / \theta $ da Equação (9) que deriva da distribuição geométrica da Equação (8) onde $ K $ conta quantas Copas ocorrem até o primeiro título. 
+
+```{python}
+copas_por_titulo = (
+  1 / prob_titulo) if prob_titulo > 0 else float('inf')
+
+print(copas_por_titulo)
+```
+
+Os três números contam a mesma história por ângulos diferentes. A chance por Copa é pequena, logo a contagem esperada em 100 edições fica próxima de um e a espera média gira em torno de um século de torneios no cenário simplificado que adotamos.
+
+## Considerações finais
+
+A pergunta do início pede uma resposta, é claro. Com o desempenho de 51,9% nas Eliminatórias e sob as hipóteses do nosso modelo, a chance de título por Copa fica perto de 1%. Nas simulações, isso transpõe-se de forma aproximada em algo como 1 título a cada 100 edições, cerca de 10 a cada mil, e uma espera média próxima de, aproximadamente, 98 Copas para um novo troféu. Para o objetivo de vencer um torneio de sete jogos, esse aproveitamento pesa contra.
+
+> Então este achado irá se concretizar?
+
+**E a resposta é óbvia: NÃO!**
+
+Para fins de comparação, testei um cenário alternativo com a taxa de 55,6%, a das Eliminatórias para 2002. A simulação estimou 1,66% de chance de título. Teve-se algo próximo de 2 títulos a cada 100 Copas e uma razão perto de 60 Copas por título. Ainda assim, o Brasil foi campeão em 2002. Em ciclos seguintes, mesmo com aproveitamentos mais altos nas Eliminatórias — 63% em 2006 e 2010, 75,9% em 2018, 88,2% em 2022 — o troféu não veio.
+
+O contraponto entre esses números nos deixa uma lição (sobre o papel do acaso, especificamente). O nosso resultado não serve como previsão do que vai acontecer. Ele é uma estimativa condicional, ancorada em hipóteses que varrem o terreno para raciocinar mais claramente sobre determinada situação. Na prática, $ p $ não fica fixo. A chance contra um adversário fraco na fase de grupos costuma ser maior que contra uma potência na final. O aproveitamento nas Eliminatórias tampouco traduz, sozinho, o desempenho esperado na Copa. O torneio é curto, muda o nível dos rivais, muda-se o esboço do chaveamento e detalhes contam.
+
+Tomado como régua, o exercício mostra que um aproveitamento ao redor de metade dos pontos quase não sustenta uma campanha perfeita. Tomado como reflexão, ele lembra que o futebol vive de picos, contextos e desvios que uma média não captura. Se a taxa recente parece menos aceitável, então a pergunta que fica é outra. O que precisa acontecer dentro de campo (ou mesmo fora dele) para que a probabilidade por jogo mude de patamar e a história volte a sorrir?
+
+**Eaí, o que você acha? Concorda, discorda ou tem algo a acrescentar? Comente abaixo e reaja ao post!**
+
+## Referências
+
+CASSUCCI, Bruno. Seleção brasileira encerra Eliminatórias com a pior campanha da história. ge. São Paulo, 9 set. 2025. Atualizado em 10 set. 2025. Disponível em: https://ge.globo.com/futebol/selecao-brasileira/noticia/2025/09/09/selecao-brasileira-encerra-eliminatorias-com-a-pior-campanha-da-historia.ghtml. Acesso em: 15 set. 2025. 

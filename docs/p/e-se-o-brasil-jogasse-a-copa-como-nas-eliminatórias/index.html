@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Aplicamos Monte Carlo para ver o que o aproveitamento de 51,9% nas Eliminatórias da Copa do Mundo de 2026 representa em sete jogos decisivos.'>
+<title>E se o Brasil jogasse a Copa como nas Eliminatórias?</title>
+
+<link rel='canonical' href='https://drewmelo.github.io/blogr/p/e-se-o-brasil-jogasse-a-copa-como-nas-eliminat%C3%B3rias/'>
+
+<link rel="stylesheet" href="/blogr/scss/style.min.9f7d7a2ee698af80358224ed462ba8784436bb2e451dc79d1e00c75f2790e9a0.css"><meta property='og:title' content='E se o Brasil jogasse a Copa como nas Eliminatórias?'>
+<meta property='og:description' content='Aplicamos Monte Carlo para ver o que o aproveitamento de 51,9% nas Eliminatórias da Copa do Mundo de 2026 representa em sete jogos decisivos.'>
+<meta property='og:url' content='https://drewmelo.github.io/blogr/p/e-se-o-brasil-jogasse-a-copa-como-nas-eliminat%C3%B3rias/'>
+<meta property='og:site_name' content='André Melo'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='estatística' /><meta property='article:tag' content='numpy' /><meta property='article:tag' content='probabilidade' /><meta property='article:tag' content='simulação' /><meta property='article:published_time' content='2025-09-17T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-09-17T00:00:00&#43;00:00'/><meta property='og:image' content='https://drewmelo.github.io/blogr/p/e-se-o-brasil-jogasse-a-copa-como-nas-eliminat%C3%B3rias/thumb.jpg' />
+<meta name="twitter:title" content="E se o Brasil jogasse a Copa como nas Eliminatórias?">
+<meta name="twitter:description" content="Aplicamos Monte Carlo para ver o que o aproveitamento de 51,9% nas Eliminatórias da Copa do Mundo de 2026 representa em sete jogos decisivos."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://drewmelo.github.io/blogr/p/e-se-o-brasil-jogasse-a-copa-como-nas-eliminat%C3%B3rias/thumb.jpg' />
+    <link rel="shortcut icon" href="/static/favicon.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Alternar Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/blogr/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/blogr/img/avatar_hua6a247bdde62458d08bf780fd26538db_182098_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/blogr">André Melo</a></h1>
+            <h2 class="site-description">Seja bem vindo ao blog!</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/drewmelo'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.instagram.com/dreew.mello/'
+                        target="_blank"
+                        title="Instagram"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
+  <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+  <path d="M16.5 7.5l0 .01" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/blogr/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blogr/arquivos/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Arquivos</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blogr/procurar/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Procurar</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blogr/sobre/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>Sobre</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Modo Dark</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Índice</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#introdução">Introdução</a></li>
+    <li><a href="#parâmetros-do-experimento-e-hipóteses-do-modelo">Parâmetros do experimento e hipóteses do modelo</a>
+      <ol>
+        <li><a href="#do-aproveitamento-à-probabilidade-de-título">Do aproveitamento à probabilidade de título</a></li>
+      </ol>
+    </li>
+    <li><a href="#da-teoria-ao-código-em-python">Da teoria ao código em Python</a>
+      <ol>
+        <li><a href="#simulando-as-copas-e-identificando-títulos">Simulando as Copas e identificando títulos</a>
+          <ol>
+            <li><a href="#como-ler-os-números-da-simulação">Como ler os números da simulação</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#considerações-finais">Considerações finais</a></li>
+    <li><a href="#referências">Referências</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/blogr/p/e-se-o-brasil-jogasse-a-copa-como-nas-eliminat%C3%B3rias/">
+                <img src="/blogr/p/e-se-o-brasil-jogasse-a-copa-como-nas-eliminat%C3%B3rias/thumb.jpg"
+                        
+                        width="1365" 
+                        height="768" 
+                        loading="lazy"
+                        alt="Featured image of post E se o Brasil jogasse a Copa como nas Eliminatórias?" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/blogr/categorias/data-science/" style="background-color: #22668D; color: #fff;">
+                Data Science
+            </a>
+        
+            <a href="/blogr/categorias/python/" style="background-color: #e8ac18; color: #fff;">
+                Python
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/blogr/p/e-se-o-brasil-jogasse-a-copa-como-nas-eliminat%C3%B3rias/">E se o Brasil jogasse a Copa como nas Eliminatórias?</a>
+        </h2>
+
+        
+        <h3 class="article-subtitle">
+            Aplicamos Monte Carlo para ver o que o aproveitamento de 51,9% nas Eliminatórias da Copa do Mundo de 2026 representa em sete jogos decisivos.
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Sep 17, 2025</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    12 minutos de leitura
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="introdução">Introdução</h2>
+<p><em>&ldquo;E se o craque se machucar no aquecimento? E se o sorteio nos colocar entre gigantes como Alemanha e França? E se a final for decidida nos pênaltis? E se a confiança subir depois de uma vitória improvável&rdquo;?</em></p>
+<p>Muitos <em>&ldquo;e se&rdquo;</em>, né? ficaria louco só de imaginar, porém a ferramenta certa para explorar isso existe e atende por um nome: Monte Carlo.</p>
+<p>A vida costuma reagir a pequenos empurrões com consequências desproporcionais. A teoria do caos descreve essa sensibilidade às condições iniciais. Um detalhe no começo pode alterar o percurso inteiro lá na frente. Em vez de perseguir uma fórmula complexa e extraordinária que pretenda domar essa instabilidade, abrimos espaço para muitos mundos possíveis e perguntamos o que se repete neles.</p>
+<p>Com o método do Monte Carlo, criamos esses mundos em série, sorteamos resultados muitas vezes e observamos como as frequências se comportam. A repetição transforma o acaso em informação. Quando o problema tem incerteza em cada esquina e várias rotas possíveis, a simulação oferece o que precisamos, um mapa. Ela exige escolhas explícitas sobre como o mundo funciona em pequenas etapas, como a chance de um evento acontecer, e devolve um retrato estatístico do que é provável.</p>
+<p>Quanto mais rodadas, mais estável fica a estimativa. Inclusive exploro essa ideia em um <em>post</em> no <em>Medium</em>, <a class="link" href="https://medium.com/@andremelopix/a-ci%C3%AAncia-da-sorte-simulando-a-lei-dos-grandes-n%C3%BAmeros-no-r-9aa9dc6564fa"  target="_blank" rel="noopener"
+    ><em>A Ciência da Sorte: simulando a Lei dos Grandes Números no R</em></a>
+, no qual simulo o lançamento de três moedas e mostro como as frequências se aproximam das probabilidades à medida que o número de tentativas cresce. O valor do método, portanto, está na franqueza das hipóteses e na possibilidade de testar cenários sem prometer certezas que a realidade não dá.</p>
+<p>Voltando ao experimento do nosso estudo, ligamos a simulação a um caso real do futebol masculino. Neste caso, a seleção brasileira, que encerrou as Eliminatórias da Copa de 2026 com 28 pontos em 54 possíveis, com um aproveitamento de 51,9% e sendo a pior campanha já registrada no formato por pontos corridos. O número fica abaixo do ciclo de 2002, quando a equipe somou 30 pontos, o que corresponde a 55,6%, como mostra a reportagem <em>Seleção brasileira encerra Eliminatórias com a pior campanha da história</em> de Cassucci (2025). A pergunta que orienta o estudo é simples e incômoda.</p>
+<blockquote>
+<p><em>Esse aproveitamento de 51,9% é realmente ruim para fins de projeção ou quão desfavorável ele se torna quando o usamos como referência para estimar a chance de título em um torneio decidido em sete jogos?</em></p>
+</blockquote>
+<h2 id="parâmetros-do-experimento-e-hipóteses-do-modelo">Parâmetros do experimento e hipóteses do modelo</h2>
+<p>Tomamos $ p $ como a probabilidade de o Brasil vencer um jogo. Para este estudo usamos $ p = 0,519 $ porque a equipe somou 28 pontos em 54 possíveis nas Eliminatórias, o que dá uma taxa de 28/54 aproximadamente. Essa taxa mistura vitórias e empates, mas a adotamos como um <em>proxy</em> simples para a chance de vitória por jogo, o que de certa forma mantém o modelo enxuto.</p>
+<p>Definimos $ m $ como o número de partidas necessárias até o título. A partir disso, $ m = 7 $ corresponde a três jogos na fase de grupos e quatro no mata mata. Além disso, exigimos 7 vitórias somando fase de grupos e mata mata, o que é um forte simplificador (um torneio conta também com empates e classificação por saldo), mas que facilitará nossa vida na construção do modelo.</p>
+<p>Assumimos os jogos, assim como as copas, como independentes e com a mesma probabilidade $ p $. Mais uma vez, opta-se por simplicidade. Na vida real $ p $ não é constante entre seleções/fases, e Copas não são totalmente independentes (explicarei isso na última seção).</p>
+<h3 id="do-aproveitamento-à-probabilidade-de-título">Do aproveitamento à probabilidade de título</h3>
+<p>Na Equação (1) $\theta $ representa a probabilidade de título em um único torneio, pois o time precisa vencer $ m $ jogos seguidos.</p>
+<p>$$
+\theta = p{^m} \tag{1}
+$$
+Na Equação (2) a variável aleatória $ X $ indica título em uma Copa. O termo $ P(X = x) $ interpreta dois casos em uma única escrita. Quando $ x = 1 $ a probabilidade é $ \theta $ e representa a campanha perfeita. Quando $ x = 0 $ a probabilidade é $ 1 - \theta $ e representa qualquer resultado que não leva ao título.</p>
+<p>$$
+P(X = x)=\theta^{x}(1-\theta)^{1-x} \tag{2}
+$$</p>
+<p>Na Equação (3) somamos $ N $ indicadores $ X_i $ e obtemos $ S $ que conta quantos títulos ocorreram em $ N $ Copas simuladas. A expressão $ P(S = s) $ descreve a chance de observar exatamente $ s $ títulos. O coeficiente $ \binom{N}{s} $ contabiliza as escolhas de quais Copas terminaram em título. O fator $ \theta^s $ corresponde aos $ s $ torneios vencidos e o fator $ (1-\theta)^{N-s} $ corresponde aos $ N - s $ torneios não vencidos, sob a hipótese de independência entre as edições.</p>
+<p>$$
+P(S = s) = \binom{N}{s}\theta^{s}(1-\theta)^{N-s},
+\qquad s = 0,1,\ldots,N \tag{3}
+$$
+Se a nossa variável aleatória $ S $ (isto porque depende do sorteio dos $ X_i $) tem distribuição binomial com parâmetros $ N $ e $ \theta $ como na Equação (3), então as Equações (4) e (5) dão o valor esperado e a variância do número de títulos ao longo das $ N $ simulações.</p>
+<p>$$
+E[S] = N\theta \tag{4}
+$$</p>
+<p>$$
+\mathrm{Var}(S) = N\theta (1 - \theta) \tag{5}
+$$</p>
+<p>A proporção observada, portanto, é um estimador não viesado de $ \theta $ como nas Equações (6) e (7).</p>
+<p>$$
+\hat{\theta} = \frac{S}{N} \tag{6}
+$$</p>
+<p>$$
+\mathrm{Var}(\hat{\theta}) = \frac{\theta (1 - \theta)}{N} \tag{7}
+$$</p>
+<p>A variável aleatória $ K $ conta o número de Copas até o primeiro título. A Equação (8) representa uma sequência com $ k - 1 $ fracassos seguida de um sucesso. Cada fracasso contribui com o fator $ 1 - \theta $ e o título encerra com $ \theta $. O suporte começa em $ k = 1 $ porque se inclui a própria edição em que o título ocorre. Trata-se da forma clássica da distribuição geométrica quando se mede o total de tentativas até o primeiro sucesso.</p>
+<p>$$
+P(K = k) = (1 - \theta)^{k-1}\theta,
+\qquad k = 1,2,\ldots \tag{8}
+$$
+Neste caso, $ K $ segue distribuição geométrica com parâmetro fixo $ \theta $, nisto, as Equações (9) e (10) mostram a espera média e a variância do tempo até um título, ambas determinadas por $ \theta $ que por sua vez depende de $ p $ e $ m $, ambos fixados.</p>
+<p>$$
+E[K] = \frac{1}{\theta} \tag{9}
+$$
+$$
+\mathrm{Var}(K) = \frac{1 - \theta}{\theta^2} \tag{10}
+$$</p>
+<h2 id="da-teoria-ao-código-em-python">Da teoria ao código em Python</h2>
+<p>Começamos importando o NumPy, que fornece o motor de números aleatórios usado para simular os ensaios de Bernoulli definidos no modelo.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span></span></code></pre></div><p>Criamos <code>rng = np.random.default_rng()</code> para gerar amostras independentes coerentes com a Equação (2), onde cada tentativa representa um jogo com probabilidade $ p $ de sucesso. Definimos <code>n_simulacoes</code> como o número de torneios hipotéticos, que corresponde ao $ N $ nas Equações (3) a (7).  Em seguida fixamos <code>n_jogos_copa</code> e <code>prob_vitoria</code>, que é, respectivamente, o $ m $ e $ p $ do nosso modelo.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="mi">20251709</span><span class="p">)</span>  <span class="c1"># reprodutibilidade</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">n_simulacoes</span> <span class="o">=</span> <span class="mi">100000</span>
+</span></span><span class="line"><span class="cl"><span class="n">n_jogos_copa</span> <span class="o">=</span> <span class="mi">7</span>
+</span></span><span class="line"><span class="cl"><span class="n">prob_vitoria</span> <span class="o">=</span> <span class="mf">0.519</span>  <span class="c1"># prob. de vencer cada jogo</span>
+</span></span></code></pre></div><p>Esses três parâmetros conectam o código às equações do modelo, pois determinam $ \theta = p{^m} $ e, quando amostrarmos os resultados, permitirão contar títulos por torneio e ao longo das $ N $ simulações como em $ X $ e $ S $.</p>
+<p>Observação breve sobre repetibilidade. Se desejarmos reproduzir exatamente os mesmos números em execuções diferentes, convém passar uma semente fixa, por exemplo <code>np.random.default_rng(20251709)</code>. A escolha do número fica a critério do leitor.</p>
+<h3 id="simulando-as-copas-e-identificando-títulos">Simulando as Copas e identificando títulos</h3>
+<p>No passo da simulação, geramos uma matriz chamada <code>resultados</code>com $ N $ linhas e $ m $ colunas. Cada entrada vale 0 para derrota ou 1 para vitória e segue um ensaio de Bernoulli com parâmetro $ p $, de acordo com a Equação (2). O tamanho da matriz reproduz $ N $ torneios de $ m $ jogos.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Matriz (n_simulacoes x n_jogos_copa) com 0/1 para derrota/vitória</span>
+</span></span><span class="line"><span class="cl"><span class="n">resultados</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">binomial</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">prob_vitoria</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">n_simulacoes</span><span class="p">,</span> <span class="n">n_jogos_copa</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">resultados</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## [[0 1 1 ... 0 0 0]
+</span></span><span class="line"><span class="cl">##  [0 1 0 ... 1 1 0]
+</span></span><span class="line"><span class="cl">##  [1 0 0 ... 0 0 0]
+</span></span><span class="line"><span class="cl">##  ...
+</span></span><span class="line"><span class="cl">##  [0 1 0 ... 0 1 1]
+</span></span><span class="line"><span class="cl">##  [0 0 0 ... 0 0 1]
+</span></span><span class="line"><span class="cl">##  [0 0 1 ... 1 1 0]]
+</span></span></code></pre></div><p>Em seguida somamos cada linha e comparamos ao número de jogos $ m $. Quando a soma de uma linha é igual a $ m $, aquele torneio registra vitórias em todos os jogos e portanto título. O vetor lógico <code>simulacoes</code> marca essas ocorrências, que correspondem a $ X = 1 $ e têm probabilidade $ \theta = p{^m} $ conforme a Equação (1). A contagem total de verdadeiros neste vetor forma $ S $, a variável binomial da Equação (3).</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># True se venceu todos os 7 jogos (título)</span>
+</span></span><span class="line"><span class="cl"><span class="n">simulacoes</span> <span class="o">=</span> <span class="p">(</span><span class="n">resultados</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="n">n_jogos_copa</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">simulacoes</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## [False False False ... False False False]
+</span></span></code></pre></div><p>Por fim obtemos os índices das dez primeiras Copas com título por meio de <code>ids_titulos</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># IDs (1-based) das primeiras 10 Copas vencidas</span>
+</span></span><span class="line"><span class="cl"><span class="n">ids_titulos</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">flatnonzero</span><span class="p">(</span><span class="n">simulacoes</span><span class="p">)[:</span><span class="mi">10</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">ids_titulos</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## [197 252 255 329 693 742 752 789 810 848]
+</span></span></code></pre></div><p>A soma de <code>simulacoes</code> produz <code>titulos</code>, que corresponde a $ S $ na Equação (3) e conta quantos torneios terminaram em título no conjunto de $ N $ simulações. A média de <code>simulacoes</code> produz <code>prob_titulo</code>, que é $ \hat{\theta} = S / N $ (Eq. 6) e estima a probabilidade de título $ \theta $. Ou seja, em uma linha obtemos a contagem efetiva e a fração observada.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">titulos</span> <span class="o">=</span> <span class="n">simulacoes</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">titulos</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## 1017
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">prob_titulo</span> <span class="o">=</span> <span class="n">simulacoes</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">prob_titulo</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## 0.01017
+</span></span></code></pre></div><h4 id="como-ler-os-números-da-simulação">Como ler os números da simulação</h4>
+<p>Oras, se a chance de título em uma Copa é $ \theta = p{^m} $ e o time precisa vencer sete jogos seguidos, adotemos $ \theta = 0,519^7 $ (lembre-se da taxa de 51,9% de aproveitamento da seleção). Com essa suposição, obtemos $ \theta \approx 0,01014 $, algo próximo de 1% (observe o <em>output</em> do nosso objeto <code>prob_titulo</code>). Trata-se de um evento raro dentro do nosso modelo simplificado.</p>
+<p>Para medir a espera até um título, usamos a média de $ K $. Vale $ E[K] = 1 / \theta \approx 98,62$. Em outras palavras, seriam em torno de 99 Copas até o próximo título quando mantidas as hipóteses de probabilidade constante por jogo e independência entre partidas.</p>
+<p>A dispersão dessa espera é grande. A variância resulta em $ \mathrm{Var}(K) $, que nos dá aproximadamente 9.627,15 e o desvio padrão (A raiz quadrada de $ \mathrm{Var}(K) $) fica perto de 98,12. Isto nos diz que algumas sequências trariam um título cedo enquanto outras esticariam a fila por muito tempo. Reforça-se ainda mais a ideia de eventos raros mesmo quando a média sugere um horizonte estável.</p>
+<p>Trazendo para a linguagem de programação, obtemos a probabilidade estimada de título pela escala desejada. Em <code>titulos_por_100</code>, traduzimos $ \hat{\theta} $ para a linguagem de expectativa em 100 edições. É a mesma ideia da Equação (4) que dá $ E[S] = N\theta $ com $ N = 100 $. No resultado aparece aproximadamente 1,017, o que diz que, sob essas hipóteses, esperaríamos cerca de um título a cada 100 Copas.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">titulos_por_100</span>  <span class="o">=</span> <span class="mi">100</span>  <span class="o">*</span> <span class="n">prob_titulo</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">titulos_por_100</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## 1.0170000000000001
+</span></span></code></pre></div><p>A mesma conversão pode ser feita para uma escala maior. Tomamos $ N = 1000 $ e obtemos por volta de 10,17 títulos esperados em mil edições.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">titulos_por_1000</span> <span class="o">=</span> <span class="mi">1000</span> <span class="o">*</span> <span class="n">prob_titulo</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">titulos_por_1000</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## 10.17
+</span></span></code></pre></div><p>Também é possível medir o tempo de espera até um título (bem como já fizemos isso anteriormente). Em <code>copas_por_titulo = 1 / prob_titulo</code> invertemos a probabilidade estimada e recuperamos a média da distribuição geométrica usada na seção anterior. O valor ficou perto de 98,33 Copas por título, em linha com a interpretação de $ E[K] = 1 / \theta $ da Equação (9) que deriva da distribuição geométrica da Equação (8) onde $ K $ conta quantas Copas ocorrem até o primeiro título.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">copas_por_titulo</span> <span class="o">=</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="mi">1</span> <span class="o">/</span> <span class="n">prob_titulo</span><span class="p">)</span> <span class="k">if</span> <span class="n">prob_titulo</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">copas_por_titulo</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## 98.32841691248771
+</span></span></code></pre></div><p>Os três números contam a mesma história por ângulos diferentes. A chance por Copa é pequena, logo a contagem esperada em 100 edições fica próxima de um e a espera média gira em torno de um século de torneios no cenário simplificado que adotamos.</p>
+<h2 id="considerações-finais">Considerações finais</h2>
+<p>A pergunta do início pede uma resposta, é claro. Com o desempenho de 51,9% nas Eliminatórias e sob as hipóteses do nosso modelo, a chance de título por Copa fica perto de 1%. Nas simulações, isso transpõe-se de forma aproximada em algo como 1 título a cada 100 edições, cerca de 10 a cada mil, e uma espera média próxima de, aproximadamente, 98 Copas para um novo troféu. Para o objetivo de vencer um torneio de sete jogos, esse aproveitamento pesa contra.</p>
+<blockquote>
+<p>Então este achado irá se concretizar?</p>
+</blockquote>
+<p><strong>E a resposta é óbvia: NÃO!</strong></p>
+<p>Para fins de comparação, testei um cenário alternativo com a taxa de 55,6%, a das Eliminatórias para 2002. A simulação estimou 1,66% de chance de título. Teve-se algo próximo de 2 títulos a cada 100 Copas e uma razão perto de 60 Copas por título. Ainda assim, o Brasil foi campeão em 2002. Em ciclos seguintes, mesmo com aproveitamentos mais altos nas Eliminatórias — 63% em 2006 e 2010, 75,9% em 2018, 88,2% em 2022 — o troféu não veio.</p>
+<p>O contraponto entre esses números nos deixa uma lição (sobre o papel do acaso, especificamente). O nosso resultado não serve como previsão do que vai acontecer. Ele é uma estimativa condicional, ancorada em hipóteses que varrem o terreno para raciocinar mais claramente sobre determinada situação. Na prática, $ p $ não fica fixo. A chance contra um adversário fraco na fase de grupos costuma ser maior que contra uma potência na final. O aproveitamento nas Eliminatórias tampouco traduz, sozinho, o desempenho esperado na Copa. O torneio é curto, muda o nível dos rivais, muda-se o esboço do chaveamento e detalhes contam.</p>
+<p>Tomado como régua, o exercício mostra que um aproveitamento ao redor de metade dos pontos quase não sustenta uma campanha perfeita. Tomado como reflexão, ele lembra que o futebol vive de picos, contextos e desvios que uma média não captura. Se a taxa recente parece menos aceitável, então a pergunta que fica é outra. O que precisa acontecer dentro de campo (ou mesmo fora dele) para que a probabilidade por jogo mude de patamar e a história volte a sorrir?</p>
+<p><strong>Eaí, o que você acha? Concorda, discorda ou tem algo a acrescentar? Comente abaixo e reaja ao post!</strong></p>
+<h2 id="referências">Referências</h2>
+<p>CASSUCCI, Bruno. Seleção brasileira encerra Eliminatórias com a pior campanha da história. ge. São Paulo, 9 set. 2025. Atualizado em 10 set. 2025. Disponível em: <a class="link" href="https://ge.globo.com/futebol/selecao-brasileira/noticia/2025/09/09/selecao-brasileira-encerra-eliminatorias-com-a-pior-campanha-da-historia.ghtml"  target="_blank" rel="noopener"
+    >https://ge.globo.com/futebol/selecao-brasileira/noticia/2025/09/09/selecao-brasileira-encerra-eliminatorias-com-a-pior-campanha-da-historia.ghtml</a>
+. Acesso em: 15 set. 2025.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/blogr/tags/estat%C3%ADstica/">estatística</a>
+        
+            <a href="/blogr/tags/numpy/">numpy</a>
+        
+            <a href="/blogr/tags/probabilidade/">probabilidade</a>
+        
+            <a href="/blogr/tags/simula%C3%A7%C3%A3o/">simulação</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Sob licença CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css"integrity="sha256-J&#43;iAE0sgH8QSz9hpcDxXIftnj65JEZgNhGcgReTTK9s="crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js"integrity="sha256-InsNdER1b2xUewP&#43;pKCUJpkhiqwHgqiPXDlIk7GzBu4="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js"integrity="sha256-y39Mpg7V3D4lhBX4x6O0bUqTV4pSrfgwEfGKfxkOdgI="crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Conteúdo relacionado</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/blogr/p/para-quem-se-conta-uma-hist%C3%B3ria-o-impacto-da-demografia-nas-avalia%C3%A7%C3%B5es-de-animes/">
+
+        
+            <div class="article-image">
+                <img src="/blogr/p/para-quem-se-conta-uma-hist%C3%B3ria-o-impacto-da-demografia-nas-avalia%C3%A7%C3%B5es-de-animes/thumb.b8578dd6014a60ad3e8094c4eaca0bec.jpg"
+                        width="1365"
+                        height="768"
+                        loading="lazy"
+                        alt="Featured image of post Para quem se conta uma história? O impacto da demografia nas avaliações de animes"
+                        
+                        data-hash="md5-uFeN1gFKYK0&#43;gJTE6soL7A==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Para quem se conta uma história? O impacto da demografia nas avaliações de animes</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/blogr/p/qi-vs-desenvolvimento-o-dinheiro-compra-inteligencia/">
+
+        
+            <div class="article-image">
+                <img src="/blogr/p/qi-vs-desenvolvimento-o-dinheiro-compra-inteligencia/thumb.affc869ff388f875afb3764309e07df9.jpg"
+                        width="1365"
+                        height="768"
+                        loading="lazy"
+                        alt="Featured image of post QI vs. Desenvolvimento Econômico: o dinheiro compra inteligência?"
+                        data-key="qi-vs-desenvolvimento-o-dinheiro-compra-inteligencia/" 
+                        data-hash="md5-r/yGn/OI&#43;HWvs3ZDCeB9&#43;Q==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">QI vs. Desenvolvimento Econômico: o dinheiro compra inteligência?</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+
+
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "andremelo" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy;
+        
+            2023 -
+        
+        2025 André Melo
+    </section>
+
+    <section class="powerby">
+        Criado com <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>. <br />
+        Todos os direitos reservados.
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/blogr/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
