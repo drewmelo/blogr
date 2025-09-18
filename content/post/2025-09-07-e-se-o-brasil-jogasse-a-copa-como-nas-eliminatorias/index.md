@@ -1,6 +1,6 @@
 ---
 title: E se o Brasil jogasse a Copa como nas Eliminatórias?
-date: '2025-09-17'
+date: '2025-09-18'
 slug: []
 categories: 
 - Data Science
@@ -22,7 +22,7 @@ comments: yes
 
 ## Introdução
 
-*"E se o craque se machucar no aquecimento? E se o sorteio nos colocar entre gigantes como Alemanha e França? E se a final for decidida nos pênaltis? E se a confiança subir depois de uma vitória improvável"?*
+*"E se o craque se machucar no aquecimento? E se o sorteio nos colocar entre gigantes como Alemanha e França? E se a final for decidida nos pênaltis? E se a confiança subir depois de uma vitória improvável"*?
 
 Muitos *"e se"*, né? ficaria louco só de imaginar, porém a ferramenta certa para explorar isso existe e atende por um nome: Monte Carlo. 
 
@@ -40,7 +40,7 @@ Voltando ao experimento do nosso estudo, ligamos a simulação a um caso real do
 
 Tomamos $ p $ como a probabilidade de o Brasil vencer um jogo. Para este estudo usamos $ p = 0,519 $ porque a equipe somou 28 pontos em 54 possíveis nas Eliminatórias, o que dá uma taxa de 28/54 aproximadamente. Essa taxa mistura vitórias e empates, mas a adotamos como um *proxy* simples para a chance de vitória por jogo, o que de certa forma mantém o modelo enxuto. 
 
-Definimos $ m $ como o número de partidas necessárias até o título. A partir disso, $ m = 8 $ corresponde a três jogos na fase de grupos e cinco no mata mata, em conformidade com o novo formato que adiciona uma fase extra, o *Round of 32*. Além disso, exigimos 8 vitórias somando fase de grupos e mata mata, o que é um forte simplificador (um torneio conta também com empates e classificação por saldo), mas que facilitará nossa vida na construção do modelo.
+Definimos $ m $ como o número de partidas necessárias até o título. A partir disso, $ m = 8 $ corresponde a três jogos na fase de grupos e cinco no mata-mata, em conformidade com o novo formato que adiciona uma fase extra, o *Round of 32*. Além disso, exigimos 8 vitórias somando fase de grupos e mata-mata, o que é um forte simplificador (um torneio conta também com empates e classificação por saldo), mas que facilitará nossa vida na construção do modelo.
 
 Assumimos os jogos, assim como as copas, como independentes e com a mesma probabilidade $ p $. Mais uma vez, opta-se por simplicidade. Na vida real $ p $ não é constante entre seleções/fases, e Copas não são totalmente independentes (explicarei isso na última seção).
 
@@ -51,6 +51,7 @@ Na Equação (1) $\theta $ representa a probabilidade de título em um único to
 $$
 \theta = p{^m} \tag{1}
 $$
+
 Na Equação (2) a variável aleatória $ X $ indica título em uma Copa. O termo $ P(X = x) $ interpreta dois casos em uma única escrita. Quando $ x = 1 $ a probabilidade é $ \theta $ e representa a campanha perfeita. Quando $ x = 0 $ a probabilidade é $ 1 - \theta $ e representa qualquer resultado que não leva ao título.
 
 $$
@@ -63,6 +64,7 @@ $$
 P(S = s) = \binom{N}{s}\theta^{s}(1-\theta)^{N-s},
 \qquad s = 0,1,\ldots,N \tag{3}
 $$
+
 Se a nossa variável aleatória $ S $ (isto porque depende do sorteio dos $ X_i $) tem distribuição binomial com parâmetros $ N $ e $ \theta $ como na Equação (3), então as Equações (4) e (5) dão o valor esperado e a variância do número de títulos ao longo das $ N $ simulações. 
 
 $$
@@ -124,7 +126,7 @@ Observação breve sobre repetibilidade. Se desejarmos reproduzir exatamente os 
 
 ### Simulando as Copas e identificando títulos
 
-No passo da simulação, geramos uma matriz chamada `resultados`com $ N $ linhas e $ m $ colunas. Cada entrada vale 0 para derrota ou 1 para vitória e segue um ensaio de Bernoulli com parâmetro $ p $, de acordo com a Equação (2). O tamanho da matriz reproduz $ N $ torneios de $ m $ jogos. 
+No passo da simulação, geramos uma matriz chamada `resultados` com $ N $ linhas e $ m $ colunas. Cada entrada vale 0 para derrota ou 1 para vitória e segue um ensaio de Bernoulli com parâmetro $ p $, no nível da partida. O tamanho da matriz reproduz $ N $ torneios de $ m $ jogos. 
 
 
 ``` python
@@ -243,21 +245,25 @@ print(copas_por_titulo)
 ## 194.5525291828794
 ```
 
-Os três números contam a mesma história por ângulos diferentes. A chance por Copa é pequena, logo a contagem esperada em 100 edições fica próxima de um e a espera média gira em torno de um século de torneios no cenário simplificado que adotamos.
+Os três números contam a mesma história por ângulos diferentes. A chance por Copa é pequena, logo a contagem esperada em 100 edições fica abaixo de um título e a espera média se estende por cerca de dois séculos de torneios no cenário simplificado que adotamos.
 
 ## Considerações finais
 
-A pergunta do início pede uma resposta, é claro. Com o desempenho de 51,9% nas Eliminatórias e sob as hipóteses do nosso modelo, a chance de título por Copa fica perto de 0,5%. Nas simulações, isso transpõe-se de forma aproximada em algo como menos de um título a cada cem edições, cerca de 5 a cada mil, e uma espera média próxima de, aproximadamente, 195 Copas para um novo troféu. Para o objetivo de vencer um torneio de oito jogos, esse aproveitamento pesa contra.
+A pergunta do início pede uma resposta, é claro. Com o desempenho de 51,9% nas Eliminatórias e sob as hipóteses do nosso modelo, a chance de título por Copa fica em uma fração de um por cento. Nas simulações, isso transpõe-se de forma aproximada em algo como menos de um título a cada cem edições, cerca de 5 a cada mil, e uma espera média próxima de, aproximadamente, 195 Copas para um novo troféu. Para o objetivo de vencer um torneio de oito jogos, esse aproveitamento pesa contra.
 
 > Então este achado irá se concretizar?
 
 **E a resposta é óbvia: NÃO!**
 
-Para fins de comparação, testei um cenário alternativo no formato clássico de sete jogos, usando a taxa de 55,6% das Eliminatórias para 2002. A simulação estimou 1,66% de chance de título, algo próximo de 2 títulos a cada 100 Copas e uma razão perto de 60 Copas por título. Ainda assim, o Brasil foi campeão em 2002. Em ciclos seguintes, mesmo com aproveitamentos mais altos nas Eliminatórias (63% em 2006 e 2010, 75,9% em 2018, 88,2% em 2022), o troféu não veio.
+Para fins de comparação, testei um cenário alternativo no formato clássico de sete jogos, usando a taxa de 55,6% das Eliminatórias para 2002. A simulação estimou 1,66% de chance de título, algo próximo de dois títulos a cada 100 Copas e uma razão perto de 60 Copas por título. Ainda assim, o Brasil foi campeão em 2002. Em ciclos seguintes, mesmo com aproveitamentos mais altos nas Eliminatórias (63% em 2006 e 2010, 75,9% em 2018, 88,2% em 2022), o troféu não veio.
 
-O contraponto entre esses números nos deixa uma lição (sobre o papel do acaso, especificamente). O nosso resultado não serve como previsão do que vai acontecer. Ele é uma estimativa condicional, ancorada em hipóteses que varrem o terreno para raciocinar mais claramente sobre determinada situação. Na prática, $ p $ não fica fixo. A chance contra um adversário fraco na fase de grupos costuma ser maior que contra uma potência na final. O aproveitamento nas Eliminatórias tampouco traduz, sozinho, o desempenho esperado na Copa. O torneio é curto, muda o nível dos rivais, muda-se o esboço do chaveamento e detalhes contam.
+O contraponto entre esses números nos deixa uma lição (sobre o papel do acaso, especificamente). O nosso resultado não serve como previsão do que vai acontecer. Ele é uma estimativa condicional, ancorada em hipóteses que varrem o terreno para raciocinar mais claramente sobre determinada situação. 
 
-Tomado como régua, o exercício mostra que um aproveitamento ao redor de metade dos pontos quase não sustenta uma campanha perfeita. Tomado como reflexão, ele lembra que o futebol vive de picos, contextos e desvios que uma média não captura. Se a taxa recente parece menos aceitável, então a pergunta que fica é outra. O que precisa acontecer dentro de campo (ou mesmo fora dele) para que a probabilidade por jogo mude de patamar e a história volte a sorrir?
+Na prática, $ p $ não fica fixo. A chance contra um adversário fraco na fase de grupos costuma ser maior que contra uma potência na final. O aproveitamento nas Eliminatórias tampouco traduz, sozinho, o desempenho esperado na Copa. O torneio é curto, muda o nível dos rivais, muda-se o esboço do chaveamento e detalhes contam.
+
+Há ainda um fato curioso que conversa com essa sensibilidade. Com o novo formato, que adiciona uma partida, a probabilidade encolhe de forma evidente. No arranjo clássico de sete jogos ela rondava algo perto de um por cento. Com oito jogos cai para algo próximo de meio por cento. Um "pequeno" ajuste na organização do torneio e o trajeto muda inteiro. É a intuição da teoria do caos em ação. Um empurrão quase imperceptível no começo e o desfecho assume outros moldes.
+
+Tomado como régua, o exercício mostra que um aproveitamento ao redor de metade dos pontos quase não sustenta uma campanha perfeita. Tomado como reflexão, ele lembra que o futebol vive de picos, contextos e desvios que uma média não captura. Se a taxa recente parece menos aceitável, então a pergunta que fica é outra. O que precisa acontecer dentro de campo (ou mesmo fora dele) para que a probabilidade por jogo mude e a história volte a sorrir?
 
 **Eaí, o que você acha? Concorda, discorda ou tem algo a acrescentar? Comente abaixo e reaja ao post!**
 
