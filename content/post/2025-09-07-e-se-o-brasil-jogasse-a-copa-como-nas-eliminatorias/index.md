@@ -22,7 +22,7 @@ comments: yes
 
 ## Introdução
 
-*"E se o craque se machucar no aquecimento? E se o sorteio nos colocar entre gigantes como Alemanha e França? E se a final for decidida nos pênaltis? E se a confiança subir depois de uma vitória improvável"*?
+*"E se o craque se machucar no aquecimento? E se o sorteio nos colocar entre gigantes como Alemanha e França? E se a final for decidida nos pênaltis? E se a confiança subir depois de uma vitória improvável?"*
 
 Muitos *"e se"*, né? ficaria louco só de imaginar, porém a ferramenta certa para explorar isso existe e atende por um nome: Monte Carlo. 
 
