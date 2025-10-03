@@ -48,11 +48,9 @@ Entre 2018 e 2020, apesar das tarifas impostas pelos Estados Unidos, as exporta�
 
 Nos Estados Unidos, o déficit comercial, já expressivo antes das medidas protecionistas, se agravou ainda mais após as novas tarifas. De 2018 a 2020, o saldo negativo cresceu 3,2%, com um déficit nas exportações líquidas de 975,1 bilhões de dólares durante 2020, e seguiu crescendo até alcançar a marca histórica de 1,31 trilhão de dólares negativos em 2022.
 
-<figure style="text-align: center;">
-  <img src="figura.png" style="width:100%; max-width:100%; height:auto;" />
-  <figcaption style="margin-top: -1em; font-size: 0.95em;">
-    <strong>Figura 1:</strong> Exportações líquidas na guerra comercial entre Estados Unidos e China
-  </figcaption>
+<figure>
+  <img src="figura.png">
+  <figcaption style="margin-top: -5em;><strong>Figura 1:</strong> Exportações líquidas na guerra comercial entre Estados Unidos e China</figcaption>
 </figure>
 
 Já o Brasil, ainda que não estivesse diretamente envolvido na disputa, identificou oportunidades para expandir sua posição comercial. Após uma queda nas exportações em 2019, o país viu seu saldo comercial aumentar em 53,2% em 2020, chegando a mais que duplicar em 2023. 

@@ -1,3 +1,199 @@
-/*
-    You can add your own custom styles here.
-*/
+/* ---- Figure padrão do post ---- */
+.post-content figure,
+.article-content figure,
+.entry-content figure {
+  display: block;
+  margin: 1rem auto;              /* centraliza */
+  width: 100%;
+  max-width: 100%;
+  overflow-x: visible;            /* nada de cortar legenda/imagem */
+}
+
+/* Figure padrão */
+.post-content figure,
+.article-content figure,
+.entry-content figure {
+  display:block;
+  margin:1rem auto;
+  width:auto;          /* <- em vez de 100% */
+  max-width:100%;      /* pode crescer até caber no container */
+}
+
+/* Imagem preenche a largura da figure */
+.post-content figure img,
+.article-content figure img,
+.entry-content figure img {
+  display:block;
+  width:100%;
+  height:auto;
+}
+
+
+/* Legenda */
+.post-content figure > figcaption,
+.article-content figure > figcaption,
+.entry-content figure > figcaption,
+.post-content figure > p.caption,
+.article-content figure > p.caption,
+.entry-content figure > p.caption {
+  position: static !important;
+  float: none !important;
+  margin-top: .65rem !important;
+  text-align: center;
+  line-height: 1.4;
+  word-break: normal;
+  overflow-wrap: anywhere;        /* se tiver palavra muito longa, quebra */
+  clear: both;
+}
+
+/* ---- Situações apertadas (celular paisagem, telas pequenas) ---- */
+@media (max-width: 900px) {
+  /* garante que nada “vaze” horizontalmente; se ainda assim a imagem for maior, rola */
+  .post-content figure,
+  .article-content figure,
+  .entry-content figure {
+    overflow-x: auto;             /* prefere scroll a cortar */
+    -webkit-overflow-scrolling: touch;
+  }
+  .post-content figure img,
+  .article-content figure img,
+  .entry-content figure img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Figure padrão */
+.post-content figure,
+.article-content figure,
+.entry-content figure {
+  display:block;
+  margin:1rem auto;
+  width:auto;          /* <- em vez de 100% */
+  max-width:100%;      /* pode crescer até caber no container */
+}
+
+/* Limite nas telas grandes */
+@media (min-width: 1200px) {
+  .post-content figure,
+  .article-content figure,
+  .entry-content figure {
+    max-width: 900px;  /* ajuste 780–960px ao seu gosto */
+  }
+}
+
+.table-wrap{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;padding:0;border:none;box-shadow:none;}
+.table-wrap table{margin:0 auto;border-collapse:collapse;width:auto;max-width:100%;}
+/* estilo "bookdown" */
+.tbl-book{border-top:2px solid #CCCCCC;border-bottom:2px solid #CCCCCC;}
+.tbl-book thead th{border-bottom:1px solid #ddd;}
+.tbl-book th,.tbl-book td{padding:6px 10px;}
+.tbl-book td,.tbl-book th{border-left:none;border-right:none;} /* sem linhas verticais */
+.tbl-book caption{caption-side:bottom;text-align:center;font-size:.95em;color:#6b7280;padding-top:.4rem;}
+
+/* Tabela menor (apenas quando usada) */
+.tbl-sm { font-size: 0.4rem; }                 /* ajuste fino aqui */
+.tbl-sm th, .tbl-sm td { padding: 4px 8px; }   /* encurta o espaçamento */
+
+/* =========================
+   Tabela responsiva + tema
+   ========================= */
+
+/* ====== TABELA RESPONSIVA (.table-wrap) – mantém o seu wrapper ====== */
+.table-wrap{
+  width:100%;
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  padding:0;
+  border:none;
+  box-shadow:none;
+}
+.table-wrap table{
+  margin:0 auto;
+  border-collapse:collapse;
+  width:auto;
+  max-width:100%;
+}
+
+/* ====== MODO CLARO (padrão) ====== */
+.article-content table.tbl-book,
+.article-content .tbl-book{
+  border-top:2px solid var(--table-border-color);
+  border-bottom:2px solid var(--table-border-color);
+}
+
+.article-content .tbl-book thead th{
+  background:#f4f6f8;                 /* cabeçalho */
+  border-bottom:1px solid var(--table-border-color);
+  color:var(--card-text-color-main);
+}
+
+.article-content .tbl-book th,
+.article-content .tbl-book td{
+  padding:6px 10px;
+  background:#fff !important;         /* fundo das células (claro) */
+  color:var(--card-text-color-main) !important;
+  border-left:none; border-right:none;
+}
+
+/* desativa “zebra” do tema dentro da .tbl-book */
+.article-content .tbl-book tbody tr:nth-child(2n) td{
+  background:#fff !important;
+}
+
+/* 1ª e última linha do corpo com leve destaque */
+
+.article-content .tbl-book caption,
+.tbl-source{
+  color:var(--card-text-color-secondary);
+}
+
+/* ====== MODO ESCURO (tema Stack usa data-scheme="dark") ====== */
+[data-scheme="dark"] .article-content table.tbl-book,
+[data-scheme="dark"] .article-content .tbl-book{
+  border-top:2px solid #354f52;       /* borda no dark */
+  border-bottom:2px solid #354f52;
+}
+
+[data-scheme="dark"] .article-content .tbl-book thead th{
+  background:#22333b !important;      /* cabeçalho no dark */
+  border-bottom:1px solid #354f52 !important;
+  color:rgba(255,255,255,.9) !important;
+}
+
+[data-scheme="dark"] .article-content .tbl-book th,
+[data-scheme="dark"] .article-content .tbl-book td{
+  background:#22333b !important;      /* fundo das células (escuro) */
+  color:rgba(255,255,255,.9) !important;
+}
+
+/* desativa zebra no dark só dentro da .tbl-book */
+[data-scheme="dark"] .article-content .tbl-book tbody tr:nth-child(2n) td{
+  background:#22333b !important;
+}
+
+
+[data-scheme="dark"] .article-content .tbl-book caption,
+[data-scheme="dark"] .tbl-source{
+  color:rgba(255,255,255,.7) !important;
+}
+
+/* Caption/nota da tabela */
+.article-content .tbl-caption{
+  text-align:center;
+  font-size:1.4rem;
+  line-height:1.4;
+  margin-top:.25rem;
+  color: var(--card-text-color-secondary); /* muda automaticamente no dark */
+}
+
+/* (opcional) ajuste para telas bem pequenas */
+@media (max-width:480px){
+  .article-content .tbl-caption{ font-size:1.2rem; }
+}
+
+/* Se o tema insistir em outra cor no dark, reforça aqui */
+[data-scheme="dark"] .article-content .tbl-caption{
+  color: rgba(255,255,255,.75);
+}

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>desigualdade on André Melo</title>
+        <link>https://drewmelo.github.io/blogr/tags/desigualdade/</link>
+        <description>Recent content in desigualdade on André Melo</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Fri, 03 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://drewmelo.github.io/blogr/tags/desigualdade/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Felicidade vs. Crescimento Econômico: mais dinheiro significa mais bem-estar?</title>
+        <link>https://drewmelo.github.io/blogr/p/felicidade-vs.-crescimento-econ%C3%B4mico-mais-dinheiro-significa-mais-bem-estar/</link>
+        <pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://drewmelo.github.io/blogr/p/felicidade-vs.-crescimento-econ%C3%B4mico-mais-dinheiro-significa-mais-bem-estar/</guid>
+        <description>&lt;img src="https://drewmelo.github.io/blogr/p/felicidade-vs.-crescimento-econ%C3%B4mico-mais-dinheiro-significa-mais-bem-estar/thumb.jpg" alt="Featured image of post Felicidade vs. Crescimento Econômico: mais dinheiro significa mais bem-estar?" /&gt;&lt;script src=&#34;https://drewmelo.github.io/blogr/p/felicidade-vs.-crescimento-econ%C3%B4mico-mais-dinheiro-significa-mais-bem-estar/index_files/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://drewmelo.github.io/blogr/p/felicidade-vs.-crescimento-econ%C3%B4mico-mais-dinheiro-significa-mais-bem-estar/index_files/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;h2 id=&#34;crescimento-e-bem-estar-entre-o-sinal-e-ruído&#34;&gt;Crescimento e bem-estar: entre o sinal e ruído&lt;/h2&gt;
+&lt;p&gt;O crescimento econômico é muitas vezes apresentado como um sinalizador que diz se um país avança ou não, e para isto, é preciso distinguir os diferentes horizontes de tempo. No curto e médio prazo, por exemplo, o Produto Interno Bruto (PIB) oscila por demasiadas vezes. Crises financeiras, choques de oferta, guerras ou pandemias fazem com que os números produzam variações que pouco ou nada dizem sobre a trajetória real de um país. Nesse intervalo, o PIB se comporta como aquilo que Nassim Taleb chama de ruído, logo, os olhos se fixam nos dados mas o que enxergamos não é sinal de longo prazo, e sim movimentos aleatórios e, principalmente, passageiros.&lt;/p&gt;
+&lt;p&gt;E quando nos voltamos aos olhares individuais, o que interessa para a vida das pessoas não é a renda medida em um único ano, e sim o seu consumo ao longo do tempo. É ele que revela o padrão de vida, e por isso, os economistas defendem o uso do consumo &lt;em&gt;per capita&lt;/em&gt; no lugar do produto &lt;em&gt;per capita&lt;/em&gt; como medida de bem-estar. Um exemplo bem simples é que se os Estados Unidos perdessem metade do seu PIB &lt;em&gt;per capita&lt;/em&gt; em um ano e no seguinte recuperassem essa perda, o consumo das famílias não exatamente variaria nesses extremos, neste caso em 50%. O acesso a bens e serviços depende de fluxos mais estáveis que a renda bruta, e é nesse ponto que entende-se por que olhar apenas para o crescimento pode enganar sobre o verdadeiro bem-estar.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Se o consumo diz mais sobre o padrão de vida e o curto prazo é dominado por ruído, até que ponto mais dinheiro garante mais bem-estar, ou neste caso, felicidade?&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Para responder a essa pergunta recorremos, como faria qualquer bom economista, a alguns dados e ao respaldo teórico. Quanto aos dados, foram obtidos do World Bank e da Gallup. No levantamento da Gallup, presente na página &lt;em&gt;What Is the World’s Emotional Temperature?&lt;/em&gt;, selecionamos as métricas &lt;em&gt;&amp;ldquo;Smiled&amp;rdquo;&lt;/em&gt; e &lt;em&gt;&amp;ldquo;Enjoyment&amp;rdquo;&lt;/em&gt; e extraímos a média de cada país. A média foi cruzada com o PIB &lt;em&gt;per capita&lt;/em&gt; ajustado pela Paridade do Poder Compra (PPC) em dólares internacionais constantes de 2021 da base &lt;em&gt;World Development Indicators&lt;/em&gt; do World Bank. Então aplicamos logaritmo ao PIB &lt;em&gt;per capita&lt;/em&gt; para compatibilizar a escala com os valores médios de emoções positivas.&lt;/p&gt;
+&lt;p&gt;Como medida de felicidade, usamos duas ondas do World Values Survey. A &lt;em&gt;Round Five – Country Pooled Datafile&lt;/em&gt;, organizada por Inglehart &lt;em&gt;et al.&lt;/em&gt; (2014), e a &lt;em&gt;Wave 7&lt;/em&gt; (2017–2022), coordenada por Haerpfer &lt;em&gt;et al.&lt;/em&gt; (2022). As duas bases fornecem dados de percepção subjetiva de felicidade, o que permite observar padrões comparáveis entre países e no tempo.&lt;/p&gt;
+&lt;h2 id=&#34;o-encontro-entre-riqueza-e-emoções&#34;&gt;O encontro entre riqueza e emoções&lt;/h2&gt;
+&lt;p&gt;A Figura 1 relaciona PIB &lt;em&gt;per capita&lt;/em&gt; em PPC constante de 2021 no eixo horizontal com a média de emoções positivas no vertical. Em níveis muito baixos de renda, pequenos ganhos já aparecem associados a significativos aumentos nas emoções positivas, como mostram Afeganistão com 1.984 dólares e média de 30,5 e República Democrática do Congo com 1.456 e 57 quando comparados à Bolívia com 9.844 e 78,5. Também aparecem países com médias de emoções positivas muito altas (na casa dos 80) espalhados por diferentes faixas de renda (entre 12.000 e 67.000 dólares), entre eles Guatemala, Indonésia, Costa Rica e Islândia. Entre as nações com mais renda, Singapura, Luxemburgo, Irlanda e Estados Unidos exibem felicidade até mesmo elevada, variando entre 73 e 80, porém o ganho não cresce na mesma proporção da renda.&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&#34;figura_1.svg&#34;&gt;
+  &lt;figcaption&gt;&lt;strong&gt;Figura 1:&lt;/strong&gt; Felicidade e produto &lt;i&gt;per capita&lt;/i&gt; em 136 países (2023). Elaboração própria a partir de dados do World Bank (2023) e Gallup Poll (2023). &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;h3 id=&#34;o-caso-brasileiro-crescimento-sem-euforia&#34;&gt;O caso brasileiro: crescimento sem euforia&lt;/h3&gt;
+&lt;p&gt;Comparar felicidade entre países impõe certas dificuldades, pois culturas distintas valorizam dimensões diferentes da vida e podem manter níveis cronicamente mais altos ou mais baixos de satisfação. Por isso, muitas vezes é mais útil observar a trajetória dentro de um mesmo país. No caso do Brasil, os dados do World Bank indicam que o PIB &lt;em&gt;per capita&lt;/em&gt; em PPC e dólares internacionais constantes de 2021 passou de 15.657,48 em 2006 para 17.917,75 dólares em 2018.&lt;/p&gt;
+&lt;p&gt;O Brasil teve crescimento durante este período? sim, inclusive próximo de 14,4%. Porém repare um fato interessante, entre 2006 a 2018, na Tabela 1, a parcela que se declara muito feliz caiu 6,3 pontos percentuais passando de 34 para 27,7. Ao mesmo tempo a parcela feliz subiu 6 pontos percentuais de 56,4 para 62,4. As categorias não muito feliz e infeliz quase não mudaram com altas de 0,1 e 0,2 ponto percentual. A análise ao longo do tempo sugere uma realocação do topo para o meio da distribuição de bem-estar. Há ganho material medido pelo consumo mas a sensação de imensa felicidade não avança no mesmo ritmo (veja novamente os países com alta renda da Figura 1).&lt;/p&gt;
+&lt;div class=&#34;table-wrap&#34;&gt;
+&lt;table class=&#34;tbl-book&#34;&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style=&#34;text-align:left;&#34;&gt; Felicidade &lt;/th&gt;
+   &lt;th style=&#34;text-align:right;&#34;&gt; 2006 &lt;/th&gt;
+   &lt;th style=&#34;text-align:right;&#34;&gt; 2018 &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style=&#34;text-align:left;&#34;&gt; Muito feliz &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 34,0 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 27,7 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&#34;text-align:left;&#34;&gt; Feliz &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 56,4 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 62,4 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&#34;text-align:left;&#34;&gt; Não muito feliz &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 9,0 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 9,1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&#34;text-align:left;&#34;&gt; Infeliz &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 0,6 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 0,8 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div class=&#34;tbl-caption&#34;&gt;
+  &lt;strong&gt;Tabela 1:&lt;/strong&gt;
+  Distribuição percentual da felicidade no Brasil ao longo do tempo (percentual). Elaboração própria a partir de WVS (2006; 2018).
+&lt;/div&gt;
+&lt;p&gt;A Tabela 2 mostra a distribuição conjunta de felicidade e classe social no Brasil em 2017-2018. Se as variáveis felicidade e classe social fossem independentes, esperaríamos que em todas as classes a proporção de pessoas muito felizes fosse de 27,7%. No entanto, isso não ocorre. As maiores concentrações de pessoas muito felizes aparecem na classe média, enquanto nas classes média baixa e baixa a maior parcela está entre os felizes. Já nas classes alta e média alta, apesar do tamanho reduzido da amostra, há prevalência de pessoas felizes e muito felizes, respectivamente.&lt;/p&gt;
+&lt;div class=&#34;table-wrap&#34;&gt;
+&lt;table class=&#34;tbl-book table&#34; style=&#34;font-size: 15px; margin-left: auto; margin-right: auto;&#34;&gt;
+ &lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;empty-cells: hide;border-bottom:hidden;&#34; colspan=&#34;1&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; &#34; colspan=&#34;5&#34;&gt;&lt;div style=&#34;border-bottom: 1px solid #ddd; padding-bottom: 5px; &#34;&gt;Classe social&lt;/div&gt;&lt;/th&gt;
+&lt;th style=&#34;empty-cells: hide;border-bottom:hidden;&#34; colspan=&#34;1&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;th style=&#34;text-align:left;&#34;&gt; Felicidade &lt;/th&gt;
+   &lt;th style=&#34;text-align:center;&#34;&gt; Alta &lt;/th&gt;
+   &lt;th style=&#34;text-align:center;&#34;&gt; Média-Alta &lt;/th&gt;
+   &lt;th style=&#34;text-align:center;&#34;&gt; Média &lt;/th&gt;
+   &lt;th style=&#34;text-align:center;&#34;&gt; Média-Baixa &lt;/th&gt;
+   &lt;th style=&#34;text-align:center;&#34;&gt; Baixa &lt;/th&gt;
+   &lt;th style=&#34;text-align:right;&#34;&gt; Total &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style=&#34;text-align:left;&#34;&gt; Muito feliz &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 1 (0,1%) &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 16 (1,0%) &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 185 (11,1%) &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 134 (8,0%) &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 126 (7,5%) &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 462 (27,7%) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&#34;text-align:left;&#34;&gt; Feliz &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 3 (0,2%) &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 4 (0,2%) &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 329 (19,7%) &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 354 (21,2%) &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 351 (21,0%) &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 1.041 (62,3%) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&#34;text-align:left;&#34;&gt; Não muito feliz &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 0 (0,0%) &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 4 (0,2%) &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 29 (1,7%) &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 41 (2,5%) &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 78 (4,7%) &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 152 (9,1%) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&#34;text-align:left;&#34;&gt; Infeliz &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 0 (0,0%) &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 1 (0,1%) &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 2 (0,1%) &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 3 (0,2%) &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 8 (0,5%) &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 14 (0,9%) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&#34;text-align:left;&#34;&gt; &lt;span style=&#34; font-weight: bold;    &#34;&gt;Total&lt;/span&gt; &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 4 (0,3%) &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 25 (1,5%) &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 545 (32,6%) &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 532 (31,9%) &lt;/td&gt;
+   &lt;td style=&#34;text-align:center;&#34;&gt; 563 (33,7%) &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 1.669 (100,0%) &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div class=&#34;tbl-caption&#34;&gt;
+  &lt;strong&gt;Tabela 2:&lt;/strong&gt;
+  Distribuição conjunta de felicidade e classe social no Brasil (2017–2018).
+  Elaboração própria a partir de WVS (2017; 2018).
+&lt;/div&gt;
+&lt;p&gt;O teste qui quadrado confirma dependência estatística entre as variáveis, com valor de 69,649 e p-valor inferior a 0,001. Com 95% de nível de confiança, isso nos leva a rejeitar a hipótese nula de independência. Contudo, o V de Cramer apresenta 0,1179, um valor baixo que aponta para uma relação fraca. A evidência, portanto, nos mostra que renda e felicidade se relacionam, todavia de forma não linear, o que nos leva ao paradoxo de Easterlin. &lt;strong&gt;E se esta é nossa evidência, o que realmente eleva a felicidade se não apenas a renda?&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;o-paradoxo-de-easterlin-e-os-limites-da-renda&#34;&gt;O paradoxo de Easterlin e os limites da renda&lt;/h2&gt;
+&lt;p&gt;O paradoxo de Easterlin, apontado por Richard Easterlin na economia da felicidade, mostra que a relação entre renda e bem-estar não é tão linear como parece intituitivamente, embora países pobres experimentem fortes ganhos de felicidade quando a renda cresce, simplesmente tal ligação perde-se em sociedades ricas. A curva aplana-se e outros fatores como saúde, relações sociais, tempo livre e segurança (não só estas, como muitas outras variáveis) passam a assegurar maior percepção de satisfação.&lt;/p&gt;
+&lt;p&gt;Clark, Frijters e Shields (2008) estudaram o paradoxo de Easterlin e propuseram uma formulação que ajuda a compreender como a felicidade se conecta à renda, ao &lt;em&gt;status&lt;/em&gt; e ao lazer. A Equação 1 pode ser expressa da seguinte forma:&lt;/p&gt;
+&lt;p&gt;$$
+u_{t} = U\big(u_{1}(Y_{t}),  u_{2}(Y_{t} \mid Y^{*}),  u_{3}(T - l_{t}, z_{t})\big)
+$$&lt;/p&gt;
+&lt;div class=&#34;tbl-caption&#34;&gt;
+  &lt;strong&gt;Equação 1: &lt;/strong&gt;
+  Função de utilidade tradicional incluindo renda relativa.
+&lt;/div&gt;
+&lt;p&gt;onde $ U(.) $ é a função que combina as subutilidades em uma utilidade final. O termo $ u_{1}(Y_{t}) $ representa a utilidade do consumo, que cresce a taxas decrescentes em relação à renda própria. O termo $ u_{2}(Y_{t}) $ capta o efeito da renda relativa, sendo $ Y^{*} $ a renda do grupo de referência, que pode ser família, vizinhos, colegas ou até a própria renda passada ou futura esperada.&lt;/p&gt;
+&lt;p&gt;A subutilidade $ u_{2} $  é entendido como o retorno de &lt;em&gt;status&lt;/em&gt; da renda e obedece à propriedade de homogeneidade de grau zero, o que significa que aumentos proporcionais em $ Y_{t} $ e $ Y^{*} $ não alteram a utilidade relativa. Já $ u_{3}(T - l_{t}, z_{t}) $ expressa a satisfação vinda do lazer, em que $ T $ é o tempo total, $ l_{t} $ são as horas de trabalho e $ z_{t} $ reúne variáveis demográficas e sociais que influenciam o bem-estar.&lt;/p&gt;
+&lt;h3 id=&#34;renda-status-e-lazer-na-vida-cotidiana&#34;&gt;Renda, &lt;em&gt;status&lt;/em&gt; e lazer na vida cotidiana&lt;/h3&gt;
+&lt;p&gt;Muitos termos e letras, no entanto, como isso se incorpora no cotidiano? Pense na Joana. Ela é gerente de marketing em São Paulo e, depois de anos de carreira, passa a morar em um condomínio de luxo. Ali, descobre que apesar de sua renda mensal de 30.000 reais colocá-la entre os 1% mais ricos do Brasil, ainda é vista como a menos rica entre os vizinhos. O marido comenta em tom de comparação que os outros casais parecem ter mais sucesso, mesmo que Joana já ganhe mais do que 99% da população brasileira, onde 90% vivem com menos de 3.500 reais por mês.&lt;/p&gt;
+&lt;p&gt;A historinha hipotética de Joana se conecta à Equação 1 da utilidade. A renda própria $ Y_{t} $ aumenta a felicidade, mas a taxas decrescentes. O salto de 1.000 para 2.000 reais transforma o padrão de vida de Joana. Já a diferença entre 30.000 e 31.000 reais pouco altera o seu bem-estar. Ao mesmo tempo, a renda de referência $ Y^{*} $ torna-se relevante, pois quando Joana compara seus 31.000 reais aos vizinhos que recebem 50.000 reais, sua utilidade relativa cai. Para ganhar posição (isto é, &lt;em&gt;status&lt;/em&gt;), ela aceita trabalhar mais horas. Como o tempo total é fixo (24 horas), o lazer diminui.&lt;/p&gt;
+&lt;p&gt;A consequência disso é excesso de oferta de trabalho, estresse e queda no bem-estar mental. E acabamos por entrar nesta espiral, onde o ganho de &lt;em&gt;status&lt;/em&gt; privado não gera benefício coletivo. O resultado é um condomínio cheio de gente bem remunerada, contudo, nem sempre mais feliz.&lt;/p&gt;
+&lt;p&gt;E para não ficarmos somente em teoria e cenários hipotéticos, observe a Figura 2, que mostra no eixo horizontal a escala de renda, onde 1 representa a mais baixa e 10 a mais alta, assim como o eixo vertical representa a média de satisfação referente a cada escala de renda.&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&#34;figura_2.svg&#34;&gt;
+  &lt;figcaption&gt;&lt;strong&gt;Figura 2:&lt;/strong&gt; Satisfação com a renda segundo escala domiciliar no Brasil (2017-2018). Elaboração própria a partir de WVS (2017; 2018). &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Nas escalas mais baixas (1 a 4) a satisfação média cresce de forma contínua, o que confirma a ideia de que sair da escassez traz grandes ganhos de bem-estar (lembre-se da nossa ideia de sair de 1.000 para 2.000 reais). Já entre as escalas 5 e 7 a curva deixa de ser tão ascendente e até oscila. No topo da distribuição, a curva praticamente torna-se achatada. A satisfação cresce de 8 para 8,6 entre as escalas 8 e 9, porém logo recua para 8,1 na escala 10. Fica óbvio, neste sentido, que aumentos adicionais de renda não necessariamente garante maior felicidade.&lt;/p&gt;
+&lt;h2 id=&#34;considerações-finais-entre-abundância-material-e-vazio-interior&#34;&gt;Considerações finais: entre abundância material e vazio interior&lt;/h2&gt;
+&lt;p&gt;Os resultados analisados neste artigo, assim como o arcabouço teórico trazido em paralelo nos mostra que renda própria traz ganhos que diminuem em intensidade à medida que aumenta, caracterizando a utilidade marginal decrescente. Quando as famílias, em nível micro, ou países, em nível macro, atingem altos padrões de vida, a renda absoluta deixa de ser o principal fator e as comparações sociais é que, de forma ineficiente, garante maior satisfação.&lt;/p&gt;
+&lt;p&gt;Em países pobres ou para quem vive abaixo de um nível de subsistência, o aumento de renda costuma transpor-se em elevados ganhos de bem-estar. Blanchard (2007) sugere um limite inferior por volta de 20.000 dólares &lt;em&gt;per capita&lt;/em&gt;, já Clark, Frijters e Shields (2008) indicam valores na casa de 10.000 dólares &lt;em&gt;per capita&lt;/em&gt;. A ideia central é que acima desses intervalos (seja 10.000 ou 20.000 dólares), os acréscimos de renda tendem a render cada vez menos felicidade.&lt;/p&gt;
+&lt;p&gt;O paradoxo de Easterlin nos confirma a evidência tanto internacional quanto ao cenário brasileiro ao mostrar que crescimento por si só não sustenta aumentos duradouros de felicidade. Há limites e há subjetividade. Expectativas e contextos locais influenciam a medição do que vem a ser felicidade.&lt;/p&gt;
+&lt;p&gt;Ainda assim, séries longas com muitos indivíduos revelam alguns padrões, principalmente em como outros elementos passam a influir tanto quanto o tão utilizado PIB. A estabilidade institucional, a qualidade da saúde e segurança pública, assim como a confiança de um residente em seu país, explicam por que países escandinavos aparecem no topo das comparações de satisfação.&lt;/p&gt;
+&lt;p&gt;O contraponto está no Brasil, que mesmo presenciando crescimento, viu aumentar a proporção de pessoas infelizes e diminuir a taxa dos que se consideravam muito alegres. Desemprego estrutural, ciclo vicioso de desigualdade e falhas institucionais graves ajudam a entender um pouco esse desencontro entre a &amp;ldquo;civilização do ter&amp;rdquo; e a &amp;ldquo;civilização do ser&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Eaí, o que você acha? Concorda, discorda ou tem algo a acrescentar? Comente abaixo e reaja ao post!&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;referências&#34;&gt;Referências&lt;/h2&gt;
+&lt;p&gt;BLANCHARD, O. &lt;em&gt;Macroeconomia. 4ª Edição. São Paulo, Ed&lt;/em&gt;. [S.l.]: Pearson, 2007.&lt;/p&gt;
+&lt;p&gt;CLARK, A. E.; FRIJTERS, P.; SHIELDS, M. A. &lt;em&gt;Relative income, happiness, and utility: An explanation for the easterlin paradox and other puzzles&lt;/em&gt;. Journal of Economic literature,
+American Economic Association, v. 46, n. 1, p. 95–144, 2008.&lt;/p&gt;
+&lt;p&gt;Gallup Poll. &lt;em&gt;Gallup World Poll: What Is the World’s Emotional Temperature?&lt;/em&gt; Washington,
+D.C.: Gallup., 2023. Acesso em: 20 set. 2025. Disponível em: &lt;a class=&#34;link&#34; href=&#34;https://news.gallup.com/interactive/268449/world-emotional-temperature.aspx&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://news.gallup.com/interactive/268449/world-emotional-temperature.aspx&lt;/a&gt;
+.&lt;/p&gt;
+&lt;p&gt;HAERPFER, C. &lt;em&gt;et al.&lt;/em&gt; (Ed.). &lt;em&gt;World Values Survey Wave 7 (2017–2022) Cross-National Data-Set&lt;/em&gt;. World Values Survey Association, 2022. Acesso em: 20 set. 2025. Disponível em: &lt;a class=&#34;link&#34; href=&#34;https://www.worldvaluessurvey.org/WVSDocumentationWV7.jsp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.worldvaluessurvey.org/WVSDocumentationWV7.jsp&lt;/a&gt;
+.&lt;/p&gt;
+&lt;p&gt;INGLEHART, R. &lt;em&gt;et al.&lt;/em&gt; (Ed.). &lt;em&gt;World Values Survey: Round Five - Country-Pooled Datafile&lt;/em&gt;.
+Madrid: JD Systems Institute, 2014. Acesso em: 20 set. 2025. Disponível em: &lt;a class=&#34;link&#34; href=&#34;https://www.worldvaluessurvey.org/WVSDocumentationWV5.jsp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.worldvaluessurvey.org/WVSDocumentationWV5.jsp&lt;/a&gt;
+.&lt;/p&gt;
+&lt;p&gt;World Bank. &lt;em&gt;World Development Indicators&lt;/em&gt;. Washington, D.C.: World Bank, 2023. Acesso em:
+20 set. 2025. Disponível em: &lt;a class=&#34;link&#34; href=&#34;https://databank.worldbank.org/source/world-development-indicators&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://databank.worldbank.org/source/world-development-indicators&lt;/a&gt;
+.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

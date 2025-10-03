@@ -39,12 +39,11 @@ Produções como *Revolutionary Girl Utena* (1997) — com sua estética provoca
 
 Do outro lado, o domínio dos shounen/seinen começou a perder fôlego. A partir dos anos 2000, um certo cansaço se instalou. Multiplicaram-se os títulos com fórmulas previsíveis, batalhas colossais mas sem peso dramático, personagens replicados em série com motivações recicladas. Ainda houve resistência — *Naruto*, *Bleach* e outros nomes seguraram as pontas por um bom tempo —, porém o público, cada vez mais exigente, passou a cobrar algo além da ação. Queriam histórias que os surpreendessem, que os tirassem do lugar. Paradoxalmente, foi no shoujo, historicamente visto como um gênero *“menor”*, que encontraram respostas mais ousadas, ou melhor, mais humanas.
 
-<figure style="text-align: center;">
-  <img src="figura_1.png" style="width:100%; max-width:100%; height:auto;" />
-  <figcaption style="margin-top: -2em; font-size: 0.95em;">
-    <strong>Figura 1:</strong> Média móvel das avaliações por grupo demográfico (shoujo/josei e shounen/seinen)
-  </figcaption>
+<figure>
+  <img src="figura_1.png">
+  <figcaption style="margin-top: -5em;><strong>Figura 1:</strong> Média móvel das avaliações por grupo demográfico (shoujo/josei e shounen/seinen)</figcaption>
 </figure>
+
 
 Antes de comparar as avaliações médias entre os grupos, testei a homogeneidade de variâncias. O resultado apontou diferenças entre os animes voltados ao público masculino (shounen e seinen), o que me levou a aplicar o teste t de Welch, mais apropriado nesses casos.
 
