@@ -6,7 +6,21 @@
             </h2>
             <footer class="article-time">
                 <time datetime='{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}'>
-                    {{- .Date.Format (or .Site.Params.dateFormat.published "Jan 02, 2006") -}}
+                  {{- $fmt := "02 Jan 2006" -}}  {{/* força dia-mês-ano */}}
+                  {{- $s := .Date.Format $fmt -}}
+                  {{- $s = replaceRE `\bJan\b` "jan." $s -}}
+                  {{- $s = replaceRE `\bFeb\b` "fev." $s -}}
+                  {{- $s = replaceRE `\bMar\b` "mar." $s -}}
+                  {{- $s = replaceRE `\bApr\b` "abr." $s -}}
+                  {{- $s = replaceRE `\bMay\b` "mai." $s -}}
+                  {{- $s = replaceRE `\bJun\b` "jun." $s -}}
+                  {{- $s = replaceRE `\bJul\b` "jul." $s -}}
+                  {{- $s = replaceRE `\bAug\b` "ago." $s -}}
+                  {{- $s = replaceRE `\bSep\b` "set." $s -}}
+                  {{- $s = replaceRE `\bOct\b` "out." $s -}}
+                  {{- $s = replaceRE `\bNov\b` "nov." $s -}}
+                  {{- $s = replaceRE `\bDec\b` "dez." $s -}}
+                  {{- $s -}}
                 </time>
             </footer>
         </div>
@@ -25,10 +39,10 @@
                         {{- $Width = $thumbnail.Width -}}
                         {{- $Height = $thumbnail.Height -}}
                     {{- end -}}
-                    
-                    <img src="{{ $Permalink }}" 
+
+                    <img src="{{ $Permalink }}"
                         width="{{ $Width }}"
-                        height="{{ $Height }}" 
+                        height="{{ $Height }}"
                         alt="{{ .Title }}"
                         loading="lazy">
                 {{ else }}

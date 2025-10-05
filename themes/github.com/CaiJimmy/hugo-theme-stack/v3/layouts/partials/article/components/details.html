@@ -32,8 +32,23 @@
             <div>
                 {{ partial "helper/icon" "date" }}
                 <time class="article-time--published">
-                    {{- .Date.Format (or .Site.Params.dateFormat.published "Jan 02, 2006") -}}
+                  {{- $fmt := "02 Jan 2006" -}}  {{/* força dia-mês-ano */}}
+                  {{- $s := .Date.Format $fmt -}}
+                  {{- $s = replaceRE `\bJan\b` "jan." $s -}}
+                  {{- $s = replaceRE `\bFeb\b` "fev." $s -}}
+                  {{- $s = replaceRE `\bMar\b` "mar." $s -}}
+                  {{- $s = replaceRE `\bApr\b` "abr." $s -}}
+                  {{- $s = replaceRE `\bMay\b` "mai." $s -}}
+                  {{- $s = replaceRE `\bJun\b` "jun." $s -}}
+                  {{- $s = replaceRE `\bJul\b` "jul." $s -}}
+                  {{- $s = replaceRE `\bAug\b` "ago." $s -}}
+                  {{- $s = replaceRE `\bSep\b` "set." $s -}}
+                  {{- $s = replaceRE `\bOct\b` "out." $s -}}
+                  {{- $s = replaceRE `\bNov\b` "nov." $s -}}
+                  {{- $s = replaceRE `\bDec\b` "dez." $s -}}
+                  {{- $s -}}
                 </time>
+
             </div>
         {{ end }}
 

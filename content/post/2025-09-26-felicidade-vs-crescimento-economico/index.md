@@ -90,7 +90,7 @@ O Brasil teve crescimento durante este período? sim, inclusive próximo de 14,4
 A Tabela 2 mostra a distribuição conjunta de felicidade e classe social no Brasil em 2017-2018. Se as variáveis felicidade e classe social fossem independentes, esperaríamos que em todas as classes a proporção de pessoas muito felizes fosse de 27,7%. No entanto, isso não ocorre. As maiores concentrações de pessoas muito felizes aparecem na classe média, enquanto nas classes média baixa e baixa a maior parcela está entre os felizes. Já nas classes alta e média alta, apesar do tamanho reduzido da amostra, há prevalência de pessoas felizes e muito felizes, respectivamente. 
 
 <div class="table-wrap">
-<table class="tbl-book table" style="font-size: 15px; margin-left: auto; margin-right: auto;">
+<table class="tbl-book table" style="font-size: 15px; color: black; margin-left: auto; margin-right: auto;">
  <thead>
 <tr>
 <th style="empty-cells: hide;border-bottom:hidden;" colspan="1"></th>
